@@ -20,17 +20,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o8d-Xa-s3p">
-                        <rect key="frame" x="5" y="0.0" width="347" height="197.5"/>
+                        <rect key="frame" x="5" y="3" width="347" height="191.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="o8d-Xa-s3p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YTn-Jh-bKl"/>
+                    <constraint firstItem="o8d-Xa-s3p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="YTn-Jh-bKl"/>
                     <constraint firstItem="o8d-Xa-s3p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="cNz-IL-UA4"/>
                     <constraint firstAttribute="trailing" secondItem="o8d-Xa-s3p" secondAttribute="trailing" constant="5" id="eIz-9w-xW6"/>
-                    <constraint firstAttribute="bottom" secondItem="o8d-Xa-s3p" secondAttribute="bottom" id="nB1-Cj-24n"/>
+                    <constraint firstAttribute="bottom" secondItem="o8d-Xa-s3p" secondAttribute="bottom" constant="3" id="nB1-Cj-24n"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>

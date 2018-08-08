@@ -9,6 +9,7 @@
 #import "MTNoteToolsTextCell.h"
 #import "UIColor+Hex.h"
 #import "UITextView+Category.h"
+#import "MTNoteModel.h"
 
 @interface MTNoteToolsTextCell ()
 <UITextViewDelegate>
@@ -27,7 +28,7 @@
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.textView.delegate = self;
-    [self.textView setPlaceholder:@"Miss Zhou. Please input..." placeholdColor:[UIColor colorWithHex:0x666666] font:[UIFont fontWithName:@"AvenirNext-UltraLightItalic" size:14]];
+    [self.textView setPlaceholder:@"Miss Zhou. Please input..." placeholdColor:[UIColor colorWithHex:0x666666] font:[UIFont fontWithName:@"AvenirNext-Italic" size:14]];
     // Initialization code
 }
 
@@ -68,6 +69,11 @@
 - (void)becomeKeyboardFirstResponder
 {
     [self.textView becomeFirstResponder];
+}
+
+- (void)setModel:(MTNoteTextModel *)model
+{
+    self.textView.text = model.text;
 }
 
 

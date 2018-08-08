@@ -689,7 +689,7 @@
 				DEVELOPMENT_TEAM = 3N5RFB77R5;
 				INFOPLIST_FILE = Momenting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "app-huaral.com.Momenting";
+				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -708,7 +708,7 @@
 				DEVELOPMENT_TEAM = 3N5RFB77R5;
 				INFOPLIST_FILE = Momenting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "app-huaral.com.Momenting";
+				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

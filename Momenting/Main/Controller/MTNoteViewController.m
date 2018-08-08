@@ -77,6 +77,7 @@ MTNoteToolsTextCellDelegate>
         MTNoteToolsTextCell *textCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteToolsTextCell getIdentifier]];
         textCell.font = self.textFont;
         textCell.delegate = self;
+        textCell.model = model;
         cell = textCell;
         
     } else {
@@ -123,6 +124,16 @@ MTNoteToolsTextCellDelegate>
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     [self adjustTableViewToFitWithKeyboardHeight:self.keyboardHeight indexPath: indexPath];
+}
+
+- (void)noteCell:(UITableViewCell *)cell didChangeText:(NSString *)text
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    id model = self.datalist[indexPath.row];
+    if ([model isKindOfClass: [MTNoteTextModel class]]) {
+        MTNoteTextModel *textModel = model;
+        textModel.text = text;
+    }
 }
 
 - (void)adjustTableViewToFitWithKeyboardHeight:(CGFloat)keyboardHeight indexPath:(NSIndexPath *)indexPath
@@ -246,11 +257,16 @@ MTNoteToolsTextCellDelegate>
     [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
     CGRect keyboardRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGFloat y = keyboardRect.origin.y;
+//    CGSize contentSize = self.tableView.contentSize;
     if (notification.name == UIKeyboardWillHideNotification) {
         y = CGRectGetHeight(self.view.bounds) - 40;
+//        contentSize.height -= 2 * keyboardRect.size.height;
+        
     } else {
         y = CGRectGetHeight(self.view.bounds) - keyboardRect.size.height - 40;
+//        contentSize.height +=  2 * keyboardRect.size.height;
     }
+//    self.tableView.contentSize = contentSize;
     self.keyboardHeight = keyboardRect.size.height;
     
     self.toolsView.keyBoardIsVisiable = (notification.name != UIKeyboardWillHideNotification);
