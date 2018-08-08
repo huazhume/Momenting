@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTNavigationView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXD-Nm-vD3">
+                    <rect key="frame" x="0.0" y="15" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="ilL-c5-Kbc"/>
+                        <constraint firstAttribute="height" constant="40" id="xkh-gR-CSf"/>
+                    </constraints>
+                    <state key="normal" image="ic_arrow_back_black_24dp"/>
+                    <connections>
+                        <action selector="leftButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rs5-cK-Zpb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kej-ho-3bT">
+                    <rect key="frame" x="172" y="26.5" width="31.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-Ak-SK1">
+                    <rect key="frame" x="0.0" y="54.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.70588235294117641" green="0.72941176470588232" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="8zC-na-3g2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pYk-Ak-SK1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="11V-J1-3RG"/>
+                <constraint firstItem="oXD-Nm-vD3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3IM-WF-Ad2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pYk-Ak-SK1" secondAttribute="trailing" id="Dk1-MJ-7av"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oXD-Nm-vD3" secondAttribute="bottom" id="KhJ-Kf-enT"/>
+                <constraint firstItem="Kej-ho-3bT" firstAttribute="centerY" secondItem="oXD-Nm-vD3" secondAttribute="centerY" id="MMP-t0-0Q5"/>
+                <constraint firstAttribute="bottom" secondItem="pYk-Ak-SK1" secondAttribute="bottom" id="dcP-i3-5Yz"/>
+                <constraint firstItem="Kej-ho-3bT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fg9-sD-JpI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow_back_black_24dp" width="24" height="24"/>
+    </resources>
+</document>

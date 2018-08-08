@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTHomeSectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qg-9I-8eP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_nav_menu_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="MzC-pH-Uiy">
+                            <rect key="frame" x="12" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="0ZA-lN-Rh9"/>
+                                <constraint firstAttribute="height" constant="24" id="POF-vK-bE4"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add_story_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="HQp-eQ-MRL">
+                            <rect key="frame" x="339" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="4wx-6k-eY6"/>
+                                <constraint firstAttribute="width" constant="24" id="sNb-PT-D1g"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Momenting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EL-x5-bxd">
+                            <rect key="frame" x="44" y="12" width="73" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TQ-ps-0uB">
+                            <rect key="frame" x="325" y="0.0" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Rtl-OL-0Eg"/>
+                            </constraints>
+                            <connections>
+                                <action selector="noteButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="yMm-a5-XRw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="3EL-x5-bxd" firstAttribute="leading" secondItem="MzC-pH-Uiy" secondAttribute="trailing" constant="8" id="HBi-x0-vXH"/>
+                        <constraint firstItem="1TQ-ps-0uB" firstAttribute="top" secondItem="9qg-9I-8eP" secondAttribute="top" id="J5X-Az-e1Y"/>
+                        <constraint firstAttribute="trailing" secondItem="1TQ-ps-0uB" secondAttribute="trailing" id="QeG-sk-aZJ"/>
+                        <constraint firstItem="3EL-x5-bxd" firstAttribute="centerY" secondItem="9qg-9I-8eP" secondAttribute="centerY" id="T57-ee-FI7"/>
+                        <constraint firstItem="MzC-pH-Uiy" firstAttribute="centerY" secondItem="9qg-9I-8eP" secondAttribute="centerY" id="WEU-Lh-1S4"/>
+                        <constraint firstItem="HQp-eQ-MRL" firstAttribute="centerY" secondItem="9qg-9I-8eP" secondAttribute="centerY" id="Z1L-lV-Rs3"/>
+                        <constraint firstAttribute="bottom" secondItem="1TQ-ps-0uB" secondAttribute="bottom" id="cXW-0W-Inl"/>
+                        <constraint firstAttribute="trailing" secondItem="HQp-eQ-MRL" secondAttribute="trailing" constant="12" id="kbZ-1R-XHA"/>
+                        <constraint firstItem="MzC-pH-Uiy" firstAttribute="leading" secondItem="9qg-9I-8eP" secondAttribute="leading" constant="12" id="w10-PA-O5A"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9qg-9I-8eP" secondAttribute="bottom" id="M64-9R-O5g"/>
+                <constraint firstItem="9qg-9I-8eP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fA8-qM-j7W"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9qg-9I-8eP" secondAttribute="trailing" id="lCU-gQ-NnP"/>
+                <constraint firstItem="9qg-9I-8eP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yBE-aU-Ts5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_add_story_black_24dp" width="24" height="24"/>
+        <image name="ic_nav_menu_24dp" width="24" height="24"/>
+    </resources>
+</document>
