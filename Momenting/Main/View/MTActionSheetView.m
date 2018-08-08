@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *deleteLabelHeightConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *deleteLabel;
+@property (assign, nonatomic) CGFloat contentViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeightConstraint;
 
 
 @end
@@ -35,10 +39,12 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.contentViewHeight = 140.f;
 }
 
 - (void)show
 {
+    self.contentViewHeightConstraint.constant = self.contentViewHeight;
     UIWindow *rootWindow = [UIApplication sharedApplication].keyWindow;
     [rootWindow addSubview:self];
 
@@ -55,7 +61,7 @@
 {
     
     [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        self.contentViewBottomConstraint.constant = -140.f;
+        self.contentViewBottomConstraint.constant = - self.contentViewHeight;
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(sheetToolsActionWithType:)]) {
@@ -63,6 +69,15 @@
         }
         [self removeFromSuperview];
     }];
+}
+
+#pragma mark - setter
+- (void)setIsShowDelete:(BOOL)isShowDelete
+{
+    CGFloat height = 140.f / 3.0;
+    self.contentViewHeight = isShowDelete ? height * 4 : height * 3;
+    self.deleteLabelHeightConstraint.constant = height;
+    self.deleteLabel.hidden = !isShowDelete;
 }
 
 

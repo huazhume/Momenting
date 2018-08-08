@@ -108,6 +108,16 @@ MTNoteToolsTextCellDelegate>
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.view endEditing:YES];
+    MTActionSheetView *sheetView = [MTActionSheetView loadFromNib];
+    sheetView.isShowDelete = YES;
+    sheetView.frame = [UIScreen mainScreen].bounds;
+    sheetView.delegate = self;
+    [sheetView show];
+}
+
 #pragma mark - MTNoteToolsTextCellDelegate
 - (void)noteCell:(UITableViewCell *)cell textViewWillBeginEditing:(UITextView *)textView;
 {
@@ -159,6 +169,8 @@ MTNoteToolsTextCellDelegate>
         [self takePhoto];
     } else if (type == MTActionSheetViewTwo) {
         [self LocalPhoto];
+    } else if (type == MTActionSheetViewDelete) {
+        //delete
     }
 }
 

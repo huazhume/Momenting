@@ -12,6 +12,7 @@ typedef enum : NSUInteger {
     MTActionSheetViewCancel = 0,
     MTActionSheetViewOne,
     MTActionSheetViewTwo,
+    MTActionSheetViewDelete,
 } MTActionSheetViewType;
 
 @protocol MTActionSheetViewDelegate <NSObject>
@@ -23,6 +24,8 @@ typedef enum : NSUInteger {
 @interface MTActionSheetView : UIView
 
 @property (weak, nonatomic) id <MTActionSheetViewDelegate> delegate;
+
+@property (assign, nonatomic) BOOL isShowDelete;
 
 + (instancetype)loadFromNib;
 
