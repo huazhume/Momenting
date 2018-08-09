@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class MTNoteTextModel;
+@class MTNoteTextVo;
 
 @protocol MTNoteToolsTextCellDelegate <NSObject>
 @optional
@@ -27,7 +27,7 @@
 
 @property (weak, nonatomic) id <MTNoteToolsTextCellDelegate> delegate;
 
-@property (strong, nonatomic) MTNoteTextModel *model;
+@property (strong, nonatomic) MTNoteTextVo *model;
 
 + (CGFloat)heightForCell;
 

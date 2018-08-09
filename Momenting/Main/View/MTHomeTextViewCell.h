@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MTNoteModel;
 
 @interface MTHomeTextViewCell : UITableViewCell
 
-+ (CGFloat)heightForCell;
+@property (strong, nonatomic) MTNoteModel *model;
+
++ (CGFloat)heightForCellWithModel:(MTNoteModel *)model;
 
 @end

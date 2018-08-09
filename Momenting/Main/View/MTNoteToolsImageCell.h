@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class MTNoteImageModel;
+@class MTNoteImageVo;
 
 @interface MTNoteToolsImageCell : UITableViewCell
 
-@property (strong, nonatomic) MTNoteImageModel *model;
+@property (strong, nonatomic) MTNoteImageVo *model;
 
-+ (CGFloat)heightForCellWithModel:(MTNoteImageModel *)model;
++ (CGFloat)heightForCellWithModel:(MTNoteImageVo *)model;
 
 
 @end

@@ -8,11 +8,21 @@
 
 #import "MTHomeTextViewCell.h"
 #import <Masonry/Masonry.h>
+#import "UIColor+Hex.h"
+#import "MTNoteModel.h"
+#import "MTMediaFileManager.h"
 
 @interface MTHomeTextViewCell ()
 
 @property (strong, nonatomic) UIVisualEffectView *effectView;
 @property (weak, nonatomic) IBOutlet UIView *conntentSecView;
+@property (weak, nonatomic) IBOutlet UIView *contentBgView;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
+
+@property (strong, nonatomic) NSArray *colors;
+@property (weak, nonatomic) IBOutlet UIView *topView;
 
 @end
 
@@ -21,25 +31,58 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self initBaseViews];
+    
+    self.colors = @[[UIColor colorWithHex:0x96B46C],[UIColor colorWithHex:0xE48370],[UIColor colorWithHex:0xC496C5],[UIColor colorWithHex:0x79B47C],[UIColor colorWithHex:0xA299CE],[UIColor colorWithHex:0xA2AEBB] ];
     // Initialization code
 }
 
-
-+ (CGFloat)heightForCell
++ (CGFloat)heightForCellWithModel:(MTNoteModel *)model
 {
-    return 200.f;
+    CGFloat textHeight = 0.f;
+    if (model.text.length > 0) {
+        CGSize textLabelSize = [model.text boundingRectWithSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Light" size:12]} context:nil].size;
+        textHeight = textLabelSize.height + 10.f;
+    }
+    
+    CGFloat imageHeight = 0.f;
+    if (model.imagePath.length > 0) {
+        imageHeight = 140.f;
+    }
+    
+    return 30.f + 8.f + imageHeight + textHeight;
 }
 
 - (void)initBaseViews
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.contentImageView.layer.masksToBounds = YES;
     self.conntentSecView.layer.cornerRadius = 10.f;
     self.conntentSecView.layer.masksToBounds = YES;
+    
+    self.contentBgView.layer.cornerRadius = 10.f;
+    self.contentBgView.layer.masksToBounds = YES;
     
     [self.conntentSecView addSubview:self.effectView];
     [self.effectView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.conntentSecView);
     }];
+    
+    self.contentBgView.layer.borderColor = [[UIColor colorWithHex:0xB4BAC3] CGColor];
+    self.contentBgView.layer.borderWidth = 0.5;
+}
+
+#pragma mark - setter
+- (void)setModel:(MTNoteModel *)model
+{
+    _model = model;
+    self.contentLabel.text = model.text;
+    NSString *path = [[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+    self.contentImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",path,model.imagePath]]];
+    self.imageViewHeightConstraint.constant = model.imagePath.length > 0 ? 140.f : 0.f;
+    
+    NSInteger index = model.indexRow % self.colors.count;
+    self.topView.backgroundColor = self.colors[index];
+    self.contentBgView.layer.borderColor = [self.topView.backgroundColor CGColor];
 }
 
 #pragma mark - getter

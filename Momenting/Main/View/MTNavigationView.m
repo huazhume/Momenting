@@ -38,5 +38,11 @@
         [self.delegate leftAction];
     }
 }
+- (IBAction)rightButtonClicked:(id)sender
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rightAction)]) {
+        [self.delegate rightAction];
+    }
+}
 
 @end

@@ -98,7 +98,6 @@
         
         [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     } else {
-        
         if (self.delegate && [self.delegate respondsToSelector:@selector(noteToolsActionWithType:)]) {
             [self.delegate noteToolsActionWithType:sender.tag];
         }

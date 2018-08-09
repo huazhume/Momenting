@@ -34,10 +34,24 @@
 		FB9DF5BF211A7FE800200097 /* MTNoteToolsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9DF5BD211A7FE800200097 /* MTNoteToolsTextCell.xib */; };
 		FB9DF5C3211A800A00200097 /* MTNoteToolsImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5C1211A800A00200097 /* MTNoteToolsImageCell.m */; };
 		FB9DF5C4211A800A00200097 /* MTNoteToolsImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9DF5C2211A800A00200097 /* MTNoteToolsImageCell.xib */; };
-		FB9DF5C7211A982900200097 /* MTNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5C6211A982900200097 /* MTNoteModel.m */; };
 		FB9DF5C9211AB48400200097 /* MTActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9DF5C8211AB48400200097 /* MTActionSheetView.xib */; };
 		FB9DF5CC211AD0C800200097 /* MTActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5CB211AD0C800200097 /* MTActionSheetView.m */; };
 		FB9DF5CF211AF3A200200097 /* UITextView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5CE211AF3A200200097 /* UITextView+Category.m */; };
+		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
+		FBD9DC98211BE657001CE04E /* MTMediaFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC95211BE657001CE04E /* MTMediaFileManager.m */; };
+		FBD9DC99211BE657001CE04E /* MTSanboxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC97211BE657001CE04E /* MTSanboxFile.m */; };
+		FBD9DCAD211BF010001CE04E /* MTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCAB211BF010001CE04E /* MTCoreDataManager.m */; };
+		FBD9DCB0211BF28D001CE04E /* MTCoreDataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCAF211BF28D001CE04E /* MTCoreDataDao.m */; };
+		FBD9DCC0211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCB3211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m */; };
+		FBD9DCC1211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCB5211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m */; };
+		FBD9DCC2211BF590001CE04E /* MTNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCB7211BF590001CE04E /* MTNoteModel.m */; };
+		FBD9DCC5211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */; };
+		FBD9DCC6211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */; };
+		FBEDA12A211C2BB700135D5D /* MTNotePo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */; };
+		FBEDA12B211C2BB700135D5D /* MTNotePo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */; };
+		FBEDA12E211C41F000135D5D /* MTNoteSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA12D211C41F000135D5D /* MTNoteSettingView.m */; };
+		FBEDA132211C4DB000135D5D /* MTHomeEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEDA131211C4DB000135D5D /* MTHomeEmptyView.xib */; };
+		FBEDA135211C4EFC00135D5D /* MTHomeEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA134211C4EFC00135D5D /* MTHomeEmptyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,13 +122,39 @@
 		FB9DF5C0211A800A00200097 /* MTNoteToolsImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteToolsImageCell.h; sourceTree = "<group>"; };
 		FB9DF5C1211A800A00200097 /* MTNoteToolsImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteToolsImageCell.m; sourceTree = "<group>"; };
 		FB9DF5C2211A800A00200097 /* MTNoteToolsImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteToolsImageCell.xib; sourceTree = "<group>"; };
-		FB9DF5C5211A982900200097 /* MTNoteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteModel.h; sourceTree = "<group>"; };
-		FB9DF5C6211A982900200097 /* MTNoteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteModel.m; sourceTree = "<group>"; };
 		FB9DF5C8211AB48400200097 /* MTActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTActionSheetView.xib; sourceTree = "<group>"; };
 		FB9DF5CA211AD0C800200097 /* MTActionSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTActionSheetView.h; sourceTree = "<group>"; };
 		FB9DF5CB211AD0C800200097 /* MTActionSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTActionSheetView.m; sourceTree = "<group>"; };
 		FB9DF5CD211AF3A200200097 /* UITextView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Category.h"; sourceTree = "<group>"; };
 		FB9DF5CE211AF3A200200097 /* UITextView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Category.m"; sourceTree = "<group>"; };
+		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FBD9DC94211BE657001CE04E /* MTMediaFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMediaFileManager.h; sourceTree = "<group>"; };
+		FBD9DC95211BE657001CE04E /* MTMediaFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMediaFileManager.m; sourceTree = "<group>"; };
+		FBD9DC96211BE657001CE04E /* MTSanboxFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSanboxFile.h; sourceTree = "<group>"; };
+		FBD9DC97211BE657001CE04E /* MTSanboxFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSanboxFile.m; sourceTree = "<group>"; };
+		FBD9DCAB211BF010001CE04E /* MTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataManager.m; sourceTree = "<group>"; };
+		FBD9DCAC211BF010001CE04E /* MTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataManager.h; sourceTree = "<group>"; };
+		FBD9DCAE211BF28D001CE04E /* MTCoreDataDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCoreDataDao.h; sourceTree = "<group>"; };
+		FBD9DCAF211BF28D001CE04E /* MTCoreDataDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataDao.m; sourceTree = "<group>"; };
+		FBD9DCB2211BF590001CE04E /* MTNoteImagePo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteImagePo+CoreDataClass.h"; sourceTree = "<group>"; };
+		FBD9DCB3211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteImagePo+CoreDataClass.m"; sourceTree = "<group>"; };
+		FBD9DCB4211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteImagePo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FBD9DCB5211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteImagePo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FBD9DCB6211BF590001CE04E /* MTNoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteModel.h; sourceTree = "<group>"; };
+		FBD9DCB7211BF590001CE04E /* MTNoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteModel.m; sourceTree = "<group>"; };
+		FBD9DCBC211BF590001CE04E /* MTNoteTextPo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteTextPo+CoreDataClass.h"; sourceTree = "<group>"; };
+		FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataClass.m"; sourceTree = "<group>"; };
+		FBD9DCBE211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteTextPo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataClass.m"; sourceTree = "<group>"; };
+		FBEDA127211C2BB700135D5D /* MTNotePo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotePo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FBEDA129211C2BB700135D5D /* MTNotePo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotePo+CoreDataClass.h"; sourceTree = "<group>"; };
+		FBEDA12C211C41F000135D5D /* MTNoteSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteSettingView.h; sourceTree = "<group>"; };
+		FBEDA12D211C41F000135D5D /* MTNoteSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteSettingView.m; sourceTree = "<group>"; };
+		FBEDA131211C4DB000135D5D /* MTHomeEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTHomeEmptyView.xib; sourceTree = "<group>"; };
+		FBEDA133211C4EFC00135D5D /* MTHomeEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeEmptyView.h; sourceTree = "<group>"; };
+		FBEDA134211C4EFC00135D5D /* MTHomeEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeEmptyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +244,7 @@
 				FB2989BF21193BC10011025D /* LaunchScreen.storyboard */,
 				FB2989C221193BC10011025D /* Info.plist */,
 				FB2989C321193BC10011025D /* main.m */,
+				FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */,
 			);
 			path = Momenting;
 			sourceTree = "<group>";
@@ -229,8 +270,8 @@
 		FB2989E6211940D10011025D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FBD9DCB1211BF590001CE04E /* Model */,
 				FB2989E7211941A40011025D /* Controller */,
-				FB2989E8211941A40011025D /* Model */,
 				FB2989E9211941A40011025D /* View */,
 			);
 			path = Main;
@@ -244,15 +285,6 @@
 				FB298A012119B3ED0011025D /* MTNoteViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FB2989E8211941A40011025D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FB9DF5C5211A982900200097 /* MTNoteModel.h */,
-				FB9DF5C6211A982900200097 /* MTNoteModel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FB2989E9211941A40011025D /* View */ = {
@@ -279,6 +311,11 @@
 				FB9DF5C8211AB48400200097 /* MTActionSheetView.xib */,
 				FB9DF5CA211AD0C800200097 /* MTActionSheetView.h */,
 				FB9DF5CB211AD0C800200097 /* MTActionSheetView.m */,
+				FBEDA12C211C41F000135D5D /* MTNoteSettingView.h */,
+				FBEDA12D211C41F000135D5D /* MTNoteSettingView.m */,
+				FBEDA131211C4DB000135D5D /* MTHomeEmptyView.xib */,
+				FBEDA133211C4EFC00135D5D /* MTHomeEmptyView.h */,
+				FBEDA134211C4EFC00135D5D /* MTHomeEmptyView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +323,8 @@
 		FB2989F221199D7E0011025D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FBD9DCAA211BF004001CE04E /* CoreDataManager */,
+				FBD9DC93211BE657001CE04E /* Sanbox */,
 				FB2989F321199D7E0011025D /* Category */,
 			);
 			path = Common;
@@ -302,6 +341,49 @@
 				FB9DF5CE211AF3A200200097 /* UITextView+Category.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		FBD9DC93211BE657001CE04E /* Sanbox */ = {
+			isa = PBXGroup;
+			children = (
+				FBD9DC94211BE657001CE04E /* MTMediaFileManager.h */,
+				FBD9DC95211BE657001CE04E /* MTMediaFileManager.m */,
+				FBD9DC96211BE657001CE04E /* MTSanboxFile.h */,
+				FBD9DC97211BE657001CE04E /* MTSanboxFile.m */,
+			);
+			path = Sanbox;
+			sourceTree = "<group>";
+		};
+		FBD9DCAA211BF004001CE04E /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FBD9DCAC211BF010001CE04E /* MTCoreDataManager.h */,
+				FBD9DCAB211BF010001CE04E /* MTCoreDataManager.m */,
+				FBD9DCAE211BF28D001CE04E /* MTCoreDataDao.h */,
+				FBD9DCAF211BF28D001CE04E /* MTCoreDataDao.m */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		FBD9DCB1211BF590001CE04E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBD9DCB6211BF590001CE04E /* MTNoteModel.h */,
+				FBD9DCB7211BF590001CE04E /* MTNoteModel.m */,
+				FBD9DCB2211BF590001CE04E /* MTNoteImagePo+CoreDataClass.h */,
+				FBD9DCB3211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m */,
+				FBD9DCB4211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.h */,
+				FBD9DCB5211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m */,
+				FBD9DCBC211BF590001CE04E /* MTNoteTextPo+CoreDataClass.h */,
+				FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */,
+				FBD9DCBE211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.h */,
+				FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */,
+				FBEDA129211C2BB700135D5D /* MTNotePo+CoreDataClass.h */,
+				FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */,
+				FBEDA127211C2BB700135D5D /* MTNotePo+CoreDataProperties.h */,
+				FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +500,7 @@
 				728034B9211A5C7600D4A9BE /* MTNavigationView.xib in Resources */,
 				FB2989FE21199E870011025D /* MTHomeTextViewCell.xib in Resources */,
 				FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */,
+				FBEDA132211C4DB000135D5D /* MTHomeEmptyView.xib in Resources */,
 				FB298A032119B3ED0011025D /* MTNoteViewController.xib in Resources */,
 				FB9DF5C9211AB48400200097 /* MTActionSheetView.xib in Resources */,
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
@@ -506,19 +589,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD9DC99211BE657001CE04E /* MTSanboxFile.m in Sources */,
 				FB9DF5C3211A800A00200097 /* MTNoteToolsImageCell.m in Sources */,
 				FB2989EE2119422C0011025D /* MTHomeSectionView.m in Sources */,
+				FBD9DCC6211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m in Sources */,
 				FB9DF5BE211A7FE800200097 /* MTNoteToolsTextCell.m in Sources */,
-				FB9DF5C7211A982900200097 /* MTNoteModel.m in Sources */,
+				FBEDA12B211C2BB700135D5D /* MTNotePo+CoreDataProperties.m in Sources */,
 				FB2989F621199DD50011025D /* UIColor+Hex.m in Sources */,
 				FB2989B921193BC10011025D /* ViewController.m in Sources */,
 				728034BC211A5DBF00D4A9BE /* MTNavigationView.m in Sources */,
 				728034B7211A4D9600D4A9BE /* MTNoteToolsView.m in Sources */,
+				FBEDA12A211C2BB700135D5D /* MTNotePo+CoreDataClass.m in Sources */,
+				FBD9DC98211BE657001CE04E /* MTMediaFileManager.m in Sources */,
 				FB2989FD21199E870011025D /* MTHomeTextViewCell.m in Sources */,
+				FBD9DCC2211BF590001CE04E /* MTNoteModel.m in Sources */,
+				FBD9DCAD211BF010001CE04E /* MTCoreDataManager.m in Sources */,
+				FBD9DCC1211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m in Sources */,
 				FB2989F921199E470011025D /* UITableViewCell+Categoty.m in Sources */,
 				FB2989C421193BC10011025D /* main.m in Sources */,
+				FBD9DCC0211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m in Sources */,
+				FBEDA12E211C41F000135D5D /* MTNoteSettingView.m in Sources */,
+				FBEDA135211C4EFC00135D5D /* MTHomeEmptyView.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
+				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
+				FBD9DCB0211BF28D001CE04E /* MTCoreDataDao.m in Sources */,
 				FB9DF5CF211AF3A200200097 /* UITextView+Category.m in Sources */,
+				FBD9DCC5211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m in Sources */,
 				FB298A022119B3ED0011025D /* MTNoteViewController.m in Sources */,
 				FB9DF5CC211AD0C800200097 /* MTActionSheetView.m in Sources */,
 			);
@@ -814,6 +910,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */;
+			path = MTCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FB2989A921193BC10011025D /* Project object */;
 }

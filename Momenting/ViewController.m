@@ -11,14 +11,22 @@
 #import "MTHomeTextViewCell.h"
 #import "UITableViewCell+Categoty.h"
 #import "MTNoteViewController.h"
+#import "MTCoreDataDao.h"
+#import "MTHomeEmptyView.h"
+#import "MTNoteModel.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
-MTHomeSectionViewDelegate>
+MTHomeSectionViewDelegate,
+MTHomeEmptyViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) MTHomeSectionView *sectionView;
 @property (assign, nonatomic) CGPoint scrollViewOldOffset;
+@property (strong, nonatomic) NSMutableArray *datalist;
+@property (weak, nonatomic) IBOutlet UIView *setView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *setViewLeadingCostraint;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 
 @end
 
@@ -32,6 +40,8 @@ MTHomeSectionViewDelegate>
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.datalist = [[[MTCoreDataDao new] getNoteSelf] mutableCopy];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Views
@@ -42,6 +52,8 @@ MTHomeSectionViewDelegate>
     self.tableView.dataSource = self;
     [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
     self.navigationController.navigationBar.hidden = YES;
+    self.logoImageView.layer.cornerRadius = self.logoImageView.bounds.size.height / 2.0;
+    self.logoImageView.layer.masksToBounds = YES;
 }
 
 #pragma mark - contentOfSet
@@ -59,12 +71,15 @@ MTHomeSectionViewDelegate>
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.datalist.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MTHomeTextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MTHomeTextViewCell getIdentifier]];
+    MTNoteModel *model = self.datalist[indexPath.row];
+    model.indexRow = indexPath.row;
+    cell.model = model;
     return cell;
 }
 
@@ -78,14 +93,52 @@ MTHomeSectionViewDelegate>
     return self.sectionView;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    MTHomeEmptyView *footView = [MTHomeEmptyView loadFromNib];
+    footView.delegate = self;
+    return self.datalist.count > 0 ? [UIView new] : footView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return self.datalist.count > 0 ? 0.f : [MTHomeEmptyView viewHeight];
+}
+
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [MTHomeTextViewCell heightForCell];
+    return [MTHomeTextViewCell heightForCellWithModel:self.datalist[indexPath.row]];
 }
 
 #pragma mark - MTHomeSectionViewDelegate
 - (void)homeNoteAction
+{
+    MTNoteViewController *noteVC = [[MTNoteViewController alloc] init];
+    [self.navigationController pushViewController:noteVC animated:YES];
+}
+
+- (void)homeSettingAction
+{
+    [self settingViewIsShow:YES];
+}
+- (IBAction)setViewDismissAction:(id)sender
+{
+    [self settingViewIsShow:NO];
+}
+
+- (void)settingViewIsShow:(BOOL)isShow
+{
+    [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.setViewLeadingCostraint.constant = isShow ? 0.f : -CGRectGetWidth(self.view.bounds);
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+#pragma mark - MTHomeEmptyViewDelegate
+- (void)emptyNoteAction
 {
     MTNoteViewController *noteVC = [[MTNoteViewController alloc] init];
     [self.navigationController pushViewController:noteVC animated:YES];
@@ -99,6 +152,14 @@ MTHomeSectionViewDelegate>
         _sectionView.delegate = self;
     }
     return _sectionView;
+}
+
+- (NSMutableArray *)datalist
+{
+    if (!_datalist) {
+        _datalist = [NSMutableArray array];
+    }
+    return _datalist;
 }
 
 - (void)dealloc

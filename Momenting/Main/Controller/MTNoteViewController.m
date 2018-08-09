@@ -15,6 +15,8 @@
 #import "MTNoteModel.h"
 #import "UIColor+Hex.h"
 #import "MTActionSheetView.h"
+#import "MTMediaFileManager.h"
+#import "MTCoreDataDao.h"
 
 @interface MTNoteViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -72,7 +74,7 @@ MTNoteToolsTextCellDelegate>
 {
     id model = self.datalist[indexPath.row];
     UITableViewCell *cell = nil;
-    if ([model isKindOfClass:[MTNoteTextModel class]]) {
+    if ([model isKindOfClass:[MTNoteTextVo class]]) {
         
         MTNoteToolsTextCell *textCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteToolsTextCell getIdentifier]];
         textCell.font = self.textFont;
@@ -102,7 +104,7 @@ MTNoteToolsTextCellDelegate>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id model = self.datalist[indexPath.row];
-    if ([model isKindOfClass:[MTNoteTextModel class]]) {
+    if ([model isKindOfClass:[MTNoteTextVo class]]) {
         return [self imageCount] ? [MTNoteToolsTextCell heightForCell] : CGRectGetHeight(self.view.bounds) - 100;
     } else {
         return [MTNoteToolsImageCell heightForCellWithModel:model];
@@ -130,8 +132,8 @@ MTNoteToolsTextCellDelegate>
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     id model = self.datalist[indexPath.row];
-    if ([model isKindOfClass: [MTNoteTextModel class]]) {
-        MTNoteTextModel *textModel = model;
+    if ([model isKindOfClass: [MTNoteTextVo class]]) {
+        MTNoteTextVo *textModel = model;
         textModel.text = text;
     }
 }
@@ -212,11 +214,24 @@ MTNoteToolsTextCellDelegate>
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    MTNoteImageModel *model = [MTNoteImageModel new];
-    model.image = image;
+    NSData *data;
+    if (UIImagePNGRepresentation(image) == nil) {
+        data = UIImageJPEGRepresentation(image, 1.0);
+    } else {
+        data = UIImagePNGRepresentation(image);
+    }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString * path =[[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+    NSString *fileName = [NSString stringWithFormat:@"%ld.png",(long)[[NSDate date]timeIntervalSince1970]];
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@",path,fileName];
+    [fileManager createFileAtPath:filePath contents:data attributes:nil];
+    MTNoteImageVo *model = [MTNoteImageVo new];
+    model.path = fileName;
+    model.width = image.size.width;
+    model.height = image.size.height;
     [self.datalist addObject:model];
     
-    MTNoteTextModel *textModel = [MTNoteTextModel new];
+    MTNoteTextVo *textModel = [MTNoteTextVo new];
     [self.datalist addObject:textModel];
     [self.tableView reloadData];
 }
@@ -288,6 +303,37 @@ MTNoteToolsTextCellDelegate>
     
 }
 
+- (void)rightAction
+{
+    __block MTNoteModel *noteModel = [MTNoteModel new];
+    noteModel.noteId = [NSString stringWithFormat:@"%ld",(long)[[NSDate date]timeIntervalSince1970]];
+    __block BOOL isTextFind = 0;
+    __block BOOL isImageFind = 0;
+    [self.datalist enumerateObjectsUsingBlock:^(id  _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([model isKindOfClass:[MTNoteTextVo class]]) {
+            MTNoteTextVo *vo = (MTNoteTextVo *)model;
+            if (vo.text.length > 0 && !isTextFind) {
+                isTextFind = YES;
+                noteModel.text = vo.text;
+            }
+        }
+        
+        if ([model isKindOfClass:[MTNoteImageVo class]]) {
+            MTNoteImageVo *vo = (MTNoteImageVo *)model;
+            if (vo.path.length > 0 && !isImageFind) {
+                isImageFind = YES;
+                noteModel.imagePath = vo.path;
+                noteModel.width = vo.width;
+                noteModel.height = vo.height;
+            }
+        }
+    }];
+    
+    [[MTCoreDataDao new] insertDatas:@[noteModel] withType:MTCoreDataContentTypeNoteSelf];
+    [[MTCoreDataDao new] insertDatas:self.datalist withType:MTCoreDataContentTypeNoteContent];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - getter
 - (MTNoteToolsView *)toolsView
 {
@@ -313,7 +359,7 @@ MTNoteToolsTextCellDelegate>
 {
     if (!_datalist) {
         _datalist = [NSMutableArray array];
-        MTNoteTextModel *textModel = [[MTNoteTextModel alloc] init];
+        MTNoteTextVo *textModel = [[MTNoteTextVo alloc] init];
         [_datalist addObject:textModel];
     }
     return _datalist;
@@ -323,7 +369,7 @@ MTNoteToolsTextCellDelegate>
 {
     __block NSInteger sum = 0;
     [self.datalist enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[MTNoteImageModel class]]) {
+        if ([obj isKindOfClass:[MTNoteImageVo class]]) {
             sum ++;
         }
     }];

@@ -12,10 +12,12 @@
 
 @end
 
-@implementation MTNoteTextModel
+@implementation MTNoteImageVo
 
 @end
 
-@implementation MTNoteImageModel
+@implementation MTNoteTextVo
 
 @end
+
+

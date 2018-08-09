@@ -71,7 +71,7 @@
     [self.textView becomeFirstResponder];
 }
 
-- (void)setModel:(MTNoteTextModel *)model
+- (void)setModel:(MTNoteTextVo *)model
 {
     self.textView.text = model.text;
 }

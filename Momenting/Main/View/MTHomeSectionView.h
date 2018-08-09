@@ -12,6 +12,8 @@
 
 - (void)homeNoteAction;
 
+- (void)homeSettingAction;
+
 @end
 
 @interface MTHomeSectionView : UIView

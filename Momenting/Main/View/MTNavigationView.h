@@ -12,6 +12,8 @@
 
 - (void)leftAction;
 
+- (void)rightAction;
+
 @end
 
 

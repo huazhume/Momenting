@@ -8,6 +8,7 @@
 
 #import "MTNoteToolsImageCell.h"
 #import "MTNoteModel.h"
+#import "MTMediaFileManager.h"
 
 @interface MTNoteToolsImageCell ()
 
@@ -18,9 +19,9 @@
 @implementation MTNoteToolsImageCell
 
 
-+ (CGFloat)heightForCellWithModel:(MTNoteImageModel *)model
++ (CGFloat)heightForCellWithModel:(MTNoteImageVo *)model
 {
-    return model.image.size.height / model.image.size.width * (CGRectGetWidth([UIScreen mainScreen].bounds) - 16);
+    return model.height / model.width * (CGRectGetWidth([UIScreen mainScreen].bounds) - 16);
 }
 
 - (void)awakeFromNib {
@@ -29,9 +30,10 @@
     // Initialization code
 }
 
-- (void)setModel:(MTNoteImageModel *)model
+- (void)setModel:(MTNoteImageVo *)model
 {
-    self.contentImageView.image = model.image;
+    NSString *path = [[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+    self.contentImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",path,model.path]]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
