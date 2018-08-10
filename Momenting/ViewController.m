@@ -27,6 +27,12 @@ MTHomeEmptyViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *setView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *setViewLeadingCostraint;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerViewTopConstraint;
+
+@property (assign, nonatomic) BOOL isAnimationing;
+@property (strong, nonatomic) NSDate *lastScrollDate;
+@property (assign, nonatomic) BOOL isHeaderHidden;
 
 @end
 
@@ -42,7 +48,14 @@ MTHomeEmptyViewDelegate>
     [super viewWillAppear:animated];
     self.datalist = [[[MTCoreDataDao new] getNoteSelf] mutableCopy];
     [self.tableView reloadData];
+    [UIApplication sharedApplication].statusBarHidden = YES;
 }
+
+- (BOOL)prefersStatusBarHidden
+{
+    return self.isHeaderHidden;
+}
+
 
 #pragma mark - Views
 - (void)initBaseViews
@@ -50,21 +63,50 @@ MTHomeEmptyViewDelegate>
     [self.tableView registerNib:[UINib nibWithNibName:@"MTHomeTextViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MTHomeTextViewCell getIdentifier]];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
     self.navigationController.navigationBar.hidden = YES;
     self.logoImageView.layer.cornerRadius = self.logoImageView.bounds.size.height / 2.0;
     self.logoImageView.layer.masksToBounds = YES;
-}
-
-#pragma mark - contentOfSet
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-
+    
+    [self.headerView addSubview:self.sectionView];
 }
 
 #pragma mark - ScrollView
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     NSLog(@"_______%@",NSStringFromCGPoint(scrollView.contentOffset));
+    if (scrollView.contentOffset.y - self.scrollViewOldOffset.y > 1) {
+        //向下滑动
+       [self scrollAnimationIsShow:NO];
+    } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 1){
+        [self scrollAnimationIsShow:YES];
+    }
+    self.scrollViewOldOffset = scrollView.contentOffset;
+}
+
+- (void)scrollAnimationIsShow:(BOOL)isShow
+{
+    NSDate *nowDate = [NSDate date];
+    
+    NSTimeInterval times = [nowDate timeIntervalSinceDate:self.lastScrollDate];
+    if (self.isAnimationing || self.tableView.contentOffset.y <= 0 || times < 0.5) {
+        return;
+    }
+    if (isShow && self.headerViewTopConstraint.constant == 0.f) {
+        return;
+    }
+    
+    if (!isShow && self.headerViewTopConstraint.constant == -60.f) {
+        return;
+    }
+    self.lastScrollDate = [NSDate date];
+    self.isHeaderHidden = !isShow;
+    [self setNeedsStatusBarAppearanceUpdate];
+    [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.headerViewTopConstraint.constant = isShow ? 0.f : -60.f;
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        self.isAnimationing = NO;
+    }];
 }
 
 
@@ -85,12 +127,12 @@ MTHomeEmptyViewDelegate>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return [MTHomeSectionView viewHeight];
+    return 0.1f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return self.sectionView;
+    return [UIView new];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -149,6 +191,7 @@ MTHomeEmptyViewDelegate>
 {
     if (!_sectionView) {
         _sectionView = [MTHomeSectionView loadFromNib];
+        _sectionView.frame = CGRectMake(0, 20, self.view.bounds.size.width, 40);
         _sectionView.delegate = self;
     }
     return _sectionView;
@@ -160,11 +203,6 @@ MTHomeEmptyViewDelegate>
         _datalist = [NSMutableArray array];
     }
     return _datalist;
-}
-
-- (void)dealloc
-{
-    [self.tableView removeObserver:self forKeyPath:@"contentOffset"];
 }
 
 - (void)didReceiveMemoryWarning {

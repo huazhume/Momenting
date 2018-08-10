@@ -39,9 +39,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="CiH-dz-Yzl">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQ2-aj-2Px">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6Mx-U1-VVF"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVY-E6-jDL" customClass="MTNoteSettingView">
                                 <rect key="frame" x="-375" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -52,7 +59,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-vT-lfl">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="667"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaokeai" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-Kz-dxg">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mt_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-Kz-dxg">
                                                 <rect key="frame" x="50" y="60" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="gqC-G2-EAT"/>
@@ -119,7 +126,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CiH-dz-Yzl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="CjG-ci-x4V"/>
+                            <constraint firstItem="vQ2-aj-2Px" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Tt-Z5-5xh"/>
+                            <constraint firstItem="vQ2-aj-2Px" firstAttribute="bottom" secondItem="CiH-dz-Yzl" secondAttribute="top" id="CfO-Xi-tIF"/>
                             <constraint firstItem="XVY-E6-jDL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DnI-ft-W5q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="llt-pb-VjC" secondAttribute="bottom" id="GKt-OP-Ydb"/>
                             <constraint firstItem="llt-pb-VjC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="OLE-Q5-pop"/>
@@ -127,18 +135,22 @@
                             <constraint firstItem="XVY-E6-jDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-375" id="R0D-sa-ALC"/>
                             <constraint firstItem="llt-pb-VjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S59-rB-ftA"/>
                             <constraint firstAttribute="bottom" secondItem="XVY-E6-jDL" secondAttribute="bottom" id="ZwP-32-wvu"/>
+                            <constraint firstItem="vQ2-aj-2Px" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dgJ-of-xDf"/>
                             <constraint firstItem="CiH-dz-Yzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dz6-e8-bOD"/>
                             <constraint firstItem="XVY-E6-jDL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="eYP-SS-I5T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="llt-pb-VjC" secondAttribute="trailing" id="sbZ-IU-p8L"/>
+                            <constraint firstAttribute="trailing" secondItem="vQ2-aj-2Px" secondAttribute="trailing" id="tR3-LQ-7xs"/>
                             <constraint firstItem="CiH-dz-Yzl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zfo-vA-Ljc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="elc-ie-app"/>
                     <connections>
+                        <outlet property="headerView" destination="vQ2-aj-2Px" id="VNI-VJ-kCY"/>
+                        <outlet property="headerViewTopConstraint" destination="dgJ-of-xDf" id="9rk-FL-D3y"/>
                         <outlet property="logoImageView" destination="7cp-Kz-dxg" id="75B-rE-Zmk"/>
                         <outlet property="setView" destination="XVY-E6-jDL" id="gTZ-s7-Dnb"/>
-                        <outlet property="setViewLeadingCostraint" destination="R0D-sa-ALC" id="dEl-Lq-LAg"/>
+                        <outlet property="setViewLeadingCostraint" destination="R0D-sa-ALC" id="PNN-PD-spn"/>
                         <outlet property="tableView" destination="CiH-dz-Yzl" id="LZq-OZ-Zip"/>
                     </connections>
                 </viewController>
@@ -148,7 +160,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mt_logo" width="233" height="234"/>
         <image name="profile_header_settings" width="21" height="21"/>
-        <image name="xiaokeai" width="540" height="623"/>
     </resources>
 </document>
