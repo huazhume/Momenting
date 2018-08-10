@@ -37,7 +37,7 @@
     self.contentView.layer.cornerRadius = 10.f;
     self.contentView.layer.masksToBounds = YES;
     
-    self.contentView.layer.borderColor = [[UIColor colorWithHex:0xB4BAC3] CGColor];
+    self.contentView.layer.borderColor = [[UIColor colorWithHex:0xC496C5] CGColor];
     self.contentView.layer.borderWidth = 0.5;
 }
 

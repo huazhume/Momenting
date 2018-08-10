@@ -71,7 +71,11 @@
         model.text = obj.text;
         model.width = obj.width;
         model.height = obj.height;
-        [muArray addObject:model];
+        if (muArray.count == 0) {
+            [muArray addObject:model];
+        } else {
+            [muArray insertObject:model atIndex:0];
+        }
     }];
     return muArray;
 }

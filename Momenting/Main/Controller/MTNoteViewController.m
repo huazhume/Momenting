@@ -17,6 +17,7 @@
 #import "MTActionSheetView.h"
 #import "MTMediaFileManager.h"
 #import "MTCoreDataDao.h"
+#import "MTActionAlertView.h"
 
 @interface MTNoteViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -304,6 +305,17 @@ MTNoteToolsTextCellDelegate>
 }
 
 - (void)rightAction
+{
+    [self.view endEditing:YES];
+    [MTActionAlertView alertShowWithMessage:@"天气这么好，多写写可好？" leftTitle:@"够了" leftColor:[UIColor colorWithHex:0xCD6256] rightTitle:@"继续" rightColor:[UIColor colorWithHex:0x333333] callBack:^(NSInteger index) {
+        if (index == 2){
+            return;
+        }
+        [self saveNote];
+    }];
+}
+
+- (void)saveNote
 {
     __block MTNoteModel *noteModel = [MTNoteModel new];
     noteModel.noteId = [NSString stringWithFormat:@"%ld",(long)[[NSDate date]timeIntervalSince1970]];

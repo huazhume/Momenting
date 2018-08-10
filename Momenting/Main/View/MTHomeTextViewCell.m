@@ -11,6 +11,7 @@
 #import "UIColor+Hex.h"
 #import "MTNoteModel.h"
 #import "MTMediaFileManager.h"
+#import "MTDateFormatManager.h"
 
 @interface MTHomeTextViewCell ()
 
@@ -23,6 +24,7 @@
 
 @property (strong, nonatomic) NSArray *colors;
 @property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIButton *timeLabel;
 
 @end
 
@@ -83,6 +85,8 @@
     NSInteger index = model.indexRow % self.colors.count;
     self.topView.backgroundColor = self.colors[index];
     self.contentBgView.layer.borderColor = [self.topView.backgroundColor CGColor];
+    NSString *time = [MTDateFormatManager formatToHumanReadableInfoWithTimeIntervalSince1970:model.noteId.longLongValue];
+    [self.timeLabel setTitle:time forState:UIControlStateNormal];
 }
 
 #pragma mark - getter

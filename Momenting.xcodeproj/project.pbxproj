@@ -47,6 +47,9 @@
 		FBD9DCC2211BF590001CE04E /* MTNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCB7211BF590001CE04E /* MTNoteModel.m */; };
 		FBD9DCC5211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */; };
 		FBD9DCC6211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */; };
+		FBE4A7AA211D65620099FFFE /* MTActionAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE4A7A9211D65620099FFFE /* MTActionAlertView.xib */; };
+		FBE4A7AD211D68890099FFFE /* MTActionAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE4A7AC211D68890099FFFE /* MTActionAlertView.m */; };
+		FBE4A7B1211D731C0099FFFE /* MTDateFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE4A7B0211D731C0099FFFE /* MTDateFormatManager.m */; };
 		FBEDA12A211C2BB700135D5D /* MTNotePo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */; };
 		FBEDA12B211C2BB700135D5D /* MTNotePo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */; };
 		FBEDA12E211C41F000135D5D /* MTNoteSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA12D211C41F000135D5D /* MTNoteSettingView.m */; };
@@ -146,6 +149,11 @@
 		FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataClass.m"; sourceTree = "<group>"; };
 		FBD9DCBE211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteTextPo+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FBE4A7A9211D65620099FFFE /* MTActionAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTActionAlertView.xib; sourceTree = "<group>"; };
+		FBE4A7AB211D68890099FFFE /* MTActionAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTActionAlertView.h; sourceTree = "<group>"; };
+		FBE4A7AC211D68890099FFFE /* MTActionAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTActionAlertView.m; sourceTree = "<group>"; };
+		FBE4A7AF211D731C0099FFFE /* MTDateFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDateFormatManager.h; sourceTree = "<group>"; };
+		FBE4A7B0211D731C0099FFFE /* MTDateFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDateFormatManager.m; sourceTree = "<group>"; };
 		FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataClass.m"; sourceTree = "<group>"; };
 		FBEDA127211C2BB700135D5D /* MTNotePo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotePo+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -316,6 +324,9 @@
 				FBEDA131211C4DB000135D5D /* MTHomeEmptyView.xib */,
 				FBEDA133211C4EFC00135D5D /* MTHomeEmptyView.h */,
 				FBEDA134211C4EFC00135D5D /* MTHomeEmptyView.m */,
+				FBE4A7A9211D65620099FFFE /* MTActionAlertView.xib */,
+				FBE4A7AB211D68890099FFFE /* MTActionAlertView.h */,
+				FBE4A7AC211D68890099FFFE /* MTActionAlertView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 		FB2989F221199D7E0011025D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FBE4A7AE211D730D0099FFFE /* Tools */,
 				FBD9DCAA211BF004001CE04E /* CoreDataManager */,
 				FBD9DC93211BE657001CE04E /* Sanbox */,
 				FB2989F321199D7E0011025D /* Category */,
@@ -384,6 +396,15 @@
 				FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FBE4A7AE211D730D0099FFFE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FBE4A7AF211D731C0099FFFE /* MTDateFormatManager.h */,
+				FBE4A7B0211D731C0099FFFE /* MTDateFormatManager.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +529,7 @@
 				FB298A052119B4840011025D /* MTNoteToolsView.xib in Resources */,
 				FB9DF5C4211A800A00200097 /* MTNoteToolsImageCell.xib in Resources */,
 				FB9DF5BF211A7FE800200097 /* MTNoteToolsTextCell.xib in Resources */,
+				FBE4A7AA211D65620099FFFE /* MTActionAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +619,7 @@
 				FBEDA12B211C2BB700135D5D /* MTNotePo+CoreDataProperties.m in Sources */,
 				FB2989F621199DD50011025D /* UIColor+Hex.m in Sources */,
 				FB2989B921193BC10011025D /* ViewController.m in Sources */,
+				FBE4A7B1211D731C0099FFFE /* MTDateFormatManager.m in Sources */,
 				728034BC211A5DBF00D4A9BE /* MTNavigationView.m in Sources */,
 				728034B7211A4D9600D4A9BE /* MTNoteToolsView.m in Sources */,
 				FBEDA12A211C2BB700135D5D /* MTNotePo+CoreDataClass.m in Sources */,
@@ -616,6 +639,7 @@
 				FB9DF5CF211AF3A200200097 /* UITextView+Category.m in Sources */,
 				FBD9DCC5211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m in Sources */,
 				FB298A022119B3ED0011025D /* MTNoteViewController.m in Sources */,
+				FBE4A7AD211D68890099FFFE /* MTActionAlertView.m in Sources */,
 				FB9DF5CC211AD0C800200097 /* MTActionSheetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,10 +806,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3N5RFB77R5;
+				DEVELOPMENT_TEAM = GY3B636822;
 				INFOPLIST_FILE = Momenting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huaral.apps.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -801,10 +826,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3N5RFB77R5;
+				DEVELOPMENT_TEAM = GY3B636822;
 				INFOPLIST_FILE = Momenting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huaral.apps.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

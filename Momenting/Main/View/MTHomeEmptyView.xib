@@ -55,12 +55,42 @@
                                 <constraint firstItem="BPH-8J-al9" firstAttribute="centerX" secondItem="q8M-Gd-eB7" secondAttribute="centerX" id="ucW-TL-cjI"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rND-YJ-j2d">
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="6fB-ko-Z9q">
+                                    <rect key="frame" x="8" y="5.5" width="19" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="19" id="gwb-Ct-ig8"/>
+                                        <constraint firstAttribute="height" constant="19" id="xpQ-UH-T4U"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-18-BR7">
+                                    <rect key="frame" x="321" y="1" width="30" height="28"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                    <state key="normal">
+                                        <color key="titleColor" red="0.01176470588" green="0.57647058819999997" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.76862745099999996" green="0.58823529409999997" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="iP6-18-BR7" secondAttribute="trailing" constant="8" id="5MT-vv-s4q"/>
+                                <constraint firstItem="6fB-ko-Z9q" firstAttribute="centerY" secondItem="rND-YJ-j2d" secondAttribute="centerY" id="bSC-P8-Zr4"/>
+                                <constraint firstItem="6fB-ko-Z9q" firstAttribute="leading" secondItem="rND-YJ-j2d" secondAttribute="leading" constant="8" id="kIf-du-rfT"/>
+                                <constraint firstAttribute="height" constant="30" id="sXW-6D-M8G"/>
+                                <constraint firstItem="iP6-18-BR7" firstAttribute="centerY" secondItem="rND-YJ-j2d" secondAttribute="centerY" id="zxJ-Gu-r82"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="rND-YJ-j2d" firstAttribute="leading" secondItem="8h4-zQ-WJx" secondAttribute="leading" id="DW7-Vc-Nby"/>
                         <constraint firstItem="q8M-Gd-eB7" firstAttribute="leading" secondItem="ueV-5Y-0WP" secondAttribute="leading" id="FKw-Gz-ERF"/>
+                        <constraint firstItem="rND-YJ-j2d" firstAttribute="top" secondItem="ueV-5Y-0WP" secondAttribute="top" id="LRc-wL-Kax"/>
                         <constraint firstItem="ueV-5Y-0WP" firstAttribute="trailing" secondItem="q8M-Gd-eB7" secondAttribute="trailing" id="NOa-qR-hQw"/>
                         <constraint firstItem="q8M-Gd-eB7" firstAttribute="centerY" secondItem="ueV-5Y-0WP" secondAttribute="centerY" id="TGe-Pk-eaG"/>
+                        <constraint firstAttribute="trailing" secondItem="rND-YJ-j2d" secondAttribute="trailing" id="gnC-zQ-QbF"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="ueV-5Y-0WP"/>
                 </view>
@@ -81,6 +111,7 @@
         </view>
     </objects>
     <resources>
+        <image name="brightness-icon-small" width="19" height="19"/>
         <image name="plus-button-small" width="24" height="24"/>
     </resources>
 </document>

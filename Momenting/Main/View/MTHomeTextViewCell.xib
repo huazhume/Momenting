@@ -40,11 +40,11 @@
                                             <constraint firstAttribute="width" constant="19" id="jZn-7i-FJm"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-RH-VLW">
-                                        <rect key="frame" x="542" y="1" width="30" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-RH-VLW">
+                                        <rect key="frame" x="542" y="1.5" width="30" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <state key="normal" title="现在">
-                                            <color key="titleColor" red="0.01176470588" green="0.57647058819999997" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -108,6 +108,7 @@
                 <outlet property="contentImageView" destination="ndS-3F-qYh" id="kWN-Jq-zgb"/>
                 <outlet property="contentLabel" destination="5B7-qb-y9d" id="1an-RZ-gmJ"/>
                 <outlet property="imageViewHeightConstraint" destination="J74-J5-8R8" id="Oek-a2-SSH"/>
+                <outlet property="timeLabel" destination="cyZ-RH-VLW" id="Hma-CG-xPN"/>
                 <outlet property="topView" destination="ZxJ-o2-r2d" id="MVK-zW-yAx"/>
             </connections>
             <point key="canvasLocation" x="147" y="84"/>
