@@ -7,8 +7,6 @@
 //
 
 #import "MTNoteToolsTextCell.h"
-#import "UIColor+Hex.h"
-#import "UITextView+Category.h"
 #import "MTNoteModel.h"
 
 @interface MTNoteToolsTextCell ()

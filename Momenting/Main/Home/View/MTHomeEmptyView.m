@@ -7,8 +7,6 @@
 //
 
 #import "MTHomeEmptyView.h"
-#import <Masonry/Masonry.h>
-#import "UIColor+Hex.h"
 
 @interface MTHomeEmptyView ()
 @property (weak, nonatomic) IBOutlet UIView *contentView;

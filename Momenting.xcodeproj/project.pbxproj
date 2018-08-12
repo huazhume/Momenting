@@ -9,52 +9,53 @@
 /* Begin PBXBuildFile section */
 		677069D22132044F10614E6A /* libPods-MomentingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F759AFD38344CD5818049317 /* libPods-MomentingUITests.a */; };
 		683120101DF0E61BC4149166 /* libPods-Momenting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339EF9E612033D7B103304CC /* libPods-Momenting.a */; };
-		728034B7211A4D9600D4A9BE /* MTNoteToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 728034B6211A4D9600D4A9BE /* MTNoteToolsView.m */; };
-		728034B9211A5C7600D4A9BE /* MTNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728034B8211A5C7600D4A9BE /* MTNavigationView.xib */; };
-		728034BC211A5DBF00D4A9BE /* MTNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 728034BB211A5DBF00D4A9BE /* MTNavigationView.m */; };
+		72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972AF211FCE8700D96DA4 /* MTNoteSettingView.m */; };
+		72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972B4211FCE8700D96DA4 /* MTHomeEmptyView.m */; };
+		72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972B5211FCE8700D96DA4 /* MTHomeEmptyView.xib */; };
+		72E972E1211FCE8700D96DA4 /* MTHomeSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972B7211FCE8700D96DA4 /* MTHomeSectionView.m */; };
+		72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972B8211FCE8700D96DA4 /* MTHomeSectionView.xib */; };
+		72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972BA211FCE8700D96DA4 /* MTHomeTextViewCell.m */; };
+		72E972E4211FCE8700D96DA4 /* MTHomeTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972BB211FCE8700D96DA4 /* MTHomeTextViewCell.xib */; };
+		72E972E6211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972C1211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m */; };
+		72E972E7211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972C3211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m */; };
+		72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972C5211FCE8700D96DA4 /* MTNoteModel.m */; };
+		72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972C7211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m */; };
+		72E972EA211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972C9211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m */; };
+		72E972EB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972CB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m */; };
+		72E972EC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972CD211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m */; };
+		72E972ED211FCE8700D96DA4 /* MTNoteToolsImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972D0211FCE8700D96DA4 /* MTNoteToolsImageCell.m */; };
+		72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972D1211FCE8700D96DA4 /* MTNoteToolsImageCell.xib */; };
+		72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972D3211FCE8700D96DA4 /* MTNoteToolsTextCell.m */; };
+		72E972F0211FCE8700D96DA4 /* MTNoteToolsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972D4211FCE8700D96DA4 /* MTNoteToolsTextCell.xib */; };
+		72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972D6211FCE8700D96DA4 /* MTNoteToolsView.m */; };
+		72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972D7211FCE8700D96DA4 /* MTNoteToolsView.xib */; };
+		72E972F3211FCE8700D96DA4 /* MTNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972DA211FCE8700D96DA4 /* MTNoteViewController.m */; };
+		72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972DB211FCE8700D96DA4 /* MTNoteViewController.xib */; };
+		72E97300211FCEA500D96DA4 /* MTActionAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972F8211FCEA500D96DA4 /* MTActionAlertView.m */; };
+		72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972F9211FCEA500D96DA4 /* MTActionAlertView.xib */; };
+		72E97302211FCEA500D96DA4 /* MTActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972FB211FCEA500D96DA4 /* MTActionSheetView.m */; };
+		72E97303211FCEA500D96DA4 /* MTActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972FC211FCEA500D96DA4 /* MTActionSheetView.xib */; };
+		72E97304211FCEA500D96DA4 /* MTNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972FE211FCEA500D96DA4 /* MTNavigationView.m */; };
+		72E97305211FCEA500D96DA4 /* MTNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972FF211FCEA500D96DA4 /* MTNavigationView.xib */; };
+		72E97329211FD23700D96DA4 /* MTCoreDataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97327211FD23700D96DA4 /* MTCoreDataDao.m */; };
+		72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97328211FD23700D96DA4 /* MTCoreDataManager.m */; };
+		72E9732D211FD23F00D96DA4 /* MTDateFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9732B211FD23F00D96DA4 /* MTDateFormatManager.m */; };
+		72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9732F211FD2B900D96DA4 /* MTSanboxFile.m */; };
+		72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97331211FD2C700D96DA4 /* MTMediaFileManager.m */; };
+		72E9733E211FD30C00D96DA4 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97339211FD30C00D96DA4 /* UIColor+Hex.m */; };
+		72E9733F211FD30C00D96DA4 /* UITableViewCell+Categoty.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9733B211FD30C00D96DA4 /* UITableViewCell+Categoty.m */; };
+		72E97340211FD30C00D96DA4 /* UITextView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9733D211FD30C00D96DA4 /* UITextView+Category.m */; };
+		72E97345211FD68D00D96DA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97343211FD68C00D96DA4 /* ViewController.m */; };
+		72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9734A211FD90600D96DA4 /* UIImage+ImageCompress.m */; };
 		D138E1478A5DEC49E5A98D5F /* libPods-MomentingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F871E6CE11387C8E90F083C /* libPods-MomentingTests.a */; };
 		FB2989B621193BC10011025D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989B521193BC10011025D /* AppDelegate.m */; };
-		FB2989B921193BC10011025D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989B821193BC10011025D /* ViewController.m */; };
 		FB2989BC21193BC10011025D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2989BA21193BC10011025D /* Main.storyboard */; };
 		FB2989BE21193BC10011025D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2989BD21193BC10011025D /* Assets.xcassets */; };
 		FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2989BF21193BC10011025D /* LaunchScreen.storyboard */; };
 		FB2989C421193BC10011025D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989C321193BC10011025D /* main.m */; };
 		FB2989CE21193BC10011025D /* MomentingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989CD21193BC10011025D /* MomentingTests.m */; };
 		FB2989D921193BC10011025D /* MomentingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989D821193BC10011025D /* MomentingUITests.m */; };
-		FB2989EB211941E60011025D /* MTHomeSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB2989EA211941E60011025D /* MTHomeSectionView.xib */; };
-		FB2989EE2119422C0011025D /* MTHomeSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989ED2119422C0011025D /* MTHomeSectionView.m */; };
-		FB2989F621199DD50011025D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989F421199DD50011025D /* UIColor+Hex.m */; };
-		FB2989F921199E470011025D /* UITableViewCell+Categoty.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989F821199E470011025D /* UITableViewCell+Categoty.m */; };
-		FB2989FD21199E870011025D /* MTHomeTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989FB21199E870011025D /* MTHomeTextViewCell.m */; };
-		FB2989FE21199E870011025D /* MTHomeTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB2989FC21199E870011025D /* MTHomeTextViewCell.xib */; };
-		FB298A022119B3ED0011025D /* MTNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB298A002119B3ED0011025D /* MTNoteViewController.m */; };
-		FB298A032119B3ED0011025D /* MTNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB298A012119B3ED0011025D /* MTNoteViewController.xib */; };
-		FB298A052119B4840011025D /* MTNoteToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB298A042119B4840011025D /* MTNoteToolsView.xib */; };
-		FB9DF5BE211A7FE800200097 /* MTNoteToolsTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5BC211A7FE800200097 /* MTNoteToolsTextCell.m */; };
-		FB9DF5BF211A7FE800200097 /* MTNoteToolsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9DF5BD211A7FE800200097 /* MTNoteToolsTextCell.xib */; };
-		FB9DF5C3211A800A00200097 /* MTNoteToolsImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5C1211A800A00200097 /* MTNoteToolsImageCell.m */; };
-		FB9DF5C4211A800A00200097 /* MTNoteToolsImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9DF5C2211A800A00200097 /* MTNoteToolsImageCell.xib */; };
-		FB9DF5C9211AB48400200097 /* MTActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9DF5C8211AB48400200097 /* MTActionSheetView.xib */; };
-		FB9DF5CC211AD0C800200097 /* MTActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5CB211AD0C800200097 /* MTActionSheetView.m */; };
-		FB9DF5CF211AF3A200200097 /* UITextView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DF5CE211AF3A200200097 /* UITextView+Category.m */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
-		FBD9DC98211BE657001CE04E /* MTMediaFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC95211BE657001CE04E /* MTMediaFileManager.m */; };
-		FBD9DC99211BE657001CE04E /* MTSanboxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC97211BE657001CE04E /* MTSanboxFile.m */; };
-		FBD9DCAD211BF010001CE04E /* MTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCAB211BF010001CE04E /* MTCoreDataManager.m */; };
-		FBD9DCB0211BF28D001CE04E /* MTCoreDataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCAF211BF28D001CE04E /* MTCoreDataDao.m */; };
-		FBD9DCC0211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCB3211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m */; };
-		FBD9DCC1211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCB5211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m */; };
-		FBD9DCC2211BF590001CE04E /* MTNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCB7211BF590001CE04E /* MTNoteModel.m */; };
-		FBD9DCC5211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */; };
-		FBD9DCC6211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */; };
-		FBE4A7AA211D65620099FFFE /* MTActionAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE4A7A9211D65620099FFFE /* MTActionAlertView.xib */; };
-		FBE4A7AD211D68890099FFFE /* MTActionAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE4A7AC211D68890099FFFE /* MTActionAlertView.m */; };
-		FBE4A7B1211D731C0099FFFE /* MTDateFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE4A7B0211D731C0099FFFE /* MTDateFormatManager.m */; };
-		FBEDA12A211C2BB700135D5D /* MTNotePo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */; };
-		FBEDA12B211C2BB700135D5D /* MTNotePo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */; };
-		FBEDA12E211C41F000135D5D /* MTNoteSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA12D211C41F000135D5D /* MTNoteSettingView.m */; };
-		FBEDA132211C4DB000135D5D /* MTHomeEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEDA131211C4DB000135D5D /* MTHomeEmptyView.xib */; };
-		FBEDA135211C4EFC00135D5D /* MTHomeEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEDA134211C4EFC00135D5D /* MTHomeEmptyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +79,74 @@
 		0E871D87A53CD8759F3EA067 /* Pods-MomentingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MomentingTests/Pods-MomentingTests.release.xcconfig"; sourceTree = "<group>"; };
 		339EF9E612033D7B103304CC /* libPods-Momenting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Momenting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		394B147571E7885531BEE82F /* Pods-MomentingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MomentingTests/Pods-MomentingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		728034B5211A4D9600D4A9BE /* MTNoteToolsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteToolsView.h; sourceTree = "<group>"; };
-		728034B6211A4D9600D4A9BE /* MTNoteToolsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteToolsView.m; sourceTree = "<group>"; };
-		728034B8211A5C7600D4A9BE /* MTNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNavigationView.xib; sourceTree = "<group>"; };
-		728034BA211A5DBF00D4A9BE /* MTNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNavigationView.h; sourceTree = "<group>"; };
-		728034BB211A5DBF00D4A9BE /* MTNavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNavigationView.m; sourceTree = "<group>"; };
+		72E972AE211FCE8700D96DA4 /* MTNoteSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteSettingView.h; sourceTree = "<group>"; };
+		72E972AF211FCE8700D96DA4 /* MTNoteSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteSettingView.m; sourceTree = "<group>"; };
+		72E972B3211FCE8700D96DA4 /* MTHomeEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeEmptyView.h; sourceTree = "<group>"; };
+		72E972B4211FCE8700D96DA4 /* MTHomeEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeEmptyView.m; sourceTree = "<group>"; };
+		72E972B5211FCE8700D96DA4 /* MTHomeEmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTHomeEmptyView.xib; sourceTree = "<group>"; };
+		72E972B6211FCE8700D96DA4 /* MTHomeSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeSectionView.h; sourceTree = "<group>"; };
+		72E972B7211FCE8700D96DA4 /* MTHomeSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeSectionView.m; sourceTree = "<group>"; };
+		72E972B8211FCE8700D96DA4 /* MTHomeSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTHomeSectionView.xib; sourceTree = "<group>"; };
+		72E972B9211FCE8700D96DA4 /* MTHomeTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeTextViewCell.h; sourceTree = "<group>"; };
+		72E972BA211FCE8700D96DA4 /* MTHomeTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeTextViewCell.m; sourceTree = "<group>"; };
+		72E972BB211FCE8700D96DA4 /* MTHomeTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTHomeTextViewCell.xib; sourceTree = "<group>"; };
+		72E972C0211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteImagePo+CoreDataClass.h"; sourceTree = "<group>"; };
+		72E972C1211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteImagePo+CoreDataClass.m"; sourceTree = "<group>"; };
+		72E972C2211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteImagePo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		72E972C3211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteImagePo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		72E972C4211FCE8700D96DA4 /* MTNoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteModel.h; sourceTree = "<group>"; };
+		72E972C5211FCE8700D96DA4 /* MTNoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteModel.m; sourceTree = "<group>"; };
+		72E972C6211FCE8700D96DA4 /* MTNotePo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotePo+CoreDataClass.h"; sourceTree = "<group>"; };
+		72E972C7211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataClass.m"; sourceTree = "<group>"; };
+		72E972C8211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotePo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		72E972C9211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		72E972CA211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteTextPo+CoreDataClass.h"; sourceTree = "<group>"; };
+		72E972CB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataClass.m"; sourceTree = "<group>"; };
+		72E972CC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteTextPo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		72E972CD211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		72E972CF211FCE8700D96DA4 /* MTNoteToolsImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteToolsImageCell.h; sourceTree = "<group>"; };
+		72E972D0211FCE8700D96DA4 /* MTNoteToolsImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteToolsImageCell.m; sourceTree = "<group>"; };
+		72E972D1211FCE8700D96DA4 /* MTNoteToolsImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTNoteToolsImageCell.xib; sourceTree = "<group>"; };
+		72E972D2211FCE8700D96DA4 /* MTNoteToolsTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteToolsTextCell.h; sourceTree = "<group>"; };
+		72E972D3211FCE8700D96DA4 /* MTNoteToolsTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteToolsTextCell.m; sourceTree = "<group>"; };
+		72E972D4211FCE8700D96DA4 /* MTNoteToolsTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTNoteToolsTextCell.xib; sourceTree = "<group>"; };
+		72E972D5211FCE8700D96DA4 /* MTNoteToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteToolsView.h; sourceTree = "<group>"; };
+		72E972D6211FCE8700D96DA4 /* MTNoteToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteToolsView.m; sourceTree = "<group>"; };
+		72E972D7211FCE8700D96DA4 /* MTNoteToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTNoteToolsView.xib; sourceTree = "<group>"; };
+		72E972D9211FCE8700D96DA4 /* MTNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteViewController.h; sourceTree = "<group>"; };
+		72E972DA211FCE8700D96DA4 /* MTNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteViewController.m; sourceTree = "<group>"; };
+		72E972DB211FCE8700D96DA4 /* MTNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTNoteViewController.xib; sourceTree = "<group>"; };
+		72E972F7211FCEA500D96DA4 /* MTActionAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTActionAlertView.h; sourceTree = "<group>"; };
+		72E972F8211FCEA500D96DA4 /* MTActionAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTActionAlertView.m; sourceTree = "<group>"; };
+		72E972F9211FCEA500D96DA4 /* MTActionAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTActionAlertView.xib; sourceTree = "<group>"; };
+		72E972FA211FCEA500D96DA4 /* MTActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTActionSheetView.h; sourceTree = "<group>"; };
+		72E972FB211FCEA500D96DA4 /* MTActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTActionSheetView.m; sourceTree = "<group>"; };
+		72E972FC211FCEA500D96DA4 /* MTActionSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTActionSheetView.xib; sourceTree = "<group>"; };
+		72E972FD211FCEA500D96DA4 /* MTNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNavigationView.h; sourceTree = "<group>"; };
+		72E972FE211FCEA500D96DA4 /* MTNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNavigationView.m; sourceTree = "<group>"; };
+		72E972FF211FCEA500D96DA4 /* MTNavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTNavigationView.xib; sourceTree = "<group>"; };
+		72E97325211FD23700D96DA4 /* MTCoreDataDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataDao.h; sourceTree = "<group>"; };
+		72E97326211FD23700D96DA4 /* MTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataManager.h; sourceTree = "<group>"; };
+		72E97327211FD23700D96DA4 /* MTCoreDataDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataDao.m; sourceTree = "<group>"; };
+		72E97328211FD23700D96DA4 /* MTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataManager.m; sourceTree = "<group>"; };
+		72E9732B211FD23F00D96DA4 /* MTDateFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDateFormatManager.m; sourceTree = "<group>"; };
+		72E9732C211FD23F00D96DA4 /* MTDateFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDateFormatManager.h; sourceTree = "<group>"; };
+		72E9732E211FD2B900D96DA4 /* MTSanboxFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSanboxFile.h; sourceTree = "<group>"; };
+		72E9732F211FD2B900D96DA4 /* MTSanboxFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSanboxFile.m; sourceTree = "<group>"; };
+		72E97331211FD2C700D96DA4 /* MTMediaFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMediaFileManager.m; sourceTree = "<group>"; };
+		72E97332211FD2C700D96DA4 /* MTMediaFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMediaFileManager.h; sourceTree = "<group>"; };
+		72E97338211FD30C00D96DA4 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		72E97339211FD30C00D96DA4 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		72E9733A211FD30C00D96DA4 /* UITableViewCell+Categoty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Categoty.h"; sourceTree = "<group>"; };
+		72E9733B211FD30C00D96DA4 /* UITableViewCell+Categoty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Categoty.m"; sourceTree = "<group>"; };
+		72E9733C211FD30C00D96DA4 /* UITextView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Category.h"; sourceTree = "<group>"; };
+		72E9733D211FD30C00D96DA4 /* UITextView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Category.m"; sourceTree = "<group>"; };
+		72E97343211FD68C00D96DA4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		72E97344211FD68C00D96DA4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		72E97348211FD81F00D96DA4 /* MTCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCommons.h; sourceTree = "<group>"; };
+		72E97349211FD81F00D96DA4 /* MTHeaderPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHeaderPrefix.pch; sourceTree = "<group>"; };
+		72E9734A211FD90600D96DA4 /* UIImage+ImageCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageCompress.m"; sourceTree = "<group>"; };
+		72E9734B211FD90600D96DA4 /* UIImage+ImageCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageCompress.h"; sourceTree = "<group>"; };
 		8718DCF41C4CCA2D889767B9 /* Pods-Momenting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momenting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Momenting/Pods-Momenting.debug.xcconfig"; sourceTree = "<group>"; };
 		8F871E6CE11387C8E90F083C /* libPods-MomentingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MomentingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE1ACC19912647F1BB86C06 /* Pods-MomentingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MomentingUITests/Pods-MomentingUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,8 +156,6 @@
 		FB2989B121193BC10011025D /* Momenting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momenting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2989B421193BC10011025D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB2989B521193BC10011025D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB2989B721193BC10011025D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB2989B821193BC10011025D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB2989BB21193BC10011025D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB2989BD21193BC10011025D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2989C021193BC10011025D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,64 +167,7 @@
 		FB2989D421193BC10011025D /* MomentingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2989D821193BC10011025D /* MomentingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MomentingUITests.m; sourceTree = "<group>"; };
 		FB2989DA21193BC10011025D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB2989EA211941E60011025D /* MTHomeSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTHomeSectionView.xib; sourceTree = "<group>"; };
-		FB2989EC2119422C0011025D /* MTHomeSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeSectionView.h; sourceTree = "<group>"; };
-		FB2989ED2119422C0011025D /* MTHomeSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeSectionView.m; sourceTree = "<group>"; };
-		FB2989F421199DD50011025D /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		FB2989F521199DD50011025D /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		FB2989F721199E470011025D /* UITableViewCell+Categoty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Categoty.h"; sourceTree = "<group>"; };
-		FB2989F821199E470011025D /* UITableViewCell+Categoty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Categoty.m"; sourceTree = "<group>"; };
-		FB2989FA21199E870011025D /* MTHomeTextViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeTextViewCell.h; sourceTree = "<group>"; };
-		FB2989FB21199E870011025D /* MTHomeTextViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeTextViewCell.m; sourceTree = "<group>"; };
-		FB2989FC21199E870011025D /* MTHomeTextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTHomeTextViewCell.xib; sourceTree = "<group>"; };
-		FB2989FF2119B3ED0011025D /* MTNoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteViewController.h; sourceTree = "<group>"; };
-		FB298A002119B3ED0011025D /* MTNoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteViewController.m; sourceTree = "<group>"; };
-		FB298A012119B3ED0011025D /* MTNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteViewController.xib; sourceTree = "<group>"; };
-		FB298A042119B4840011025D /* MTNoteToolsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteToolsView.xib; sourceTree = "<group>"; };
-		FB9DF5BB211A7FE800200097 /* MTNoteToolsTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteToolsTextCell.h; sourceTree = "<group>"; };
-		FB9DF5BC211A7FE800200097 /* MTNoteToolsTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteToolsTextCell.m; sourceTree = "<group>"; };
-		FB9DF5BD211A7FE800200097 /* MTNoteToolsTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteToolsTextCell.xib; sourceTree = "<group>"; };
-		FB9DF5C0211A800A00200097 /* MTNoteToolsImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteToolsImageCell.h; sourceTree = "<group>"; };
-		FB9DF5C1211A800A00200097 /* MTNoteToolsImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteToolsImageCell.m; sourceTree = "<group>"; };
-		FB9DF5C2211A800A00200097 /* MTNoteToolsImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteToolsImageCell.xib; sourceTree = "<group>"; };
-		FB9DF5C8211AB48400200097 /* MTActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTActionSheetView.xib; sourceTree = "<group>"; };
-		FB9DF5CA211AD0C800200097 /* MTActionSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTActionSheetView.h; sourceTree = "<group>"; };
-		FB9DF5CB211AD0C800200097 /* MTActionSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTActionSheetView.m; sourceTree = "<group>"; };
-		FB9DF5CD211AF3A200200097 /* UITextView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Category.h"; sourceTree = "<group>"; };
-		FB9DF5CE211AF3A200200097 /* UITextView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Category.m"; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		FBD9DC94211BE657001CE04E /* MTMediaFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMediaFileManager.h; sourceTree = "<group>"; };
-		FBD9DC95211BE657001CE04E /* MTMediaFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMediaFileManager.m; sourceTree = "<group>"; };
-		FBD9DC96211BE657001CE04E /* MTSanboxFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSanboxFile.h; sourceTree = "<group>"; };
-		FBD9DC97211BE657001CE04E /* MTSanboxFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSanboxFile.m; sourceTree = "<group>"; };
-		FBD9DCAB211BF010001CE04E /* MTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataManager.m; sourceTree = "<group>"; };
-		FBD9DCAC211BF010001CE04E /* MTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataManager.h; sourceTree = "<group>"; };
-		FBD9DCAE211BF28D001CE04E /* MTCoreDataDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCoreDataDao.h; sourceTree = "<group>"; };
-		FBD9DCAF211BF28D001CE04E /* MTCoreDataDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataDao.m; sourceTree = "<group>"; };
-		FBD9DCB2211BF590001CE04E /* MTNoteImagePo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteImagePo+CoreDataClass.h"; sourceTree = "<group>"; };
-		FBD9DCB3211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteImagePo+CoreDataClass.m"; sourceTree = "<group>"; };
-		FBD9DCB4211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteImagePo+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FBD9DCB5211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteImagePo+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FBD9DCB6211BF590001CE04E /* MTNoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteModel.h; sourceTree = "<group>"; };
-		FBD9DCB7211BF590001CE04E /* MTNoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteModel.m; sourceTree = "<group>"; };
-		FBD9DCBC211BF590001CE04E /* MTNoteTextPo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteTextPo+CoreDataClass.h"; sourceTree = "<group>"; };
-		FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataClass.m"; sourceTree = "<group>"; };
-		FBD9DCBE211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNoteTextPo+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNoteTextPo+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FBE4A7A9211D65620099FFFE /* MTActionAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTActionAlertView.xib; sourceTree = "<group>"; };
-		FBE4A7AB211D68890099FFFE /* MTActionAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTActionAlertView.h; sourceTree = "<group>"; };
-		FBE4A7AC211D68890099FFFE /* MTActionAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTActionAlertView.m; sourceTree = "<group>"; };
-		FBE4A7AF211D731C0099FFFE /* MTDateFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDateFormatManager.h; sourceTree = "<group>"; };
-		FBE4A7B0211D731C0099FFFE /* MTDateFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDateFormatManager.m; sourceTree = "<group>"; };
-		FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataClass.m"; sourceTree = "<group>"; };
-		FBEDA127211C2BB700135D5D /* MTNotePo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotePo+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotePo+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FBEDA129211C2BB700135D5D /* MTNotePo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotePo+CoreDataClass.h"; sourceTree = "<group>"; };
-		FBEDA12C211C41F000135D5D /* MTNoteSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteSettingView.h; sourceTree = "<group>"; };
-		FBEDA12D211C41F000135D5D /* MTNoteSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteSettingView.m; sourceTree = "<group>"; };
-		FBEDA131211C4DB000135D5D /* MTHomeEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTHomeEmptyView.xib; sourceTree = "<group>"; };
-		FBEDA133211C4EFC00135D5D /* MTHomeEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeEmptyView.h; sourceTree = "<group>"; };
-		FBEDA134211C4EFC00135D5D /* MTHomeEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeEmptyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +221,237 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		72E972A7211FCE8700D96DA4 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				72E972A8211FCE8700D96DA4 /* Controller */,
+				72E972AC211FCE8700D96DA4 /* Model */,
+				72E972AD211FCE8700D96DA4 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		72E972A8211FCE8700D96DA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72E972AC211FCE8700D96DA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72E972AD211FCE8700D96DA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72E972AE211FCE8700D96DA4 /* MTNoteSettingView.h */,
+				72E972AF211FCE8700D96DA4 /* MTNoteSettingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72E972B0211FCE8700D96DA4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				72E972B1211FCE8700D96DA4 /* Model */,
+				72E972B2211FCE8700D96DA4 /* View */,
+				72E972BD211FCE8700D96DA4 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		72E972B1211FCE8700D96DA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72E972B2211FCE8700D96DA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72E972B3211FCE8700D96DA4 /* MTHomeEmptyView.h */,
+				72E972B4211FCE8700D96DA4 /* MTHomeEmptyView.m */,
+				72E972B5211FCE8700D96DA4 /* MTHomeEmptyView.xib */,
+				72E972B6211FCE8700D96DA4 /* MTHomeSectionView.h */,
+				72E972B7211FCE8700D96DA4 /* MTHomeSectionView.m */,
+				72E972B8211FCE8700D96DA4 /* MTHomeSectionView.xib */,
+				72E972B9211FCE8700D96DA4 /* MTHomeTextViewCell.h */,
+				72E972BA211FCE8700D96DA4 /* MTHomeTextViewCell.m */,
+				72E972BB211FCE8700D96DA4 /* MTHomeTextViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72E972BD211FCE8700D96DA4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				72E97344211FD68C00D96DA4 /* ViewController.h */,
+				72E97343211FD68C00D96DA4 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		72E972BE211FCE8700D96DA4 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				72E972BF211FCE8700D96DA4 /* Model */,
+				72E972CE211FCE8700D96DA4 /* View */,
+				72E972D8211FCE8700D96DA4 /* ViewController */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		72E972BF211FCE8700D96DA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72E972C0211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.h */,
+				72E972C1211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m */,
+				72E972C2211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.h */,
+				72E972C3211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m */,
+				72E972C4211FCE8700D96DA4 /* MTNoteModel.h */,
+				72E972C5211FCE8700D96DA4 /* MTNoteModel.m */,
+				72E972C6211FCE8700D96DA4 /* MTNotePo+CoreDataClass.h */,
+				72E972C7211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m */,
+				72E972C8211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.h */,
+				72E972C9211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m */,
+				72E972CA211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.h */,
+				72E972CB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m */,
+				72E972CC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.h */,
+				72E972CD211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72E972CE211FCE8700D96DA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72E972CF211FCE8700D96DA4 /* MTNoteToolsImageCell.h */,
+				72E972D0211FCE8700D96DA4 /* MTNoteToolsImageCell.m */,
+				72E972D1211FCE8700D96DA4 /* MTNoteToolsImageCell.xib */,
+				72E972D2211FCE8700D96DA4 /* MTNoteToolsTextCell.h */,
+				72E972D3211FCE8700D96DA4 /* MTNoteToolsTextCell.m */,
+				72E972D4211FCE8700D96DA4 /* MTNoteToolsTextCell.xib */,
+				72E972D5211FCE8700D96DA4 /* MTNoteToolsView.h */,
+				72E972D6211FCE8700D96DA4 /* MTNoteToolsView.m */,
+				72E972D7211FCE8700D96DA4 /* MTNoteToolsView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72E972D8211FCE8700D96DA4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				72E972D9211FCE8700D96DA4 /* MTNoteViewController.h */,
+				72E972DA211FCE8700D96DA4 /* MTNoteViewController.m */,
+				72E972DB211FCE8700D96DA4 /* MTNoteViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		72E972F5211FCEA500D96DA4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				72E972F6211FCEA500D96DA4 /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		72E972F6211FCEA500D96DA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72E972F7211FCEA500D96DA4 /* MTActionAlertView.h */,
+				72E972F8211FCEA500D96DA4 /* MTActionAlertView.m */,
+				72E972F9211FCEA500D96DA4 /* MTActionAlertView.xib */,
+				72E972FA211FCEA500D96DA4 /* MTActionSheetView.h */,
+				72E972FB211FCEA500D96DA4 /* MTActionSheetView.m */,
+				72E972FC211FCEA500D96DA4 /* MTActionSheetView.xib */,
+				72E972FD211FCEA500D96DA4 /* MTNavigationView.h */,
+				72E972FE211FCEA500D96DA4 /* MTNavigationView.m */,
+				72E972FF211FCEA500D96DA4 /* MTNavigationView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72E97307211FD02900D96DA4 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		72E97321211FD1BB00D96DA4 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				72E97337211FD30C00D96DA4 /* Category */,
+				72E97324211FD1FE00D96DA4 /* Sanbox */,
+				72E97323211FD1D600D96DA4 /* Tools */,
+				72E97322211FD1BB00D96DA4 /* Db */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		72E97322211FD1BB00D96DA4 /* Db */ = {
+			isa = PBXGroup;
+			children = (
+				72E97325211FD23700D96DA4 /* MTCoreDataDao.h */,
+				72E97327211FD23700D96DA4 /* MTCoreDataDao.m */,
+				72E97326211FD23700D96DA4 /* MTCoreDataManager.h */,
+				72E97328211FD23700D96DA4 /* MTCoreDataManager.m */,
+			);
+			path = Db;
+			sourceTree = "<group>";
+		};
+		72E97323211FD1D600D96DA4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				72E9732C211FD23F00D96DA4 /* MTDateFormatManager.h */,
+				72E9732B211FD23F00D96DA4 /* MTDateFormatManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		72E97324211FD1FE00D96DA4 /* Sanbox */ = {
+			isa = PBXGroup;
+			children = (
+				72E97332211FD2C700D96DA4 /* MTMediaFileManager.h */,
+				72E97331211FD2C700D96DA4 /* MTMediaFileManager.m */,
+				72E9732E211FD2B900D96DA4 /* MTSanboxFile.h */,
+				72E9732F211FD2B900D96DA4 /* MTSanboxFile.m */,
+			);
+			path = Sanbox;
+			sourceTree = "<group>";
+		};
+		72E97337211FD30C00D96DA4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				72E9734B211FD90600D96DA4 /* UIImage+ImageCompress.h */,
+				72E9734A211FD90600D96DA4 /* UIImage+ImageCompress.m */,
+				72E97338211FD30C00D96DA4 /* UIColor+Hex.h */,
+				72E97339211FD30C00D96DA4 /* UIColor+Hex.m */,
+				72E9733A211FD30C00D96DA4 /* UITableViewCell+Categoty.h */,
+				72E9733B211FD30C00D96DA4 /* UITableViewCell+Categoty.m */,
+				72E9733C211FD30C00D96DA4 /* UITextView+Category.h */,
+				72E9733D211FD30C00D96DA4 /* UITextView+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		72E97346211FD81F00D96DA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */,
+				FB2989C321193BC10011025D /* main.m */,
+				72E97348211FD81F00D96DA4 /* MTCommons.h */,
+				72E97349211FD81F00D96DA4 /* MTHeaderPrefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FB2989A821193BC10011025D = {
 			isa = PBXGroup;
 			children = (
@@ -241,18 +477,16 @@
 		FB2989B321193BC10011025D /* Momenting */ = {
 			isa = PBXGroup;
 			children = (
-				FB2989F221199D7E0011025D /* Common */,
+				72E97321211FD1BB00D96DA4 /* Expand */,
+				72E97307211FD02900D96DA4 /* Vender */,
 				FB2989E6211940D10011025D /* Main */,
 				FB2989B421193BC10011025D /* AppDelegate.h */,
 				FB2989B521193BC10011025D /* AppDelegate.m */,
-				FB2989B721193BC10011025D /* ViewController.h */,
-				FB2989B821193BC10011025D /* ViewController.m */,
 				FB2989BA21193BC10011025D /* Main.storyboard */,
-				FB2989BD21193BC10011025D /* Assets.xcassets */,
 				FB2989BF21193BC10011025D /* LaunchScreen.storyboard */,
 				FB2989C221193BC10011025D /* Info.plist */,
-				FB2989C321193BC10011025D /* main.m */,
-				FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */,
+				FB2989BD21193BC10011025D /* Assets.xcassets */,
+				72E97346211FD81F00D96DA4 /* Supporting Files */,
 			);
 			path = Momenting;
 			sourceTree = "<group>";
@@ -278,133 +512,12 @@
 		FB2989E6211940D10011025D /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FBD9DCB1211BF590001CE04E /* Model */,
-				FB2989E7211941A40011025D /* Controller */,
-				FB2989E9211941A40011025D /* View */,
+				72E972F5211FCEA500D96DA4 /* Other */,
+				72E972B0211FCE8700D96DA4 /* Home */,
+				72E972BE211FCE8700D96DA4 /* Note */,
+				72E972A7211FCE8700D96DA4 /* Setting */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		FB2989E7211941A40011025D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FB2989FF2119B3ED0011025D /* MTNoteViewController.h */,
-				FB298A002119B3ED0011025D /* MTNoteViewController.m */,
-				FB298A012119B3ED0011025D /* MTNoteViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		FB2989E9211941A40011025D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FB2989EA211941E60011025D /* MTHomeSectionView.xib */,
-				FB2989EC2119422C0011025D /* MTHomeSectionView.h */,
-				FB2989ED2119422C0011025D /* MTHomeSectionView.m */,
-				FB2989FA21199E870011025D /* MTHomeTextViewCell.h */,
-				FB2989FB21199E870011025D /* MTHomeTextViewCell.m */,
-				FB2989FC21199E870011025D /* MTHomeTextViewCell.xib */,
-				FB298A042119B4840011025D /* MTNoteToolsView.xib */,
-				728034B5211A4D9600D4A9BE /* MTNoteToolsView.h */,
-				728034B6211A4D9600D4A9BE /* MTNoteToolsView.m */,
-				728034B8211A5C7600D4A9BE /* MTNavigationView.xib */,
-				728034BA211A5DBF00D4A9BE /* MTNavigationView.h */,
-				728034BB211A5DBF00D4A9BE /* MTNavigationView.m */,
-				FB9DF5BB211A7FE800200097 /* MTNoteToolsTextCell.h */,
-				FB9DF5BC211A7FE800200097 /* MTNoteToolsTextCell.m */,
-				FB9DF5BD211A7FE800200097 /* MTNoteToolsTextCell.xib */,
-				FB9DF5C0211A800A00200097 /* MTNoteToolsImageCell.h */,
-				FB9DF5C1211A800A00200097 /* MTNoteToolsImageCell.m */,
-				FB9DF5C2211A800A00200097 /* MTNoteToolsImageCell.xib */,
-				FB9DF5C8211AB48400200097 /* MTActionSheetView.xib */,
-				FB9DF5CA211AD0C800200097 /* MTActionSheetView.h */,
-				FB9DF5CB211AD0C800200097 /* MTActionSheetView.m */,
-				FBEDA12C211C41F000135D5D /* MTNoteSettingView.h */,
-				FBEDA12D211C41F000135D5D /* MTNoteSettingView.m */,
-				FBEDA131211C4DB000135D5D /* MTHomeEmptyView.xib */,
-				FBEDA133211C4EFC00135D5D /* MTHomeEmptyView.h */,
-				FBEDA134211C4EFC00135D5D /* MTHomeEmptyView.m */,
-				FBE4A7A9211D65620099FFFE /* MTActionAlertView.xib */,
-				FBE4A7AB211D68890099FFFE /* MTActionAlertView.h */,
-				FBE4A7AC211D68890099FFFE /* MTActionAlertView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FB2989F221199D7E0011025D /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				FBE4A7AE211D730D0099FFFE /* Tools */,
-				FBD9DCAA211BF004001CE04E /* CoreDataManager */,
-				FBD9DC93211BE657001CE04E /* Sanbox */,
-				FB2989F321199D7E0011025D /* Category */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		FB2989F321199D7E0011025D /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				FB2989F521199DD50011025D /* UIColor+Hex.h */,
-				FB2989F421199DD50011025D /* UIColor+Hex.m */,
-				FB2989F721199E470011025D /* UITableViewCell+Categoty.h */,
-				FB2989F821199E470011025D /* UITableViewCell+Categoty.m */,
-				FB9DF5CD211AF3A200200097 /* UITextView+Category.h */,
-				FB9DF5CE211AF3A200200097 /* UITextView+Category.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		FBD9DC93211BE657001CE04E /* Sanbox */ = {
-			isa = PBXGroup;
-			children = (
-				FBD9DC94211BE657001CE04E /* MTMediaFileManager.h */,
-				FBD9DC95211BE657001CE04E /* MTMediaFileManager.m */,
-				FBD9DC96211BE657001CE04E /* MTSanboxFile.h */,
-				FBD9DC97211BE657001CE04E /* MTSanboxFile.m */,
-			);
-			path = Sanbox;
-			sourceTree = "<group>";
-		};
-		FBD9DCAA211BF004001CE04E /* CoreDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				FBD9DCAC211BF010001CE04E /* MTCoreDataManager.h */,
-				FBD9DCAB211BF010001CE04E /* MTCoreDataManager.m */,
-				FBD9DCAE211BF28D001CE04E /* MTCoreDataDao.h */,
-				FBD9DCAF211BF28D001CE04E /* MTCoreDataDao.m */,
-			);
-			path = CoreDataManager;
-			sourceTree = "<group>";
-		};
-		FBD9DCB1211BF590001CE04E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FBD9DCB6211BF590001CE04E /* MTNoteModel.h */,
-				FBD9DCB7211BF590001CE04E /* MTNoteModel.m */,
-				FBD9DCB2211BF590001CE04E /* MTNoteImagePo+CoreDataClass.h */,
-				FBD9DCB3211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m */,
-				FBD9DCB4211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.h */,
-				FBD9DCB5211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m */,
-				FBD9DCBC211BF590001CE04E /* MTNoteTextPo+CoreDataClass.h */,
-				FBD9DCBD211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m */,
-				FBD9DCBE211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.h */,
-				FBD9DCBF211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m */,
-				FBEDA129211C2BB700135D5D /* MTNotePo+CoreDataClass.h */,
-				FBEDA126211C2BB700135D5D /* MTNotePo+CoreDataClass.m */,
-				FBEDA127211C2BB700135D5D /* MTNotePo+CoreDataProperties.h */,
-				FBEDA128211C2BB700135D5D /* MTNotePo+CoreDataProperties.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		FBE4A7AE211D730D0099FFFE /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				FBE4A7AF211D731C0099FFFE /* MTDateFormatManager.h */,
-				FBE4A7B0211D731C0099FFFE /* MTDateFormatManager.m */,
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,19 +631,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2989EB211941E60011025D /* MTHomeSectionView.xib in Resources */,
-				728034B9211A5C7600D4A9BE /* MTNavigationView.xib in Resources */,
-				FB2989FE21199E870011025D /* MTHomeTextViewCell.xib in Resources */,
+				72E972E4211FCE8700D96DA4 /* MTHomeTextViewCell.xib in Resources */,
+				72E97305211FCEA500D96DA4 /* MTNavigationView.xib in Resources */,
 				FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */,
-				FBEDA132211C4DB000135D5D /* MTHomeEmptyView.xib in Resources */,
-				FB298A032119B3ED0011025D /* MTNoteViewController.xib in Resources */,
-				FB9DF5C9211AB48400200097 /* MTActionSheetView.xib in Resources */,
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
+				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
+				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
+				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
+				72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */,
 				FB2989BC21193BC10011025D /* Main.storyboard in Resources */,
-				FB298A052119B4840011025D /* MTNoteToolsView.xib in Resources */,
-				FB9DF5C4211A800A00200097 /* MTNoteToolsImageCell.xib in Resources */,
-				FB9DF5BF211A7FE800200097 /* MTNoteToolsTextCell.xib in Resources */,
-				FBE4A7AA211D65620099FFFE /* MTActionAlertView.xib in Resources */,
+				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
+				72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */,
+				72E972F0211FCE8700D96DA4 /* MTNoteToolsTextCell.xib in Resources */,
+				72E97303211FCEA500D96DA4 /* MTActionSheetView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,36 +743,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBD9DC99211BE657001CE04E /* MTSanboxFile.m in Sources */,
-				FB9DF5C3211A800A00200097 /* MTNoteToolsImageCell.m in Sources */,
-				FB2989EE2119422C0011025D /* MTHomeSectionView.m in Sources */,
-				FBD9DCC6211BF590001CE04E /* MTNoteTextPo+CoreDataProperties.m in Sources */,
-				FB9DF5BE211A7FE800200097 /* MTNoteToolsTextCell.m in Sources */,
-				FBEDA12B211C2BB700135D5D /* MTNotePo+CoreDataProperties.m in Sources */,
-				FB2989F621199DD50011025D /* UIColor+Hex.m in Sources */,
-				FB2989B921193BC10011025D /* ViewController.m in Sources */,
-				FBE4A7B1211D731C0099FFFE /* MTDateFormatManager.m in Sources */,
-				728034BC211A5DBF00D4A9BE /* MTNavigationView.m in Sources */,
-				728034B7211A4D9600D4A9BE /* MTNoteToolsView.m in Sources */,
-				FBEDA12A211C2BB700135D5D /* MTNotePo+CoreDataClass.m in Sources */,
-				FBD9DC98211BE657001CE04E /* MTMediaFileManager.m in Sources */,
-				FB2989FD21199E870011025D /* MTHomeTextViewCell.m in Sources */,
-				FBD9DCC2211BF590001CE04E /* MTNoteModel.m in Sources */,
-				FBD9DCAD211BF010001CE04E /* MTCoreDataManager.m in Sources */,
-				FBD9DCC1211BF590001CE04E /* MTNoteImagePo+CoreDataProperties.m in Sources */,
-				FB2989F921199E470011025D /* UITableViewCell+Categoty.m in Sources */,
+				72E972E7211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m in Sources */,
+				72E9733F211FD30C00D96DA4 /* UITableViewCell+Categoty.m in Sources */,
+				72E972EA211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m in Sources */,
+				72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */,
+				72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */,
+				72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */,
+				72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */,
+				72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */,
+				72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */,
+				72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */,
+				72E97340211FD30C00D96DA4 /* UITextView+Category.m in Sources */,
+				72E9733E211FD30C00D96DA4 /* UIColor+Hex.m in Sources */,
+				72E972E1211FCE8700D96DA4 /* MTHomeSectionView.m in Sources */,
+				72E972ED211FCE8700D96DA4 /* MTNoteToolsImageCell.m in Sources */,
+				72E972EC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m in Sources */,
+				72E97300211FCEA500D96DA4 /* MTActionAlertView.m in Sources */,
+				72E972F3211FCE8700D96DA4 /* MTNoteViewController.m in Sources */,
+				72E9732D211FD23F00D96DA4 /* MTDateFormatManager.m in Sources */,
+				72E972EB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m in Sources */,
+				72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */,
 				FB2989C421193BC10011025D /* main.m in Sources */,
-				FBD9DCC0211BF590001CE04E /* MTNoteImagePo+CoreDataClass.m in Sources */,
-				FBEDA12E211C41F000135D5D /* MTNoteSettingView.m in Sources */,
-				FBEDA135211C4EFC00135D5D /* MTHomeEmptyView.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
+				72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */,
+				72E972E6211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m in Sources */,
+				72E97304211FCEA500D96DA4 /* MTNavigationView.m in Sources */,
+				72E97345211FD68D00D96DA4 /* ViewController.m in Sources */,
+				72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */,
+				72E97302211FCEA500D96DA4 /* MTActionSheetView.m in Sources */,
+				72E97329211FD23700D96DA4 /* MTCoreDataDao.m in Sources */,
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
-				FBD9DCB0211BF28D001CE04E /* MTCoreDataDao.m in Sources */,
-				FB9DF5CF211AF3A200200097 /* UITextView+Category.m in Sources */,
-				FBD9DCC5211BF590001CE04E /* MTNoteTextPo+CoreDataClass.m in Sources */,
-				FB298A022119B3ED0011025D /* MTNoteViewController.m in Sources */,
-				FBE4A7AD211D68890099FFFE /* MTActionAlertView.m in Sources */,
-				FB9DF5CC211AD0C800200097 /* MTActionSheetView.m in Sources */,
+				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,13 +938,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3N5RFB77R5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -844,13 +961,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3N5RFB77R5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -57,7 +57,6 @@ MTHomeEmptyViewDelegate>
     return self.isHeaderHidden;
 }
 
-
 #pragma mark - Views
 - (void)initBaseViews
 {
@@ -100,10 +99,10 @@ MTHomeEmptyViewDelegate>
 #pragma mark - ScrollView
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.y - self.scrollViewOldOffset.y > 1) {
+    if (scrollView.contentOffset.y - self.scrollViewOldOffset.y > 0) {
         //向下滑动
        [self scrollAnimationIsShow:NO];
-    } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 1){
+    } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 0){
         [self scrollAnimationIsShow:YES];
     }
     self.scrollViewOldOffset = scrollView.contentOffset;

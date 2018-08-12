@@ -7,8 +7,6 @@
 //
 
 #import "MTHomeTextViewCell.h"
-#import <Masonry/Masonry.h>
-#import "UIColor+Hex.h"
 #import "MTNoteModel.h"
 #import "MTMediaFileManager.h"
 #import "MTDateFormatManager.h"
