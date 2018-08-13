@@ -55,6 +55,7 @@
 		FB2989C421193BC10011025D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989C321193BC10011025D /* main.m */; };
 		FB2989CE21193BC10011025D /* MomentingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989CD21193BC10011025D /* MomentingTests.m */; };
 		FB2989D921193BC10011025D /* MomentingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989D821193BC10011025D /* MomentingUITests.m */; };
+		FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +168,8 @@
 		FB2989D421193BC10011025D /* MomentingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2989D821193BC10011025D /* MomentingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MomentingUITests.m; sourceTree = "<group>"; };
 		FB2989DA21193BC10011025D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB874AC8212160FF0050DD58 /* MTDeleteStyleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDeleteStyleTableView.h; sourceTree = "<group>"; };
+		FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDeleteStyleTableView.m; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -387,6 +390,7 @@
 		72E97321211FD1BB00D96DA4 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				FB874AC7212160C90050DD58 /* Custom */,
 				72E97337211FD30C00D96DA4 /* Category */,
 				72E97324211FD1FE00D96DA4 /* Sanbox */,
 				72E97323211FD1D600D96DA4 /* Tools */,
@@ -518,6 +522,15 @@
 				72E972A7211FCE8700D96DA4 /* Setting */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FB874AC7212160C90050DD58 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				FB874AC8212160FF0050DD58 /* MTDeleteStyleTableView.h */,
+				FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -770,6 +783,7 @@
 				72E97304211FCEA500D96DA4 /* MTNavigationView.m in Sources */,
 				72E97345211FD68D00D96DA4 /* ViewController.m in Sources */,
 				72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */,
+				FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */,
 				72E97302211FCEA500D96DA4 /* MTActionSheetView.m in Sources */,
 				72E97329211FD23700D96DA4 /* MTCoreDataDao.m in Sources */,
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
@@ -940,13 +954,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3N5RFB77R5;
+				DEVELOPMENT_TEAM = GY3B636822;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huaral.com.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -963,13 +978,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3N5RFB77R5;
+				DEVELOPMENT_TEAM = GY3B636822;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = app.huaral.com.Momenting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huaral.com.Momenting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIButton *timeLabel;
 
+
+
 @end
 
 @implementation MTHomeTextViewCell
@@ -69,6 +71,8 @@
     
     self.contentBgView.layer.borderColor = [[UIColor colorWithHex:0xB4BAC3] CGColor];
     self.contentBgView.layer.borderWidth = 0.5;
+    self.editingAccessoryView.tintColor = [UIColor purpleColor];
+    self.editingAccessoryView.backgroundColor = [UIColor purpleColor];
 }
 
 #pragma mark - setter

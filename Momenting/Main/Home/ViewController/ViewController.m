@@ -15,13 +15,14 @@
 #import "MTHomeEmptyView.h"
 #import "MTNoteModel.h"
 #import <MJRefresh/MJRefresh.h>
+#import "MTDeleteStyleTableView.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
 MTHomeSectionViewDelegate,
 MTHomeEmptyViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet MTDeleteStyleTableView *tableView;
 @property (strong, nonatomic) MTHomeSectionView *sectionView;
 @property (assign, nonatomic) CGPoint scrollViewOldOffset;
 @property (strong, nonatomic) NSMutableArray *datalist;
@@ -171,6 +172,38 @@ MTHomeEmptyViewDelegate>
 {
     return self.datalist.count > 0 ? 0.f : [MTHomeEmptyView viewHeight];
 }
+
+//先要设Cell可编辑
+- (NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"删除", @"") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+                                          {
+                                              [tableView setEditing:NO animated:YES];  // 这句很重要，退出编辑模式，隐藏左滑菜单
+
+                                          }];
+    deleteAction.backgroundColor = [UIColor whiteColor];
+    NSString *readTitle = @"截屏";
+
+    UITableViewRowAction *readAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:readTitle handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+                                        {
+                                            [tableView setEditing:NO animated:YES];  // 这句很重要，退出编辑模式，隐藏左滑菜单
+
+                                        }];
+    readAction.backgroundColor = [UIColor whiteColor];
+    return @[deleteAction, readAction];
+}
+
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.tableView.editingIndexPath = indexPath;
+    [self.view setNeedsLayout];   // 触发-(void)viewDidLayoutSubviews
+}
+
+- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.tableView.editingIndexPath = nil;
+}
+
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

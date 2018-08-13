@@ -21,21 +21,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRP-a6-gFR">
                                 <rect key="frame" x="109.5" y="539" width="156" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-pP-f6m">
-                                        <rect key="frame" x="0.0" y="36.5" width="60" height="55"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secret_logo" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-pP-f6m">
+                                        <rect key="frame" x="0.0" y="34" width="60" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="3u6-oQ-Hgf"/>
-                                            <constraint firstAttribute="height" constant="55" id="50X-ZT-n1h"/>
+                                            <constraint firstAttribute="height" constant="60" id="50X-ZT-n1h"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secret" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmw-C5-6p1">
-                                        <rect key="frame" x="60" y="46.5" width="86" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <rect key="frame" x="60" y="46" width="86" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记录你的小秘密" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmL-FC-7FV">
-                                        <rect key="frame" x="60" y="67" width="86" height="14.5"/>
+                                        <rect key="frame" x="60" y="67.5" width="86" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -44,9 +45,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="NN3-pP-f6m" firstAttribute="leading" secondItem="HRP-a6-gFR" secondAttribute="leading" id="1gR-vL-INL"/>
-                                    <constraint firstItem="Kmw-C5-6p1" firstAttribute="top" secondItem="NN3-pP-f6m" secondAttribute="top" constant="10" id="Iuw-VK-Qyc"/>
+                                    <constraint firstItem="Kmw-C5-6p1" firstAttribute="top" secondItem="NN3-pP-f6m" secondAttribute="top" constant="12" id="Iuw-VK-Qyc"/>
                                     <constraint firstItem="Kmw-C5-6p1" firstAttribute="leading" secondItem="NN3-pP-f6m" secondAttribute="trailing" id="L52-La-HEX"/>
-                                    <constraint firstItem="xmL-FC-7FV" firstAttribute="bottom" secondItem="NN3-pP-f6m" secondAttribute="bottom" constant="-10" id="Qv3-wi-Lam"/>
+                                    <constraint firstItem="xmL-FC-7FV" firstAttribute="bottom" secondItem="NN3-pP-f6m" secondAttribute="bottom" constant="-12" id="Qv3-wi-Lam"/>
                                     <constraint firstAttribute="trailing" secondItem="xmL-FC-7FV" secondAttribute="trailing" constant="10" id="Tqd-oW-QEO"/>
                                     <constraint firstAttribute="height" constant="128" id="YM6-e9-ODJ"/>
                                     <constraint firstItem="NN3-pP-f6m" firstAttribute="centerY" secondItem="HRP-a6-gFR" secondAttribute="centerY" id="nNC-em-vJc"/>
@@ -69,6 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app_logo" width="200" height="200"/>
+        <image name="secret_logo" width="292" height="293"/>
     </resources>
 </document>

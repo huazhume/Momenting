@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="CiH-dz-Yzl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="CiH-dz-Yzl" customClass="MTDeleteStyleTableView">
                                 <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -59,15 +59,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-vT-lfl">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="667"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xuan" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-Kz-dxg">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaokeai2" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-Kz-dxg">
                                                 <rect key="frame" x="50" y="60" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="gqC-G2-EAT"/>
                                                     <constraint firstAttribute="height" constant="100" id="mPI-3l-i0a"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xiaobai zhang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbr-kc-Ta6">
-                                                <rect key="frame" x="50" y="170" width="110" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      xian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbr-kc-Ta6">
+                                                <rect key="frame" x="50" y="170" width="59" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -161,6 +161,6 @@
     </scenes>
     <resources>
         <image name="profile_header_settings" width="21" height="21"/>
-        <image name="xuan" width="1666" height="1816"/>
+        <image name="xiaokeai2" width="320" height="320"/>
     </resources>
 </document>
