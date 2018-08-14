@@ -8,6 +8,13 @@
 
 #import "MTNavigationView.h"
 
+@interface MTNavigationView ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
+
+@end
+
 @implementation MTNavigationView
 
 + (instancetype)loadFromNib
@@ -29,6 +36,16 @@
     [super awakeFromNib];
     
 }
+
+#pragma mark - setter
+- (void)setType:(MTNavigationViewType)type
+{
+    self.titleLabel.text = type == MTNavigationViewNoteDetail ? @"" : @"Note";
+    self.rightButton.hidden = type == MTNavigationViewNoteDetail;
+    NSString *imageName = type == MTNavigationViewNoteDetail ? @"ic_arrow_back_white_24dp" : @"ic_arrow_back_black_24dp";
+    [self.leftButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+}
+
 
 #pragma mark - events
 

@@ -20,4 +20,8 @@
 
 @end
 
+@implementation MTNoteBaseVo
+
+@end
+
 

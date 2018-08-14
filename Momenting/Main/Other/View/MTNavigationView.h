@@ -16,10 +16,17 @@
 
 @end
 
+typedef NS_ENUM(NSUInteger, MTNavigationViewType) {
+    MTNavigationViewNote = 0,
+    MTNavigationViewNoteDetail,
+};
+
 
 @interface MTNavigationView : UIView
 
 @property (weak, nonatomic) id <MTNavigationViewDelegate> delegate;
+
+@property (assign, nonatomic) MTNavigationViewType type;
 
 + (instancetype)loadFromNib;
 

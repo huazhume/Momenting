@@ -19,4 +19,6 @@ typedef enum : NSUInteger {
 
 - (NSArray *)getNoteSelf;
 
+- (NSArray *)getNoteDetailList:(NSString *)noteId;
+
 @end

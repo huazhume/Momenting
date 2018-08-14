@@ -16,6 +16,7 @@
 #import "MTNoteModel.h"
 #import <MJRefresh/MJRefresh.h>
 #import "MTDeleteStyleTableView.h"
+#import "MTNoteDetailViewController.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -34,7 +35,6 @@ MTHomeEmptyViewDelegate>
 
 @property (assign, nonatomic) BOOL isAnimationing;
 @property (strong, nonatomic) NSDate *lastScrollDate;
-@property (assign, nonatomic) BOOL isHeaderHidden;
 
 @end
 
@@ -50,14 +50,7 @@ MTHomeEmptyViewDelegate>
     [super viewWillAppear:animated];
     self.datalist = [[[MTCoreDataDao new] getNoteSelf] mutableCopy];
     [self.tableView reloadData];
-    [UIApplication sharedApplication].statusBarHidden = YES;
 }
-
-- (BOOL)prefersStatusBarHidden
-{
-    return self.isHeaderHidden;
-}
-
 #pragma mark - Views
 - (void)initBaseViews
 {
@@ -129,10 +122,10 @@ MTHomeEmptyViewDelegate>
         return;
     }
     self.lastScrollDate = [NSDate date];
-    self.isHeaderHidden = !isShow;
     [self setNeedsStatusBarAppearanceUpdate];
     [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.headerViewTopConstraint.constant = isShow ? 0.f : -60.f;
+        [UIApplication sharedApplication].statusBarHidden = !isShow;
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         self.isAnimationing = NO;
@@ -213,6 +206,16 @@ MTHomeEmptyViewDelegate>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [MTHomeTextViewCell heightForCellWithModel:self.datalist[indexPath.row]];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MTNoteDetailViewController *detailVC = [[MTNoteDetailViewController alloc] init];
+    MTNoteModel *model = self.datalist[indexPath.row];
+    detailVC.noteId = model.noteId;
+    detailVC.color = model.sectionColor;
+    detailVC.isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 #pragma mark - MTHomeSectionViewDelegate

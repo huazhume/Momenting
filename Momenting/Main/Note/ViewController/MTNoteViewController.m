@@ -326,9 +326,8 @@ MTNoteToolsTextCellDelegate>
                 isTextFind = YES;
                 noteModel.text = vo.text;
             }
-        }
-        
-        if ([model isKindOfClass:[MTNoteImageVo class]]) {
+            vo.noteId = noteModel.noteId;
+        } else if ([model isKindOfClass:[MTNoteImageVo class]]) {
             MTNoteImageVo *vo = (MTNoteImageVo *)model;
             if (vo.path.length > 0 && !isImageFind) {
                 isImageFind = YES;
@@ -336,6 +335,7 @@ MTNoteToolsTextCellDelegate>
                 noteModel.width = vo.width;
                 noteModel.height = vo.height;
             }
+            vo.noteId = noteModel.noteId;
         }
     }];
     

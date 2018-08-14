@@ -55,6 +55,8 @@
 		FB2989C421193BC10011025D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989C321193BC10011025D /* main.m */; };
 		FB2989CE21193BC10011025D /* MomentingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989CD21193BC10011025D /* MomentingTests.m */; };
 		FB2989D921193BC10011025D /* MomentingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989D821193BC10011025D /* MomentingUITests.m */; };
+		FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A96D02122867C0033911E /* MTNoteDetailViewController.m */; };
+		FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */; };
 		FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -168,6 +170,9 @@
 		FB2989D421193BC10011025D /* MomentingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2989D821193BC10011025D /* MomentingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MomentingUITests.m; sourceTree = "<group>"; };
 		FB2989DA21193BC10011025D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB3A96CF2122867C0033911E /* MTNoteDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteDetailViewController.h; sourceTree = "<group>"; };
+		FB3A96D02122867C0033911E /* MTNoteDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteDetailViewController.m; sourceTree = "<group>"; };
+		FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteDetailViewController.xib; sourceTree = "<group>"; };
 		FB874AC8212160FF0050DD58 /* MTDeleteStyleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDeleteStyleTableView.h; sourceTree = "<group>"; };
 		FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDeleteStyleTableView.m; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -516,12 +521,39 @@
 		FB2989E6211940D10011025D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FB3A96CC212286430033911E /* Detail */,
 				72E972F5211FCEA500D96DA4 /* Other */,
 				72E972B0211FCE8700D96DA4 /* Home */,
 				72E972BE211FCE8700D96DA4 /* Note */,
 				72E972A7211FCE8700D96DA4 /* Setting */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FB3A96CC212286430033911E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FB3A96CE2122865E0033911E /* View */,
+				FB3A96CD2122865E0033911E /* ViewController */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FB3A96CD2122865E0033911E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB3A96CF2122867C0033911E /* MTNoteDetailViewController.h */,
+				FB3A96D02122867C0033911E /* MTNoteDetailViewController.m */,
+				FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FB3A96CE2122865E0033911E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FB874AC7212160C90050DD58 /* Custom */ = {
@@ -648,6 +680,7 @@
 				72E97305211FCEA500D96DA4 /* MTNavigationView.xib in Resources */,
 				FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */,
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
+				FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */,
 				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
 				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
 				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
@@ -785,6 +818,7 @@
 				72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */,
 				FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */,
 				72E97302211FCEA500D96DA4 /* MTActionSheetView.m in Sources */,
+				FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */,
 				72E97329211FD23700D96DA4 /* MTCoreDataDao.m in Sources */,
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
 				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,

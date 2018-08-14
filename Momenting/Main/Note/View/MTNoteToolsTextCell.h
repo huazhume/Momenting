@@ -20,6 +20,11 @@
 
 @end
 
+typedef enum : NSUInteger {
+    MTNoteToolsTextCellNormal,
+    MTNoteToolsTextCellDetail,
+} MTNoteToolsTextCellType;
+
 
 @interface MTNoteToolsTextCell : UITableViewCell
 
@@ -29,7 +34,11 @@
 
 @property (strong, nonatomic) MTNoteTextVo *model;
 
+@property (assign, nonatomic) MTNoteToolsTextCellType type;
+
 + (CGFloat)heightForCell;
+
++ (CGFloat)heightForCellWithModel:(MTNoteTextVo *)model;
 
 - (void)becomeKeyboardFirstResponder;
 

@@ -18,27 +18,31 @@
 @property (assign, nonatomic) CGFloat width;
 @property (assign, nonatomic) CGFloat height;
 @property (assign, nonatomic) NSInteger indexRow;
+@property (strong, nonatomic) UIColor *sectionColor;
 
 @end
 
-@interface MTNoteImageVo : NSObject
+@interface MTNoteBaseVo : NSObject
 
 @property (copy, nonatomic) NSString *noteId;
+@property (assign, nonatomic) NSInteger sortIndex;
+
+@end
+
+@interface MTNoteImageVo : MTNoteBaseVo
+
 @property (strong, nonatomic) UIImage *image;
 @property (assign, nonatomic) CGFloat width;
 @property (assign, nonatomic) CGFloat height;
 @property (copy, nonatomic) NSString *path;
-@property (assign, nonatomic) NSInteger sortIndex;
 
 @end
 
-@interface MTNoteTextVo : NSObject
+@interface MTNoteTextVo : MTNoteBaseVo
 
-@property (copy, nonatomic) NSString *noteId;
 @property (assign, nonatomic) CGFloat fontSize;
 @property (strong, nonatomic) NSString *fontName;
 @property (copy, nonatomic) NSString *text;
-@property (assign, nonatomic) NSInteger sortIndex;
 
 @end
 

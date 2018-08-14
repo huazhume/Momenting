@@ -86,6 +86,7 @@
     
     NSInteger index = model.indexRow % self.colors.count;
     self.topView.backgroundColor = self.colors[index];
+    model.sectionColor = self.topView.backgroundColor;
     self.contentBgView.layer.borderColor = [self.topView.backgroundColor CGColor];
     NSString *time = [MTDateFormatManager formatToHumanReadableInfoWithTimeIntervalSince1970:model.noteId.longLongValue];
     [self.timeLabel setTitle:time forState:UIControlStateNormal];

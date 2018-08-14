@@ -35,7 +35,7 @@
                 po.fontName = vo.fontName;
                 po.fontSize = vo.fontSize;
                 po.noteId = vo.noteId;
-                po.sortIndex = vo.sortIndex;
+                po.sortIndex = idx;
                 
             } else {
                 MTNoteImageVo *vo = (MTNoteImageVo *)obj;
@@ -44,7 +44,7 @@
                 po.width = vo.width;
                 po.height = vo.height;
                 po.noteId = vo.noteId;
-                po.sortIndex = vo.sortIndex;
+                po.sortIndex = idx;
             }
         }];
     }
@@ -78,6 +78,50 @@
         }
     }];
     return muArray;
+}
+
+- (NSArray *)getNoteDetailList:(NSString *)noteId
+{
+    NSFetchRequest *textRequest=[NSFetchRequest fetchRequestWithEntityName:@"MTNoteTextPo"];
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"noteId=%@",noteId];
+    textRequest.predicate = predicate;
+    NSArray *textArray = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:textRequest error:nil];
+    
+    NSFetchRequest *imageRequest=[NSFetchRequest fetchRequestWithEntityName:@"MTNoteImagePo"];
+    NSPredicate *imagePredicate=[NSPredicate predicateWithFormat:@"noteId=%@",noteId];
+    imageRequest.predicate=imagePredicate;
+    NSArray *imageArray = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:imageRequest error:nil];
+    
+    NSMutableArray *muArray = [[NSMutableArray alloc] initWithArray:textArray];
+    [muArray addObjectsFromArray:imageArray];
+    NSMutableArray *muVoArray = [NSMutableArray array];
+    [muArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[MTNoteTextPo class]]) {
+            MTNoteTextVo *vo = [MTNoteTextVo new];
+            MTNoteTextPo *po = (MTNoteTextPo *)obj;
+            vo.text = po.text;
+            vo.fontName = po.fontName;
+            vo.fontSize = po.fontSize;
+            vo.noteId = po.noteId;
+            vo.sortIndex = po.sortIndex;
+            [muVoArray addObject:vo];
+            
+        } else {
+            MTNoteImageVo *vo = [MTNoteImageVo new];
+            MTNoteImagePo *po = (MTNoteImagePo *)obj;
+            vo.path = po.path;
+            vo.width = po.width;
+            vo.height = po.height;
+            vo.noteId = po.noteId;
+            vo.sortIndex = po.sortIndex;
+            [muVoArray addObject:vo];
+        }
+    }];
+    [muVoArray sortUsingComparator:^NSComparisonResult(MTNoteBaseVo *obj1, MTNoteBaseVo *obj2) {
+        return obj1.sortIndex > obj2.sortIndex;
+    }];
+
+    return muVoArray;
 }
 
 @end
