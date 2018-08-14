@@ -104,7 +104,13 @@ MTHomeEmptyViewDelegate>
     } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 0){
         [self scrollAnimationIsShow:YES];
     }
-    self.scrollViewOldOffset = scrollView.contentOffset;
+//    self.scrollViewOldOffset = scrollView.contentOffset;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    // 获取开始拖拽时tableview偏移量
+   self.scrollViewOldOffset = scrollView.contentOffset;
 }
 
 - (void)scrollAnimationIsShow:(BOOL)isShow
@@ -112,7 +118,7 @@ MTHomeEmptyViewDelegate>
     NSDate *nowDate = [NSDate date];
     
     NSTimeInterval times = [nowDate timeIntervalSinceDate:self.lastScrollDate];
-    if (self.isAnimationing || self.tableView.contentOffset.y <= 0 || times < 0.5) {
+    if (self.isAnimationing || self.tableView.contentOffset.y <= 0 || times < 0.5 || self.tableView.contentOffset.y >= self.tableView.contentSize.height) {
         return;
     }
     if (isShow && self.headerViewTopConstraint.constant == 0.f) {
