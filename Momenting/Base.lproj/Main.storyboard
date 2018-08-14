@@ -44,7 +44,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQ2-aj-2Px">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6Mx-U1-VVF"/>
                                 </constraints>
@@ -160,7 +160,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mt_logo" width="233" height="234"/>
         <image name="profile_header_settings" width="21" height="21"/>
         <image name="xiaokeai2" width="320" height="320"/>
+
     </resources>
 </document>
