@@ -14,7 +14,7 @@
 #import "MTCoreDataDao.h"
 #import "MTHomeEmptyView.h"
 #import "MTNoteModel.h"
-
+#import <MJRefresh/MJRefresh.h>
 #import "MTDeleteStyleTableView.h"
 
 @interface ViewController ()
@@ -69,6 +69,30 @@ MTHomeEmptyViewDelegate>
     self.logoImageView.layer.masksToBounds = YES;
     
     [self.headerView addSubview:self.sectionView];
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    NSMutableArray *muImage = [NSMutableArray array];
+    for (int i = 1 ; i < 34 ; i ++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%d",i]];
+        [muImage addObject:image];
+    }
+    // 设置普通状态的动画图片
+    [header setImages:muImage forState:MJRefreshStateIdle];
+    // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
+    [header setImages:muImage forState:MJRefreshStatePulling];
+    // 设置正在刷新状态的动画图片
+    [header setImages:muImage forState:MJRefreshStateRefreshing];
+    // 设置header
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
+    self.tableView.mj_header = header;
+}
+
+- (void)loadNewData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView.mj_header endRefreshing];
+    });
 }
 
 #pragma mark - ScrollView

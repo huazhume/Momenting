@@ -544,6 +544,7 @@
 				FB2989AD21193BC10011025D /* Sources */,
 				FB2989AE21193BC10011025D /* Frameworks */,
 				FB2989AF21193BC10011025D /* Resources */,
+				150E040A58F4960E23034B5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -676,6 +677,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		150E040A58F4960E23034B5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Momenting/Pods-Momenting-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Momenting/Pods-Momenting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AE0C3552A8F2BD9F6FC68138 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
