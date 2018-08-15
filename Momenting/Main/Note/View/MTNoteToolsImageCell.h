@@ -9,9 +9,17 @@
 #import <UIKit/UIKit.h>
 @class MTNoteImageVo;
 
+
+typedef enum : NSUInteger {
+    MTNoteToolsImageCellNormal,
+    MTNoteToolsImageCellDetail,
+} MTNoteToolsImageCellType;
+
 @interface MTNoteToolsImageCell : UITableViewCell
 
 @property (strong, nonatomic) MTNoteImageVo *model;
+
+@property (assign, nonatomic) MTNoteToolsImageCellType type;
 
 + (CGFloat)heightForCellWithModel:(MTNoteImageVo *)model;
 

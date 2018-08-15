@@ -15,6 +15,9 @@
 #define OTHER_DIR_NAME @"MT_OTHER"
 #define DB_DIR_NAME @"MT_DB"
 
+#define IMAGEBATE_DIR_NAME @"MT_IMAGEBATE"
+
+
 @interface MTMediaFileManager ()
 
 @end
@@ -67,7 +70,8 @@
     mediaFileName = VEDIO_DIR_NAME;
   }else if (mediaType == FILE_DB_TYPE){
     mediaFileName = DB_DIR_NAME;
-    
+  } else if (mediaType == FILE_IMAGEBATE_TYPE) {
+      mediaFileName = IMAGEBATE_DIR_NAME;
   }
   NSString *createPath = [filePath
       stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",
@@ -114,7 +118,8 @@
     mediaFileName =  VEDIO_DIR_NAME;
   }else if (mediaType == FILE_DB_TYPE){
     mediaFileName = DB_DIR_NAME;
-    
+  } else if (mediaType == FILE_IMAGEBATE_TYPE) {
+    mediaFileName = IMAGEBATE_DIR_NAME;
   }
   
   return [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",mediaFileName]];

@@ -48,6 +48,11 @@
 		72E97345211FD68D00D96DA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97343211FD68C00D96DA4 /* ViewController.m */; };
 		72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9734A211FD90600D96DA4 /* UIImage+ImageCompress.m */; };
 		D138E1478A5DEC49E5A98D5F /* libPods-MomentingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F871E6CE11387C8E90F083C /* libPods-MomentingTests.a */; };
+		FB0A37612123EB83007CB0DC /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0A37602123EB82007CB0DC /* UIView+Category.m */; };
+		FB0A37632123FEED007CB0DC /* MTActionToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB0A37622123FEED007CB0DC /* MTActionToastView.xib */; };
+		FB0A37662123FF9F007CB0DC /* MTActionToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0A37652123FF9F007CB0DC /* MTActionToastView.m */; };
+		FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0A376821241A8D007CB0DC /* MTNoteDetailSectionView.m */; };
+		FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB0A376A21241A9A007CB0DC /* MTNoteDetailSectionView.xib */; };
 		FB2989B621193BC10011025D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989B521193BC10011025D /* AppDelegate.m */; };
 		FB2989BC21193BC10011025D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2989BA21193BC10011025D /* Main.storyboard */; };
 		FB2989BE21193BC10011025D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2989BD21193BC10011025D /* Assets.xcassets */; };
@@ -156,6 +161,14 @@
 		CBE9C524DC1AB51CBB12ACF5 /* Pods-Momenting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Momenting.release.xcconfig"; path = "Pods/Target Support Files/Pods-Momenting/Pods-Momenting.release.xcconfig"; sourceTree = "<group>"; };
 		F05DA3419D69EB65736AF8B7 /* Pods-MomentingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MomentingUITests/Pods-MomentingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F759AFD38344CD5818049317 /* libPods-MomentingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MomentingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0A375F2123EB82007CB0DC /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		FB0A37602123EB82007CB0DC /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		FB0A37622123FEED007CB0DC /* MTActionToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTActionToastView.xib; sourceTree = "<group>"; };
+		FB0A37642123FF9F007CB0DC /* MTActionToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTActionToastView.h; sourceTree = "<group>"; };
+		FB0A37652123FF9F007CB0DC /* MTActionToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTActionToastView.m; sourceTree = "<group>"; };
+		FB0A376721241A8D007CB0DC /* MTNoteDetailSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteDetailSectionView.h; sourceTree = "<group>"; };
+		FB0A376821241A8D007CB0DC /* MTNoteDetailSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteDetailSectionView.m; sourceTree = "<group>"; };
+		FB0A376A21241A9A007CB0DC /* MTNoteDetailSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteDetailSectionView.xib; sourceTree = "<group>"; };
 		FB2989B121193BC10011025D /* Momenting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momenting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2989B421193BC10011025D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB2989B521193BC10011025D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -381,6 +394,9 @@
 				72E972FD211FCEA500D96DA4 /* MTNavigationView.h */,
 				72E972FE211FCEA500D96DA4 /* MTNavigationView.m */,
 				72E972FF211FCEA500D96DA4 /* MTNavigationView.xib */,
+				FB0A37622123FEED007CB0DC /* MTActionToastView.xib */,
+				FB0A37642123FF9F007CB0DC /* MTActionToastView.h */,
+				FB0A37652123FF9F007CB0DC /* MTActionToastView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +454,8 @@
 		72E97337211FD30C00D96DA4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FB0A375F2123EB82007CB0DC /* UIView+Category.h */,
+				FB0A37602123EB82007CB0DC /* UIView+Category.m */,
 				72E9734B211FD90600D96DA4 /* UIImage+ImageCompress.h */,
 				72E9734A211FD90600D96DA4 /* UIImage+ImageCompress.m */,
 				72E97338211FD30C00D96DA4 /* UIColor+Hex.h */,
@@ -552,6 +570,9 @@
 		FB3A96CE2122865E0033911E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB0A376721241A8D007CB0DC /* MTNoteDetailSectionView.h */,
+				FB0A376821241A8D007CB0DC /* MTNoteDetailSectionView.m */,
+				FB0A376A21241A9A007CB0DC /* MTNoteDetailSectionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -679,8 +700,10 @@
 				72E972E4211FCE8700D96DA4 /* MTHomeTextViewCell.xib in Resources */,
 				72E97305211FCEA500D96DA4 /* MTNavigationView.xib in Resources */,
 				FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */,
+				FB0A37632123FEED007CB0DC /* MTActionToastView.xib in Resources */,
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
 				FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */,
+				FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */,
 				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
 				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
 				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
@@ -789,7 +812,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0A37612123EB83007CB0DC /* UIView+Category.m in Sources */,
 				72E972E7211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m in Sources */,
+				FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */,
 				72E9733F211FD30C00D96DA4 /* UITableViewCell+Categoty.m in Sources */,
 				72E972EA211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m in Sources */,
 				72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */,
@@ -813,6 +838,7 @@
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
 				72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */,
 				72E972E6211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m in Sources */,
+				FB0A37662123FF9F007CB0DC /* MTActionToastView.m in Sources */,
 				72E97304211FCEA500D96DA4 /* MTNavigationView.m in Sources */,
 				72E97345211FD68D00D96DA4 /* ViewController.m in Sources */,
 				72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */,

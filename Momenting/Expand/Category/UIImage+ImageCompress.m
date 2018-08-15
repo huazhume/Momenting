@@ -13,7 +13,7 @@
 + (UIImage *)compressImage:(UIImage *)image
              compressRatio:(CGFloat)ratio
 {
-    return [[self class] compressImage:image compressRatio:ratio maxCompressRatio:0.1f];
+    return [[self class] compressImage:image compressRatio:ratio maxCompressRatio:0.05f];
 }
 
 + (UIImage *)compressImage:(UIImage *)image compressRatio:(CGFloat)ratio maxCompressRatio:(CGFloat)maxRatio

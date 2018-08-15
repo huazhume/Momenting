@@ -16,6 +16,7 @@ typedef enum {
   FILE_DB_TYPE,           // db  数据库
   FILE_OFFLINE_TYPE,      // offline data 离线数据
   FILE_OTHER_TYPE,        // other 其它
+  FILE_IMAGEBATE_TYPE,
 } FILE_MEDIA_MODE;
 
 /// 沙盒目录类型

@@ -13,6 +13,7 @@
 @interface MTNoteToolsImageCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
 
 @end
 
@@ -34,6 +35,11 @@
 {
     NSString *path = [[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
     self.contentImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",path,model.path]]];
+}
+
+- (void)setType:(MTNoteToolsImageCellType)type
+{
+    self.editButton.hidden = (type == MTNoteToolsImageCellDetail);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

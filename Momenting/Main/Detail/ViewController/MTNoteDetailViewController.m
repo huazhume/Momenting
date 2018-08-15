@@ -12,6 +12,8 @@
 #import "MTNoteToolsImageCell.h"
 #import "MTNoteModel.h"
 #import "MTCoreDataDao.h"
+#import "MTActionToastView.h"
+#import "MTNoteDetailSectionView.h"
 
 @interface MTNoteDetailViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -28,6 +30,8 @@ MTNavigationViewDelegate>
 @property (assign, nonatomic) BOOL isAnimationing;
 @property (strong, nonatomic) NSDate *lastScrollDate;
 @property (assign, nonatomic) CGPoint scrollViewOldOffset;
+
+@property (assign, nonatomic) BOOL isDownloading;
 
 @end
 
@@ -67,17 +71,19 @@ MTNavigationViewDelegate>
     [self.tableView registerNib:[UINib nibWithNibName:@"MTNoteToolsImageCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MTNoteToolsImageCell getIdentifier]];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.layer.borderColor = self.color.CGColor;
+    self.tableView.layer.masksToBounds = YES;
 }
 
 #pragma mark - ScrollView
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.y - self.scrollViewOldOffset.y > 1) {
-        //向下滑动
-        [self scrollAnimationIsShow:NO];
-    } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 0){
-        [self scrollAnimationIsShow:YES];
-    }
+//    if (scrollView.contentOffset.y - self.scrollViewOldOffset.y > 1) {
+//        //向下滑动
+//        [self scrollAnimationIsShow:NO];
+//    } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 0){
+//        [self scrollAnimationIsShow:YES];
+//    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -134,6 +140,7 @@ MTNavigationViewDelegate>
     } else {
         MTNoteToolsImageCell *imageCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteToolsImageCell getIdentifier]];
         imageCell.model = model;
+        [imageCell setType:MTNoteToolsImageCellDetail];
         cell = imageCell;
     }
     return cell;
@@ -141,12 +148,14 @@ MTNavigationViewDelegate>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 0.f;
+    return self.isDownloading ? [MTNoteDetailSectionView viewHeight] : 0.f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return [UIView new];
+    MTNoteDetailSectionView *sectionView = [MTNoteDetailSectionView loadFromNib];
+    sectionView.color = self.color;
+    return self.isDownloading ? sectionView : [UIView new];
 }
 
 #pragma mark - UITableViewDelegate
@@ -164,6 +173,26 @@ MTNavigationViewDelegate>
 - (IBAction)dismissButtonClicked:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)downloadButtonClicked:(id)sender
+{
+    [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.tableView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.85f, 0.85f);
+    } completion:^(BOOL finished) {
+        
+        [UIView animateWithDuration:0.29 delay:0.5 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.tableView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0f, 1.0f);
+        } completion:^(BOOL finished) {
+            [self.tableView renderViewToImageCompletion:^(UIImage *image) {
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+                MTActionToastView *toastView = [MTActionToastView loadFromNib];
+                toastView.bounds = CGRectMake(0, 0, 110, 32);
+                [toastView show];
+                
+            }];
+        }];
+    }];
+    
 }
 
 #pragma mark - getter

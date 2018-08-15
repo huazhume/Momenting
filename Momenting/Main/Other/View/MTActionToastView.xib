@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MTActionToastView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkp-C9-bqI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已保存到相册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-Oq-rCD">
+                    <rect key="frame" x="15" y="10" width="345" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Jkp-C9-bqI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3ed-ix-14w"/>
+                <constraint firstAttribute="bottom" secondItem="YRE-Oq-rCD" secondAttribute="bottom" constant="10" id="Nax-ak-RYK"/>
+                <constraint firstAttribute="bottom" secondItem="Jkp-C9-bqI" secondAttribute="bottom" id="NbC-jA-1iN"/>
+                <constraint firstItem="YRE-Oq-rCD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="SbZ-OK-giz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jkp-C9-bqI" secondAttribute="trailing" id="U7v-oy-sJt"/>
+                <constraint firstItem="Jkp-C9-bqI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XG9-6z-BlR"/>
+                <constraint firstAttribute="trailing" secondItem="YRE-Oq-rCD" secondAttribute="trailing" constant="15" id="jhg-hZ-lwg"/>
+                <constraint firstItem="YRE-Oq-rCD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="vio-j6-FXh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="effectBgView" destination="Jkp-C9-bqI" id="gHQ-El-kF3"/>
+                <outlet property="titleLabel" destination="YRE-Oq-rCD" id="dYg-rE-PMt"/>
+            </connections>
+        </view>
+    </objects>
+</document>

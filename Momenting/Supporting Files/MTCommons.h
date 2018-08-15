@@ -17,6 +17,7 @@
 #import "UITableViewCell+Categoty.h"
 #import "UITextView+Category.h"
 #import <Masonry/Masonry.h>
+#import "UIView+Category.h"
 
 
 #endif /* MYCommons_h */

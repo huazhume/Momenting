@@ -16,6 +16,7 @@
 #import "MTMediaFileManager.h"
 #import "MTCoreDataDao.h"
 #import "MTActionAlertView.h"
+#import "UIImage+ImageCompress.h"
 
 @interface MTNoteViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -219,11 +220,22 @@ MTNoteToolsTextCellDelegate>
     } else {
         data = UIImagePNGRepresentation(image);
     }
+    
+    UIImage *beta_image = [UIImage compressImage:image compressRatio:0.4];
+    NSData *beta_data;
+    if (UIImagePNGRepresentation(beta_image) == nil) {
+        beta_data = UIImageJPEGRepresentation(beta_image, 1.0);
+    } else {
+        beta_data = UIImagePNGRepresentation(beta_image);
+    }
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString * path =[[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+    NSString * beta_path =[[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGEBATE_TYPE];
     NSString *fileName = [NSString stringWithFormat:@"%ld.png",(long)[[NSDate date]timeIntervalSince1970]];
     NSString *filePath = [NSString stringWithFormat:@"%@/%@",path,fileName];
+    NSString *beta_filePath = [NSString stringWithFormat:@"%@/%@",beta_path,fileName];
     [fileManager createFileAtPath:filePath contents:data attributes:nil];
+    [fileManager createFileAtPath:beta_filePath contents:beta_data attributes:nil];
     MTNoteImageVo *model = [MTNoteImageVo new];
     model.path = fileName;
     model.width = image.size.width;

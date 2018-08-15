@@ -10,6 +10,7 @@
 #import "MTNoteModel.h"
 #import "MTMediaFileManager.h"
 #import "MTDateFormatManager.h"
+#import "UIImage+ImageCompress.h"
 
 @interface MTHomeTextViewCell ()
 
@@ -46,6 +47,10 @@
         textHeight = textLabelSize.height + 10.f;
     }
     
+    if (textHeight > ([UIFont fontWithName:@"PingFangSC-Light" size:12].lineHeight * 4 + 10)) {
+        textHeight = ([UIFont fontWithName:@"PingFangSC-Light" size:12].lineHeight * 4 + 10);
+    }
+    
     CGFloat imageHeight = 0.f;
     if (model.imagePath.length > 0) {
         imageHeight = 140.f;
@@ -80,8 +85,23 @@
 {
     _model = model;
     self.contentLabel.text = model.text;
-    NSString *path = [[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
-    self.contentImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",path,model.imagePath]]];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *path = [[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGEBATE_TYPE];
+    NSString *beta_path = [NSString stringWithFormat:@"%@/%@",path,model.imagePath];
+    if (![fileManager fileExistsAtPath:beta_path]) {
+        NSString *originPath = [[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+        NSString *imagePath = [NSString stringWithFormat:@"%@/%@",originPath,model.imagePath];
+        UIImage *image = [UIImage compressImage:[[UIImage alloc] initWithContentsOfFile:imagePath] compressRatio:0.05];
+        NSData *beta_data = nil;
+        if (UIImagePNGRepresentation(image) == nil) {
+            beta_data = UIImageJPEGRepresentation(image, 1.0);
+        } else {
+            beta_data = UIImagePNGRepresentation(image);
+        }
+        [fileManager createFileAtPath:beta_path contents:beta_data attributes:nil];
+    }
+    self.contentImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:beta_path]];
     self.imageViewHeightConstraint.constant = model.imagePath.length > 0 ? 140.f : 0.f;
     
     NSInteger index = model.indexRow % self.colors.count;
