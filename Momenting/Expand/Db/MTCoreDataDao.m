@@ -124,4 +124,43 @@
     return muVoArray;
 }
 
+
+- (BOOL)deleteNoteWithNoteId:(NSString *)noteId
+{
+    
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"noteId=%@",noteId];
+    {
+        NSFetchRequest *deleRequest = [NSFetchRequest fetchRequestWithEntityName:@"MTNotePo"];
+        deleRequest.predicate = predicate;
+        NSArray *deleArray = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:deleRequest error:nil];
+        for (MTNotePo *stu in deleArray) {
+            [[[MTCoreDataManager shareInstance] managedObjectContext] deleteObject:stu];
+        }
+    }
+    {
+        NSFetchRequest *imageDeleRequest = [NSFetchRequest fetchRequestWithEntityName:@"MTNoteImagePo"];
+        
+        imageDeleRequest.predicate = predicate;
+        NSArray *deleImageArray = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:imageDeleRequest error:nil];
+        for (MTNoteImagePo *stu in deleImageArray) {
+            [[[MTCoreDataManager shareInstance] managedObjectContext] deleteObject:stu];
+        }
+    }
+    {
+        NSFetchRequest *textDeleRequest = [NSFetchRequest fetchRequestWithEntityName:@"MTNoteImagePo"];
+        textDeleRequest.predicate = predicate;
+        NSArray *deleTextArray = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:textDeleRequest error:nil];
+        for (MTNoteTextPo *stu in deleTextArray) {
+            [[[MTCoreDataManager shareInstance] managedObjectContext] deleteObject:stu];
+        }
+    }
+    NSError *error = nil;
+    if ([[[MTCoreDataManager shareInstance] managedObjectContext] save:&error]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+
 @end

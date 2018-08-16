@@ -17,6 +17,8 @@
 #import <MJRefresh/MJRefresh.h>
 #import "MTDeleteStyleTableView.h"
 #import "MTNoteDetailViewController.h"
+#import "MTActionAlertView.h"
+#import "MTCoreDataDao.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -173,21 +175,30 @@ MTHomeEmptyViewDelegate>
 //先要设Cell可编辑
 - (NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"删除", @"") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
-                                          {
-                                              [tableView setEditing:NO animated:YES];  // 这句很重要，退出编辑模式，隐藏左滑菜单
-
-                                          }];
-    deleteAction.backgroundColor = [UIColor whiteColor];
-    NSString *readTitle = @"截屏";
-
+//    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"", @"") handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
+//                                          {
+//                                              [tableView setEditing:NO animated:YES];  // 这句很重要，退出编辑模式，隐藏左滑菜单
+//
+//                                          }];
+//    deleteAction.backgroundColor = [UIColor whiteColor];
+    NSString *readTitle = @"";
     UITableViewRowAction *readAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:readTitle handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
                                         {
-                                            [tableView setEditing:NO animated:YES];  // 这句很重要，退出编辑模式，隐藏左滑菜单
+                                            
+                                            [MTActionAlertView alertShowWithMessage:@"真的忍心要删除嘛？" leftTitle:@"是哒" leftColor:[UIColor colorWithHex:0xCD6256] rightTitle:@"不啦" rightColor:[UIColor colorWithHex:0x333333] callBack:^(NSInteger index) {
+                                                if (index == 2){
+                                                    return;
+                                                }
+                                                MTNoteModel *model = self.datalist[indexPath.row];
+                                                [[MTCoreDataDao new]deleteNoteWithNoteId:model.noteId];
+                                                [self.datalist removeObjectAtIndex:indexPath.row];
+                                                [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:(UITableViewRowAnimationAutomatic)];
+                                                 [tableView setEditing:NO animated:YES];
+                                            }];
 
                                         }];
     readAction.backgroundColor = [UIColor whiteColor];
-    return @[deleteAction, readAction];
+    return @[readAction];
 }
 
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath

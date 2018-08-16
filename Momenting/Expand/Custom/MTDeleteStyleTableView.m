@@ -36,13 +36,13 @@
         // iOS 11层级 (Xcode 9编译): UITableView -> UISwipeActionPullView
         for (UIView *subview in self.subviews)
         {
-            if ([subview isKindOfClass:NSClassFromString(@"UISwipeActionPullView")] && [subview.subviews count] >= 2)
+            if ([subview isKindOfClass:NSClassFromString(@"UISwipeActionPullView")] && [subview.subviews count] >= 1)
             {
-                UIButton *deleteButton = subview.subviews[1];
-                self.leftButton.frame = CGRectMake(20, 0, deleteButton.bounds.size.width - 40, deleteButton.bounds.size.height);
-                [deleteButton addSubview:self.leftButton];
+//                UIButton *deleteButton = subview.subviews[1];
+//                self.leftButton.frame = CGRectMake(20, 0, deleteButton.bounds.size.width - 40, deleteButton.bounds.size.height);
+//                [deleteButton addSubview:self.leftButton];
                 UIButton *readButton = subview.subviews[0];
-                self.rightButton.frame = CGRectMake(30, 0, readButton.bounds.size.width - 60, readButton.bounds.size.height);
+                self.rightButton.frame = CGRectMake(20, 0, readButton.bounds.size.width - 60, readButton.bounds.size.height);
                 [readButton addSubview:self.rightButton];
             }
         }
@@ -53,14 +53,14 @@
         UITableViewCell*tableCell = [self cellForRowAtIndexPath:self.editingIndexPath];
         for (UIView *subview in tableCell.subviews)
         {
-            if ([subview isKindOfClass:NSClassFromString(@"UITableViewCellDeleteConfirmationView")] && [subview.subviews count] >= 2)
+            if ([subview isKindOfClass:NSClassFromString(@"UITableViewCellDeleteConfirmationView")] && [subview.subviews count] >= 1)
             {
                 UIButton *deleteButton = subview.subviews[0];
-                self.leftButton.frame = CGRectMake(20, 0, deleteButton.bounds.size.width - 40, deleteButton.bounds.size.height);
+                self.leftButton.frame = CGRectMake(10, 0, deleteButton.bounds.size.width - 40, deleteButton.bounds.size.height);
                 [deleteButton addSubview:self.leftButton];
-                UIButton *readButton = subview.subviews[1];
-                self.rightButton.frame = CGRectMake(20, 0, readButton.bounds.size.width - 40, readButton.bounds.size.height);
-                [readButton addSubview:self.rightButton];
+//                UIButton *readButton = subview.subviews[1];
+//                self.rightButton.frame = CGRectMake(20, 0, readButton.bounds.size.width - 40, readButton.bounds.size.height);
+//                [readButton addSubview:self.rightButton];
             }
         }
     }
@@ -75,6 +75,7 @@
         [_rightButton setImage:[UIImage imageNamed:@"trash"] forState:UIControlStateNormal];
         _rightButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _rightButton.userInteractionEnabled = NO;
+//        _rightButton.backgroundColor = [UIColor colorWithHex:0xC496C5];
     }
     return _rightButton;
 }
@@ -86,6 +87,7 @@
         _leftButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [_leftButton setImage:[UIImage imageNamed:@"radioMoreButtonSelected"] forState:UIControlStateNormal];
         _leftButton.userInteractionEnabled = NO;
+//        _leftButton.backgroundColor = [UIColor colorWithHex:0xC496C5];
     }
     return _leftButton;
 }

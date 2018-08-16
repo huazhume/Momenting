@@ -21,4 +21,6 @@ typedef enum : NSUInteger {
 
 - (NSArray *)getNoteDetailList:(NSString *)noteId;
 
+- (BOOL)deleteNoteWithNoteId:(NSString *)noteId;
+
 @end

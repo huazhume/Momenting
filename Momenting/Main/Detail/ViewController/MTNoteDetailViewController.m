@@ -176,11 +176,11 @@ MTNavigationViewDelegate>
 }
 - (IBAction)downloadButtonClicked:(id)sender
 {
-    [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.tableView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.85f, 0.85f);
     } completion:^(BOOL finished) {
         
-        [UIView animateWithDuration:0.29 delay:0.5 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [UIView animateWithDuration:0.1 delay:0.2 options:UIViewAnimationOptionCurveEaseIn animations:^{
             self.tableView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0f, 1.0f);
         } completion:^(BOOL finished) {
             [self.tableView renderViewToImageCompletion:^(UIImage *image) {
