@@ -1,0 +1,35 @@
+//
+//  MTNoteSettingHeaderCell.m
+//  Momenting
+//
+//  Created by huazhume on 2018/8/18.
+//  Copyright © 2018年 xiaobai zhang. All rights reserved.
+//
+
+#import "MTNoteSettingHeaderCell.h"
+
+@interface MTNoteSettingHeaderCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+
+@end
+
+@implementation MTNoteSettingHeaderCell
+
++ (CGFloat)heightForCell
+{
+    return 120.f;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.coverImageView.layer.cornerRadius = self.coverImageView.bounds.size.height / 2.0;
+    self.coverImageView.layer.masksToBounds = YES;
+}
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end
