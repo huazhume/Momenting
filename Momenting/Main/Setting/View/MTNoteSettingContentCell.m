@@ -8,6 +8,11 @@
 
 #import "MTNoteSettingContentCell.h"
 
+@interface MTNoteSettingContentCell ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 @implementation MTNoteSettingContentCell
 
 
@@ -19,6 +24,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
+- (void)setTitle:(NSString *)title
+{
+    self.titleLabel.text = title;
 }
 
 

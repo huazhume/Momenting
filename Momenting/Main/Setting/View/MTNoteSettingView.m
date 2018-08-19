@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) UITableView *tableView;
 
+@property (strong, nonatomic) NSMutableArray *datalist;
+
 @end
 
 @implementation MTNoteSettingView
@@ -29,6 +31,7 @@
 - (void)initBaseViews
 {
     [self addSubview:self.tableView];
+    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Become a member",@"Become a member",@"Become a member"],@[@"Push notification",@"Help"]] mutableCopy];
 }
 
 
@@ -45,7 +48,7 @@
     } else if (section == 1) {
         return 2;
     }
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,6 +61,7 @@
         
     } else {
         MTNoteSettingContentCell *contentCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteSettingContentCell getIdentifier]];
+        [contentCell setTitle:self.datalist[indexPath.section][indexPath.row]];
         cell = contentCell;
     }
     return cell;
@@ -65,7 +69,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return section ? 30.f : 0.f;
+    if (section == 0) {
+        return 0.f;
+    } else if (section == 2) {
+        return 30.f;
+    }
+    return 30.f + 40.f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -106,6 +115,14 @@
         
     }
     return _tableView;
+}
+
+- (NSMutableArray *)datalist
+{
+    if (!_datalist) {
+        _datalist = [NSMutableArray array];
+    }
+    return _datalist;
 }
 
 @end

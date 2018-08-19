@@ -42,6 +42,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="titleLabel" destination="Exd-YJ-hPW" id="XG1-my-a1M"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -12,4 +12,6 @@
 
 + (CGFloat)heightForCell;
 
+- (void)setTitle:(NSString *)title;
+
 @end
