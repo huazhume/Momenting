@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MTMediaFileManager.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate ()
 
@@ -22,9 +23,57 @@
     [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType:FILE_IMAGE_TYPE];
     [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType:FILE_DB_TYPE];
     [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType: FILE_IMAGEBATE_TYPE];
-   
+    [self requestAuthor];
     return YES;
 }
+
+- (void)requestAuthor
+{
+    // 申请通知权限
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        
+        // A Boolean value indicating whether authorization was granted. The value of this parameter is YES when authorization for the requested options was granted. The value is NO when authorization for one or more of the options is denied.
+        if (granted) {
+            
+            // 1、创建通知内容，注：这里得用可变类型的UNMutableNotificationContent，否则内容的属性是只读的
+            UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+            // 标题
+            content.title = [NSString stringWithFormat:@"小秘密",arc4random_uniform(100)];
+            // 次标题
+            content.subtitle = @"我好爱你啊";
+            // 内容
+            content.body = @"我好爱你啊我好爱你啊我好爱你啊我好爱你啊我好爱你啊我好爱你啊我好爱你啊我好爱你啊我好爱你啊我好爱你啊。";
+            // [UIApplication sharedApplication].applicationIconBadgeNumber++;
+            // app显示通知数量的角标
+            // content.badge = @([UIApplication sharedApplication].applicationIconBadgeNumber);
+            // 通知的提示声音，这里用的默认的声音
+            content.sound = [UNNotificationSound defaultSound];
+            NSURL *imageUrl = [[NSBundle mainBundle] URLForResource:@"xiaokeai" withExtension:@"png"];
+            UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:@"imageIndetifier" URL:imageUrl options:nil error:nil];
+            // 附件 可以是音频、图片、视频 这里是一张图片
+            // content.attachments = @[attachment];
+            // 标识符
+            content.categoryIdentifier = @"categoryIndentifier";
+            // 2、创建通知触发
+            /* 触发器分三种：
+             UNTimeIntervalNotificationTrigger : 在一定时间后触发，如果设置重复的话，timeInterval不能小于60
+             UNCalendarNotificationTrigger : 在某天某时触发，可重复
+             UNLocationNotificationTrigger : 进入或离开某个地理区域时触发
+             */
+            UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:120 repeats:YES];
+            // 3、创建通知请求
+            UNNotificationRequest *notificationRequest = [UNNotificationRequest requestWithIdentifier:@"KFGroupNotification" content:content trigger:trigger];
+            // 4、将请求加入通知中心
+            [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:notificationRequest withCompletionHandler:^(NSError * _Nullable error) {
+                if (error == nil) {
+                    NSLog(@"已成功加推送%@",notificationRequest.identifier);
+                }
+            }];
+        }
+        
+    }];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

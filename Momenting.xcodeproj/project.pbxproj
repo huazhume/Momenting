@@ -64,6 +64,7 @@
 		FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */; };
 		FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
+		FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE5F23E21267B6600B24208 /* MTNotificationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +190,8 @@
 		FB874AC8212160FF0050DD58 /* MTDeleteStyleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDeleteStyleTableView.h; sourceTree = "<group>"; };
 		FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDeleteStyleTableView.m; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FBE5F23D21267B6600B24208 /* MTNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationManager.h; sourceTree = "<group>"; };
+		FBE5F23E21267B6600B24208 /* MTNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +414,7 @@
 		72E97321211FD1BB00D96DA4 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				FBE5F23C21267B3B00B24208 /* Notification */,
 				FB874AC7212160C90050DD58 /* Custom */,
 				72E97337211FD30C00D96DA4 /* Category */,
 				72E97324211FD1FE00D96DA4 /* Sanbox */,
@@ -584,6 +588,15 @@
 				FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		FBE5F23C21267B3B00B24208 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				FBE5F23D21267B6600B24208 /* MTNotificationManager.h */,
+				FBE5F23E21267B6600B24208 /* MTNotificationManager.m */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -833,6 +846,7 @@
 				72E972F3211FCE8700D96DA4 /* MTNoteViewController.m in Sources */,
 				72E9732D211FD23F00D96DA4 /* MTDateFormatManager.m in Sources */,
 				72E972EB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m in Sources */,
+				FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */,
 				72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */,
 				FB2989C421193BC10011025D /* main.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
