@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		677069D22132044F10614E6A /* libPods-MomentingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F759AFD38344CD5818049317 /* libPods-MomentingUITests.a */; };
 		683120101DF0E61BC4149166 /* libPods-Momenting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339EF9E612033D7B103304CC /* libPods-Momenting.a */; };
+		722838362128700F003C28FD /* MTNoteSettingHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722838342128700E003C28FD /* MTNoteSettingHeaderCell.m */; };
+		722838372128700F003C28FD /* MTNoteSettingHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722838352128700F003C28FD /* MTNoteSettingHeaderCell.xib */; };
+		7228383E212872AD003C28FD /* MTNoteSettingContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7228383C212872AD003C28FD /* MTNoteSettingContentCell.m */; };
+		7228383F212872AD003C28FD /* MTNoteSettingContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7228383D212872AD003C28FD /* MTNoteSettingContentCell.xib */; };
 		72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972AF211FCE8700D96DA4 /* MTNoteSettingView.m */; };
 		72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972B4211FCE8700D96DA4 /* MTHomeEmptyView.m */; };
 		72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972B5211FCE8700D96DA4 /* MTHomeEmptyView.xib */; };
@@ -88,6 +92,12 @@
 		0E871D87A53CD8759F3EA067 /* Pods-MomentingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MomentingTests/Pods-MomentingTests.release.xcconfig"; sourceTree = "<group>"; };
 		339EF9E612033D7B103304CC /* libPods-Momenting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Momenting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		394B147571E7885531BEE82F /* Pods-MomentingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomentingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MomentingTests/Pods-MomentingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		722838332128700E003C28FD /* MTNoteSettingHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteSettingHeaderCell.h; sourceTree = "<group>"; };
+		722838342128700E003C28FD /* MTNoteSettingHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteSettingHeaderCell.m; sourceTree = "<group>"; };
+		722838352128700F003C28FD /* MTNoteSettingHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteSettingHeaderCell.xib; sourceTree = "<group>"; };
+		7228383B212872AD003C28FD /* MTNoteSettingContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteSettingContentCell.h; sourceTree = "<group>"; };
+		7228383C212872AD003C28FD /* MTNoteSettingContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteSettingContentCell.m; sourceTree = "<group>"; };
+		7228383D212872AD003C28FD /* MTNoteSettingContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteSettingContentCell.xib; sourceTree = "<group>"; };
 		72E972AE211FCE8700D96DA4 /* MTNoteSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNoteSettingView.h; sourceTree = "<group>"; };
 		72E972AF211FCE8700D96DA4 /* MTNoteSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNoteSettingView.m; sourceTree = "<group>"; };
 		72E972B3211FCE8700D96DA4 /* MTHomeEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeEmptyView.h; sourceTree = "<group>"; };
@@ -274,6 +284,12 @@
 			children = (
 				72E972AE211FCE8700D96DA4 /* MTNoteSettingView.h */,
 				72E972AF211FCE8700D96DA4 /* MTNoteSettingView.m */,
+				722838332128700E003C28FD /* MTNoteSettingHeaderCell.h */,
+				722838342128700E003C28FD /* MTNoteSettingHeaderCell.m */,
+				722838352128700F003C28FD /* MTNoteSettingHeaderCell.xib */,
+				7228383B212872AD003C28FD /* MTNoteSettingContentCell.h */,
+				7228383C212872AD003C28FD /* MTNoteSettingContentCell.m */,
+				7228383D212872AD003C28FD /* MTNoteSettingContentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -714,12 +730,14 @@
 				72E97305211FCEA500D96DA4 /* MTNavigationView.xib in Resources */,
 				FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */,
 				FB0A37632123FEED007CB0DC /* MTActionToastView.xib in Resources */,
+				722838372128700F003C28FD /* MTNoteSettingHeaderCell.xib in Resources */,
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
 				FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */,
 				FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */,
 				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
 				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
 				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
+				7228383F212872AD003C28FD /* MTNoteSettingContentCell.xib in Resources */,
 				72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */,
 				FB2989BC21193BC10011025D /* Main.storyboard in Resources */,
 				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
@@ -826,6 +844,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0A37612123EB83007CB0DC /* UIView+Category.m in Sources */,
+				7228383E212872AD003C28FD /* MTNoteSettingContentCell.m in Sources */,
 				72E972E7211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m in Sources */,
 				FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */,
 				72E9733F211FD30C00D96DA4 /* UITableViewCell+Categoty.m in Sources */,
@@ -860,6 +879,7 @@
 				72E97302211FCEA500D96DA4 /* MTActionSheetView.m in Sources */,
 				FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */,
 				72E97329211FD23700D96DA4 /* MTCoreDataDao.m in Sources */,
+				722838362128700F003C28FD /* MTNoteSettingHeaderCell.m in Sources */,
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
 				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,
 			);

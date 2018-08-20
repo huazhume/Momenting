@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,54 +52,15 @@
                                 <rect key="frame" x="-375" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZY3-mk-dzW">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="667"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-vT-lfl">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="667"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaokeai2" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-Kz-dxg">
-                                                <rect key="frame" x="50" y="60" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="gqC-G2-EAT"/>
-                                                    <constraint firstAttribute="height" constant="100" id="mPI-3l-i0a"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      xian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbr-kc-Ta6">
-                                                <rect key="frame" x="50" y="170" width="59" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOE-50-SFU">
-                                                <rect key="frame" x="25" y="617" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="1aO-1h-XXR"/>
-                                                    <constraint firstAttribute="height" constant="40" id="TMm-dx-yht"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="profile_header_settings"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNh-DF-zq0">
-                                                <rect key="frame" x="65" y="629" width="46.5" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-vT-lfl" customClass="MTNoteSettingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="7cp-Kz-dxg" firstAttribute="leading" secondItem="ghC-vT-lfl" secondAttribute="leading" constant="50" id="0pr-iA-p2U"/>
-                                            <constraint firstItem="zbr-kc-Ta6" firstAttribute="leading" secondItem="7cp-Kz-dxg" secondAttribute="leading" id="GRS-Ej-pmc"/>
-                                            <constraint firstAttribute="bottom" secondItem="zOE-50-SFU" secondAttribute="bottom" constant="10" id="dvO-yM-zEl"/>
-                                            <constraint firstItem="zOE-50-SFU" firstAttribute="leading" secondItem="ghC-vT-lfl" secondAttribute="leading" constant="25" id="kjk-kn-Pc9"/>
-                                            <constraint firstItem="7cp-Kz-dxg" firstAttribute="top" secondItem="ghC-vT-lfl" secondAttribute="top" constant="60" id="lYv-zT-hED"/>
-                                            <constraint firstItem="zbr-kc-Ta6" firstAttribute="top" secondItem="7cp-Kz-dxg" secondAttribute="bottom" constant="10" id="mgQ-7f-TY8"/>
-                                            <constraint firstItem="sNh-DF-zq0" firstAttribute="leading" secondItem="zOE-50-SFU" secondAttribute="trailing" id="qHp-Ny-x2h"/>
-                                            <constraint firstItem="sNh-DF-zq0" firstAttribute="centerY" secondItem="zOE-50-SFU" secondAttribute="centerY" id="zSF-Xz-oNw"/>
-                                        </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-Vc-86a">
-                                        <rect key="frame" x="295" y="0.0" width="80" height="667"/>
+                                        <rect key="frame" x="285" y="0.0" width="90" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="setViewDismissAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pei-9h-hLB"/>
@@ -112,7 +72,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Qno-Vc-86a" secondAttribute="bottom" id="4Jy-Wk-l5m"/>
                                     <constraint firstItem="Qno-Vc-86a" firstAttribute="leading" secondItem="ghC-vT-lfl" secondAttribute="trailing" id="7vU-ZN-Gha"/>
                                     <constraint firstItem="Qno-Vc-86a" firstAttribute="top" secondItem="XVY-E6-jDL" secondAttribute="top" id="Aus-dc-Jkq"/>
-                                    <constraint firstAttribute="trailing" secondItem="ghC-vT-lfl" secondAttribute="trailing" constant="80" id="AwC-6x-rty"/>
+                                    <constraint firstAttribute="trailing" secondItem="ghC-vT-lfl" secondAttribute="trailing" constant="90" id="AwC-6x-rty"/>
                                     <constraint firstItem="ghC-vT-lfl" firstAttribute="leading" secondItem="XVY-E6-jDL" secondAttribute="leading" id="IYI-In-8hZ"/>
                                     <constraint firstAttribute="bottom" secondItem="ghC-vT-lfl" secondAttribute="bottom" id="Oj2-r8-MNa"/>
                                     <constraint firstItem="ZY3-mk-dzW" firstAttribute="trailing" secondItem="ghC-vT-lfl" secondAttribute="trailing" id="Z6m-Ej-5y8"/>
@@ -148,7 +108,6 @@
                     <connections>
                         <outlet property="headerView" destination="vQ2-aj-2Px" id="VNI-VJ-kCY"/>
                         <outlet property="headerViewTopConstraint" destination="dgJ-of-xDf" id="9rk-FL-D3y"/>
-                        <outlet property="logoImageView" destination="7cp-Kz-dxg" id="75B-rE-Zmk"/>
                         <outlet property="setView" destination="XVY-E6-jDL" id="gTZ-s7-Dnb"/>
                         <outlet property="setViewLeadingCostraint" destination="R0D-sa-ALC" id="PNN-PD-spn"/>
                         <outlet property="tableView" destination="CiH-dz-Yzl" id="LZq-OZ-Zip"/>
@@ -159,10 +118,4 @@
             <point key="canvasLocation" x="503" y="-65"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mt_logo" width="233" height="234"/>
-        <image name="profile_header_settings" width="21" height="21"/>
-        <image name="xiaokeai2" width="320" height="320"/>
-
-    </resources>
 </document>
