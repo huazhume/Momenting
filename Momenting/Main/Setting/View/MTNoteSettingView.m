@@ -31,7 +31,7 @@
 - (void)initBaseViews
 {
     [self addSubview:self.tableView];
-    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Become a member",@"Become a member",@"Become a member"],@[@"Push notification",@"Help"]] mutableCopy];
+    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Become a member",@"Become a member",@"Become a member"],@[@"Push notification",@"About"]] mutableCopy];
 }
 
 
@@ -98,7 +98,43 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
+    switch (indexPath.section) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            if (indexPath.row == 0) {
+                //通知设置
+                [self goinSettingInterface];
+            } else {
+                //关于我们
+                
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark - Actions
+- (void)goinSettingInterface
+{
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
 
 #pragma mark - getter
