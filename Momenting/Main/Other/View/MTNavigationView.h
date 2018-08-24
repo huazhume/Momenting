@@ -10,6 +10,8 @@
 
 @protocol MTNavigationViewDelegate <NSObject>
 
+@optional
+
 - (void)leftAction;
 
 - (void)rightAction;
@@ -27,6 +29,12 @@ typedef NS_ENUM(NSUInteger, MTNavigationViewType) {
 @property (weak, nonatomic) id <MTNavigationViewDelegate> delegate;
 
 @property (assign, nonatomic) MTNavigationViewType type;
+
+@property (copy, nonatomic) NSString *navigationTitle;
+
+@property (copy, nonatomic) NSString *rightTitle;
+
+@property (copy, nonatomic) NSString *rightImageName;
 
 + (instancetype)loadFromNib;
 

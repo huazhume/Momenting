@@ -67,6 +67,19 @@
 		FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A96D02122867C0033911E /* MTNoteDetailViewController.m */; };
 		FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */; };
 		FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */; };
+		FB9C1F47212FA9CF00CE1224 /* MTNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1F45212FA9CF00CE1224 /* MTNotificationViewController.m */; };
+		FB9C1F48212FA9CF00CE1224 /* MTNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F46212FA9CF00CE1224 /* MTNotificationViewController.xib */; };
+		FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1F4A212FAAA000CE1224 /* MTNotificationViewCell.m */; };
+		FB9C1F4D212FAAA000CE1224 /* MTNotificationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F4B212FAAA000CE1224 /* MTNotificationViewCell.xib */; };
+		FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1F4F2130142600CE1224 /* MTAddNotificationController.m */; };
+		FB9C1F522130142600CE1224 /* MTAddNotificationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */; };
+		FBB5E378212EAB6E008A3F07 /* MTProfileSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB5E376212EAB6E008A3F07 /* MTProfileSetViewController.m */; };
+		FBB5E379212EAB6E008A3F07 /* MTProfileSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB5E377212EAB6E008A3F07 /* MTProfileSetViewController.xib */; };
+		FBB5E37C212EAD5E008A3F07 /* MTHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB5E37B212EAD5E008A3F07 /* MTHelp.m */; };
+		FBB5E38B212EB613008A3F07 /* MTSettingProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB5E389212EB613008A3F07 /* MTSettingProfileCell.m */; };
+		FBB5E38C212EB613008A3F07 /* MTSettingProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB5E38A212EB613008A3F07 /* MTSettingProfileCell.xib */; };
+		FBB5E390212EB85C008A3F07 /* MTSettingNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB5E38E212EB85C008A3F07 /* MTSettingNameCell.m */; };
+		FBB5E391212EB85C008A3F07 /* MTSettingNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB5E38F212EB85C008A3F07 /* MTSettingNameCell.xib */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
 		FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE5F23E21267B6600B24208 /* MTNotificationManager.m */; };
 /* End PBXBuildFile section */
@@ -199,6 +212,26 @@
 		FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteDetailViewController.xib; sourceTree = "<group>"; };
 		FB874AC8212160FF0050DD58 /* MTDeleteStyleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDeleteStyleTableView.h; sourceTree = "<group>"; };
 		FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDeleteStyleTableView.m; sourceTree = "<group>"; };
+		FB9C1F44212FA9CF00CE1224 /* MTNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationViewController.h; sourceTree = "<group>"; };
+		FB9C1F45212FA9CF00CE1224 /* MTNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationViewController.m; sourceTree = "<group>"; };
+		FB9C1F46212FA9CF00CE1224 /* MTNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNotificationViewController.xib; sourceTree = "<group>"; };
+		FB9C1F49212FAAA000CE1224 /* MTNotificationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationViewCell.h; sourceTree = "<group>"; };
+		FB9C1F4A212FAAA000CE1224 /* MTNotificationViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationViewCell.m; sourceTree = "<group>"; };
+		FB9C1F4B212FAAA000CE1224 /* MTNotificationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNotificationViewCell.xib; sourceTree = "<group>"; };
+		FB9C1F4E2130142600CE1224 /* MTAddNotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAddNotificationController.h; sourceTree = "<group>"; };
+		FB9C1F4F2130142600CE1224 /* MTAddNotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAddNotificationController.m; sourceTree = "<group>"; };
+		FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTAddNotificationController.xib; sourceTree = "<group>"; };
+		FBB5E375212EAB6E008A3F07 /* MTProfileSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTProfileSetViewController.h; sourceTree = "<group>"; };
+		FBB5E376212EAB6E008A3F07 /* MTProfileSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTProfileSetViewController.m; sourceTree = "<group>"; };
+		FBB5E377212EAB6E008A3F07 /* MTProfileSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTProfileSetViewController.xib; sourceTree = "<group>"; };
+		FBB5E37A212EAD5E008A3F07 /* MTHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHelp.h; sourceTree = "<group>"; };
+		FBB5E37B212EAD5E008A3F07 /* MTHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHelp.m; sourceTree = "<group>"; };
+		FBB5E388212EB613008A3F07 /* MTSettingProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSettingProfileCell.h; sourceTree = "<group>"; };
+		FBB5E389212EB613008A3F07 /* MTSettingProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSettingProfileCell.m; sourceTree = "<group>"; };
+		FBB5E38A212EB613008A3F07 /* MTSettingProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTSettingProfileCell.xib; sourceTree = "<group>"; };
+		FBB5E38D212EB85C008A3F07 /* MTSettingNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSettingNameCell.h; sourceTree = "<group>"; };
+		FBB5E38E212EB85C008A3F07 /* MTSettingNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSettingNameCell.m; sourceTree = "<group>"; };
+		FBB5E38F212EB85C008A3F07 /* MTSettingNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTSettingNameCell.xib; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FBE5F23D21267B6600B24208 /* MTNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationManager.h; sourceTree = "<group>"; };
 		FBE5F23E21267B6600B24208 /* MTNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationManager.m; sourceTree = "<group>"; };
@@ -268,6 +301,9 @@
 		72E972A8211FCE8700D96DA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FBB5E375212EAB6E008A3F07 /* MTProfileSetViewController.h */,
+				FBB5E376212EAB6E008A3F07 /* MTProfileSetViewController.m */,
+				FBB5E377212EAB6E008A3F07 /* MTProfileSetViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +326,12 @@
 				7228383B212872AD003C28FD /* MTNoteSettingContentCell.h */,
 				7228383C212872AD003C28FD /* MTNoteSettingContentCell.m */,
 				7228383D212872AD003C28FD /* MTNoteSettingContentCell.xib */,
+				FBB5E388212EB613008A3F07 /* MTSettingProfileCell.h */,
+				FBB5E389212EB613008A3F07 /* MTSettingProfileCell.m */,
+				FBB5E38A212EB613008A3F07 /* MTSettingProfileCell.xib */,
+				FBB5E38D212EB85C008A3F07 /* MTSettingNameCell.h */,
+				FBB5E38E212EB85C008A3F07 /* MTSettingNameCell.m */,
+				FBB5E38F212EB85C008A3F07 /* MTSettingNameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,6 +498,8 @@
 			children = (
 				72E9732C211FD23F00D96DA4 /* MTDateFormatManager.h */,
 				72E9732B211FD23F00D96DA4 /* MTDateFormatManager.m */,
+				FBB5E37A212EAD5E008A3F07 /* MTHelp.h */,
+				FBB5E37B212EAD5E008A3F07 /* MTHelp.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -559,6 +603,7 @@
 		FB2989E6211940D10011025D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FBDD902C212FA944009A75D7 /* Notification */,
 				FB3A96CC212286430033911E /* Detail */,
 				72E972F5211FCEA500D96DA4 /* Other */,
 				72E972B0211FCE8700D96DA4 /* Home */,
@@ -604,6 +649,46 @@
 				FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		FBDD902C212FA944009A75D7 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				FBDD902E212FA969009A75D7 /* Model */,
+				FBDD902D212FA969009A75D7 /* View */,
+				FBDD902F212FA969009A75D7 /* ViewController */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		FBDD902D212FA969009A75D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB9C1F49212FAAA000CE1224 /* MTNotificationViewCell.h */,
+				FB9C1F4A212FAAA000CE1224 /* MTNotificationViewCell.m */,
+				FB9C1F4B212FAAA000CE1224 /* MTNotificationViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBDD902E212FA969009A75D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBDD902F212FA969009A75D7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB9C1F44212FA9CF00CE1224 /* MTNotificationViewController.h */,
+				FB9C1F45212FA9CF00CE1224 /* MTNotificationViewController.m */,
+				FB9C1F46212FA9CF00CE1224 /* MTNotificationViewController.xib */,
+				FB9C1F4E2130142600CE1224 /* MTAddNotificationController.h */,
+				FB9C1F4F2130142600CE1224 /* MTAddNotificationController.m */,
+				FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		FBE5F23C21267B3B00B24208 /* Notification */ = {
@@ -681,6 +766,7 @@
 		FB2989A921193BC10011025D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MT;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "xiaobai zhang";
 				TargetAttributes = {
@@ -734,13 +820,19 @@
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
 				FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */,
 				FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */,
+				FB9C1F48212FA9CF00CE1224 /* MTNotificationViewController.xib in Resources */,
+				FBB5E391212EB85C008A3F07 /* MTSettingNameCell.xib in Resources */,
 				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
 				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
 				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
+				FB9C1F522130142600CE1224 /* MTAddNotificationController.xib in Resources */,
 				7228383F212872AD003C28FD /* MTNoteSettingContentCell.xib in Resources */,
 				72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */,
+				FBB5E38C212EB613008A3F07 /* MTSettingProfileCell.xib in Resources */,
 				FB2989BC21193BC10011025D /* Main.storyboard in Resources */,
+				FB9C1F4D212FAAA000CE1224 /* MTNotificationViewCell.xib in Resources */,
 				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
+				FBB5E379212EAB6E008A3F07 /* MTProfileSetViewController.xib in Resources */,
 				72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */,
 				72E972F0211FCE8700D96DA4 /* MTNoteToolsTextCell.xib in Resources */,
 				72E97303211FCEA500D96DA4 /* MTActionSheetView.xib in Resources */,
@@ -847,15 +939,18 @@
 				7228383E212872AD003C28FD /* MTNoteSettingContentCell.m in Sources */,
 				72E972E7211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m in Sources */,
 				FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */,
+				FBB5E378212EAB6E008A3F07 /* MTProfileSetViewController.m in Sources */,
 				72E9733F211FD30C00D96DA4 /* UITableViewCell+Categoty.m in Sources */,
 				72E972EA211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m in Sources */,
 				72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */,
 				72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */,
+				FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */,
 				72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */,
 				72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */,
 				72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */,
 				72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */,
 				72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */,
+				FBB5E390212EB85C008A3F07 /* MTSettingNameCell.m in Sources */,
 				72E97340211FD30C00D96DA4 /* UITextView+Category.m in Sources */,
 				72E9733E211FD30C00D96DA4 /* UIColor+Hex.m in Sources */,
 				72E972E1211FCE8700D96DA4 /* MTHomeSectionView.m in Sources */,
@@ -867,11 +962,14 @@
 				72E972EB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m in Sources */,
 				FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */,
 				72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */,
+				FBB5E37C212EAD5E008A3F07 /* MTHelp.m in Sources */,
 				FB2989C421193BC10011025D /* main.m in Sources */,
+				FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
 				72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */,
 				72E972E6211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m in Sources */,
 				FB0A37662123FF9F007CB0DC /* MTActionToastView.m in Sources */,
+				FB9C1F47212FA9CF00CE1224 /* MTNotificationViewController.m in Sources */,
 				72E97304211FCEA500D96DA4 /* MTNavigationView.m in Sources */,
 				72E97345211FD68D00D96DA4 /* ViewController.m in Sources */,
 				72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */,
@@ -882,6 +980,7 @@
 				722838362128700F003C28FD /* MTNoteSettingHeaderCell.m in Sources */,
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
 				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,
+				FBB5E38B212EB613008A3F07 /* MTSettingProfileCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

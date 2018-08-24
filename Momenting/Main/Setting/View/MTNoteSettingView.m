@@ -9,6 +9,8 @@
 #import "MTNoteSettingView.h"
 #import "MTNoteSettingContentCell.h"
 #import "MTNoteSettingHeaderCell.h"
+#import "MTProfileSetViewController.h"
+#import "MTNotificationViewController.h"
 
 @interface MTNoteSettingView ()
 <UITableViewDelegate,UITableViewDataSource>
@@ -31,7 +33,7 @@
 - (void)initBaseViews
 {
     [self addSubview:self.tableView];
-    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Become a member",@"Become a member",@"Become a member"],@[@"Push notification",@"About"]] mutableCopy];
+    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Notifications",@"Become a member",@"Become a member"],@[@"Push notification",@"About"]] mutableCopy];
 }
 
 
@@ -101,17 +103,32 @@
     switch (indexPath.section) {
         case 0:
         {
+            // header
             
         }
             break;
         case 1:
         {
-            
+            if (indexPath.row == 0) {
+                //修改资料
+                MTProfileSetViewController *vc = [MTProfileSetViewController new];
+                [[MTHelp currentNavigation] pushViewController:vc animated:YES];
+            } else {
+                //更换背景
+            }
         }
             break;
         case 2:
         {
-            
+            if (indexPath.row == 0) {
+                //通知1
+                MTNotificationViewController *notification = [MTNotificationViewController new];
+                [[MTHelp currentNavigation] pushViewController:notification animated:YES];
+            } else if (indexPath.row == 1) {
+                //通知2
+            } else {
+                //通知3
+            }
         }
             break;
         case 3:
@@ -121,7 +138,6 @@
                 [self goinSettingInterface];
             } else {
                 //关于我们
-                
             }
         }
             break;

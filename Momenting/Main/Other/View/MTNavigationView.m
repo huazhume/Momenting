@@ -46,6 +46,23 @@
     [self.leftButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
 }
 
+- (void)setNavigationTitle:(NSString *)navigationTitle
+{
+    _navigationTitle = navigationTitle;
+    self.titleLabel.text = navigationTitle;
+}
+
+- (void)setRightTitle:(NSString *)rightTitle
+{
+    _rightTitle = rightTitle;
+    [self.rightButton setTitle:rightTitle forState:UIControlStateNormal];
+}
+
+- (void)setRightImageName:(NSString *)rightImageName
+{
+    _rightImageName = rightImageName;
+    [self.rightButton setImage:[UIImage imageNamed:rightImageName] forState:UIControlStateNormal];
+}
 
 #pragma mark - events
 
