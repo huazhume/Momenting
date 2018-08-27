@@ -33,7 +33,7 @@
 - (void)initBaseViews
 {
     [self addSubview:self.tableView];
-    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Notifications",@"Become a member",@"Become a member"],@[@"Push notification",@"About"]] mutableCopy];
+    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Notifications",@"Push notification"],@[@"Contact us", @"About"]] mutableCopy];
 }
 
 
@@ -47,7 +47,7 @@
 {
     if (section == 0) {
         return 1;
-    } else if (section == 1) {
+    } else if (section ==  1 || section == 2) {
         return 2;
     }
     return 2;
@@ -126,16 +126,14 @@
                 [[MTHelp currentNavigation] pushViewController:notification animated:YES];
             } else if (indexPath.row == 1) {
                 //通知2
-            } else {
-                //通知3
-            }
+                [self goinSettingInterface];
+            } 
         }
             break;
         case 3:
         {
             if (indexPath.row == 0) {
-                //通知设置
-                [self goinSettingInterface];
+                //联系我们
             } else {
                 //关于我们
             }

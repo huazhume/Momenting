@@ -80,6 +80,13 @@
 		FBB5E38C212EB613008A3F07 /* MTSettingProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB5E38A212EB613008A3F07 /* MTSettingProfileCell.xib */; };
 		FBB5E390212EB85C008A3F07 /* MTSettingNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB5E38E212EB85C008A3F07 /* MTSettingNameCell.m */; };
 		FBB5E391212EB85C008A3F07 /* MTSettingNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB5E38F212EB85C008A3F07 /* MTSettingNameCell.xib */; };
+		FBC099932133D54B00242E1F /* MTAddNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC099912133D54B00242E1F /* MTAddNotificationCell.m */; };
+		FBC099942133D54B00242E1F /* MTAddNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC099922133D54B00242E1F /* MTAddNotificationCell.xib */; };
+		FBC099982133E2F500242E1F /* MTAddNotificationTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC099962133E2F500242E1F /* MTAddNotificationTimeCell.m */; };
+		FBC099992133E2F500242E1F /* MTAddNotificationTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC099972133E2F500242E1F /* MTAddNotificationTimeCell.xib */; };
+		FBC0999D2133F48700242E1F /* MTAddNotificationStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC0999B2133F48700242E1F /* MTAddNotificationStateCell.m */; };
+		FBC0999E2133F48700242E1F /* MTAddNotificationStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC0999C2133F48700242E1F /* MTAddNotificationStateCell.xib */; };
+		FBC099A42133FBD800242E1F /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
 		FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE5F23E21267B6600B24208 /* MTNotificationManager.m */; };
 /* End PBXBuildFile section */
@@ -232,6 +239,17 @@
 		FBB5E38D212EB85C008A3F07 /* MTSettingNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSettingNameCell.h; sourceTree = "<group>"; };
 		FBB5E38E212EB85C008A3F07 /* MTSettingNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSettingNameCell.m; sourceTree = "<group>"; };
 		FBB5E38F212EB85C008A3F07 /* MTSettingNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTSettingNameCell.xib; sourceTree = "<group>"; };
+		FBC099902133D54B00242E1F /* MTAddNotificationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAddNotificationCell.h; sourceTree = "<group>"; };
+		FBC099912133D54B00242E1F /* MTAddNotificationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAddNotificationCell.m; sourceTree = "<group>"; };
+		FBC099922133D54B00242E1F /* MTAddNotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTAddNotificationCell.xib; sourceTree = "<group>"; };
+		FBC099952133E2F500242E1F /* MTAddNotificationTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAddNotificationTimeCell.h; sourceTree = "<group>"; };
+		FBC099962133E2F500242E1F /* MTAddNotificationTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAddNotificationTimeCell.m; sourceTree = "<group>"; };
+		FBC099972133E2F500242E1F /* MTAddNotificationTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTAddNotificationTimeCell.xib; sourceTree = "<group>"; };
+		FBC0999A2133F48700242E1F /* MTAddNotificationStateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAddNotificationStateCell.h; sourceTree = "<group>"; };
+		FBC0999B2133F48700242E1F /* MTAddNotificationStateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAddNotificationStateCell.m; sourceTree = "<group>"; };
+		FBC0999C2133F48700242E1F /* MTAddNotificationStateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTAddNotificationStateCell.xib; sourceTree = "<group>"; };
+		FBC099A22133FBD800242E1F /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
+		FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FBE5F23D21267B6600B24208 /* MTNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationManager.h; sourceTree = "<group>"; };
 		FBE5F23E21267B6600B24208 /* MTNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationManager.m; sourceTree = "<group>"; };
@@ -528,6 +546,8 @@
 				72E9733B211FD30C00D96DA4 /* UITableViewCell+Categoty.m */,
 				72E9733C211FD30C00D96DA4 /* UITextView+Category.h */,
 				72E9733D211FD30C00D96DA4 /* UITextView+Category.m */,
+				FBC099A22133FBD800242E1F /* NSDateFormatter+Category.h */,
+				FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -667,6 +687,15 @@
 				FB9C1F49212FAAA000CE1224 /* MTNotificationViewCell.h */,
 				FB9C1F4A212FAAA000CE1224 /* MTNotificationViewCell.m */,
 				FB9C1F4B212FAAA000CE1224 /* MTNotificationViewCell.xib */,
+				FBC099902133D54B00242E1F /* MTAddNotificationCell.h */,
+				FBC099912133D54B00242E1F /* MTAddNotificationCell.m */,
+				FBC099922133D54B00242E1F /* MTAddNotificationCell.xib */,
+				FBC099952133E2F500242E1F /* MTAddNotificationTimeCell.h */,
+				FBC099962133E2F500242E1F /* MTAddNotificationTimeCell.m */,
+				FBC099972133E2F500242E1F /* MTAddNotificationTimeCell.xib */,
+				FBC0999A2133F48700242E1F /* MTAddNotificationStateCell.h */,
+				FBC0999B2133F48700242E1F /* MTAddNotificationStateCell.m */,
+				FBC0999C2133F48700242E1F /* MTAddNotificationStateCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -821,10 +850,12 @@
 				FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */,
 				FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */,
 				FB9C1F48212FA9CF00CE1224 /* MTNotificationViewController.xib in Resources */,
+				FBC099942133D54B00242E1F /* MTAddNotificationCell.xib in Resources */,
 				FBB5E391212EB85C008A3F07 /* MTSettingNameCell.xib in Resources */,
 				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
 				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
 				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
+				FBC099992133E2F500242E1F /* MTAddNotificationTimeCell.xib in Resources */,
 				FB9C1F522130142600CE1224 /* MTAddNotificationController.xib in Resources */,
 				7228383F212872AD003C28FD /* MTNoteSettingContentCell.xib in Resources */,
 				72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */,
@@ -836,6 +867,7 @@
 				72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */,
 				72E972F0211FCE8700D96DA4 /* MTNoteToolsTextCell.xib in Resources */,
 				72E97303211FCEA500D96DA4 /* MTActionSheetView.xib in Resources */,
+				FBC0999E2133F48700242E1F /* MTAddNotificationStateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,11 +976,13 @@
 				72E972EA211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m in Sources */,
 				72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */,
 				72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */,
+				FBC0999D2133F48700242E1F /* MTAddNotificationStateCell.m in Sources */,
 				FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */,
 				72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */,
 				72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */,
 				72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */,
 				72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */,
+				FBC099932133D54B00242E1F /* MTAddNotificationCell.m in Sources */,
 				72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */,
 				FBB5E390212EB85C008A3F07 /* MTSettingNameCell.m in Sources */,
 				72E97340211FD30C00D96DA4 /* UITextView+Category.m in Sources */,
@@ -956,9 +990,11 @@
 				72E972E1211FCE8700D96DA4 /* MTHomeSectionView.m in Sources */,
 				72E972ED211FCE8700D96DA4 /* MTNoteToolsImageCell.m in Sources */,
 				72E972EC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m in Sources */,
+				FBC099982133E2F500242E1F /* MTAddNotificationTimeCell.m in Sources */,
 				72E97300211FCEA500D96DA4 /* MTActionAlertView.m in Sources */,
 				72E972F3211FCE8700D96DA4 /* MTNoteViewController.m in Sources */,
 				72E9732D211FD23F00D96DA4 /* MTDateFormatManager.m in Sources */,
+				FBC099A42133FBD800242E1F /* NSDateFormatter+Category.m in Sources */,
 				72E972EB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m in Sources */,
 				FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */,
 				72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */,

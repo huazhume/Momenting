@@ -10,4 +10,8 @@
 
 @interface MTNotificationManager : NSObject
 
++ (MTNotificationManager *)shareInstance;
+
+- (void)AddMinutesNotification;
+
 @end

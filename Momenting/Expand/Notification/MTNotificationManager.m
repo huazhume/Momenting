@@ -33,18 +33,17 @@
     [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
         if (granted) { //注册成功
             
-        
         }
     }];
 }
 
-- (void)oneMinutesNotification
+- (void)AddMinutesNotification
 {
     UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-    content.title = [NSString stringWithFormat:@"小秘密%d",arc4random_uniform(100)];
-    content.subtitle = @"柯梵办公室通知";
+    content.title = @"你会想我吗？";
+//    content.subtitle = @"你会想我吗？";
     // 内容
-    content.body = @"柯梵科技是一家以人为本，具有强烈社会责任感的公司。公司的最大愿景就是每个员工都能住上大房子，开上好车，实现逆袭高富帅、白富美的愿望。";
+    content.body = @"你会想我吗？你会想我吗？你会想我吗？你会想我吗？你会想我吗？你会想我吗？你会想我吗？";
     
    [UIApplication sharedApplication].applicationIconBadgeNumber++;
     // app显示通知数量的角标
@@ -56,7 +55,7 @@
     UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:@"imageIndetifier" URL:imageUrl options:nil error:nil];
     
     // 附件 可以是音频、图片、视频 这里是一张图片
-    content.attachments = @[attachment];
+//    content.attachments = @[attachment];
     // 标识符
     content.categoryIdentifier = @"categoryIndentifier";
     // 2、创建通知触发
