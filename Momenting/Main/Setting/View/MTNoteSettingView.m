@@ -11,6 +11,7 @@
 #import "MTNoteSettingHeaderCell.h"
 #import "MTProfileSetViewController.h"
 #import "MTNotificationViewController.h"
+#import "MTStyleViewController.h"
 
 @interface MTNoteSettingView ()
 <UITableViewDelegate,UITableViewDataSource>
@@ -33,9 +34,13 @@
 - (void)initBaseViews
 {
     [self addSubview:self.tableView];
-    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify home style"],@[@"Notifications",@"Push notification"],@[@"Contact us", @"About"]] mutableCopy];
+    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify language"],@[@"Notifications",@"Push notification"],@[@"Contact us", @"About"]] mutableCopy];
 }
 
+- (void)refreshData
+{
+    [self.tableView reloadData];
+}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -60,6 +65,7 @@
         
         MTNoteSettingHeaderCell *headerCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteSettingHeaderCell getIdentifier]];
         cell = headerCell;
+        [headerCell refreshCell];
         
     } else {
         MTNoteSettingContentCell *contentCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteSettingContentCell getIdentifier]];
@@ -115,6 +121,8 @@
                 [[MTHelp currentNavigation] pushViewController:vc animated:YES];
             } else {
                 //更换背景
+                MTStyleViewController * vc = [MTStyleViewController new];
+                [[MTHelp currentNavigation] pushViewController:vc animated:YES];
             }
         }
             break;

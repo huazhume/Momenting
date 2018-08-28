@@ -12,4 +12,7 @@
 
 + (CGFloat)heightForCell;
 
+- (void)refreshCell;
+
+
 @end

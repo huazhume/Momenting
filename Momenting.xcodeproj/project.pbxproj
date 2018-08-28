@@ -73,6 +73,19 @@
 		FB9C1F4D212FAAA000CE1224 /* MTNotificationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F4B212FAAA000CE1224 /* MTNotificationViewCell.xib */; };
 		FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1F4F2130142600CE1224 /* MTAddNotificationController.m */; };
 		FB9C1F522130142600CE1224 /* MTAddNotificationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */; };
+		FBB0788B2134DD3E003510D1 /* MTStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078892134DD3E003510D1 /* MTStyleViewController.m */; };
+		FBB0788C2134DD3E003510D1 /* MTStyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB0788A2134DD3E003510D1 /* MTStyleViewController.xib */; };
+		FBB078A12134E043003510D1 /* CGGeometry+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB0788F2134E043003510D1 /* CGGeometry+RSKImageCropper.m */; };
+		FBB078A22134E043003510D1 /* RSKImageCropperStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBB078912134E043003510D1 /* RSKImageCropperStrings.bundle */; };
+		FBB078A32134E043003510D1 /* RSKImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078942134E043003510D1 /* RSKImageCropViewController.m */; };
+		FBB078A42134E043003510D1 /* RSKImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078962134E043003510D1 /* RSKImagePicker.m */; };
+		FBB078A52134E043003510D1 /* RSKImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078982134E043003510D1 /* RSKImageScrollView.m */; };
+		FBB078A62134E043003510D1 /* RSKInternalUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB0789A2134E043003510D1 /* RSKInternalUtility.m */; };
+		FBB078A72134E043003510D1 /* RSKTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB0789C2134E043003510D1 /* RSKTouchView.m */; };
+		FBB078A82134E043003510D1 /* UIApplication+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB0789E2134E043003510D1 /* UIApplication+RSKImageCropper.m */; };
+		FBB078A92134E043003510D1 /* UIImage+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078A02134E043003510D1 /* UIImage+RSKImageCropper.m */; };
+		FBB078AD213539AF003510D1 /* MTUserInfoDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078AC213539AF003510D1 /* MTUserInfoDefault.m */; };
+		FBB078B021353A58003510D1 /* MTMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078AF21353A58003510D1 /* MTMeModel.m */; };
 		FBB5E378212EAB6E008A3F07 /* MTProfileSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB5E376212EAB6E008A3F07 /* MTProfileSetViewController.m */; };
 		FBB5E379212EAB6E008A3F07 /* MTProfileSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB5E377212EAB6E008A3F07 /* MTProfileSetViewController.xib */; };
 		FBB5E37C212EAD5E008A3F07 /* MTHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB5E37B212EAD5E008A3F07 /* MTHelp.m */; };
@@ -228,6 +241,32 @@
 		FB9C1F4E2130142600CE1224 /* MTAddNotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAddNotificationController.h; sourceTree = "<group>"; };
 		FB9C1F4F2130142600CE1224 /* MTAddNotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAddNotificationController.m; sourceTree = "<group>"; };
 		FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTAddNotificationController.xib; sourceTree = "<group>"; };
+		FBB078882134DD3E003510D1 /* MTStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTStyleViewController.h; sourceTree = "<group>"; };
+		FBB078892134DD3E003510D1 /* MTStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTStyleViewController.m; sourceTree = "<group>"; };
+		FBB0788A2134DD3E003510D1 /* MTStyleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTStyleViewController.xib; sourceTree = "<group>"; };
+		FBB0788E2134E043003510D1 /* CGGeometry+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+RSKImageCropper.h"; sourceTree = "<group>"; };
+		FBB0788F2134E043003510D1 /* CGGeometry+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+RSKImageCropper.m"; sourceTree = "<group>"; };
+		FBB078902134E043003510D1 /* RSKImageCropper.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = RSKImageCropper.modulemap; sourceTree = "<group>"; };
+		FBB078912134E043003510D1 /* RSKImageCropperStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RSKImageCropperStrings.bundle; sourceTree = "<group>"; };
+		FBB078922134E043003510D1 /* RSKImageCropViewController+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSKImageCropViewController+Protected.h"; sourceTree = "<group>"; };
+		FBB078932134E043003510D1 /* RSKImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageCropViewController.h; sourceTree = "<group>"; };
+		FBB078942134E043003510D1 /* RSKImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageCropViewController.m; sourceTree = "<group>"; };
+		FBB078952134E043003510D1 /* RSKImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImagePicker.h; sourceTree = "<group>"; };
+		FBB078962134E043003510D1 /* RSKImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImagePicker.m; sourceTree = "<group>"; };
+		FBB078972134E043003510D1 /* RSKImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageScrollView.h; sourceTree = "<group>"; };
+		FBB078982134E043003510D1 /* RSKImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageScrollView.m; sourceTree = "<group>"; };
+		FBB078992134E043003510D1 /* RSKInternalUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKInternalUtility.h; sourceTree = "<group>"; };
+		FBB0789A2134E043003510D1 /* RSKInternalUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKInternalUtility.m; sourceTree = "<group>"; };
+		FBB0789B2134E043003510D1 /* RSKTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKTouchView.h; sourceTree = "<group>"; };
+		FBB0789C2134E043003510D1 /* RSKTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKTouchView.m; sourceTree = "<group>"; };
+		FBB0789D2134E043003510D1 /* UIApplication+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+RSKImageCropper.h"; sourceTree = "<group>"; };
+		FBB0789E2134E043003510D1 /* UIApplication+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+RSKImageCropper.m"; sourceTree = "<group>"; };
+		FBB0789F2134E043003510D1 /* UIImage+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSKImageCropper.h"; sourceTree = "<group>"; };
+		FBB078A02134E043003510D1 /* UIImage+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSKImageCropper.m"; sourceTree = "<group>"; };
+		FBB078AB213539AF003510D1 /* MTUserInfoDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTUserInfoDefault.h; sourceTree = "<group>"; };
+		FBB078AC213539AF003510D1 /* MTUserInfoDefault.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTUserInfoDefault.m; sourceTree = "<group>"; };
+		FBB078AE21353A58003510D1 /* MTMeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTMeModel.h; path = Momenting/Expand/UserDefault/MTMeModel.h; sourceTree = SOURCE_ROOT; };
+		FBB078AF21353A58003510D1 /* MTMeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTMeModel.m; path = Momenting/Expand/UserDefault/MTMeModel.m; sourceTree = SOURCE_ROOT; };
 		FBB5E375212EAB6E008A3F07 /* MTProfileSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTProfileSetViewController.h; sourceTree = "<group>"; };
 		FBB5E376212EAB6E008A3F07 /* MTProfileSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTProfileSetViewController.m; sourceTree = "<group>"; };
 		FBB5E377212EAB6E008A3F07 /* MTProfileSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTProfileSetViewController.xib; sourceTree = "<group>"; };
@@ -322,6 +361,9 @@
 				FBB5E375212EAB6E008A3F07 /* MTProfileSetViewController.h */,
 				FBB5E376212EAB6E008A3F07 /* MTProfileSetViewController.m */,
 				FBB5E377212EAB6E008A3F07 /* MTProfileSetViewController.xib */,
+				FBB078882134DD3E003510D1 /* MTStyleViewController.h */,
+				FBB078892134DD3E003510D1 /* MTStyleViewController.m */,
+				FBB0788A2134DD3E003510D1 /* MTStyleViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -329,6 +371,8 @@
 		72E972AC211FCE8700D96DA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBB078AE21353A58003510D1 /* MTMeModel.h */,
+				FBB078AF21353A58003510D1 /* MTMeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,6 +527,7 @@
 		72E97307211FD02900D96DA4 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				FBB0788D2134E043003510D1 /* RSKImageCropper */,
 			);
 			path = Vender;
 			sourceTree = "<group>";
@@ -490,6 +535,7 @@
 		72E97321211FD1BB00D96DA4 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				FBB078AA21353992003510D1 /* UserDefault */,
 				FBE5F23C21267B3B00B24208 /* Notification */,
 				FB874AC7212160C90050DD58 /* Custom */,
 				72E97337211FD30C00D96DA4 /* Category */,
@@ -669,6 +715,41 @@
 				FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		FBB0788D2134E043003510D1 /* RSKImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				FBB0788E2134E043003510D1 /* CGGeometry+RSKImageCropper.h */,
+				FBB0788F2134E043003510D1 /* CGGeometry+RSKImageCropper.m */,
+				FBB078902134E043003510D1 /* RSKImageCropper.modulemap */,
+				FBB078912134E043003510D1 /* RSKImageCropperStrings.bundle */,
+				FBB078922134E043003510D1 /* RSKImageCropViewController+Protected.h */,
+				FBB078932134E043003510D1 /* RSKImageCropViewController.h */,
+				FBB078942134E043003510D1 /* RSKImageCropViewController.m */,
+				FBB078952134E043003510D1 /* RSKImagePicker.h */,
+				FBB078962134E043003510D1 /* RSKImagePicker.m */,
+				FBB078972134E043003510D1 /* RSKImageScrollView.h */,
+				FBB078982134E043003510D1 /* RSKImageScrollView.m */,
+				FBB078992134E043003510D1 /* RSKInternalUtility.h */,
+				FBB0789A2134E043003510D1 /* RSKInternalUtility.m */,
+				FBB0789B2134E043003510D1 /* RSKTouchView.h */,
+				FBB0789C2134E043003510D1 /* RSKTouchView.m */,
+				FBB0789D2134E043003510D1 /* UIApplication+RSKImageCropper.h */,
+				FBB0789E2134E043003510D1 /* UIApplication+RSKImageCropper.m */,
+				FBB0789F2134E043003510D1 /* UIImage+RSKImageCropper.h */,
+				FBB078A02134E043003510D1 /* UIImage+RSKImageCropper.m */,
+			);
+			path = RSKImageCropper;
+			sourceTree = "<group>";
+		};
+		FBB078AA21353992003510D1 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				FBB078AB213539AF003510D1 /* MTUserInfoDefault.h */,
+				FBB078AC213539AF003510D1 /* MTUserInfoDefault.m */,
+			);
+			path = UserDefault;
 			sourceTree = "<group>";
 		};
 		FBDD902C212FA944009A75D7 /* Notification */ = {
@@ -852,6 +933,7 @@
 				FB9C1F48212FA9CF00CE1224 /* MTNotificationViewController.xib in Resources */,
 				FBC099942133D54B00242E1F /* MTAddNotificationCell.xib in Resources */,
 				FBB5E391212EB85C008A3F07 /* MTSettingNameCell.xib in Resources */,
+				FBB0788C2134DD3E003510D1 /* MTStyleViewController.xib in Resources */,
 				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
 				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
 				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
@@ -860,6 +942,7 @@
 				7228383F212872AD003C28FD /* MTNoteSettingContentCell.xib in Resources */,
 				72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */,
 				FBB5E38C212EB613008A3F07 /* MTSettingProfileCell.xib in Resources */,
+				FBB078A22134E043003510D1 /* RSKImageCropperStrings.bundle in Resources */,
 				FB2989BC21193BC10011025D /* Main.storyboard in Resources */,
 				FB9C1F4D212FAAA000CE1224 /* MTNotificationViewCell.xib in Resources */,
 				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
@@ -969,6 +1052,7 @@
 			files = (
 				FB0A37612123EB83007CB0DC /* UIView+Category.m in Sources */,
 				7228383E212872AD003C28FD /* MTNoteSettingContentCell.m in Sources */,
+				FBB078A12134E043003510D1 /* CGGeometry+RSKImageCropper.m in Sources */,
 				72E972E7211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m in Sources */,
 				FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */,
 				FBB5E378212EAB6E008A3F07 /* MTProfileSetViewController.m in Sources */,
@@ -976,36 +1060,45 @@
 				72E972EA211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m in Sources */,
 				72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */,
 				72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */,
+				FBB0788B2134DD3E003510D1 /* MTStyleViewController.m in Sources */,
 				FBC0999D2133F48700242E1F /* MTAddNotificationStateCell.m in Sources */,
 				FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */,
 				72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */,
 				72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */,
+				FBB078A52134E043003510D1 /* RSKImageScrollView.m in Sources */,
 				72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */,
 				72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */,
 				FBC099932133D54B00242E1F /* MTAddNotificationCell.m in Sources */,
 				72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */,
 				FBB5E390212EB85C008A3F07 /* MTSettingNameCell.m in Sources */,
+				FBB078A72134E043003510D1 /* RSKTouchView.m in Sources */,
 				72E97340211FD30C00D96DA4 /* UITextView+Category.m in Sources */,
 				72E9733E211FD30C00D96DA4 /* UIColor+Hex.m in Sources */,
 				72E972E1211FCE8700D96DA4 /* MTHomeSectionView.m in Sources */,
+				FBB078A62134E043003510D1 /* RSKInternalUtility.m in Sources */,
 				72E972ED211FCE8700D96DA4 /* MTNoteToolsImageCell.m in Sources */,
 				72E972EC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m in Sources */,
 				FBC099982133E2F500242E1F /* MTAddNotificationTimeCell.m in Sources */,
+				FBB078A92134E043003510D1 /* UIImage+RSKImageCropper.m in Sources */,
 				72E97300211FCEA500D96DA4 /* MTActionAlertView.m in Sources */,
 				72E972F3211FCE8700D96DA4 /* MTNoteViewController.m in Sources */,
 				72E9732D211FD23F00D96DA4 /* MTDateFormatManager.m in Sources */,
 				FBC099A42133FBD800242E1F /* NSDateFormatter+Category.m in Sources */,
 				72E972EB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m in Sources */,
+				FBB078A32134E043003510D1 /* RSKImageCropViewController.m in Sources */,
 				FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */,
 				72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */,
 				FBB5E37C212EAD5E008A3F07 /* MTHelp.m in Sources */,
 				FB2989C421193BC10011025D /* main.m in Sources */,
 				FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
+				FBB078B021353A58003510D1 /* MTMeModel.m in Sources */,
 				72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */,
 				72E972E6211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m in Sources */,
+				FBB078A82134E043003510D1 /* UIApplication+RSKImageCropper.m in Sources */,
 				FB0A37662123FF9F007CB0DC /* MTActionToastView.m in Sources */,
 				FB9C1F47212FA9CF00CE1224 /* MTNotificationViewController.m in Sources */,
+				FBB078A42134E043003510D1 /* RSKImagePicker.m in Sources */,
 				72E97304211FCEA500D96DA4 /* MTNavigationView.m in Sources */,
 				72E97345211FD68D00D96DA4 /* ViewController.m in Sources */,
 				72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */,
@@ -1017,6 +1110,7 @@
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
 				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,
 				FBB5E38B212EB613008A3F07 /* MTSettingProfileCell.m in Sources */,
+				FBB078AD213539AF003510D1 /* MTUserInfoDefault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

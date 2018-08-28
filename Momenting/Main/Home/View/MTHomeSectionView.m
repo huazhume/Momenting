@@ -8,6 +8,13 @@
 
 #import "MTHomeSectionView.h"
 
+
+@interface MTHomeSectionView ()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@end
+
 @implementation MTHomeSectionView
 
 + (instancetype)loadFromNib
@@ -28,6 +35,12 @@
 {
     [super awakeFromNib];
     
+}
+
+- (void)setName:(NSString *)name
+{
+    _name = name;
+    self.nameLabel.text = name;
 }
 
 #pragma mark - events

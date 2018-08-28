@@ -83,6 +83,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="nameLabel" destination="3EL-x5-bxd" id="2et-wf-tpj"/>
+            </connections>
         </view>
     </objects>
     <resources>

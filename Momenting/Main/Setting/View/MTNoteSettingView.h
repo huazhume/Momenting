@@ -10,4 +10,6 @@
 
 @interface MTNoteSettingView : UIView
 
+- (void)refreshData;
+
 @end

@@ -7,9 +7,13 @@
 //
 
 #import "MTNoteSettingHeaderCell.h"
+#import "MTMeModel.h"
+#import "MTUserInfoDefault.h"
 
 @interface MTNoteSettingHeaderCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *aboutLabel;
 
 @end
 
@@ -26,6 +30,16 @@
     self.coverImageView.layer.cornerRadius = self.coverImageView.bounds.size.height / 2.0;
     self.coverImageView.layer.masksToBounds = YES;
 }
+
+- (void)refreshCell
+{
+    MTMeModel *meModel = [MTUserInfoDefault getUserDefaultMeModel];
+    self.coverImageView.image = [UIImage imageWithContentsOfFile:meModel.image];
+    self.nameLabel.text = meModel.name ?: @"你的名字";
+    self.aboutLabel.text = meModel.about ?: @"关于你";
+    
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

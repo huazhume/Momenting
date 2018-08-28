@@ -19,6 +19,10 @@
 #import "MTNoteDetailViewController.h"
 #import "MTActionAlertView.h"
 #import "MTCoreDataDao.h"
+#import "MTMediaFileManager.h"
+#import "MTNoteSettingView.h"
+#import "MTMeModel.h"
+#import "MTUserInfoDefault.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -29,7 +33,7 @@ MTHomeEmptyViewDelegate>
 @property (strong, nonatomic) MTHomeSectionView *sectionView;
 @property (assign, nonatomic) CGPoint scrollViewOldOffset;
 @property (strong, nonatomic) NSMutableArray *datalist;
-@property (weak, nonatomic) IBOutlet UIView *setView;
+@property (weak, nonatomic) IBOutlet MTNoteSettingView *setView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *setViewLeadingCostraint;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
@@ -37,6 +41,7 @@ MTHomeEmptyViewDelegate>
 
 @property (assign, nonatomic) BOOL isAnimationing;
 @property (strong, nonatomic) NSDate *lastScrollDate;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 
 @end
 
@@ -52,6 +57,15 @@ MTHomeEmptyViewDelegate>
     [super viewWillAppear:animated];
     self.datalist = [[[MTCoreDataDao new] getNoteSelf] mutableCopy];
     [self.tableView reloadData];
+    
+    NSString * path =[[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+    NSString *fileName = @"homeStyle";
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@",path,fileName];
+    self.bgImageView.image = [UIImage imageWithContentsOfFile:filePath];
+    
+    MTMeModel *meModel = [MTUserInfoDefault getUserDefaultMeModel];
+    self.sectionView.name = meModel.name;
+    [self.setView refreshData];
 }
 #pragma mark - Views
 - (void)initBaseViews
@@ -268,6 +282,7 @@ MTHomeEmptyViewDelegate>
     if (!_sectionView) {
         _sectionView = [MTHomeSectionView loadFromNib];
         _sectionView.frame = CGRectMake(0, 20, self.view.bounds.size.width, 40);
+        _sectionView.backgroundColor = [UIColor clearColor];
         _sectionView.delegate = self;
     }
     return _sectionView;

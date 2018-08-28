@@ -64,6 +64,12 @@
     [self.rightButton setImage:[UIImage imageNamed:rightImageName] forState:UIControlStateNormal];
 }
 
+- (void)setRightColor:(UIColor *)rightColor
+{
+    _rightColor = rightColor;
+    [self.rightButton setTitleColor:rightColor forState:UIControlStateNormal];
+}
+
 #pragma mark - events
 
 - (IBAction)leftButtonClicked:(id)sender

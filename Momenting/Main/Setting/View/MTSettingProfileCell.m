@@ -7,6 +7,7 @@
 //
 
 #import "MTSettingProfileCell.h"
+#import "MTMediaFileManager.h"
 
 @interface MTSettingProfileCell ()
 
@@ -27,6 +28,12 @@
     self.coverImageView.layer.cornerRadius = self.coverImageView.bounds.size.height / 2.0;
     self.coverImageView.layer.masksToBounds = YES;
 }
+
+- (void)refreshCell
+{
+     self.coverImageView.image = [UIImage imageWithContentsOfFile:[[MTMediaFileManager sharedManager] getUserImageFilePath]];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     

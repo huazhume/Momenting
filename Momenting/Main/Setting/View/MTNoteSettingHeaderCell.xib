@@ -60,7 +60,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="aboutLabel" destination="Z0S-c1-eZW" id="MMv-nL-Pcf"/>
                 <outlet property="coverImageView" destination="pCr-gl-Xab" id="eMA-Qo-uAE"/>
+                <outlet property="nameLabel" destination="GYB-Rm-dM8" id="zfw-M4-vKz"/>
             </connections>
             <point key="canvasLocation" x="4" y="-75"/>
         </tableViewCell>

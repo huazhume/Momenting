@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTStyleViewController">
+            <connections>
+                <outlet property="bgImageView" destination="N5U-ax-1YI" id="y7N-9V-0wQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N5U-ax-1YI">
+                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kr-xp-d4F">
+                    <rect key="frame" x="167" y="323.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="MRX-ku-kh3"/>
+                        <constraint firstAttribute="height" constant="40" id="j6M-0c-wNF"/>
+                    </constraints>
+                    <state key="normal" image="edit-cover-image-blue"/>
+                    <connections>
+                        <action selector="editStyleButtonClicked:" destination="-1" eventType="touchUpInside" id="oph-2j-o4D"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1kr-xp-d4F" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="CrJ-gG-pac"/>
+                <constraint firstItem="1kr-xp-d4F" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Jrf-0x-cNB"/>
+                <constraint firstItem="N5U-ax-1YI" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="36" id="Tvd-IL-w7A"/>
+                <constraint firstItem="N5U-ax-1YI" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="jkk-Ku-dLk"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="N5U-ax-1YI" secondAttribute="bottom" id="ysZ-2D-iiq"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="N5U-ax-1YI" secondAttribute="trailing" id="z2C-rX-ONq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="edit-cover-image-blue" width="20" height="20"/>
+    </resources>
+</document>

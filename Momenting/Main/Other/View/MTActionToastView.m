@@ -75,6 +75,13 @@
 //    }];
 }
 
+#pragma mark - setter
+- (void)setContent:(NSString *)content
+{
+    _content = content;
+    self.titleLabel.text = content;
+}
+
 #pragma mark - getter
 - (UIVisualEffectView *)effectView
 {

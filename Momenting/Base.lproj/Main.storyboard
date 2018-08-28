@@ -43,9 +43,19 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQ2-aj-2Px">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-4m-gcN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6Mx-U1-VVF"/>
+                                    <constraint firstAttribute="bottom" secondItem="RXC-4m-gcN" secondAttribute="bottom" id="A6g-IU-EOr"/>
+                                    <constraint firstItem="RXC-4m-gcN" firstAttribute="leading" secondItem="vQ2-aj-2Px" secondAttribute="leading" id="S3c-jO-Tka"/>
+                                    <constraint firstAttribute="trailing" secondItem="RXC-4m-gcN" secondAttribute="trailing" id="STv-ta-XAz"/>
+                                    <constraint firstItem="RXC-4m-gcN" firstAttribute="top" secondItem="vQ2-aj-2Px" secondAttribute="top" id="Swn-Jn-P1n"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVY-E6-jDL" customClass="MTNoteSettingView">
@@ -106,6 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="elc-ie-app"/>
                     <connections>
+                        <outlet property="bgImageView" destination="llt-pb-VjC" id="fmw-v7-m2G"/>
                         <outlet property="headerView" destination="vQ2-aj-2Px" id="VNI-VJ-kCY"/>
                         <outlet property="headerViewTopConstraint" destination="dgJ-of-xDf" id="9rk-FL-D3y"/>
                         <outlet property="setView" destination="XVY-E6-jDL" id="gTZ-s7-Dnb"/>

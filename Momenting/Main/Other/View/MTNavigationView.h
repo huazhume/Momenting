@@ -34,6 +34,8 @@ typedef NS_ENUM(NSUInteger, MTNavigationViewType) {
 
 @property (copy, nonatomic) NSString *rightTitle;
 
+@property (strong, nonatomic) UIColor *rightColor;
+
 @property (copy, nonatomic) NSString *rightImageName;
 
 + (instancetype)loadFromNib;

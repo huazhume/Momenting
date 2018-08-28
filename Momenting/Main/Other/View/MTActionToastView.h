@@ -10,6 +10,8 @@
 
 @interface MTActionToastView : UIView
 
+@property (copy, nonatomic) NSString *content;
+
 + (instancetype)loadFromNib;
 
 - (void)show;

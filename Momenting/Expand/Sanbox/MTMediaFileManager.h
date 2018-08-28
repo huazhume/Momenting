@@ -39,4 +39,8 @@ typedef enum {
 - (NSInteger)createMediaFileWithSanboxType:(SANBOX_FILE_TYPEMODE)sanboxType
                           AndWithMediaType:(FILE_MEDIA_MODE)mediaType;
 
+- (NSString *)getHomeStyleFilePath;
+
+- (NSString *)getUserImageFilePath;
+
 @end

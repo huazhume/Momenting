@@ -123,6 +123,21 @@
   }
   
   return [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",mediaFileName]];
-  
+}
+
+- (NSString *)getHomeStyleFilePath
+{
+    
+    NSString * path =[[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+    NSString *fileName = @"homeStyle";
+    return [NSString stringWithFormat:@"%@/%@",path,fileName];
+}
+
+- (NSString *)getUserImageFilePath
+{
+    
+    NSString * path =[[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
+    NSString *fileName = @"userImage";
+    return [NSString stringWithFormat:@"%@/%@",path,fileName];
 }
 @end

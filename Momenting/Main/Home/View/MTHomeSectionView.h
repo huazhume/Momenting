@@ -20,6 +20,8 @@
 
 @property (weak, nonatomic) id <MTHomeSectionViewDelegate> delegate;
 
+@property (copy, nonatomic) NSString *name;
+
 + (instancetype)loadFromNib;
 
 + (CGFloat)viewHeight;

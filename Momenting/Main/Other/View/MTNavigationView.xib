@@ -39,10 +39,10 @@
                         <constraint firstAttribute="height" constant="0.5" id="8zC-na-3g2"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJT-pI-o08">
-                    <rect key="frame" x="327" y="15" width="40" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJT-pI-o08">
+                    <rect key="frame" x="284" y="15" width="80" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="Xj1-04-Kca"/>
+                        <constraint firstAttribute="width" constant="80" id="Xj1-04-Kca"/>
                         <constraint firstAttribute="height" constant="40" id="tc6-4M-tzR"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -59,7 +59,7 @@
                 <constraint firstItem="pYk-Ak-SK1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="11V-J1-3RG"/>
                 <constraint firstItem="oXD-Nm-vD3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3IM-WF-Ad2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pYk-Ak-SK1" secondAttribute="trailing" id="Dk1-MJ-7av"/>
-                <constraint firstItem="tJT-pI-o08" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-8" id="Fot-Nx-s4N"/>
+                <constraint firstItem="tJT-pI-o08" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-11" id="Fot-Nx-s4N"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oXD-Nm-vD3" secondAttribute="bottom" id="KhJ-Kf-enT"/>
                 <constraint firstItem="Kej-ho-3bT" firstAttribute="centerY" secondItem="oXD-Nm-vD3" secondAttribute="centerY" id="MMP-t0-0Q5"/>
                 <constraint firstAttribute="bottom" secondItem="pYk-Ak-SK1" secondAttribute="bottom" id="dcP-i3-5Yz"/>

@@ -10,13 +10,22 @@
 #import "MTNavigationView.h"
 #import "MTSettingProfileCell.h"
 #import "MTSettingNameCell.h"
+#import "MTActionSheetView.h"
+#import "MTMeModel.h"
+#import "MTMediaFileManager.h"
+#import "MTUserInfoDefault.h"
+
 
 @interface MTProfileSetViewController ()
 <UITableViewDelegate,UITableViewDataSource,
-MTNavigationViewDelegate>
+MTNavigationViewDelegate,
+MTSettingNameCellDelegate,
+UINavigationControllerDelegate,UIImagePickerControllerDelegate,
+MTActionSheetViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) MTNavigationView *navigationView;
+@property (strong, nonatomic) MTMeModel *meModel;
 
 @end
 
@@ -29,6 +38,9 @@ MTNavigationViewDelegate>
 
 - (void)initBaseViews
 {
+    
+    self.meModel = [MTUserInfoDefault getUserDefaultMeModel];
+    
     [self.view addSubview:self.navigationView];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MTSettingProfileCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MTSettingProfileCell getIdentifier]];
@@ -55,14 +67,19 @@ MTNavigationViewDelegate>
 {
     if (indexPath.row == 0) {
         MTSettingProfileCell *profileCell = [tableView dequeueReusableCellWithIdentifier:[MTSettingProfileCell getIdentifier]];
+        [profileCell refreshCell];
         return profileCell;
     } else if (indexPath.row == 1) {
         MTSettingNameCell *nameCell = [tableView dequeueReusableCellWithIdentifier:[MTSettingNameCell getIdentifier]];
         nameCell.title = @"Name";
+        nameCell.content = self.meModel.name;
+        nameCell.delegate = self;
         return nameCell;
     } else {
         MTSettingNameCell *descCell = [tableView dequeueReusableCellWithIdentifier:[MTSettingNameCell getIdentifier]];
         descCell.title = @"About";
+        descCell.content = self.meModel.about;
+        descCell.delegate = self;
         return descCell;
     }
 }
@@ -76,6 +93,18 @@ MTNavigationViewDelegate>
 {
     return [UIView new];
 }
+
+#pragma mark - MTSettingNameCellDelegate
+- (void)noteCell:(UITableViewCell *)cell didChangeText:(NSString *)text
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    if (indexPath.row == 1) { //name
+        self.meModel.name = text;
+    } else { //about
+        self.meModel.about = text;
+    }
+}
+
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,12 +120,90 @@ MTNavigationViewDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (indexPath.row == 0) {
+        [self.view endEditing:YES];
+        MTActionSheetView *sheetView = [MTActionSheetView loadFromNib];
+        sheetView.frame = [UIScreen mainScreen].bounds;
+        sheetView.delegate = self;
+        [sheetView show];
+    }
 }
+
+#pragma mark - MTActionSheetViewDelegate
+
+#pragma mark - MTActionSheetViewDelegate
+- (void)sheetToolsActionWithType:(MTActionSheetViewType)type
+{
+    if (type == MTActionSheetViewOne) {
+        [self takePhoto];
+    } else if (type == MTActionSheetViewTwo) {
+        [self LocalPhoto];
+    } else if (type == MTActionSheetViewDelete) {
+        //delete
+    }
+}
+
+#pragma mark - photo
+- (void)takePhoto
+{
+    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.videoQuality = UIImagePickerControllerQualityTypeIFrame1280x720;
+        picker.allowsEditing = YES;
+        picker.sourceType = sourceType;
+        [self presentViewController:picker animated:YES completion:nil];
+    } else {
+        NSLog(@"无法打开照相机");
+    }
+}
+
+-(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
+    if (![type isEqualToString:@"public.image"]) {
+        return;
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    NSData *data;
+    if (UIImagePNGRepresentation(image) == nil) {
+        data = UIImageJPEGRepresentation(image, 1.0);
+    } else {
+        data = UIImagePNGRepresentation(image);
+    }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [fileManager createFileAtPath:[[MTMediaFileManager sharedManager] getUserImageFilePath] contents:data attributes:nil];
+    [self.tableView reloadData];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    NSLog(@"您取消了选择图片");
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)LocalPhoto
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
 
 #pragma mark - MTNavigationViewDelegate
 - (void)leftAction
 {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)rightAction
+{
+    [self.view endEditing:YES];
+    [MTUserInfoDefault saveDefaultUserInfo:self.meModel];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -111,6 +218,14 @@ MTNavigationViewDelegate>
         _navigationView.rightTitle = @"save";
     }
     return _navigationView;
+}
+
+- (MTMeModel *)meModel
+{
+    if (!_meModel) {
+        _meModel = [[MTMeModel alloc] init];
+    }
+    return _meModel;
 }
 
 
