@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MTAddNotificationTimeCellDelegate <NSObject>
+
+- (void)notificationTime:(NSString *)time withIsHour:(BOOL)isHour;
+
+@end
+
 @interface MTAddNotificationTimeCell : UITableViewCell
+
+@property (weak, nonatomic) id <MTAddNotificationTimeCellDelegate> delegate;
 
 + (CGFloat)heightForCell;
 

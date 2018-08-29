@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+@class MTNotificationVo;
 
 @interface MTNotificationManager : NSObject
 
 + (MTNotificationManager *)shareInstance;
 
 - (void)AddMinutesNotification;
+
+- (void)registNotifications;
+
+- (void)addNotificationWithVo:(MTNotificationVo *)vo;
 
 @end

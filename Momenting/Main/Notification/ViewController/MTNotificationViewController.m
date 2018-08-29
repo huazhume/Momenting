@@ -11,6 +11,9 @@
 #import "MTNotificationViewCell.h"
 #import "MTDeleteStyleTableView.h"
 #import "MTAddNotificationController.h"
+#import "MTCoreDataDao.h"
+#import "MTActionAlertView.h"
+#import "MTNotificationVo.h"
 
 
 @interface MTNotificationViewController ()
@@ -19,6 +22,7 @@ MTNavigationViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MTDeleteStyleTableView *tableView;
 @property (strong, nonatomic) MTNavigationView *navigationView;
+@property (strong, nonatomic) NSMutableArray *notifications;
 
 @end
 
@@ -27,6 +31,13 @@ MTNavigationViewDelegate>
 {
     [super viewDidLoad];
     [self initBaseViews];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.notifications = [[[MTCoreDataDao new]getNotifications] mutableCopy];
+    [self.tableView reloadData];
 }
 
 - (void)initBaseViews
@@ -46,12 +57,13 @@ MTNavigationViewDelegate>
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.notifications.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MTNotificationViewCell *notificationCell = [tableView dequeueReusableCellWithIdentifier:[MTNotificationViewCell getIdentifier]];
+    notificationCell.model = self.notifications[indexPath.row];
     return notificationCell;
 }
 
@@ -69,7 +81,17 @@ MTNavigationViewDelegate>
 {
     NSString *readTitle = @"";
     UITableViewRowAction *readAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:readTitle handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-                                            
+        [MTActionAlertView alertShowWithMessage:@"真的忍心要删除嘛？" leftTitle:@"是哒" leftColor:[UIColor colorWithHex:0xCD6256] rightTitle:@"不啦" rightColor:[UIColor colorWithHex:0x333333] callBack:^(NSInteger index) {
+            if (index == 2){
+                return;
+            }
+            MTNotificationVo *model = self.notifications[indexPath.row];
+            [[MTCoreDataDao new] deleteNotificationWithContent:model.content];
+            [self.notifications removeObjectAtIndex:indexPath.row];
+            
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:(UITableViewRowAnimationAutomatic)];
+            [tableView setEditing:NO animated:YES];
+        }];
     }];
     readAction.backgroundColor = [UIColor whiteColor];
     return @[readAction];
@@ -79,6 +101,7 @@ MTNavigationViewDelegate>
 {
     self.tableView.editingIndexPath = indexPath;
     [self.view setNeedsLayout];   // 触发-(void)viewDidLayoutSubviews
+    
 }
 
 - (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,7 +114,7 @@ MTNavigationViewDelegate>
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100.f;
+    return [MTNotificationViewCell heightForCellWithModel:self.notifications[indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

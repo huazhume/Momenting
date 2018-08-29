@@ -23,7 +23,8 @@
     [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType:FILE_IMAGE_TYPE];
     [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType:FILE_DB_TYPE];
     [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType: FILE_IMAGEBATE_TYPE];
-    [[MTNotificationManager shareInstance] AddMinutesNotification];
+    
+     [[MTNotificationManager shareInstance] registNotifications];
     return YES;
 }
 

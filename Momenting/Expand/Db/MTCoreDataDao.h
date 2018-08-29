@@ -23,4 +23,10 @@ typedef enum : NSUInteger {
 
 - (BOOL)deleteNoteWithNoteId:(NSString *)noteId;
 
+- (BOOL)insertNotificationDatas:(NSArray *)datas;
+
+- (NSArray *)getNotifications;
+
+- (BOOL)deleteNotificationWithContent:(NSString *)content;
+
 @end

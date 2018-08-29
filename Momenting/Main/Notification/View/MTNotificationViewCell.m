@@ -7,6 +7,7 @@
 //
 
 #import "MTNotificationViewCell.h"
+#import "MTNotificationVo.h"
 
 @interface MTNotificationViewCell ()
 
@@ -23,6 +24,17 @@
 @end
 
 @implementation MTNotificationViewCell
+
+
++ (CGFloat)heightForCellWithModel:(MTNotificationVo *)model
+{
+    CGFloat textHeight = 0.f;
+    if (model.content.length > 0) {
+        CGSize textLabelSize = [model.content boundingRectWithSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Light" size:12]} context:nil].size;
+        textHeight = textLabelSize.height + 10.f;
+    }
+    return 46.f + textHeight;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -53,10 +65,18 @@
 {
     self.signButton.selected = !self.signButton.isSelected;
 }
+
 - (void)setSignName:(NSString *)signName
 {
     _signName = signName;
     [self.signButton setImage:[UIImage imageNamed:signName] forState:UIControlStateNormal];
+}
+
+- (void)setModel:(MTNotificationVo *)model
+{
+    _model = model;
+    [self.timeLabel setTitle:model.time forState:UIControlStateNormal];
+    self.contentLabel.text = model.content;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

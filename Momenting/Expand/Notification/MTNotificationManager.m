@@ -8,6 +8,8 @@
 
 #import "MTNotificationManager.h"
 #import <UserNotifications/UserNotifications.h>
+#import "MTCoreDataDao.h"
+#import "MTNotificationVo.h"
 
 @interface MTNotificationManager ()
 
@@ -34,6 +36,15 @@
         if (granted) { //注册成功
             
         }
+    }];
+}
+
+
+- (void)registNotifications
+{
+    NSArray *notifications = [[MTCoreDataDao new]getNotifications];
+    [notifications enumerateObjectsUsingBlock:^(MTNotificationVo *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self addNotificationWithVo:obj];
     }];
 }
 
@@ -64,10 +75,42 @@
      UNCalendarNotificationTrigger : 在某天某时触发，可重复
      UNLocationNotificationTrigger : 进入或离开某个地理区域时触发
      */
-    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:60 repeats:YES];
+//    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:60 repeats:YES];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.hour = 16;
+    components.minute = 48;
+    UNCalendarNotificationTrigger *dayTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:components repeats:YES];
     // 3、创建通知请求
-    UNNotificationRequest *notificationRequest = [UNNotificationRequest requestWithIdentifier:@"KFGroupNotification" content:content trigger:trigger];
+    UNNotificationRequest *notificationRequest = [UNNotificationRequest requestWithIdentifier:@"KFGroupNotification" content:content trigger:dayTrigger];
     // 4、将请求加入通知中心
+    [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:notificationRequest withCompletionHandler:^(NSError * _Nullable error) {
+        if (error == nil) {
+            NSLog(@"已成功加推送%@",notificationRequest.identifier);
+        }
+    }];
+}
+
+- (void)addNotificationWithVo:(MTNotificationVo *)vo
+{
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.title = @"你的小秘密";
+    content.body = vo.content;
+    content.categoryIdentifier = [NSString stringWithFormat:@"category%d",arc4random_uniform(10000)];
+    [UIApplication sharedApplication].applicationIconBadgeNumber++;
+    content.badge = @([UIApplication sharedApplication].applicationIconBadgeNumber);
+    
+    content.sound = [UNNotificationSound defaultSound];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    NSArray *times = [vo.time componentsSeparatedByString:@":"];
+    if (times.count < 2) {
+        return;
+    }
+    NSString *hour = times[0];
+    NSString *minute = times[1];
+    components.hour = hour.intValue;
+    components.minute = minute.intValue;
+    UNCalendarNotificationTrigger *dayTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:components repeats:YES];
+    UNNotificationRequest *notificationRequest = [UNNotificationRequest requestWithIdentifier: [NSString stringWithFormat:@"Notification%d",arc4random_uniform(10000)] content:content trigger:dayTrigger];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:notificationRequest withCompletionHandler:^(NSError * _Nullable error) {
         if (error == nil) {
             NSLog(@"已成功加推送%@",notificationRequest.identifier);

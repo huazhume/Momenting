@@ -9,6 +9,7 @@
 #import "MTAddNotificationCell.h"
 
 @interface MTAddNotificationCell ()
+<UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
@@ -26,12 +27,40 @@
 {
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.textView.delegate = self;
 }
 
 - (void)becomeFirstResponder
 {
     [self.textView becomeFirstResponder];
 }
+
+#pragma mark - textView delegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView;
+{
+    if ([self.delegate respondsToSelector:@selector(noteCell:textViewWillBeginEditing:)]) {
+        [self.delegate noteCell:self textViewWillBeginEditing:textView];
+    }
+    return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    
+    if ([self.delegate respondsToSelector:@selector(noteCell:didChangeText:)]) {
+        [self.delegate noteCell:self didChangeText:self.textView.text];
+    }
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    
+    if ([self.delegate respondsToSelector:@selector(noteCell:textViewDidEndEditing:)]) {
+        [self.delegate noteCell:self textViewDidEndEditing:textView];
+    }
+}
+
+
 
 #pragma mark - setting & getter
 - (void)setTitle:(NSString *)title

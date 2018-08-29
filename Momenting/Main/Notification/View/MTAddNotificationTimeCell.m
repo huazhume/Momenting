@@ -113,7 +113,18 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    
+    NSString *time = nil;
+    if (row == 0) {
+        time =  [NSString stringWithFormat:@"%02ld",((NSString *)self.hours[row]).integerValue];
+    } else {
+        time =  [NSString stringWithFormat:@"%02ld",((NSString *)self.minutes[row]).integerValue];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(notificationTime: withIsHour:)]) {
+        [self.delegate notificationTime:time withIsHour:component == 0];
+    }
 }
+
 
 #pragma mark - getter
 - (NSMutableArray *)hours

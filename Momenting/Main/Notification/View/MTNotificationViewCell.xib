@@ -101,6 +101,7 @@
                 <outlet property="contentBgView" destination="Jbn-yF-dsy" id="YeF-S3-Q60"/>
                 <outlet property="contentLabel" destination="YMR-i4-dYt" id="139-9s-Cnq"/>
                 <outlet property="signButton" destination="F9m-gU-rMn" id="NSB-LW-e6m"/>
+                <outlet property="timeLabel" destination="LKh-rs-KNb" id="0cO-vu-DTM"/>
                 <outlet property="topView" destination="tW4-FT-8Ot" id="LhC-jS-dfI"/>
             </connections>
             <point key="canvasLocation" x="140" y="116"/>

@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MTNotificationVo;
 
 @interface MTNotificationViewCell : UITableViewCell
 
 @property (copy, nonatomic) NSString *signName;
+
+@property (strong, nonatomic) MTNotificationVo *model;
+
++ (CGFloat)heightForCellWithModel:(MTNotificationVo *)model;
 
 @end

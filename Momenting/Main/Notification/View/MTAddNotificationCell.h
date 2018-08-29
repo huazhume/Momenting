@@ -8,9 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MTAddNotificationCellDelegate <NSObject>
+@optional
+
+- (void)noteCell:(UITableViewCell *)cell didChangeText:(NSString *)text;
+
+- (void)noteCell:(UITableViewCell *)cell textViewWillBeginEditing:(UITextView *)textView;
+
+- (void)noteCell:(UITableViewCell *)cell textViewDidEndEditing:(UITextView *)textView;
+
+@end
+
 @interface MTAddNotificationCell : UITableViewCell
 
 @property (copy, nonatomic) NSString *title;
+
+@property (weak, nonatomic) id <MTAddNotificationCellDelegate> delegate;
 
 + (CGFloat)heightForCell;
 

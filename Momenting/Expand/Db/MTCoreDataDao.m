@@ -12,6 +12,8 @@
 #import "MTNotePo+CoreDataProperties.h"
 #import "MTNoteTextPo+CoreDataProperties.h"
 #import "MTNoteImagePo+CoreDataProperties.h"
+#import "MTNotificationVo.h"
+#import "MTNotificationPo+CoreDataProperties.h"
 
 @implementation MTCoreDataDao
 
@@ -151,6 +153,68 @@
         textDeleRequest.predicate = predicate;
         NSArray *deleTextArray = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:textDeleRequest error:nil];
         for (MTNoteTextPo *stu in deleTextArray) {
+            [[[MTCoreDataManager shareInstance] managedObjectContext] deleteObject:stu];
+        }
+    }
+    NSError *error = nil;
+    if ([[[MTCoreDataManager shareInstance] managedObjectContext] save:&error]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+
+- (BOOL)insertNotificationDatas:(NSArray *)datas
+{
+    [datas enumerateObjectsUsingBlock:^(MTNotificationVo *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        MTNotificationPo *po = [NSEntityDescription insertNewObjectForEntityForName:@"MTNotificationPo" inManagedObjectContext:[[MTCoreDataManager shareInstance] managedObjectContext]];
+        po.notificationId = obj.notificationId;
+        po.content = obj.content;
+        po.time = obj.time;
+        po.state = obj.state.integerValue;
+    }];
+
+    NSError *error = nil;
+    if ([[[MTCoreDataManager shareInstance] managedObjectContext] save:&error]) {
+        NSLog(@"数据插入到数据库成功");
+        return YES;
+    }else{
+        NSLog(@"数据插入到数据库失败");
+        return NO;
+    }
+}
+
+- (NSArray *)getNotifications
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"MTNotificationPo"];
+    NSArray *array = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:request error:nil];
+    NSMutableArray *muArray = [NSMutableArray array];
+    [array enumerateObjectsUsingBlock:^(MTNotificationPo *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        MTNotificationVo *po = [MTNotificationVo new];
+        po.notificationId = obj.notificationId;
+        po.content = obj.content;
+        po.time = obj.time;
+        po.state = [NSNumber numberWithInteger:obj.state];
+        if (muArray.count == 0) {
+            [muArray addObject:po];
+        } else {
+            [muArray insertObject:po atIndex:0];
+        }
+    }];
+    return muArray;
+}
+
+
+- (BOOL)deleteNotificationWithContent:(NSString *)content
+{
+    
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"content=%@",content];
+    {
+        NSFetchRequest *deleRequest = [NSFetchRequest fetchRequestWithEntityName:@"MTNotificationPo"];
+        deleRequest.predicate = predicate;
+        NSArray *deleArray = [[[MTCoreDataManager shareInstance] managedObjectContext] executeFetchRequest:deleRequest error:nil];
+        for (MTNotePo *stu in deleArray) {
             [[[MTCoreDataManager shareInstance] managedObjectContext] deleteObject:stu];
         }
     }

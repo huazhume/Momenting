@@ -11,15 +11,24 @@
 #import "MTNavigationView.h"
 #import "MTAddNotificationCell.h"
 #import "MTAddNotificationStateCell.h"
+#import "MTNotificationVo.h"
+#import "MTActionToastView.h"
+#import "MTCoreDataDao.h"
+#import "MTNotificationManager.h"
 
 
 @interface MTAddNotificationController ()
 <UITableViewDelegate,UITableViewDataSource,
-MTNavigationViewDelegate>
+MTNavigationViewDelegate,
+MTAddNotificationCellDelegate,
+MTAddNotificationTimeCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) MTNavigationView *navigationView;
+@property (strong, nonatomic) MTNotificationVo *vo;
 
+@property (copy, nonatomic) NSString *hour;
+@property (copy, nonatomic) NSString *minute;
 @end
 
 @implementation MTAddNotificationController
@@ -58,9 +67,11 @@ MTNavigationViewDelegate>
 {
     if (indexPath.row == 0) {
         MTAddNotificationCell *descCell = [tableView dequeueReusableCellWithIdentifier:[MTAddNotificationCell getIdentifier]];
+        descCell.delegate = self;
         return descCell;
     } else if (indexPath.row == 1){
         MTAddNotificationTimeCell *timeCell = [tableView dequeueReusableCellWithIdentifier:[MTAddNotificationTimeCell getIdentifier]];
+        timeCell.delegate = self;
         return timeCell;
     } else {
         MTAddNotificationStateCell *stateCell = [tableView dequeueReusableCellWithIdentifier:[MTAddNotificationStateCell getIdentifier]];
@@ -95,6 +106,23 @@ MTNavigationViewDelegate>
     
 }
 
+#pragma mark - MTSettingNameCellDelegate
+- (void)noteCell:(UITableViewCell *)cell didChangeText:(NSString *)text
+{
+    self.vo.content = text;
+}
+
+#pragma mark - MTAddNotificationTimeCellDelegate
+- (void)notificationTime:(NSString *)time withIsHour:(BOOL)isHour
+{
+    if (isHour) {
+        self.hour = time;
+    } else {
+        self.minute = time;
+    }
+}
+
+
 #pragma mark - MTNavigationViewDelegate
 - (void)leftAction
 {
@@ -103,7 +131,26 @@ MTNavigationViewDelegate>
 
 - (void)rightAction
 {
+    if (!self.vo.content.length) {
+        MTActionToastView *toastView = [MTActionToastView loadFromNib];
+        toastView.bounds = CGRectMake(0, 0, 110, 32);
+        toastView.content = @"输入通知内容哦";
+        [toastView show];
+        return;
+    }
     
+    self.vo.time = [NSString stringWithFormat:@"%@:%@",self.hour,self.minute];
+    [[MTCoreDataDao new] insertNotificationDatas:@[self.vo]];
+    MTActionToastView *toastView = [MTActionToastView loadFromNib];
+    toastView.bounds = CGRectMake(0, 0, 110, 32);
+    toastView.content = @"保存成功";
+    [toastView show];
+    
+    [[MTNotificationManager shareInstance] addNotificationWithVo:self.vo];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 
 #pragma mark - setter & getter
@@ -117,6 +164,14 @@ MTNavigationViewDelegate>
         _navigationView.rightTitle = @"save";
     }
     return _navigationView;
+}
+
+- (MTNotificationVo *)vo
+{
+    if (!_vo) {
+        _vo = [MTNotificationVo new];
+    }
+    return _vo;
 }
 
 
