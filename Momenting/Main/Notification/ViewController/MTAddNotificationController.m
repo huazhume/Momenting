@@ -40,6 +40,15 @@ MTAddNotificationTimeCellDelegate>
 
 - (void)initBaseViews
 {
+    
+    NSString *time = [[NSDateFormatter my_getHHmmFormatter] stringFromDate:[NSDate date]];
+    NSArray *times = [time componentsSeparatedByString:@":"];
+    if (times.count < 2) {
+        return;
+    }
+    self.hour = ((NSString *)times[0]);
+    self.minute = ((NSString *)times[1]);
+    
     [self.view addSubview:self.navigationView];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MTAddNotificationCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MTAddNotificationCell getIdentifier]];
@@ -145,12 +154,8 @@ MTAddNotificationTimeCellDelegate>
     toastView.bounds = CGRectMake(0, 0, 110, 32);
     toastView.content = @"保存成功";
     [toastView show];
-    
     [[MTNotificationManager shareInstance] addNotificationWithVo:self.vo];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.navigationController popViewControllerAnimated:YES];
-    });
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - setter & getter

@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) MTNotificationVo *model;
 
+@property (assign, nonatomic) NSInteger indexRow;
+
 + (CGFloat)heightForCellWithModel:(MTNotificationVo *)model;
 
 @end

@@ -96,9 +96,6 @@
     content.title = @"你的小秘密";
     content.body = vo.content;
     content.categoryIdentifier = [NSString stringWithFormat:@"category%d",arc4random_uniform(10000)];
-    [UIApplication sharedApplication].applicationIconBadgeNumber++;
-    content.badge = @([UIApplication sharedApplication].applicationIconBadgeNumber);
-    
     content.sound = [UNNotificationSound defaultSound];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     NSArray *times = [vo.time componentsSeparatedByString:@":"];

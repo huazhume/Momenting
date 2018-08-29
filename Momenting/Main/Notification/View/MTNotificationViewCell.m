@@ -44,6 +44,8 @@
 
 - (void)initBaseViews
 {
+    
+    self.colors = @[[UIColor colorWithHex:0x96B46C],[UIColor colorWithHex:0xE48370],[UIColor colorWithHex:0xC496C5],[UIColor colorWithHex:0x79B47C],[UIColor colorWithHex:0xA299CE],[UIColor colorWithHex:0xA2AEBB] ];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.contentBgView.layer.borderColor = [[UIColor colorWithHex:0xC496C5 andAlpha:0.6] CGColor];
@@ -64,6 +66,14 @@
 - (IBAction)signButtonClicked:(id)sender
 {
     self.signButton.selected = !self.signButton.isSelected;
+}
+
+- (void)setIndexRow:(NSInteger)indexRow
+{
+    _indexRow = indexRow;
+    NSInteger index = indexRow % self.colors.count;
+    self.topView.backgroundColor = self.colors[index];
+    self.contentBgView.layer.borderColor = [self.topView.backgroundColor CGColor];
 }
 
 - (void)setSignName:(NSString *)signName

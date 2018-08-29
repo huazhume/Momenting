@@ -64,6 +64,7 @@ MTNavigationViewDelegate>
 {
     MTNotificationViewCell *notificationCell = [tableView dequeueReusableCellWithIdentifier:[MTNotificationViewCell getIdentifier]];
     notificationCell.model = self.notifications[indexPath.row];
+    notificationCell.indexRow = indexPath.row;
     return notificationCell;
 }
 
