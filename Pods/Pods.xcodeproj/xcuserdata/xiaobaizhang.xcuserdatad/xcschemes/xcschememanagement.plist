@@ -4,38 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MJRefresh.xcscheme_^#shared#^_</key>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Masonry.xcscheme_^#shared#^_</key>
+		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-Momenting.xcscheme_^#shared#^_</key>
+		<key>Pods-Momenting.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-MomentingTests.xcscheme_^#shared#^_</key>
+		<key>Pods-MomentingTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Pods-MomentingUITests.xcscheme_^#shared#^_</key>
+		<key>Pods-MomentingUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
