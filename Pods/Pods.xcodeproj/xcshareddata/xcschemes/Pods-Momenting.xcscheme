@@ -17,7 +17,7 @@
                BlueprintIdentifier = "0A54FF2CAA3A5238F5B13F585ECA3079"
                BuildableName = "libPods-Momenting.a"
                BlueprintName = "Pods-Momenting"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,7 +50,7 @@
             BlueprintIdentifier = "0A54FF2CAA3A5238F5B13F585ECA3079"
             BuildableName = "libPods-Momenting.a"
             BlueprintName = "Pods-Momenting"
-            ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
