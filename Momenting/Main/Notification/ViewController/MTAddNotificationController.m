@@ -143,7 +143,7 @@ MTAddNotificationTimeCellDelegate>
     if (!self.vo.content.length) {
         MTActionToastView *toastView = [MTActionToastView loadFromNib];
         toastView.bounds = CGRectMake(0, 0, 110, 32);
-        toastView.content = @"输入通知内容哦";
+        toastView.content = Localized(@"addNotificationToast");
         [toastView show];
         return;
     }
@@ -152,7 +152,7 @@ MTAddNotificationTimeCellDelegate>
     [[MTCoreDataDao new] insertNotificationDatas:@[self.vo]];
     MTActionToastView *toastView = [MTActionToastView loadFromNib];
     toastView.bounds = CGRectMake(0, 0, 110, 32);
-    toastView.content = @"保存成功";
+    toastView.content = Localized(@"addNotificationSaveSuccess");
     [toastView show];
     [[MTNotificationManager shareInstance] addNotificationWithVo:self.vo];
     [self.navigationController popViewControllerAnimated:YES];
@@ -165,8 +165,8 @@ MTAddNotificationTimeCellDelegate>
         _navigationView = [MTNavigationView loadFromNib];
         _navigationView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 55);
         _navigationView.delegate = self;
-        _navigationView.navigationTitle = @"Add Notification";
-        _navigationView.rightTitle = @"save";
+        _navigationView.navigationTitle = Localized(@"addNotificationTitle");
+        _navigationView.rightTitle = Localized(@"save");
     }
     return _navigationView;
 }

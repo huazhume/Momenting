@@ -11,6 +11,7 @@
 
 @interface MTSettingProfileCell ()
 
+@property (weak, nonatomic) IBOutlet UILabel *editProfileLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 @end
 
@@ -27,6 +28,8 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.coverImageView.layer.cornerRadius = self.coverImageView.bounds.size.height / 2.0;
     self.coverImageView.layer.masksToBounds = YES;
+    self.editProfileLabel.text = Localized(@"profileEditPicture");
+    
 }
 
 - (void)refreshCell

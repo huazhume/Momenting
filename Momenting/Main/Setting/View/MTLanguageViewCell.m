@@ -39,7 +39,7 @@
 - (void)setLanguageStatus:(BOOL)languageStatus
 {
     _languageStatus = languageStatus;
-    self.checkMarkImageView.image = languageStatus ? nil : [UIImage imageNamed:@"settings-checkmark"];
+    self.checkMarkImageView.image = !languageStatus ? nil : [UIImage imageNamed:@"settings-checkmark"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

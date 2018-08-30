@@ -34,7 +34,7 @@
 - (void)initBaseViews
 {
     [self addSubview:self.tableView];
-    self.datalist = [@[@[@"header"],@[@"Modify Profile",@"Modify language"],@[@"Notifications",@"Push notification"],@[@"Contact us", @"About"]] mutableCopy];
+    self.datalist = [@[@[@"header"],@[Localized(@"modifyProfile"),Localized(@"modifyLanguage")],@[Localized(@"notifications"),Localized(@"pushNotification")],@[Localized(@"contactUs"), Localized(@"about")]] mutableCopy];
 }
 
 - (void)refreshData

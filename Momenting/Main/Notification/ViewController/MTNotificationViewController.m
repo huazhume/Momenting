@@ -142,7 +142,7 @@ MTNavigationViewDelegate>
         _navigationView = [MTNavigationView loadFromNib];
         _navigationView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 55);
         _navigationView.delegate = self;
-        _navigationView.navigationTitle = @"Notifications";
+        _navigationView.navigationTitle = Localized(@"notificationTitle");
         _navigationView.rightImageName = @"add-icon";
         _navigationView.rightTitle = @"";
     }

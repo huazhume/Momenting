@@ -8,6 +8,13 @@
 
 #import "MTAddNotificationStateCell.h"
 
+@interface MTAddNotificationStateCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+
+@end
+
 @implementation MTAddNotificationStateCell
 
 + (CGFloat)heightForCell
@@ -25,6 +32,7 @@
 - (void)initBaseViews
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.titleLabel.text = Localized(@"addNotificationState");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

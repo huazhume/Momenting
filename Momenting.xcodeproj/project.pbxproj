@@ -106,6 +106,19 @@
 		FBDDBE25213782A7002A88FE /* MTLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE23213782A7002A88FE /* MTLanguageViewController.xib */; };
 		FBDDBE292137831F002A88FE /* MTLanguageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE272137831F002A88FE /* MTLanguageViewCell.m */; };
 		FBDDBE2A2137831F002A88FE /* MTLanguageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE282137831F002A88FE /* MTLanguageViewCell.xib */; };
+		FBDDBE2F21378EBD002A88FE /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE3121378EBD002A88FE /* Language.strings */; };
+		FBDDBE472137B253002A88FE /* EBBannerView+Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE362137B252002A88FE /* EBBannerView+Categories.m */; };
+		FBDDBE482137B253002A88FE /* EBBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE372137B252002A88FE /* EBBannerView.m */; };
+		FBDDBE492137B253002A88FE /* EBBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE382137B252002A88FE /* EBBannerView.xib */; };
+		FBDDBE4A2137B253002A88FE /* EBBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE392137B252002A88FE /* EBBannerViewController.m */; };
+		FBDDBE4B2137B253002A88FE /* EBBannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE3A2137B252002A88FE /* EBBannerViewController.xib */; };
+		FBDDBE4C2137B253002A88FE /* EBBannerViewMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE3B2137B252002A88FE /* EBBannerViewMaker.m */; };
+		FBDDBE4D2137B253002A88FE /* EBBannerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE3D2137B252002A88FE /* EBBannerWindow.m */; };
+		FBDDBE4E2137B253002A88FE /* EBCustomBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE3E2137B252002A88FE /* EBCustomBannerView.m */; };
+		FBDDBE4F2137B253002A88FE /* EBEmptyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE402137B252002A88FE /* EBEmptyWindow.m */; };
+		FBDDBE502137B253002A88FE /* EBMuteDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE422137B252002A88FE /* EBMuteDetector.m */; };
+		FBDDBE512137B253002A88FE /* EBMuteDetector.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE432137B252002A88FE /* EBMuteDetector.mp3 */; };
+		FBDDBE542137B431002A88FE /* MTForegroundPushView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE532137B431002A88FE /* MTForegroundPushView.m */; };
 		FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE5F23E21267B6600B24208 /* MTNotificationManager.m */; };
 /* End PBXBuildFile section */
 
@@ -308,6 +321,30 @@
 		FBDDBE262137831F002A88FE /* MTLanguageViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLanguageViewCell.h; sourceTree = "<group>"; };
 		FBDDBE272137831F002A88FE /* MTLanguageViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLanguageViewCell.m; sourceTree = "<group>"; };
 		FBDDBE282137831F002A88FE /* MTLanguageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTLanguageViewCell.xib; sourceTree = "<group>"; };
+		FBDDBE2B21378E48002A88FE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FBDDBE2C21378E48002A88FE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FBDDBE3021378EBD002A88FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Language.strings; sourceTree = "<group>"; };
+		FBDDBE3221378EC0002A88FE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Language.strings"; sourceTree = "<group>"; };
+		FBDDBE352137B252002A88FE /* EBBannerView+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EBBannerView+Categories.h"; sourceTree = "<group>"; };
+		FBDDBE362137B252002A88FE /* EBBannerView+Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EBBannerView+Categories.m"; sourceTree = "<group>"; };
+		FBDDBE372137B252002A88FE /* EBBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBBannerView.m; sourceTree = "<group>"; };
+		FBDDBE382137B252002A88FE /* EBBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBBannerView.xib; sourceTree = "<group>"; };
+		FBDDBE392137B252002A88FE /* EBBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBBannerViewController.m; sourceTree = "<group>"; };
+		FBDDBE3A2137B252002A88FE /* EBBannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBBannerViewController.xib; sourceTree = "<group>"; };
+		FBDDBE3B2137B252002A88FE /* EBBannerViewMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBBannerViewMaker.m; sourceTree = "<group>"; };
+		FBDDBE3C2137B252002A88FE /* EBBannerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBBannerWindow.h; sourceTree = "<group>"; };
+		FBDDBE3D2137B252002A88FE /* EBBannerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBBannerWindow.m; sourceTree = "<group>"; };
+		FBDDBE3E2137B252002A88FE /* EBCustomBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBCustomBannerView.m; sourceTree = "<group>"; };
+		FBDDBE3F2137B252002A88FE /* EBEmptyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBEmptyWindow.h; sourceTree = "<group>"; };
+		FBDDBE402137B252002A88FE /* EBEmptyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBEmptyWindow.m; sourceTree = "<group>"; };
+		FBDDBE412137B252002A88FE /* EBMuteDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMuteDetector.h; sourceTree = "<group>"; };
+		FBDDBE422137B252002A88FE /* EBMuteDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMuteDetector.m; sourceTree = "<group>"; };
+		FBDDBE432137B252002A88FE /* EBMuteDetector.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EBMuteDetector.mp3; sourceTree = "<group>"; };
+		FBDDBE442137B252002A88FE /* EBBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBBannerView.h; sourceTree = "<group>"; };
+		FBDDBE452137B252002A88FE /* EBBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBBannerViewController.h; sourceTree = "<group>"; };
+		FBDDBE462137B252002A88FE /* EBCustomBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBCustomBannerView.h; sourceTree = "<group>"; };
+		FBDDBE522137B431002A88FE /* MTForegroundPushView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTForegroundPushView.h; sourceTree = "<group>"; };
+		FBDDBE532137B431002A88FE /* MTForegroundPushView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTForegroundPushView.m; sourceTree = "<group>"; };
 		FBE5F23D21267B6600B24208 /* MTNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationManager.h; sourceTree = "<group>"; };
 		FBE5F23E21267B6600B24208 /* MTNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -551,6 +588,7 @@
 		72E97307211FD02900D96DA4 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				FBDDBE332137B252002A88FE /* EBBannerView */,
 				FBB0788D2134E043003510D1 /* RSKImageCropper */,
 			);
 			path = Vender;
@@ -629,6 +667,7 @@
 				FB2989C321193BC10011025D /* main.m */,
 				72E97348211FD81F00D96DA4 /* MTCommons.h */,
 				72E97349211FD81F00D96DA4 /* MTHeaderPrefix.pch */,
+				FBDDBE3121378EBD002A88FE /* Language.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -789,6 +828,8 @@
 		FBDD902D212FA969009A75D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBDDBE522137B431002A88FE /* MTForegroundPushView.h */,
+				FBDDBE532137B431002A88FE /* MTForegroundPushView.m */,
 				FB9C1F49212FAAA000CE1224 /* MTNotificationViewCell.h */,
 				FB9C1F4A212FAAA000CE1224 /* MTNotificationViewCell.m */,
 				FB9C1F4B212FAAA000CE1224 /* MTNotificationViewCell.xib */,
@@ -829,6 +870,39 @@
 				FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FBDDBE332137B252002A88FE /* EBBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				FBDDBE342137B252002A88FE /* Classes */,
+				FBDDBE442137B252002A88FE /* EBBannerView.h */,
+				FBDDBE452137B252002A88FE /* EBBannerViewController.h */,
+				FBDDBE462137B252002A88FE /* EBCustomBannerView.h */,
+			);
+			path = EBBannerView;
+			sourceTree = "<group>";
+		};
+		FBDDBE342137B252002A88FE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FBDDBE352137B252002A88FE /* EBBannerView+Categories.h */,
+				FBDDBE362137B252002A88FE /* EBBannerView+Categories.m */,
+				FBDDBE372137B252002A88FE /* EBBannerView.m */,
+				FBDDBE382137B252002A88FE /* EBBannerView.xib */,
+				FBDDBE392137B252002A88FE /* EBBannerViewController.m */,
+				FBDDBE3A2137B252002A88FE /* EBBannerViewController.xib */,
+				FBDDBE3B2137B252002A88FE /* EBBannerViewMaker.m */,
+				FBDDBE3C2137B252002A88FE /* EBBannerWindow.h */,
+				FBDDBE3D2137B252002A88FE /* EBBannerWindow.m */,
+				FBDDBE3E2137B252002A88FE /* EBCustomBannerView.m */,
+				FBDDBE3F2137B252002A88FE /* EBEmptyWindow.h */,
+				FBDDBE402137B252002A88FE /* EBEmptyWindow.m */,
+				FBDDBE412137B252002A88FE /* EBMuteDetector.h */,
+				FBDDBE422137B252002A88FE /* EBMuteDetector.m */,
+				FBDDBE432137B252002A88FE /* EBMuteDetector.mp3 */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		FBE5F23C21267B3B00B24208 /* Notification */ = {
@@ -934,6 +1008,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = FB2989A821193BC10011025D;
 			productRefGroup = FB2989B221193BC10011025D /* Products */;
@@ -952,6 +1027,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDDBE512137B253002A88FE /* EBMuteDetector.mp3 in Resources */,
 				72E972E4211FCE8700D96DA4 /* MTHomeTextViewCell.xib in Resources */,
 				72E97305211FCEA500D96DA4 /* MTNavigationView.xib in Resources */,
 				FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */,
@@ -964,6 +1040,7 @@
 				FBC099942133D54B00242E1F /* MTAddNotificationCell.xib in Resources */,
 				FBB5E391212EB85C008A3F07 /* MTSettingNameCell.xib in Resources */,
 				FBB0788C2134DD3E003510D1 /* MTStyleViewController.xib in Resources */,
+				FBDDBE2F21378EBD002A88FE /* Language.strings in Resources */,
 				72E972F2211FCE8700D96DA4 /* MTNoteToolsView.xib in Resources */,
 				72E97301211FCEA500D96DA4 /* MTActionAlertView.xib in Resources */,
 				72E972E2211FCE8700D96DA4 /* MTHomeSectionView.xib in Resources */,
@@ -974,11 +1051,13 @@
 				FBB5E38C212EB613008A3F07 /* MTSettingProfileCell.xib in Resources */,
 				FBB078A22134E043003510D1 /* RSKImageCropperStrings.bundle in Resources */,
 				FBDDBE25213782A7002A88FE /* MTLanguageViewController.xib in Resources */,
+				FBDDBE492137B253002A88FE /* EBBannerView.xib in Resources */,
 				FB2989BC21193BC10011025D /* Main.storyboard in Resources */,
 				FB9C1F4D212FAAA000CE1224 /* MTNotificationViewCell.xib in Resources */,
 				FBDDBE2A2137831F002A88FE /* MTLanguageViewCell.xib in Resources */,
 				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
 				FBB5E379212EAB6E008A3F07 /* MTProfileSetViewController.xib in Resources */,
+				FBDDBE4B2137B253002A88FE /* EBBannerViewController.xib in Resources */,
 				72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */,
 				72E972F0211FCE8700D96DA4 /* MTNoteToolsTextCell.xib in Resources */,
 				72E97303211FCEA500D96DA4 /* MTActionSheetView.xib in Resources */,
@@ -1085,6 +1164,7 @@
 				FB0A37612123EB83007CB0DC /* UIView+Category.m in Sources */,
 				7228383E212872AD003C28FD /* MTNoteSettingContentCell.m in Sources */,
 				FBB078A12134E043003510D1 /* CGGeometry+RSKImageCropper.m in Sources */,
+				FBDDBE482137B253002A88FE /* EBBannerView.m in Sources */,
 				72E972E7211FCE8700D96DA4 /* MTNoteImagePo+CoreDataProperties.m in Sources */,
 				FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */,
 				FBB5E378212EAB6E008A3F07 /* MTProfileSetViewController.m in Sources */,
@@ -1093,14 +1173,17 @@
 				72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */,
 				72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */,
 				FBB0788B2134DD3E003510D1 /* MTStyleViewController.m in Sources */,
+				FBDDBE4F2137B253002A88FE /* EBEmptyWindow.m in Sources */,
 				FBC0999D2133F48700242E1F /* MTAddNotificationStateCell.m in Sources */,
 				FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */,
 				72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */,
 				72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */,
 				FBDDBE292137831F002A88FE /* MTLanguageViewCell.m in Sources */,
 				FBDDBE24213782A7002A88FE /* MTLanguageViewController.m in Sources */,
+				FBDDBE542137B431002A88FE /* MTForegroundPushView.m in Sources */,
 				FBB078A52134E043003510D1 /* RSKImageScrollView.m in Sources */,
 				72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */,
+				FBDDBE472137B253002A88FE /* EBBannerView+Categories.m in Sources */,
 				72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */,
 				FBC099932133D54B00242E1F /* MTAddNotificationCell.m in Sources */,
 				72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */,
@@ -1113,10 +1196,13 @@
 				72E972ED211FCE8700D96DA4 /* MTNoteToolsImageCell.m in Sources */,
 				72E972EC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m in Sources */,
 				FBC099982133E2F500242E1F /* MTAddNotificationTimeCell.m in Sources */,
+				FBDDBE4D2137B253002A88FE /* EBBannerWindow.m in Sources */,
 				FBB078A92134E043003510D1 /* UIImage+RSKImageCropper.m in Sources */,
 				72E97300211FCEA500D96DA4 /* MTActionAlertView.m in Sources */,
 				72E972F3211FCE8700D96DA4 /* MTNoteViewController.m in Sources */,
 				72E9732D211FD23F00D96DA4 /* MTDateFormatManager.m in Sources */,
+				FBDDBE502137B253002A88FE /* EBMuteDetector.m in Sources */,
+				FBDDBE4E2137B253002A88FE /* EBCustomBannerView.m in Sources */,
 				FBC099A42133FBD800242E1F /* NSDateFormatter+Category.m in Sources */,
 				72E972EB211FCE8700D96DA4 /* MTNoteTextPo+CoreDataClass.m in Sources */,
 				FBB078A32134E043003510D1 /* RSKImageCropViewController.m in Sources */,
@@ -1127,6 +1213,7 @@
 				FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
 				FBB078B021353A58003510D1 /* MTMeModel.m in Sources */,
+				FBDDBE4A2137B253002A88FE /* EBBannerViewController.m in Sources */,
 				72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */,
 				72E972E6211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m in Sources */,
 				FBB078A82134E043003510D1 /* UIApplication+RSKImageCropper.m in Sources */,
@@ -1145,6 +1232,7 @@
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
 				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,
 				FBB5E38B212EB613008A3F07 /* MTSettingProfileCell.m in Sources */,
+				FBDDBE4C2137B253002A88FE /* EBBannerViewMaker.m in Sources */,
 				FBB078AD213539AF003510D1 /* MTUserInfoDefault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1185,6 +1273,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FB2989BB21193BC10011025D /* Base */,
+				FBDDBE2B21378E48002A88FE /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1193,8 +1282,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				FB2989C021193BC10011025D /* Base */,
+				FBDDBE2C21378E48002A88FE /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FBDDBE3121378EBD002A88FE /* Language.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBDDBE3021378EBD002A88FE /* en */,
+				FBDDBE3221378EC0002A88FE /* zh-Hans */,
+			);
+			name = Language.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1204,6 +1303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1259,6 +1359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

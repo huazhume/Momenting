@@ -1,0 +1,38 @@
+/* 
+  Language.strings
+  Momenting
+
+  Created by xiaobai zhang on 2018/8/30.
+  Copyright © 2018年 xiaobai zhang. All rights reserved.
+*/
+
+"modifyProfile" = "修改资料";
+"modifyLanguage" = "修改语言";
+"notifications" = "通知列表";
+"pushNotification" = "通知开关";
+"contactUs" = "联系我们";
+"about" = "关于";
+"save" = "保存";
+
+
+//editProfile
+"profileEditTitle" = "资料";
+"profileEditPicture" = "修改头像";
+"profileEditName" = "名称";
+"profileEditAbout" = "关于";
+
+//language
+"language" = "语言";
+
+"notificationTitle" = "通知列表";
+
+"addNotificationTitle" = "添加通知";
+"addNotificationContent" = "内容";
+"addNotificationTime" = "时间";
+"addNotificationState" = "是否开启";
+"addNotificationToast" = "请输入内容哦";
+"addNotificationSaveSuccess" = "保存成功";
+
+"noteTitle" = "笔记";
+"noteContentPlaceholder" = "请输入内容哦";
+"noteNext" = "下一步";

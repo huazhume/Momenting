@@ -11,8 +11,9 @@
 @interface MTAddNotificationCell ()
 <UITextViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -28,6 +29,7 @@
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.textView.delegate = self;
+    self.titleLabel.text = Localized(@"addNotificationContent");
 }
 
 - (void)becomeFirstResponder

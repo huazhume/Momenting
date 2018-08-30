@@ -11,7 +11,7 @@
 #import "MTMediaFileManager.h"
 
 static NSString *kUserInfoKey = @"userInfoKey";
-static NSString *kLanagureKey = @"lanagureKey";
+static NSString *kLanagureKey = @"appLanguage";
 
 @implementation MTUserInfoDefault
 
@@ -44,18 +44,19 @@ static NSString *kLanagureKey = @"lanagureKey";
     
 }
 
-+ (void)saveDefaultLanagure:(NSNumber *)lanagureStatus
++ (void)saveDefaultLanagure:(BOOL)isChinese
 {
     NSString *key = kLanagureKey;
-    [[NSUserDefaults standardUserDefaults] setObject:lanagureStatus forKey:key];
+    NSString *string = isChinese ? @"zh-Hans" : @"en";
+    [[NSUserDefaults standardUserDefaults] setObject:string forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-+ (BOOL)getUserDefaultLanagure
++ (BOOL)getUserDefaultLanagureIsChinese
 {
     NSString *key = kLanagureKey;
-    NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-    return number.boolValue;
+    NSString *string = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    return ![string isEqualToString:@"en"];
 }
 
 

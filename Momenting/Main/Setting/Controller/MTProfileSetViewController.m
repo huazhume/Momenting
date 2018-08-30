@@ -71,13 +71,14 @@ MTActionSheetViewDelegate>
         return profileCell;
     } else if (indexPath.row == 1) {
         MTSettingNameCell *nameCell = [tableView dequeueReusableCellWithIdentifier:[MTSettingNameCell getIdentifier]];
-        nameCell.title = @"Name";
+        
+        nameCell.title = Localized(@"profileEditName");
         nameCell.content = self.meModel.name;
         nameCell.delegate = self;
         return nameCell;
     } else {
         MTSettingNameCell *descCell = [tableView dequeueReusableCellWithIdentifier:[MTSettingNameCell getIdentifier]];
-        descCell.title = @"About";
+        descCell.title = Localized(@"profileEditAbout");
         descCell.content = self.meModel.about;
         descCell.delegate = self;
         return descCell;
@@ -214,8 +215,8 @@ MTActionSheetViewDelegate>
         _navigationView = [MTNavigationView loadFromNib];
         _navigationView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 55);
         _navigationView.delegate = self;
-        _navigationView.navigationTitle = @"Edit Profile";
-        _navigationView.rightTitle = @"save";
+        _navigationView.navigationTitle = Localized(@"profileEditTitle");
+        _navigationView.rightTitle = Localized(@"save");
     }
     return _navigationView;
 }

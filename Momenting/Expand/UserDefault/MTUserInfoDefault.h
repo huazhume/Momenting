@@ -15,8 +15,8 @@
 
 + (MTMeModel *)getUserDefaultMeModel;
 
-+ (void)saveDefaultLanagure:(NSNumber *)lanagureStatus;
++ (void)saveDefaultLanagure:(BOOL)isChinese;
 
-+ (BOOL)getUserDefaultLanagure;
++ (BOOL)getUserDefaultLanagureIsChinese;
 
 @end

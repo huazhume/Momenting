@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -55,6 +56,7 @@
             <viewLayoutGuide key="safeArea" id="i1s-6A-EAn"/>
             <connections>
                 <outlet property="pickerView" destination="2Rk-m8-M8C" id="ncM-yR-k6b"/>
+                <outlet property="titleLabel" destination="cKl-qv-oKW" id="vno-FO-0fF"/>
             </connections>
             <point key="canvasLocation" x="59" y="124.5"/>
         </tableViewCell>

@@ -38,7 +38,8 @@
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.textView.delegate = self;
-    [self.textView setPlaceholder:@"Miss Zhou. Please input..." placeholdColor:[UIColor colorWithHex:0x666666] font:[UIFont fontWithName:@"AvenirNext-Italic" size:14]];
+    
+    [self.textView setPlaceholder:Localized(@"noteContentPlaceholder") placeholdColor:[UIColor colorWithHex:0x666666] font:[UIFont fontWithName:@"AvenirNext-UltraLightItalic" size:14]];
     
     [self.contentView addSubview:self.descLabel];
     [self.descLabel mas_makeConstraints:^(MASConstraintMaker *make) {

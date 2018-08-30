@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) NSMutableArray *minutes;
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 @implementation MTAddNotificationTimeCell
@@ -60,6 +62,8 @@
     NSInteger minute = ((NSString *)times[1]).integerValue;
     [self.pickerView selectRow:hour inComponent:0 animated:NO];
     [self.pickerView selectRow:minute inComponent:1 animated:NO];
+    
+    self.titleLabel.text = Localized(@"addNotificationTime");
 }
 
 #pragma mark - pickerView delegate & dataSource

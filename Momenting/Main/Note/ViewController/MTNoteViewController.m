@@ -373,6 +373,8 @@ MTNoteToolsTextCellDelegate>
         _navigationView = [MTNavigationView loadFromNib];
         _navigationView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 55);
         _navigationView.delegate = self;
+        _navigationView.navigationTitle = Localized(@"noteTitle");
+        _navigationView.rightTitle = Localized(@"noteNext");
     }
     return _navigationView;
 }

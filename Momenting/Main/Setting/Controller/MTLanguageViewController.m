@@ -47,7 +47,7 @@ MTNavigationViewDelegate>
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [UIView new];
     
-    self.lanagureStatus = [MTUserInfoDefault getUserDefaultLanagure];
+    self.lanagureStatus = [MTUserInfoDefault getUserDefaultLanagureIsChinese];
     [self.tableView reloadData];
 }
 
@@ -61,7 +61,7 @@ MTNavigationViewDelegate>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MTLanguageViewCell *languageCell = [tableView dequeueReusableCellWithIdentifier:[MTLanguageViewCell getIdentifier]];
-    NSString *title = indexPath.row ? @"English" : @"中文";
+    NSString *title = indexPath.row ? @"English" : @"中文(简体)";
     languageCell.title = title;
     languageCell.languageStatus = (self.lanagureStatus != indexPath.row);
     return languageCell;
@@ -85,8 +85,8 @@ MTNavigationViewDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.lanagureStatus = (indexPath.row != 0);
-    [MTUserInfoDefault saveDefaultLanagure:[NSNumber numberWithBool:self.lanagureStatus]];
+    self.lanagureStatus = (indexPath.row == 0);
+    [MTUserInfoDefault saveDefaultLanagure:self.lanagureStatus];
     [self.tableView reloadData];
 }
 
@@ -104,7 +104,7 @@ MTNavigationViewDelegate>
         _navigationView = [MTNavigationView loadFromNib];
         _navigationView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 55);
         _navigationView.delegate = self;
-        _navigationView.navigationTitle = @"Language";
+        _navigationView.navigationTitle = Localized(@"language");
         _navigationView.rightImageName = @"";
         _navigationView.rightTitle = @"";
     }

@@ -1,0 +1,38 @@
+/* 
+  Language.strings
+  Momenting
+
+  Created by xiaobai zhang on 2018/8/30.
+  Copyright © 2018年 xiaobai zhang. All rights reserved.
+*/
+
+//setting
+"modifyProfile" = "Modify Profile";
+"modifyLanguage" = "Modify language";
+"notifications" = "Notifications";
+"pushNotification" = "Push notification";
+"contactUs" = "Contact us";
+"about" = "About";
+"save" = "save";
+
+"profileEditTitle" = "Edit profile";
+"profileEditPicture" = "Edit profile picture";
+"profileEditName" = "Name";
+"profileEditAbout" = "About";
+
+"language" = "Language";
+
+"notificationTitle" = "Notifications";
+
+"addNotificationTitle" = "Add notification";
+"addNotificationContent" = "Content";
+"addNotificationTime" = "Time";
+"addNotificationState" = "State";
+"addNotificationToast" = "Please input";
+"addNotificationSaveSuccess" = "Save success";
+
+"noteTitle" = "Note";
+"noteContentPlaceholder" = "Please input content";
+"noteNext" = "Next";
+
+
