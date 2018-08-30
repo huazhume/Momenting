@@ -11,7 +11,7 @@
 #import "MTNoteSettingHeaderCell.h"
 #import "MTProfileSetViewController.h"
 #import "MTNotificationViewController.h"
-#import "MTStyleViewController.h"
+#import "MTLanguageViewController.h"
 
 @interface MTNoteSettingView ()
 <UITableViewDelegate,UITableViewDataSource>
@@ -121,7 +121,7 @@
                 [[MTHelp currentNavigation] pushViewController:vc animated:YES];
             } else {
                 //更换背景
-                MTStyleViewController * vc = [MTStyleViewController new];
+                MTLanguageViewController * vc = [MTLanguageViewController new];
                 [[MTHelp currentNavigation] pushViewController:vc animated:YES];
             }
         }

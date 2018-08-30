@@ -11,6 +11,7 @@
 #import "MTMediaFileManager.h"
 
 static NSString *kUserInfoKey = @"userInfoKey";
+static NSString *kLanagureKey = @"lanagureKey";
 
 @implementation MTUserInfoDefault
 
@@ -41,6 +42,20 @@ static NSString *kUserInfoKey = @"userInfoKey";
     meModel.image = [[MTMediaFileManager sharedManager]getUserImageFilePath];
     return meModel;
     
+}
+
++ (void)saveDefaultLanagure:(NSNumber *)lanagureStatus
+{
+    NSString *key = kLanagureKey;
+    [[NSUserDefaults standardUserDefaults] setObject:lanagureStatus forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (BOOL)getUserDefaultLanagure
+{
+    NSString *key = kLanagureKey;
+    NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    return number.boolValue;
 }
 
 

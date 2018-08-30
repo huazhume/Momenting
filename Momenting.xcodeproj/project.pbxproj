@@ -57,6 +57,7 @@
 		FB0A37662123FF9F007CB0DC /* MTActionToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0A37652123FF9F007CB0DC /* MTActionToastView.m */; };
 		FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0A376821241A8D007CB0DC /* MTNoteDetailSectionView.m */; };
 		FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB0A376A21241A9A007CB0DC /* MTNoteDetailSectionView.xib */; };
+		FB2151B4213684F40003845A /* MTNotificationVo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2151B3213684F40003845A /* MTNotificationVo.m */; };
 		FB2989B621193BC10011025D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989B521193BC10011025D /* AppDelegate.m */; };
 		FB2989BC21193BC10011025D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2989BA21193BC10011025D /* Main.storyboard */; };
 		FB2989BE21193BC10011025D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2989BD21193BC10011025D /* Assets.xcassets */; };
@@ -101,6 +102,10 @@
 		FBC0999E2133F48700242E1F /* MTAddNotificationStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC0999C2133F48700242E1F /* MTAddNotificationStateCell.xib */; };
 		FBC099A42133FBD800242E1F /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
+		FBDDBE24213782A7002A88FE /* MTLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE22213782A7002A88FE /* MTLanguageViewController.m */; };
+		FBDDBE25213782A7002A88FE /* MTLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE23213782A7002A88FE /* MTLanguageViewController.xib */; };
+		FBDDBE292137831F002A88FE /* MTLanguageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE272137831F002A88FE /* MTLanguageViewCell.m */; };
+		FBDDBE2A2137831F002A88FE /* MTLanguageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE282137831F002A88FE /* MTLanguageViewCell.xib */; };
 		FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE5F23E21267B6600B24208 /* MTNotificationManager.m */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +218,13 @@
 		FB0A376721241A8D007CB0DC /* MTNoteDetailSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteDetailSectionView.h; sourceTree = "<group>"; };
 		FB0A376821241A8D007CB0DC /* MTNoteDetailSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteDetailSectionView.m; sourceTree = "<group>"; };
 		FB0A376A21241A9A007CB0DC /* MTNoteDetailSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteDetailSectionView.xib; sourceTree = "<group>"; };
+		FB2151B2213684F40003845A /* MTNotificationVo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationVo.h; sourceTree = "<group>"; };
+		FB2151B3213684F40003845A /* MTNotificationVo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationVo.m; sourceTree = "<group>"; };
+		FB2151C1213690F10003845A /* MTCoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MTCoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		FB2151CE213692490003845A /* MTNotificationPo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotificationPo+CoreDataClass.m"; sourceTree = "<group>"; };
+		FB2151CF213692490003845A /* MTNotificationPo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTNotificationPo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FB2151D0213692490003845A /* MTNotificationPo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotificationPo+CoreDataClass.h"; sourceTree = "<group>"; };
+		FB2151D12136924A0003845A /* MTNotificationPo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTNotificationPo+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FB2989B121193BC10011025D /* Momenting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momenting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2989B421193BC10011025D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB2989B521193BC10011025D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -290,6 +302,12 @@
 		FBC099A22133FBD800242E1F /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
 		FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FBDDBE21213782A7002A88FE /* MTLanguageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLanguageViewController.h; sourceTree = "<group>"; };
+		FBDDBE22213782A7002A88FE /* MTLanguageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLanguageViewController.m; sourceTree = "<group>"; };
+		FBDDBE23213782A7002A88FE /* MTLanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTLanguageViewController.xib; sourceTree = "<group>"; };
+		FBDDBE262137831F002A88FE /* MTLanguageViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLanguageViewCell.h; sourceTree = "<group>"; };
+		FBDDBE272137831F002A88FE /* MTLanguageViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLanguageViewCell.m; sourceTree = "<group>"; };
+		FBDDBE282137831F002A88FE /* MTLanguageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTLanguageViewCell.xib; sourceTree = "<group>"; };
 		FBE5F23D21267B6600B24208 /* MTNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationManager.h; sourceTree = "<group>"; };
 		FBE5F23E21267B6600B24208 /* MTNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -364,6 +382,9 @@
 				FBB078882134DD3E003510D1 /* MTStyleViewController.h */,
 				FBB078892134DD3E003510D1 /* MTStyleViewController.m */,
 				FBB0788A2134DD3E003510D1 /* MTStyleViewController.xib */,
+				FBDDBE21213782A7002A88FE /* MTLanguageViewController.h */,
+				FBDDBE22213782A7002A88FE /* MTLanguageViewController.m */,
+				FBDDBE23213782A7002A88FE /* MTLanguageViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +415,9 @@
 				FBB5E38D212EB85C008A3F07 /* MTSettingNameCell.h */,
 				FBB5E38E212EB85C008A3F07 /* MTSettingNameCell.m */,
 				FBB5E38F212EB85C008A3F07 /* MTSettingNameCell.xib */,
+				FBDDBE262137831F002A88FE /* MTLanguageViewCell.h */,
+				FBDDBE272137831F002A88FE /* MTLanguageViewCell.m */,
+				FBDDBE282137831F002A88FE /* MTLanguageViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -784,6 +808,12 @@
 		FBDD902E212FA969009A75D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FB2151D0213692490003845A /* MTNotificationPo+CoreDataClass.h */,
+				FB2151CE213692490003845A /* MTNotificationPo+CoreDataClass.m */,
+				FB2151D12136924A0003845A /* MTNotificationPo+CoreDataProperties.h */,
+				FB2151CF213692490003845A /* MTNotificationPo+CoreDataProperties.m */,
+				FB2151B2213684F40003845A /* MTNotificationVo.h */,
+				FB2151B3213684F40003845A /* MTNotificationVo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -943,8 +973,10 @@
 				72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */,
 				FBB5E38C212EB613008A3F07 /* MTSettingProfileCell.xib in Resources */,
 				FBB078A22134E043003510D1 /* RSKImageCropperStrings.bundle in Resources */,
+				FBDDBE25213782A7002A88FE /* MTLanguageViewController.xib in Resources */,
 				FB2989BC21193BC10011025D /* Main.storyboard in Resources */,
 				FB9C1F4D212FAAA000CE1224 /* MTNotificationViewCell.xib in Resources */,
+				FBDDBE2A2137831F002A88FE /* MTLanguageViewCell.xib in Resources */,
 				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
 				FBB5E379212EAB6E008A3F07 /* MTProfileSetViewController.xib in Resources */,
 				72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */,
@@ -1065,6 +1097,8 @@
 				FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */,
 				72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */,
 				72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */,
+				FBDDBE292137831F002A88FE /* MTLanguageViewCell.m in Sources */,
+				FBDDBE24213782A7002A88FE /* MTLanguageViewController.m in Sources */,
 				FBB078A52134E043003510D1 /* RSKImageScrollView.m in Sources */,
 				72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */,
 				72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */,
@@ -1096,6 +1130,7 @@
 				72E9734C211FD90600D96DA4 /* UIImage+ImageCompress.m in Sources */,
 				72E972E6211FCE8700D96DA4 /* MTNoteImagePo+CoreDataClass.m in Sources */,
 				FBB078A82134E043003510D1 /* UIApplication+RSKImageCropper.m in Sources */,
+				FB2151B4213684F40003845A /* MTNotificationVo.m in Sources */,
 				FB0A37662123FF9F007CB0DC /* MTActionToastView.m in Sources */,
 				FB9C1F47212FA9CF00CE1224 /* MTNotificationViewController.m in Sources */,
 				FBB078A42134E043003510D1 /* RSKImagePicker.m in Sources */,
@@ -1213,7 +1248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1262,7 +1297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1280,7 +1315,7 @@
 				DEVELOPMENT_TEAM = ZHVJZ82B29;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1304,7 +1339,7 @@
 				DEVELOPMENT_TEAM = ZHVJZ82B29;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1419,9 +1454,10 @@
 		FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				FB2151C1213690F10003845A /* MTCoreDataModel 2.xcdatamodel */,
 				FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */,
 			);
-			currentVersion = FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */;
+			currentVersion = FB2151C1213690F10003845A /* MTCoreDataModel 2.xcdatamodel */;
 			path = MTCoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

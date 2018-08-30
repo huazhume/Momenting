@@ -95,6 +95,11 @@ MTHomeEmptyViewDelegate>
     header.lastUpdatedTimeLabel.hidden = YES;
     header.stateLabel.hidden = YES;
     self.tableView.mj_header = header;
+    
+    
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(settingViewIsShow:)];
+    recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.setView addGestureRecognizer:recognizer];
 }
 
 - (void)loadNewData

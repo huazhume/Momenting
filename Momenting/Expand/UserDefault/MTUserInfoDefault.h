@@ -15,4 +15,8 @@
 
 + (MTMeModel *)getUserDefaultMeModel;
 
++ (void)saveDefaultLanagure:(NSNumber *)lanagureStatus;
+
++ (BOOL)getUserDefaultLanagure;
+
 @end
