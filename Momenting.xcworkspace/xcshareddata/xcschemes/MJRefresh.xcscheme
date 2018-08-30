@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F8C9FD61262ED8C66E0DF109A0297C7"
-               BuildableName = "libPods-MomentingTests.a"
-               BlueprintName = "Pods-MomentingTests"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "04CF549EBEEE7BC87AEAE35397184D94"
+               BuildableName = "libMJRefresh.a"
+               BlueprintName = "MJRefresh"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,10 +47,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8C9FD61262ED8C66E0DF109A0297C7"
-            BuildableName = "libPods-MomentingTests.a"
-            BlueprintName = "Pods-MomentingTests"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "04CF549EBEEE7BC87AEAE35397184D94"
+            BuildableName = "libMJRefresh.a"
+            BlueprintName = "MJRefresh"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
