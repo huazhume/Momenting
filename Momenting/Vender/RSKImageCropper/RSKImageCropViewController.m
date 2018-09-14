@@ -560,7 +560,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 
 - (BOOL)isPortraitInterfaceOrientation
 {
-    return CGRectGetHeight(self.view.bounds) > CGRectGetWidth(self.view.bounds);
+    return CGRectGetHeight(self.view.bounds) > SCREEN_WIDTH;
 }
 
 #pragma mark - Private
@@ -617,10 +617,10 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 - (void)resetZoomScale
 {
     CGFloat zoomScale;
-    if (CGRectGetWidth(self.view.bounds) > CGRectGetHeight(self.view.bounds)) {
+    if (SCREEN_WIDTH > CGRectGetHeight(self.view.bounds)) {
         zoomScale = CGRectGetHeight(self.view.bounds) / self.originalImage.size.height;
     } else {
-        zoomScale = CGRectGetWidth(self.view.bounds) / self.originalImage.size.width;
+        zoomScale = SCREEN_WIDTH / self.originalImage.size.width;
     }
     self.imageScrollView.zoomScale = zoomScale;
 }
@@ -756,7 +756,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 
 - (void)layoutOverlayView
 {
-    CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds) * 2, CGRectGetHeight(self.view.bounds) * 2);
+    CGRect frame = CGRectMake(0, 0, SCREEN_WIDTH * 2, CGRectGetHeight(self.view.bounds) * 2);
     self.overlayView.frame = frame;
 }
 
@@ -764,7 +764,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 {
     switch (self.cropMode) {
         case RSKImageCropModeCircle: {
-            CGFloat viewWidth = CGRectGetWidth(self.view.bounds);
+            CGFloat viewWidth = SCREEN_WIDTH;
             CGFloat viewHeight = CGRectGetHeight(self.view.bounds);
             
             CGFloat diameter;
@@ -783,7 +783,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
             break;
         }
         case RSKImageCropModeSquare: {
-            CGFloat viewWidth = CGRectGetWidth(self.view.bounds);
+            CGFloat viewWidth = SCREEN_WIDTH;
             CGFloat viewHeight = CGRectGetHeight(self.view.bounds);
             
             CGFloat length;

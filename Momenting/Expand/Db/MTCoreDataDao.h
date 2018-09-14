@@ -29,4 +29,8 @@ typedef enum : NSUInteger {
 
 - (BOOL)deleteNotificationWithContent:(NSString *)content;
 
+- (void)config;
+
++ (MTCoreDataDao *)shareInstance;
+
 @end

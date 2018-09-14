@@ -298,7 +298,7 @@ MTNoteToolsTextCellDelegate>
     self.toolsView.keyBoardIsVisiable = (notification.name != UIKeyboardWillHideNotification);
     [UIView animateWithDuration:animationDuration
                      animations:^{
-                         self.toolsView.frame = CGRectMake(0, y, CGRectGetWidth(self.view.bounds), 40);
+                         self.toolsView.frame = CGRectMake(0, y, SCREEN_WIDTH, 40);
                      }];
 }
 
@@ -371,7 +371,7 @@ MTNoteToolsTextCellDelegate>
 {
     if (!_navigationView) {
         _navigationView = [MTNavigationView loadFromNib];
-        _navigationView.frame = CGRectMake(0, iPhoneTopMargin, CGRectGetWidth(self.view.bounds), 55);
+        _navigationView.frame = CGRectMake(0, iPhoneTopMargin, SCREEN_WIDTH, 55);
         _navigationView.delegate = self;
         _navigationView.navigationTitle = Localized(@"noteTitle");
         _navigationView.rightTitle = Localized(@"noteNext");

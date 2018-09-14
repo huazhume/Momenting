@@ -11,6 +11,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import "MTNotificationManager.h"
 #import "MTLanguageManager.h"
+#import "MTCoreDataDao.h"
 
 @interface AppDelegate ()
 <UNUserNotificationCenterDelegate>
@@ -23,6 +24,7 @@
     // Override point for cus∫tomization after application launch.
     
     [[MTMediaFileManager sharedManager] config];
+    [[MTCoreDataDao shareInstance] config];
     [[MTNotificationManager shareInstance] config];
     [[MTLanguageManager shareInstance] config];
     

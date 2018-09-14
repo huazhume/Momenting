@@ -267,7 +267,7 @@ MTHomeEmptyViewDelegate>
 - (void)settingViewIsShow:(BOOL)isShow
 {
     [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        self.setViewLeadingCostraint.constant = isShow ? 0.f : -CGRectGetWidth(self.view.bounds);
+        self.setViewLeadingCostraint.constant = isShow ? 0.f : -SCREEN_WIDTH;
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         
