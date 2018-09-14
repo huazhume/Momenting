@@ -19,4 +19,8 @@
 
 - (void)addNotificationWithVo:(MTNotificationVo *)vo;
 
+- (void)showPushViewWithUserinfo:(NSDictionary *)userinfo;
+
+- (void)config;
+
 @end

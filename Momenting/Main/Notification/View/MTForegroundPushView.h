@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class EBCustomBannerView;
+@class MTNotificationVo;
 
 typedef void(^Callback)(void);
 
@@ -17,7 +18,10 @@ typedef void(^Callback)(void);
 
 @property (nonatomic, copy) Callback callback;
 
+@property (nonatomic, strong) MTNotificationVo *model;
+
 + (CGFloat)heightForViewWithContent:(NSString *)content;
+
 
 
 @end

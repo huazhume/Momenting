@@ -9,6 +9,7 @@
 #import "MTForegroundPushView.h"
 #import <Masonry/Masonry.h>
 #import "EBCustomBannerView.h"
+#import "MTNotificationVo.h"
 
 
 @interface MTForegroundPushView ()
@@ -65,7 +66,7 @@
     [self.logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.contentView).offset(12);
         make.top.equalTo(self.contentView).offset(9);
-        make.size.mas_equalTo(CGSizeMake(15, 19));
+        make.size.mas_equalTo(CGSizeMake(19, 19));
     }];
     
     [self.contentView addSubview:self.timeLabel];
@@ -114,6 +115,10 @@
 }
 
 #pragma mark - setter
+- (void)setModel:(MTNotificationVo *)model
+{
+    self.contentLabel.text = model.content;
+}
 
 
 #pragma mark - getter
@@ -122,12 +127,12 @@
     if (!_contentView) {
         _contentView = [[UIView alloc] init];
         _contentView.backgroundColor = [UIColor colorWithHex:0xFFFFFF andAlpha:0.8];
-        // _contentView.layer.masksToBounds = YES;
+        _contentView.layer.masksToBounds = YES;
         _contentView.layer.cornerRadius = 10.f;
-        _contentView.layer.shadowOpacity = 0.5;// 阴影透明度
-        _contentView.layer.shadowColor = [UIColor grayColor].CGColor;// 阴影的颜色
-        _contentView.layer.shadowRadius = 3;// 阴影扩散的范围控制
-        _contentView.layer.shadowOffset = CGSizeMake(1, 1);// 阴影的范围
+//        _contentView.layer.shadowOpacity = 0.5;// 阴影透明度
+//        _contentView.layer.shadowColor = [UIColor grayColor].CGColor;// 阴影的颜色
+//        _contentView.layer.shadowRadius = 3;// 阴影扩散的范围控制
+//        _contentView.layer.shadowOffset = CGSizeMake(1, 1);// 阴影的范围
     }
     return _contentView;
 }
@@ -136,7 +141,9 @@
 {
     if (!_logoImageView) {
         _logoImageView = [[UIImageView alloc] init];
-        _logoImageView.image = [UIImage imageNamed:@"push_logo"];
+        _logoImageView.image = [UIImage imageNamed:@"secret_logo"];
+        _logoImageView.layer.cornerRadius = 4.f;
+        _logoImageView.layer.masksToBounds = YES;
     }
     return _logoImageView;
 }
@@ -147,7 +154,7 @@
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.font = [UIFont systemFontOfSize:13];
         _titleLabel.textColor = [UIColor colorWithHex:0x666666];
-        _titleLabel.text = @"智能盯盘";
+        _titleLabel.text = @"你的小秘密";
     }
     return _titleLabel;
 }
@@ -159,7 +166,7 @@
         _contentLabel.numberOfLines = 0;
         _contentLabel.font = [UIFont systemFontOfSize:13];
         _contentLabel.textColor = [UIColor colorWithHex:0x333333];
-        _contentLabel.text = @"【BTC】10:34的全网价触发盯";
+        _contentLabel.text = @"你知道我有多想你么";
     }
     return _contentLabel;
 }

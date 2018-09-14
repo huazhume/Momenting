@@ -15,6 +15,7 @@
 #import "MTActionToastView.h"
 #import "MTCoreDataDao.h"
 #import "MTNotificationManager.h"
+#import "MTDateFormatManager.h"
 
 
 @interface MTAddNotificationController ()
@@ -147,8 +148,8 @@ MTAddNotificationTimeCellDelegate>
         [toastView show];
         return;
     }
-    
     self.vo.time = [NSString stringWithFormat:@"%@:%@",self.hour,self.minute];
+    self.vo.notificationId = [NSString stringWithFormat:@"%ld",(NSInteger)[[NSDate date] timeIntervalSince1970]];
     [[MTCoreDataDao new] insertNotificationDatas:@[self.vo]];
     MTActionToastView *toastView = [MTActionToastView loadFromNib];
     toastView.bounds = CGRectMake(0, 0, 110, 32);
@@ -163,7 +164,7 @@ MTAddNotificationTimeCellDelegate>
 {
     if (!_navigationView) {
         _navigationView = [MTNavigationView loadFromNib];
-        _navigationView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 55);
+        _navigationView.frame = CGRectMake(0, iPhoneTopMargin, CGRectGetWidth(self.view.bounds), 55);
         _navigationView.delegate = self;
         _navigationView.navigationTitle = Localized(@"addNotificationTitle");
         _navigationView.rightTitle = Localized(@"save");

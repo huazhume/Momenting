@@ -13,6 +13,7 @@
 #import "MTLanguageManager.h"
 
 @interface AppDelegate ()
+<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -22,7 +23,7 @@
     // Override point for cus∫tomization after application launch.
     
     [[MTMediaFileManager sharedManager] config];
-    [[MTNotificationManager shareInstance] registNotifications];
+    [[MTNotificationManager shareInstance] config];
     [[MTLanguageManager shareInstance] config];
     
     return YES;
@@ -33,7 +34,7 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     //本地通知
-    
+    [[MTNotificationManager shareInstance] showPushViewWithUserinfo:notification.userInfo];
 }
 
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings

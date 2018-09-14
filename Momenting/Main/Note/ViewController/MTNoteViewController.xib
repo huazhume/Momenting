@@ -21,6 +21,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kih-Is-LZy">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gPK-FP-Rv9">
                     <rect key="frame" x="0.0" y="56" width="375" height="571"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,9 +32,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="gPK-FP-Rv9" firstAttribute="top" secondItem="kih-Is-LZy" secondAttribute="bottom" id="8iN-hk-nHv"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="gPK-FP-Rv9" secondAttribute="bottom" constant="40" id="DUz-kY-6vy"/>
                 <constraint firstItem="gPK-FP-Rv9" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="36" id="FQT-Ox-QPF"/>
                 <constraint firstItem="gPK-FP-Rv9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="K6X-M1-P0D"/>
+                <constraint firstItem="kih-Is-LZy" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gTo-Ya-ZnT"/>
+                <constraint firstItem="kih-Is-LZy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="h8c-0j-x7n"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kih-Is-LZy" secondAttribute="trailing" id="hWa-bU-eMZ"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gPK-FP-Rv9" secondAttribute="trailing" id="pAi-1h-eHX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 xiaobai zhang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MTBaseViewController.h"
 
-@interface MTNoteViewController : UIViewController
+@interface MTNoteViewController : MTBaseViewController
 
 @end
