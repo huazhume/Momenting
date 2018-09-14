@@ -43,4 +43,6 @@ typedef enum {
 
 - (NSString *)getUserImageFilePath;
 
+- (void)config;
+
 @end

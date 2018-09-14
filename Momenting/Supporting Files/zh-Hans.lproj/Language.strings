@@ -36,3 +36,7 @@
 "noteTitle" = "笔记";
 "noteContentPlaceholder" = "请输入内容哦";
 "noteNext" = "下一步";
+
+"username" = "你的昵称";
+"userDescription" = "关于";
+

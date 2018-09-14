@@ -88,6 +88,8 @@ MTNavigationViewDelegate>
     self.lanagureStatus = (indexPath.row == 0);
     [MTUserInfoDefault saveDefaultLanagure:self.lanagureStatus];
     [self.tableView reloadData];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kLanguageNotification object:nil];
+    self.navigationView.navigationTitle = Localized(@"language");
 }
 
 #pragma mark - MTNavigationViewDelegate

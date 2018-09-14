@@ -34,5 +34,7 @@
 "noteTitle" = "Note";
 "noteContentPlaceholder" = "Please input content";
 "noteNext" = "Next";
+"username" = "Your nikeName";
+"userDescription" = "About me";
 
 

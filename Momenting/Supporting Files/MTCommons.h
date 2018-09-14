@@ -16,6 +16,7 @@
 #define Localized(key)  [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"]] ofType:@"lproj"]] localizedStringForKey:(key) value:nil table:@"Language"]
 
 
+
 #import "UIColor+Hex.h"
 #import "UITableViewCell+Categoty.h"
 #import "UITextView+Category.h"
@@ -23,6 +24,7 @@
 #import "UIView+Category.h"
 #import "MTHelp.h"
 #import "NSDateFormatter+Category.h"
+#import "MTLanguageManager.h"
 
 
 #endif /* MYCommons_h */

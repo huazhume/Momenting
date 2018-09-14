@@ -28,18 +28,40 @@
 {
     [super awakeFromNib];
     [self initBaseViews];
+    [self registNotification];
 }
 
 #pragma mark - initBaseViews
 - (void)initBaseViews
 {
     [self addSubview:self.tableView];
+    [self loadData];
+}
+
+- (void)loadData
+{
     self.datalist = [@[@[@"header"],@[Localized(@"modifyProfile"),Localized(@"modifyLanguage")],@[Localized(@"notifications"),Localized(@"pushNotification")],@[Localized(@"contactUs"), Localized(@"about")]] mutableCopy];
 }
 
 - (void)refreshData
 {
     [self.tableView reloadData];
+}
+
+- (void)registNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageChangeAction) name:kLanguageNotification object:nil];
+}
+
+- (void)languageChangeAction
+{
+    [self loadData];
+    [self.tableView reloadData];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITableViewDataSource

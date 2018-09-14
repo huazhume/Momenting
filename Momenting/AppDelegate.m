@@ -10,6 +10,7 @@
 #import "MTMediaFileManager.h"
 #import <UserNotifications/UserNotifications.h>
 #import "MTNotificationManager.h"
+#import "MTLanguageManager.h"
 
 @interface AppDelegate ()
 
@@ -20,11 +21,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for cus∫tomization after application launch.
     
-    [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType:FILE_IMAGE_TYPE];
-    [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType:FILE_DB_TYPE];
-    [[MTMediaFileManager sharedManager] createMediaFileWithSanboxType:SANBOX_DOCUMNET_TYPE AndWithMediaType: FILE_IMAGEBATE_TYPE];
+    [[MTMediaFileManager sharedManager] config];
+    [[MTNotificationManager shareInstance] registNotifications];
+    [[MTLanguageManager shareInstance] config];
     
-     [[MTNotificationManager shareInstance] registNotifications];
     return YES;
 }
 
@@ -38,7 +38,7 @@
 
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
-    
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

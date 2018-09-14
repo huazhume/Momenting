@@ -35,8 +35,8 @@
 {
     MTMeModel *meModel = [MTUserInfoDefault getUserDefaultMeModel];
     self.coverImageView.image = [UIImage imageWithContentsOfFile:meModel.image];
-    self.nameLabel.text = meModel.name ?: @"你的名字";
-    self.aboutLabel.text = meModel.about ?: @"关于你";
+    self.nameLabel.text = meModel.name ?: Localized(@"username");;
+    self.aboutLabel.text = meModel.about ?: Localized(@"userDescription");
     
 }
 
