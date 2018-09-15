@@ -1,5 +1,5 @@
 //
-//  MTCoreDataDao.h
+//  MTLocalDataManager.h
 //  Momenting
 //
 //  Created by xiaobai zhang on 2018/8/9.
@@ -13,7 +13,7 @@ typedef enum : NSUInteger {
     MTCoreDataContentTypeNoteContent,
 } MTCoreDataContentType;
 
-@interface MTCoreDataDao : NSObject
+@interface MTLocalDataManager : NSObject
 
 - (BOOL)insertDatas:(NSArray *)datas withType:(MTCoreDataContentType)type;
 
@@ -31,6 +31,6 @@ typedef enum : NSUInteger {
 
 - (void)config;
 
-+ (MTCoreDataDao *)shareInstance;
++ (MTLocalDataManager *)shareInstance;
 
 @end

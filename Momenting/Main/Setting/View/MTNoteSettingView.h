@@ -12,4 +12,7 @@
 
 - (void)refreshData;
 
+
+- (void)changeDeviceOrienationIsV:(BOOL)status;
+
 @end

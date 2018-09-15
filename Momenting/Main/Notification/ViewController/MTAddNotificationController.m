@@ -13,7 +13,7 @@
 #import "MTAddNotificationStateCell.h"
 #import "MTNotificationVo.h"
 #import "MTActionToastView.h"
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTNotificationManager.h"
 #import "MTDateFormatManager.h"
 
@@ -150,7 +150,7 @@ MTAddNotificationTimeCellDelegate>
     }
     self.vo.time = [NSString stringWithFormat:@"%@:%@",self.hour,self.minute];
     self.vo.notificationId = [NSString stringWithFormat:@"%ld",(NSInteger)[[NSDate date] timeIntervalSince1970]];
-    [[MTCoreDataDao new] insertNotificationDatas:@[self.vo]];
+    [[MTLocalDataManager shareInstance] insertNotificationDatas:@[self.vo]];
     MTActionToastView *toastView = [MTActionToastView loadFromNib];
     toastView.bounds = CGRectMake(0, 0, 110, 32);
     toastView.content = Localized(@"addNotificationSaveSuccess");

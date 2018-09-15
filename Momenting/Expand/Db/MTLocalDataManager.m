@@ -1,12 +1,12 @@
 //
-//  MTCoreDataDao.m
+//  MTLocalDataManager.m
 //  Momenting
 //
 //  Created by xiaobai zhang on 2018/8/9.
 //  Copyright © 2018年 xiaobai zhang. All rights reserved.
 //
 
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTCoreDataManager.h"
 #import "MTNoteModel.h"
 #import "MTNotePo+CoreDataProperties.h"
@@ -15,7 +15,21 @@
 #import "MTNotificationVo.h"
 #import "MTNotificationPo+CoreDataProperties.h"
 
-@implementation MTCoreDataDao
+@implementation MTLocalDataManager
+
++ (MTLocalDataManager *)shareInstance
+{
+    static MTLocalDataManager *manager = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[MTLocalDataManager alloc] init];
+        
+    });
+    
+    return manager;
+}
+
 
 - (BOOL)insertDatas:(NSArray *)datas withType:(MTCoreDataContentType)type
 {
@@ -226,7 +240,6 @@
     }
 }
 
-
 - (void)config
 {
     if ([[NSUserDefaults standardUserDefaults]objectForKey:@"contentConfig"]) {
@@ -282,18 +295,60 @@
     
 }
 
-+ (MTCoreDataDao *)shareInstance
+- (void)aboutMe
 {
-    static MTCoreDataDao *manager = nil;
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"aboutMe"]) {
+        return;
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:@"info" forKey:@"contentConfig"];
+    MTNoteTextVo *vo1 = [MTNoteTextVo new];
+    vo1.noteId = @"note_01";
+    vo1.text = @"关于我\n\n欢迎来到Secret。\n"
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [[MTCoreDataDao alloc] init];
-        
-    });
+    "在阿尔卑斯山一处风景秀美却也极为险峻的山路转弯处，经常发生事故，可即使如此，来往的车辆依旧疾驰而过，不断更换的警示牌没有起到任何作用，直到有一天那里立起一块木牌，写着“慢慢走，欣赏啊”，人们才猛然惊觉，原来只记得埋头赶路，竟忘了看看这满目秀丽。\n\n"
     
-    return manager;
+    "人生就是如此美好\n"
+    "有时当你遇到一个人，你是否也想和她一起思考、书写、聆听、欣赏……\n\n";
+    
+    MTNoteTextVo *vo2 = [MTNoteTextVo new];
+    vo2.noteId = @"note_01";
+    vo2.text = @"我喜欢一个女孩，短发样子很可爱，她从我的身边走过去，我的眼睛都要掉出来...\n";
+    
+ 
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

@@ -8,7 +8,7 @@
 
 #import "MTNotificationManager.h"
 #import <UserNotifications/UserNotifications.h>
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTNotificationVo.h"
 #import "MTForegroundPushView.h"
 #import "EBCustomBannerView.h"
@@ -44,7 +44,7 @@
 
 - (void)registNotifications
 {
-    NSArray *notifications = [[MTCoreDataDao new]getNotifications];
+    NSArray *notifications = [[MTLocalDataManager shareInstance]getNotifications];
     [notifications enumerateObjectsUsingBlock:^(MTNotificationVo *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self addNotificationWithVo:obj];
     }];

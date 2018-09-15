@@ -14,7 +14,7 @@
 #import "MTNoteModel.h"
 #import "MTActionSheetView.h"
 #import "MTMediaFileManager.h"
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTActionAlertView.h"
 #import "UIImage+ImageCompress.h"
 
@@ -351,8 +351,8 @@ MTNoteToolsTextCellDelegate>
         }
     }];
     
-    [[MTCoreDataDao new] insertDatas:@[noteModel] withType:MTCoreDataContentTypeNoteSelf];
-    [[MTCoreDataDao new] insertDatas:self.datalist withType:MTCoreDataContentTypeNoteContent];
+    [[MTLocalDataManager shareInstance] insertDatas:@[noteModel] withType:MTCoreDataContentTypeNoteSelf];
+    [[MTLocalDataManager shareInstance] insertDatas:self.datalist withType:MTCoreDataContentTypeNoteContent];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

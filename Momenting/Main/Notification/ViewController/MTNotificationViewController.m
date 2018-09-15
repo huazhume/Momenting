@@ -11,7 +11,7 @@
 #import "MTNotificationViewCell.h"
 #import "MTDeleteStyleTableView.h"
 #import "MTAddNotificationController.h"
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTActionAlertView.h"
 #import "MTNotificationVo.h"
 
@@ -36,7 +36,7 @@ MTNavigationViewDelegate>
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.notifications = [[[MTCoreDataDao new]getNotifications] mutableCopy];
+    self.notifications = [[[MTLocalDataManager shareInstance]getNotifications] mutableCopy];
     [self.tableView reloadData];
 }
 
@@ -87,7 +87,7 @@ MTNavigationViewDelegate>
                 return;
             }
             MTNotificationVo *model = self.notifications[indexPath.row];
-            [[MTCoreDataDao new] deleteNotificationWithContent:model.content];
+            [[MTLocalDataManager shareInstance] deleteNotificationWithContent:model.content];
             [self.notifications removeObjectAtIndex:indexPath.row];
             
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:(UITableViewRowAnimationAutomatic)];

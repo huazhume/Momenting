@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,18 +60,18 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVY-E6-jDL" customClass="MTNoteSettingView">
-                                <rect key="frame" x="-375" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="-850" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZY3-mk-dzW">
                                         <rect key="frame" x="0.0" y="0.0" width="285" height="667"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghC-vT-lfl" customClass="MTNoteSettingView">
                                         <rect key="frame" x="0.0" y="0.0" width="285" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-Vc-86a">
-                                        <rect key="frame" x="285" y="0.0" width="90" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="setViewDismissAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pei-9h-hLB"/>
@@ -80,7 +81,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Qno-Vc-86a" secondAttribute="bottom" id="4Jy-Wk-l5m"/>
-                                    <constraint firstItem="Qno-Vc-86a" firstAttribute="leading" secondItem="ghC-vT-lfl" secondAttribute="trailing" id="7vU-ZN-Gha"/>
+                                    <constraint firstItem="Qno-Vc-86a" firstAttribute="leading" secondItem="XVY-E6-jDL" secondAttribute="leading" id="ABS-AG-AeE"/>
                                     <constraint firstItem="Qno-Vc-86a" firstAttribute="top" secondItem="XVY-E6-jDL" secondAttribute="top" id="Aus-dc-Jkq"/>
                                     <constraint firstAttribute="trailing" secondItem="ghC-vT-lfl" secondAttribute="trailing" constant="90" id="AwC-6x-rty"/>
                                     <constraint firstItem="ghC-vT-lfl" firstAttribute="leading" secondItem="XVY-E6-jDL" secondAttribute="leading" id="IYI-In-8hZ"/>
@@ -91,6 +92,7 @@
                                     <constraint firstItem="ZY3-mk-dzW" firstAttribute="top" secondItem="XVY-E6-jDL" secondAttribute="top" id="isi-T6-zI9"/>
                                     <constraint firstItem="ZY3-mk-dzW" firstAttribute="leading" secondItem="XVY-E6-jDL" secondAttribute="leading" id="rNf-3c-G4J"/>
                                     <constraint firstAttribute="trailing" secondItem="Qno-Vc-86a" secondAttribute="trailing" id="wsj-Tu-1Nd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qno-Vc-86a" secondAttribute="trailing" id="xOE-Su-4mf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -102,12 +104,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="llt-pb-VjC" secondAttribute="bottom" id="GKt-OP-Ydb"/>
                             <constraint firstItem="llt-pb-VjC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="OLE-Q5-pop"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CiH-dz-Yzl" secondAttribute="bottom" id="OfP-Ve-FAu"/>
-                            <constraint firstItem="XVY-E6-jDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-375" id="R0D-sa-ALC"/>
+                            <constraint firstItem="XVY-E6-jDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-850" id="R0D-sa-ALC"/>
                             <constraint firstItem="llt-pb-VjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S59-rB-ftA"/>
-                            <constraint firstAttribute="bottom" secondItem="XVY-E6-jDL" secondAttribute="bottom" id="ZwP-32-wvu"/>
                             <constraint firstItem="vQ2-aj-2Px" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dgJ-of-xDf"/>
                             <constraint firstItem="CiH-dz-Yzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dz6-e8-bOD"/>
                             <constraint firstItem="XVY-E6-jDL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="eYP-SS-I5T"/>
+                            <constraint firstItem="XVY-E6-jDL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="nLO-TT-2bu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="llt-pb-VjC" secondAttribute="trailing" id="sbZ-IU-p8L"/>
                             <constraint firstAttribute="trailing" secondItem="vQ2-aj-2Px" secondAttribute="trailing" id="tR3-LQ-7xs"/>
                             <constraint firstItem="CiH-dz-Yzl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zfo-vA-Ljc"/>
@@ -120,6 +122,7 @@
                         <outlet property="headerView" destination="vQ2-aj-2Px" id="VNI-VJ-kCY"/>
                         <outlet property="headerViewTopConstraint" destination="dgJ-of-xDf" id="9rk-FL-D3y"/>
                         <outlet property="setView" destination="XVY-E6-jDL" id="gTZ-s7-Dnb"/>
+                        <outlet property="setViewLeadingConstraint" destination="R0D-sa-ALC" id="55x-50-NhB"/>
                         <outlet property="setViewLeadingCostraint" destination="R0D-sa-ALC" id="PNN-PD-spn"/>
                         <outlet property="tableView" destination="CiH-dz-Yzl" id="LZq-OZ-Zip"/>
                     </connections>

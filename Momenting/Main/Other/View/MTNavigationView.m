@@ -34,7 +34,25 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    [self registNotifications];
+}
+
+
+- (void)registNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientChange:)name:UIDeviceOrientationDidChangeNotification object:nil];
     
+}
+
+- (void)orientChange:(NSNotification *)noti
+{
+    self.frame = CGRectMake(0, iPhoneTopMargin, SCREEN_WIDTH, 55);
+}
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - setter

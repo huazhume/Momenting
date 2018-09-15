@@ -11,7 +11,7 @@
 #import "MTNoteToolsTextCell.h"
 #import "MTNoteToolsImageCell.h"
 #import "MTNoteModel.h"
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTActionToastView.h"
 #import "MTNoteDetailSectionView.h"
 
@@ -46,7 +46,7 @@ MTNavigationViewDelegate>
 
 - (void)loadData
 {
-    self.datalist = [[[MTCoreDataDao new] getNoteDetailList:self.noteId] mutableCopy];
+    self.datalist = [[[MTLocalDataManager shareInstance] getNoteDetailList:self.noteId] mutableCopy];
     [self.tableView reloadData];
 }
 

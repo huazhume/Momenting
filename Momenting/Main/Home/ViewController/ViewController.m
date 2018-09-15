@@ -11,14 +11,14 @@
 #import "MTHomeTextViewCell.h"
 #import "UITableViewCell+Categoty.h"
 #import "MTNoteViewController.h"
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTHomeEmptyView.h"
 #import "MTNoteModel.h"
 #import <MJRefresh/MJRefresh.h>
 #import "MTDeleteStyleTableView.h"
 #import "MTNoteDetailViewController.h"
 #import "MTActionAlertView.h"
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 #import "MTMediaFileManager.h"
 #import "MTNoteSettingView.h"
 #import "MTMeModel.h"
@@ -42,6 +42,7 @@ MTHomeEmptyViewDelegate>
 @property (assign, nonatomic) BOOL isAnimationing;
 @property (strong, nonatomic) NSDate *lastScrollDate;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *setViewLeadingConstraint;
 
 @end
 
@@ -50,12 +51,13 @@ MTHomeEmptyViewDelegate>
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initBaseViews];
+    [self registNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.datalist = [[[MTCoreDataDao new] getNoteSelf] mutableCopy];
+    self.datalist = [[[MTLocalDataManager shareInstance] getNoteSelf] mutableCopy];
     [self.tableView reloadData];
     
     NSString * path =[[MTMediaFileManager sharedManager] getMediaFilePathWithAndSanBoxType:SANBOX_DOCUMNET_TYPE AndMediaType:FILE_IMAGE_TYPE];
@@ -100,6 +102,8 @@ MTHomeEmptyViewDelegate>
     UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(settingViewIsShow:)];
     recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.setView addGestureRecognizer:recognizer];
+    
+//    self.setViewLeadingCostraint.constant = -SCREEN_WIDTH;
 }
 
 - (void)loadNewData
@@ -107,6 +111,47 @@ MTHomeEmptyViewDelegate>
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView.mj_header endRefreshing];
     });
+}
+
+- (void)registNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientChange:)name:UIDeviceOrientationDidChangeNotification object:nil];
+    
+}
+
+- (void)orientChange:(NSNotification *)noti
+{
+//    self.setViewLeadingCostraint.constant = -SCREEN_WIDTH;
+
+    UIDeviceOrientation  orient = [UIDevice currentDevice].orientation;
+    switch (orient)
+    {
+        case UIDeviceOrientationPortrait:
+            [self.setView changeDeviceOrienationIsV:YES];
+            
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+            [self.setView changeDeviceOrienationIsV:NO];
+            
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            [self.setView changeDeviceOrienationIsV:YES];
+            
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            [self.setView changeDeviceOrienationIsV:NO];
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - ScrollView
@@ -209,7 +254,7 @@ MTHomeEmptyViewDelegate>
                                                     return;
                                                 }
                                                 MTNoteModel *model = self.datalist[indexPath.row];
-                                                [[MTCoreDataDao new]deleteNoteWithNoteId:model.noteId];
+                                                [[MTLocalDataManager shareInstance]deleteNoteWithNoteId:model.noteId];
                                                 [self.datalist removeObjectAtIndex:indexPath.row];
                                                 [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:(UITableViewRowAnimationAutomatic)];
                                                  [tableView setEditing:NO animated:YES];

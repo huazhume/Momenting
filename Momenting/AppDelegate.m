@@ -11,7 +11,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import "MTNotificationManager.h"
 #import "MTLanguageManager.h"
-#import "MTCoreDataDao.h"
+#import "MTLocalDataManager.h"
 
 @interface AppDelegate ()
 <UNUserNotificationCenterDelegate>
@@ -23,8 +23,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for cus∫tomization after application launch.
     
+//    [[UNUserNotificationCenter currentNotificationCenter] removeAllPendingNotificationRequests];
+//    [[UNUserNotificationCenter currentNotificationCenter] removeAllDeliveredNotifications];
     [[MTMediaFileManager sharedManager] config];
-    [[MTCoreDataDao shareInstance] config];
+    [[MTLocalDataManager shareInstance] config];
     [[MTNotificationManager shareInstance] config];
     [[MTLanguageManager shareInstance] config];
     

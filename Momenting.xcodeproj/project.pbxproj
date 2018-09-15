@@ -41,7 +41,7 @@
 		72E97303211FCEA500D96DA4 /* MTActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972FC211FCEA500D96DA4 /* MTActionSheetView.xib */; };
 		72E97304211FCEA500D96DA4 /* MTNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E972FE211FCEA500D96DA4 /* MTNavigationView.m */; };
 		72E97305211FCEA500D96DA4 /* MTNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E972FF211FCEA500D96DA4 /* MTNavigationView.xib */; };
-		72E97329211FD23700D96DA4 /* MTCoreDataDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97327211FD23700D96DA4 /* MTCoreDataDao.m */; };
+		72E97329211FD23700D96DA4 /* MTLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97327211FD23700D96DA4 /* MTLocalDataManager.m */; };
 		72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E97328211FD23700D96DA4 /* MTCoreDataManager.m */; };
 		72E9732D211FD23F00D96DA4 /* MTDateFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9732B211FD23F00D96DA4 /* MTDateFormatManager.m */; };
 		72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E9732F211FD2B900D96DA4 /* MTSanboxFile.m */; };
@@ -198,9 +198,9 @@
 		72E972FD211FCEA500D96DA4 /* MTNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNavigationView.h; sourceTree = "<group>"; };
 		72E972FE211FCEA500D96DA4 /* MTNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNavigationView.m; sourceTree = "<group>"; };
 		72E972FF211FCEA500D96DA4 /* MTNavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTNavigationView.xib; sourceTree = "<group>"; };
-		72E97325211FD23700D96DA4 /* MTCoreDataDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataDao.h; sourceTree = "<group>"; };
+		72E97325211FD23700D96DA4 /* MTLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLocalDataManager.h; sourceTree = "<group>"; };
 		72E97326211FD23700D96DA4 /* MTCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataManager.h; sourceTree = "<group>"; };
-		72E97327211FD23700D96DA4 /* MTCoreDataDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataDao.m; sourceTree = "<group>"; };
+		72E97327211FD23700D96DA4 /* MTLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLocalDataManager.m; sourceTree = "<group>"; };
 		72E97328211FD23700D96DA4 /* MTCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataManager.m; sourceTree = "<group>"; };
 		72E9732B211FD23F00D96DA4 /* MTDateFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDateFormatManager.m; sourceTree = "<group>"; };
 		72E9732C211FD23F00D96DA4 /* MTDateFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDateFormatManager.h; sourceTree = "<group>"; };
@@ -621,8 +621,8 @@
 		72E97322211FD1BB00D96DA4 /* Db */ = {
 			isa = PBXGroup;
 			children = (
-				72E97325211FD23700D96DA4 /* MTCoreDataDao.h */,
-				72E97327211FD23700D96DA4 /* MTCoreDataDao.m */,
+				72E97325211FD23700D96DA4 /* MTLocalDataManager.h */,
+				72E97327211FD23700D96DA4 /* MTLocalDataManager.m */,
 				72E97326211FD23700D96DA4 /* MTCoreDataManager.h */,
 				72E97328211FD23700D96DA4 /* MTCoreDataManager.m */,
 			);
@@ -1016,7 +1016,7 @@
 					FB2989B021193BC10011025D = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					FB2989C821193BC10011025D = {
 						CreatedOnToolsVersion = 9.2;
@@ -1259,7 +1259,7 @@
 				FB8325BA214B656E007CB95A /* MTLanguageManager.m in Sources */,
 				72E97302211FCEA500D96DA4 /* MTActionSheetView.m in Sources */,
 				FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */,
-				72E97329211FD23700D96DA4 /* MTCoreDataDao.m in Sources */,
+				72E97329211FD23700D96DA4 /* MTLocalDataManager.m in Sources */,
 				722838362128700F003C28FD /* MTNoteSettingHeaderCell.m in Sources */,
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
 				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,
@@ -1444,7 +1444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZHVJZ82B29;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
@@ -1452,8 +1452,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3b6e1af4-83cf-4235-befc-d75b2b4ee4a1";
-				PROVISIONING_PROFILE_SPECIFIER = iOSDevelopmentProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1467,8 +1467,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZHVJZ82B29;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
@@ -1476,8 +1476,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secret;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "177275a5-f33c-4b81-bfe4-f5e162a65551";
-				PROVISIONING_PROFILE_SPECIFIER = iOSDistributionAdhocProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

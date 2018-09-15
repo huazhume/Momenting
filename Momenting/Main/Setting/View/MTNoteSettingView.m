@@ -36,6 +36,7 @@
 {
     [self addSubview:self.tableView];
     [self loadData];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)loadData
@@ -164,6 +165,7 @@
         {
             if (indexPath.row == 0) {
                 //联系我们
+                [self sendEmail];
             } else {
                 //关于我们
             }
@@ -175,17 +177,42 @@
     }
 }
 
+- (void)changeDeviceOrienationIsV:(BOOL)status
+{
+    self.tableView.frame = CGRectMake(0, 0,status ?  SCREEN_WIDTH - 90 : SCREEN_HEIGHT - 50, SCREEN_HEIGHT);
+}
+
 #pragma mark - Actions
 - (void)goinSettingInterface
 {
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
 
+-(void)sendEmail
+{
+    NSMutableString *mailUrl = [NSMutableString string];
+    //添加收件人
+    NSArray *toRecipients = [NSArray arrayWithObject: @"huazhume@163.com"];
+    [mailUrl appendFormat:@"mailto:%@", [toRecipients componentsJoinedByString:@","]];
+//    //添加抄送
+//    NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil];
+//    [mailUrl appendFormat:@"?cc=%@", [ccRecipients componentsJoinedByString:@","]];
+//    //添加密送
+//    NSArray *bccRecipients = [NSArray arrayWithObjects:@"fourth@example.com", nil];
+//    [mailUrl appendFormat:@"&bcc=%@", [bccRecipients componentsJoinedByString:@","]];
+    //添加主题
+    [mailUrl appendString:@"&subject=联系我们"];
+    //添加邮件内容
+    [mailUrl appendString:@"&body=<b>Thanks</b> body!"];
+    NSString* email = [mailUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:email]];
+}
+
 #pragma mark - getter
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - 90, SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width - 90, self.frame.size.height) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.separatorColor = [UIColor clearColor];
         _tableView.delegate = self;
