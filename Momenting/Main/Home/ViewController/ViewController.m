@@ -23,6 +23,9 @@
 #import "MTNoteSettingView.h"
 #import "MTMeModel.h"
 #import "MTUserInfoDefault.h"
+#import "AppDelegate.h"
+#import "MTHomeWebModel.h"
+#import "FLBaseWebViewController.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -43,6 +46,8 @@ MTHomeEmptyViewDelegate>
 @property (strong, nonatomic) NSDate *lastScrollDate;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *setViewLeadingConstraint;
+
+@property (strong, nonatomic) MTHomeWebModel *webModel;
 
 @end
 
@@ -289,6 +294,7 @@ MTHomeEmptyViewDelegate>
     MTNoteModel *model = self.datalist[indexPath.row];
     detailVC.noteId = model.noteId;
     detailVC.color = model.sectionColor;
+    detailVC.weather = model.weather;
     detailVC.isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
     [self.navigationController pushViewController:detailVC animated:YES];
 }

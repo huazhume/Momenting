@@ -15,11 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<MTNoteTextPo *> *)fetchRequest;
 
-@property (nonatomic) int64_t fontSize;
 @property (nullable, nonatomic, copy) NSString *fontName;
-@property (nullable, nonatomic, copy) NSString *text;
-@property (nonatomic) int64_t sortIndex;
+@property (nonatomic) int64_t fontSize;
 @property (nullable, nonatomic, copy) NSString *noteId;
+@property (nonatomic) int64_t sortIndex;
+@property (nullable, nonatomic, copy) NSString *text;
+@property (nonatomic) int64_t fontType;
 
 @end
 

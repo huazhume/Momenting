@@ -1,8 +1,8 @@
 //
 //  MTNotePo+CoreDataProperties.m
-//  
 //
-//  Created by xiaobai zhang on 2018/8/9.
+//
+//  Created by xiaobai zhang on 2019/3/26.
 //
 //
 
@@ -11,13 +11,14 @@
 @implementation MTNotePo (CoreDataProperties)
 
 + (NSFetchRequest<MTNotePo *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"MTNotePo"];
+    return [NSFetchRequest fetchRequestWithEntityName:@"MTNotePo"];
 }
 
+@dynamic height;
 @dynamic imagePath;
 @dynamic noteId;
 @dynamic text;
 @dynamic width;
-@dynamic height;
+@dynamic weather;
 
 @end

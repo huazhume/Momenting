@@ -81,6 +81,7 @@
 {
     _font = font;
     self.textView.font = font;
+    self.descLabel.font = font;
 }
 
 - (void)becomeKeyboardFirstResponder

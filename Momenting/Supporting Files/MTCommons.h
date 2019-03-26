@@ -29,6 +29,7 @@
 #import "MTHelp.h"
 #import "NSDateFormatter+Category.h"
 #import "MTLanguageManager.h"
+#import "UIFont+MTFont.h"
 
 
 #endif /* MYCommons_h */

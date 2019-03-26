@@ -12,6 +12,7 @@
 "notifications" = "Notifications";
 "pushNotification" = "Push notification";
 "contactUs" = "Contact us";
+"WebNotification" = "updateWeb";
 "about" = "About";
 "save" = "save";
 

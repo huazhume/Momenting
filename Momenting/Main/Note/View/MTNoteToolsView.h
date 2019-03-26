@@ -33,6 +33,8 @@ typedef enum : NSUInteger {
 
 @property (assign, nonatomic) BOOL keyBoardIsVisiable;
 
+@property (copy, nonatomic) NSString *weatherTitle;
+
 + (instancetype)loadFromNib;
 
 + (CGFloat)viewHeight;

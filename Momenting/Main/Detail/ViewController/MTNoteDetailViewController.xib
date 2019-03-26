@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +18,7 @@
                 <outlet property="toolsBgView" destination="5a2-sk-qfx" id="CPg-5X-EMQ"/>
                 <outlet property="toolsViewBottomConstraint" destination="UCK-si-kXr" id="VIz-o4-tCv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weatherButton" destination="WtQ-3h-n4Z" id="0gz-qI-SKU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -51,7 +53,7 @@
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvg-tR-fM0">
-                            <rect key="frame" x="229" y="2.5" width="40" height="40"/>
+                            <rect key="frame" x="319" y="2" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="N0Q-yU-IBg"/>
                                 <constraint firstAttribute="height" constant="40" id="VcS-T8-U9B"/>
@@ -62,14 +64,12 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtQ-3h-n4Z">
-                            <rect key="frame" x="274" y="2" width="40" height="40"/>
+                            <rect key="frame" x="284" y="2" width="30" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="NTJ-mx-PK5"/>
                                 <constraint firstAttribute="height" constant="40" id="uVK-j3-L7i"/>
                             </constraints>
-                            <state key="normal" image="postFooter_bookmark_outline"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4L-Eg-zkH">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4L-Eg-zkH">
                             <rect key="frame" x="319" y="2" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="0MC-Nr-22a"/>
@@ -96,9 +96,9 @@
                         <constraint firstItem="d4L-Eg-zkH" firstAttribute="leading" secondItem="WtQ-3h-n4Z" secondAttribute="trailing" constant="5" id="EXI-nI-giV"/>
                         <constraint firstItem="d4L-Eg-zkH" firstAttribute="centerY" secondItem="5a2-sk-qfx" secondAttribute="centerY" id="JSB-d9-lZX"/>
                         <constraint firstItem="WtQ-3h-n4Z" firstAttribute="centerY" secondItem="5a2-sk-qfx" secondAttribute="centerY" id="dor-qG-ejW"/>
-                        <constraint firstItem="WtQ-3h-n4Z" firstAttribute="leading" secondItem="vvg-tR-fM0" secondAttribute="trailing" constant="5" id="eD1-72-JqP"/>
                         <constraint firstAttribute="height" constant="44" id="pWq-HX-wd1"/>
                         <constraint firstItem="vvg-tR-fM0" firstAttribute="centerY" secondItem="5a2-sk-qfx" secondAttribute="centerY" id="rAE-Wd-X9A"/>
+                        <constraint firstAttribute="trailing" secondItem="vvg-tR-fM0" secondAttribute="trailing" constant="16" id="y6F-5b-KXi"/>
                         <constraint firstItem="yrV-V9-ViG" firstAttribute="leading" secondItem="5a2-sk-qfx" secondAttribute="leading" constant="8" id="yEZ-iG-vci"/>
                     </constraints>
                 </view>
@@ -122,7 +122,6 @@
     </objects>
     <resources>
         <image name="navBackButton" width="30" height="30"/>
-        <image name="postFooter_bookmark_outline" width="20" height="26"/>
         <image name="postFooter_respond_outline" width="21" height="21"/>
         <image name="postFooter_share_outline" width="20" height="26"/>
     </resources>

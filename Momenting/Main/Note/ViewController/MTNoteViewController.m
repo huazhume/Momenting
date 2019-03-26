@@ -17,6 +17,7 @@
 #import "MTLocalDataManager.h"
 #import "MTActionAlertView.h"
 #import "UIImage+ImageCompress.h"
+#import "MTWeatherAlertView.h"
 
 @interface MTNoteViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -25,7 +26,8 @@ MTNoteToolsViewDelegate,
 UIActionSheetDelegate,
 UINavigationControllerDelegate,UIImagePickerControllerDelegate,
 MTActionSheetViewDelegate,
-MTNoteToolsTextCellDelegate>
+MTNoteToolsTextCellDelegate,
+MTWeatherAlertViewDelegate>
 
 @property (strong, nonatomic) MTNoteToolsView *toolsView;
 @property (strong, nonatomic) MTNavigationView *navigationView;
@@ -35,6 +37,10 @@ MTNoteToolsTextCellDelegate>
 @property (strong, nonatomic) NSMutableArray *datalist;
 
 @property (strong, nonatomic) UIFont *textFont;
+@property (copy, nonatomic) NSString *weatherTitle;
+@property (strong, nonatomic) NSIndexPath *selectIndexPath;
+
+
 
 @end
 
@@ -61,6 +67,8 @@ MTNoteToolsTextCellDelegate>
     
     MTNoteToolsTextCell *textCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     [textCell becomeKeyboardFirstResponder];
+    
+    self.weatherTitle = @"A";
 }
 
 
@@ -113,12 +121,22 @@ MTNoteToolsTextCellDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    id model = [self.datalist objectAtIndex:indexPath.row];
+    if ([model isKindOfClass:[MTNoteTextVo class]]) return;
+    self.selectIndexPath = indexPath;
     [self.view endEditing:YES];
     MTActionSheetView *sheetView = [MTActionSheetView loadFromNib];
     sheetView.isShowDelete = YES;
     sheetView.frame = [UIScreen mainScreen].bounds;
     sheetView.delegate = self;
     [sheetView show];
+}
+
+#pragma mark - MTWeatherAlertViewDelegate
+- (void)weatherAlertViewSelectedWithTitle:(NSString *)title
+{
+    self.weatherTitle = title;
+    self.toolsView.weatherTitle = title;
 }
 
 #pragma mark - MTNoteToolsTextCellDelegate
@@ -166,24 +184,47 @@ MTNoteToolsTextCellDelegate>
 
 - (void)noteToolsActionWithType:(MTNoteToolsViewType)type
 {
+    
     if (type == MTNoteToolsViewImage) {
+        self.selectIndexPath = nil;
         [self.view endEditing:YES];
         MTActionSheetView *sheetView = [MTActionSheetView loadFromNib];
         sheetView.frame = [UIScreen mainScreen].bounds;
         sheetView.delegate = self;
         [sheetView show];
+    } else if (type == MTNoteToolsViewAt) {
+        [self.view endEditing:YES];
+        MTWeatherAlertView *weatherView = [MTWeatherAlertView loadFromNib];
+        weatherView.frame = [UIScreen mainScreen].bounds;
+        weatherView.delegate = self;
+        weatherView.selectTitle = self.weatherTitle;
+        [weatherView show];
     }
 }
 
 #pragma mark - MTActionSheetViewDelegate
 - (void)sheetToolsActionWithType:(MTActionSheetViewType)type
 {
-    if (type == MTActionSheetViewOne) {
-        [self takePhoto];
-    } else if (type == MTActionSheetViewTwo) {
-        [self LocalPhoto];
-    } else if (type == MTActionSheetViewDelete) {
-        //delete
+    if (self.selectIndexPath == nil) {
+        if (type == MTActionSheetViewOne) {
+            [self takePhoto];
+        } else if (type == MTActionSheetViewTwo) {
+            [self LocalPhoto];
+        }
+    } else {
+        if (self.selectIndexPath.row >= self.datalist.count) return;
+        id model = [self.datalist objectAtIndex:self.selectIndexPath.row];
+        if ([model isKindOfClass:[MTNoteTextVo class]]) return;
+        if (type == MTActionSheetViewOne) {
+            [self takePhoto];
+        } else if (type == MTActionSheetViewTwo) {
+            [self LocalPhoto];
+        } else if (type == MTActionSheetViewDelete) {
+            //delete
+            [self.datalist removeObject:model];
+            [self.datalist removeObjectAtIndex:self.selectIndexPath.row];
+            [self.tableView reloadData];
+        }
     }
 }
 
@@ -191,17 +232,14 @@ MTNoteToolsTextCellDelegate>
 - (void)takePhoto
 {
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
-    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
-    {
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.videoQuality = UIImagePickerControllerQualityTypeIFrame1280x720;
         picker.allowsEditing = YES;
         picker.sourceType = sourceType;
         [self presentViewController:picker animated:YES completion:nil];
-    }
-    else
-    {
+    } else {
         NSLog(@"无法打开照相机");
     }
 }
@@ -240,10 +278,17 @@ MTNoteToolsTextCellDelegate>
     model.path = fileName;
     model.width = image.size.width;
     model.height = image.size.height;
-    [self.datalist addObject:model];
     
-    MTNoteTextVo *textModel = [MTNoteTextVo new];
-    [self.datalist addObject:textModel];
+    if (self.selectIndexPath) {
+        if (self.selectIndexPath.row >= self.datalist.count) return;
+        [self.datalist replaceObjectAtIndex:self.selectIndexPath.row withObject:model];
+        
+    } else {
+        [self.datalist addObject:model];
+        MTNoteTextVo *textModel = [MTNoteTextVo new];
+        [self.datalist addObject:textModel];
+    }
+
     [self.tableView reloadData];
 }
 
@@ -337,6 +382,8 @@ MTNoteToolsTextCellDelegate>
             if (vo.text.length > 0 && !isTextFind) {
                 isTextFind = YES;
                 noteModel.text = vo.text;
+                vo.fontName = self.textFont.fontName;
+                vo.fontSize = self.textFont.pointSize;
             }
             vo.noteId = noteModel.noteId;
         } else if ([model isKindOfClass:[MTNoteImageVo class]]) {
@@ -351,6 +398,7 @@ MTNoteToolsTextCellDelegate>
         }
     }];
     
+    noteModel.weather = self.weatherTitle;
     [[MTLocalDataManager shareInstance] insertDatas:@[noteModel] withType:MTCoreDataContentTypeNoteSelf];
     [[MTLocalDataManager shareInstance] insertDatas:self.datalist withType:MTCoreDataContentTypeNoteContent];
     [self.navigationController popViewControllerAnimated:YES];

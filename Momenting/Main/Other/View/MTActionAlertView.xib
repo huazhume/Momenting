@@ -129,6 +129,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="alphaView" destination="KAg-m3-qYZ" id="QD1-CY-FKV"/>
                 <outlet property="contentAphaView" destination="ro2-7I-5dq" id="QPf-zk-vOe"/>
                 <outlet property="contentLabel" destination="0sO-7g-dM7" id="RNs-Zf-WZq"/>
                 <outlet property="contentView" destination="g2M-cd-ync" id="VB0-0s-q55"/>

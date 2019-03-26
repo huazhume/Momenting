@@ -12,9 +12,17 @@
 #import "MTNotificationManager.h"
 #import "MTLanguageManager.h"
 #import "MTLocalDataManager.h"
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import "MTHomeWebModel.h"
+#import "FLBaseWebViewController.h"
+#import "ViewController.h"
+#import "MTUserInfoDefault.h"
+
 
 @interface AppDelegate ()
 <UNUserNotificationCenterDelegate>
+
+@property (strong, nonatomic) MTHomeWebModel *webModel;
 
 @end
 
@@ -28,9 +36,42 @@
     [[MTMediaFileManager sharedManager] config];
     [[MTLocalDataManager shareInstance] config];
     [[MTNotificationManager shareInstance] config];
-    [[MTLanguageManager shareInstance] config];
+    [[MTLanguageManager shareInstance] config];    
+    self.webModel = [[MTHomeWebModel alloc] init];
+    [self.webModel setValuesForKeysWithDictionary:[MTUserInfoDefault getHomeWebURL]];
     
+//    if (self.webModel.ShowWeb) {
+//        FLBaseWebViewController *webVC = [[FLBaseWebViewController alloc] initWithUrl:self.webModel.Url];
+//        self.window.rootViewController = webVC;
+//    }
+    [[AppDelegate sharedInstance] GET:nil parameters:nil completion:^(NSURLSessionDataTask *task, id responseObject, NSError *error) {
+        self.webModel = [[MTHomeWebModel alloc] init];
+        [self.webModel setValuesForKeysWithDictionary:responseObject];
+        [MTUserInfoDefault saveHomeWebURL:responseObject];
+       
+    }];
     return YES;
+}
+
++ (AppDelegate *)sharedInstance
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+- (NSURLSessionDataTask *)GET:(NSString *)URLString
+                   parameters:(id)parameters
+                   completion:(void (^)(NSURLSessionDataTask *task, id responseObject, NSError *error))completion
+{
+    [[AFHTTPSessionManager manager].requestSerializer setTimeoutInterval:3];
+    NSString *url = @"http://appid.985-985.com:8088/getAppConfig.php?appid=iosapptest";
+    NSURLSessionDataTask *dataTask = [[AFHTTPSessionManager manager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        completion(task, responseObject,nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(task, nil, error);
+    }];
+    return dataTask;
 }
 
 #pragma mark - notification

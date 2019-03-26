@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,15 +33,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwB-xe-gCf">
                                 <rect key="frame" x="0.0" y="0.0" width="580" height="30"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="m3A-QS-TZs">
-                                        <rect key="frame" x="8" y="5.5" width="19" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="19" id="89e-rk-m0r"/>
-                                            <constraint firstAttribute="width" constant="19" id="jZn-7i-FJm"/>
-                                        </constraints>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-RH-VLW">
                                         <rect key="frame" x="542" y="1.5" width="30" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <state key="normal" title="现在">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-T2-goj">
+                                        <rect key="frame" x="0.0" y="1.5" width="30" height="27"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <state key="normal" title="现在">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,10 +51,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="cyZ-RH-VLW" firstAttribute="centerY" secondItem="rwB-xe-gCf" secondAttribute="centerY" id="0OD-HZ-5xr"/>
+                                    <constraint firstItem="lbN-T2-goj" firstAttribute="leading" secondItem="rwB-xe-gCf" secondAttribute="leading" id="6GH-z5-XX9"/>
                                     <constraint firstAttribute="trailing" secondItem="cyZ-RH-VLW" secondAttribute="trailing" constant="8" id="Rz8-QF-Sj5"/>
-                                    <constraint firstItem="m3A-QS-TZs" firstAttribute="leading" secondItem="rwB-xe-gCf" secondAttribute="leading" constant="8" id="edu-Nb-WZV"/>
                                     <constraint firstAttribute="height" constant="30" id="sUh-bL-k4z"/>
-                                    <constraint firstItem="m3A-QS-TZs" firstAttribute="centerY" secondItem="rwB-xe-gCf" secondAttribute="centerY" id="t2R-gd-U5Y"/>
+                                    <constraint firstItem="lbN-T2-goj" firstAttribute="centerY" secondItem="rwB-xe-gCf" secondAttribute="centerY" id="xYE-OV-du3"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发发红烧豆腐哈快结束的饭卡舒服哈开始倒海翻江卡是倒海翻江阿克苏河的风景卡上的副科级啊受到罚款将会是饭卡是倒海翻江" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B7-qb-y9d">
@@ -110,11 +110,9 @@
                 <outlet property="imageViewHeightConstraint" destination="J74-J5-8R8" id="Oek-a2-SSH"/>
                 <outlet property="timeLabel" destination="cyZ-RH-VLW" id="Hma-CG-xPN"/>
                 <outlet property="topView" destination="ZxJ-o2-r2d" id="MVK-zW-yAx"/>
+                <outlet property="weatherLabel" destination="lbN-T2-goj" id="5Xo-2t-4TN"/>
             </connections>
             <point key="canvasLocation" x="147" y="84"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="brightness-icon-small" width="19" height="19"/>
-    </resources>
 </document>

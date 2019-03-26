@@ -41,6 +41,8 @@
             po.text = obj.text;
             po.width = obj.width;
             po.height = obj.height;
+            po.weather = obj.weather;
+            
         }];
     } else {
         [datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -51,6 +53,7 @@
                 po.fontName = vo.fontName;
                 po.fontSize = vo.fontSize;
                 po.noteId = vo.noteId;
+                po.fontType = vo.fontType;
                 po.sortIndex = idx;
                 
             } else {
@@ -87,6 +90,7 @@
         model.text = obj.text;
         model.width = obj.width;
         model.height = obj.height;
+        model.weather = obj.weather;
         if (muArray.count == 0) {
             [muArray addObject:model];
         } else {
@@ -120,6 +124,7 @@
             vo.fontSize = po.fontSize;
             vo.noteId = po.noteId;
             vo.sortIndex = po.sortIndex;
+            vo.fontType = po.fontType;
             [muVoArray addObject:vo];
             
         } else {

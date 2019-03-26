@@ -59,5 +59,19 @@ static NSString *kLanagureKey = @"appLanguage";
     return ![string isEqualToString:@"en"];
 }
 
++ (void)saveHomeWebURL:(NSDictionary*)url
+{
+    NSString *key = @"homeWebURL";
+    [[NSUserDefaults standardUserDefaults] setObject:url forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSDictionary *)getHomeWebURL
+{
+    NSString *key = @"homeWebURL";
+    NSDictionary *string = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    return string;
+}
+
 
 @end

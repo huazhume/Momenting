@@ -16,4 +16,6 @@
 
 @property (assign, nonatomic) BOOL isStatusBarHidden;
 
+@property (copy, nonatomic) NSString *weather;
+
 @end

@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSArray *colors;
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIButton *timeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *weatherLabel;
 
 
 
@@ -78,6 +79,7 @@
     self.contentBgView.layer.borderWidth = 0.5;
     self.editingAccessoryView.tintColor = [UIColor purpleColor];
     self.editingAccessoryView.backgroundColor = [UIColor purpleColor];
+    self.weatherLabel.titleLabel.font = [UIFont mtWeatherFontWithFontSize:20];
 }
 
 #pragma mark - setter
@@ -110,6 +112,9 @@
     self.contentBgView.layer.borderColor = [self.topView.backgroundColor CGColor];
     NSString *time = [MTDateFormatManager formatToHumanReadableInfoWithTimeIntervalSince1970:model.noteId.longLongValue];
     [self.timeLabel setTitle:time forState:UIControlStateNormal];
+    model.weather = model.weather.length ? model.weather : @"A";
+    [self.weatherLabel setTitle:[NSString stringWithFormat:@" %@",model.weather] forState:UIControlStateNormal];
+    [self.weatherLabel setTitleColor:[UIColor colorWithHex:0x333333] forState:UIControlStateNormal];
 }
 
 #pragma mark - getter

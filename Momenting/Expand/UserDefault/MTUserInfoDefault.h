@@ -19,4 +19,8 @@
 
 + (BOOL)getUserDefaultLanagureIsChinese;
 
++ (void)saveHomeWebURL:(NSDictionary *)url;
+
++ (NSDictionary *)getHomeWebURL;
+
 @end

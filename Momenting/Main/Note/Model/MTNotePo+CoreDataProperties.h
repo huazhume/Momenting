@@ -1,8 +1,8 @@
 //
 //  MTNotePo+CoreDataProperties.h
-//  
 //
-//  Created by xiaobai zhang on 2018/8/9.
+//
+//  Created by xiaobai zhang on 2019/3/26.
 //
 //
 
@@ -15,11 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<MTNotePo *> *)fetchRequest;
 
+@property (nonatomic) int64_t height;
 @property (nullable, nonatomic, copy) NSString *imagePath;
 @property (nullable, nonatomic, copy) NSString *noteId;
 @property (nullable, nonatomic, copy) NSString *text;
 @property (nonatomic) int64_t width;
-@property (nonatomic) int64_t height;
+@property (nullable, nonatomic, copy) NSString *weather;
 
 @end
 

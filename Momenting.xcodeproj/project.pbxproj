@@ -104,6 +104,15 @@
 		FBC0999D2133F48700242E1F /* MTAddNotificationStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC0999B2133F48700242E1F /* MTAddNotificationStateCell.m */; };
 		FBC0999E2133F48700242E1F /* MTAddNotificationStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC0999C2133F48700242E1F /* MTAddNotificationStateCell.xib */; };
 		FBC099A42133FBD800242E1F /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */; };
+		FBC1CC5D2182C909008CB13C /* Weather&Time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC1CC5C2182C909008CB13C /* Weather&Time.ttf */; };
+		FBC1CC602182EE6B008CB13C /* UIFont+MTFont.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1CC5F2182EE6B008CB13C /* UIFont+MTFont.m */; };
+		FBC1CC6921832004008CB13C /* MTWeatherAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1CC6821832004008CB13C /* MTWeatherAlertView.m */; };
+		FBC1CC6B21832012008CB13C /* MTWeatherAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC1CC6A21832012008CB13C /* MTWeatherAlertView.xib */; };
+		FBC1CC6F2183260F008CB13C /* MTWeatherViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1CC6D2183260F008CB13C /* MTWeatherViewCell.m */; };
+		FBC1CC702183260F008CB13C /* MTWeatherViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBC1CC6E2183260F008CB13C /* MTWeatherViewCell.xib */; };
+		FBD94995223F3BD000B92500 /* FLWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9498D223F3BD000B92500 /* FLWebView.m */; };
+		FBD94996223F3BD000B92500 /* FLBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD94990223F3BD000B92500 /* FLBaseWebViewController.m */; };
+		FBD9499B223F47B800B92500 /* MTHomeWebModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD9499A223F47B800B92500 /* MTHomeWebModel.m */; };
 		FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */; };
 		FBDDBE24213782A7002A88FE /* MTLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE22213782A7002A88FE /* MTLanguageViewController.m */; };
 		FBDDBE25213782A7002A88FE /* MTLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE23213782A7002A88FE /* MTLanguageViewController.xib */; };
@@ -322,6 +331,21 @@
 		FBC0999C2133F48700242E1F /* MTAddNotificationStateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTAddNotificationStateCell.xib; sourceTree = "<group>"; };
 		FBC099A22133FBD800242E1F /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
 		FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
+		FBC1CC5C2182C909008CB13C /* Weather&Time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Weather&Time.ttf"; sourceTree = "<group>"; };
+		FBC1CC5E2182EE6B008CB13C /* UIFont+MTFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+MTFont.h"; sourceTree = "<group>"; };
+		FBC1CC5F2182EE6B008CB13C /* UIFont+MTFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MTFont.m"; sourceTree = "<group>"; };
+		FBC1CC6721832004008CB13C /* MTWeatherAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTWeatherAlertView.h; sourceTree = "<group>"; };
+		FBC1CC6821832004008CB13C /* MTWeatherAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTWeatherAlertView.m; sourceTree = "<group>"; };
+		FBC1CC6A21832012008CB13C /* MTWeatherAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTWeatherAlertView.xib; sourceTree = "<group>"; };
+		FBC1CC6C2183260F008CB13C /* MTWeatherViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTWeatherViewCell.h; sourceTree = "<group>"; };
+		FBC1CC6D2183260F008CB13C /* MTWeatherViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTWeatherViewCell.m; sourceTree = "<group>"; };
+		FBC1CC6E2183260F008CB13C /* MTWeatherViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTWeatherViewCell.xib; sourceTree = "<group>"; };
+		FBD9498C223F3BD000B92500 /* FLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLBaseWebViewController.h; sourceTree = "<group>"; };
+		FBD9498D223F3BD000B92500 /* FLWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLWebView.m; sourceTree = "<group>"; };
+		FBD94990223F3BD000B92500 /* FLBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLBaseWebViewController.m; sourceTree = "<group>"; };
+		FBD94992223F3BD000B92500 /* FLWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLWebView.h; sourceTree = "<group>"; };
+		FBD94999223F47B800B92500 /* MTHomeWebModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeWebModel.h; sourceTree = "<group>"; };
+		FBD9499A223F47B800B92500 /* MTHomeWebModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeWebModel.m; sourceTree = "<group>"; };
 		FBD9DC62211BE0CB001CE04E /* MTCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FBDDBE21213782A7002A88FE /* MTLanguageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLanguageViewController.h; sourceTree = "<group>"; };
 		FBDDBE22213782A7002A88FE /* MTLanguageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLanguageViewController.m; sourceTree = "<group>"; };
@@ -470,18 +494,11 @@
 		72E972B0211FCE8700D96DA4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				72E972B1211FCE8700D96DA4 /* Model */,
+				FBD94998223F47A900B92500 /* Model */,
 				72E972B2211FCE8700D96DA4 /* View */,
 				72E972BD211FCE8700D96DA4 /* ViewController */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		72E972B1211FCE8700D96DA4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		72E972B2211FCE8700D96DA4 /* View */ = {
@@ -590,6 +607,12 @@
 				FB0A37622123FEED007CB0DC /* MTActionToastView.xib */,
 				FB0A37642123FF9F007CB0DC /* MTActionToastView.h */,
 				FB0A37652123FF9F007CB0DC /* MTActionToastView.m */,
+				FBC1CC6721832004008CB13C /* MTWeatherAlertView.h */,
+				FBC1CC6821832004008CB13C /* MTWeatherAlertView.m */,
+				FBC1CC6A21832012008CB13C /* MTWeatherAlertView.xib */,
+				FBC1CC6C2183260F008CB13C /* MTWeatherViewCell.h */,
+				FBC1CC6D2183260F008CB13C /* MTWeatherViewCell.m */,
+				FBC1CC6E2183260F008CB13C /* MTWeatherViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -606,6 +629,7 @@
 		72E97321211FD1BB00D96DA4 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				FBD94988223F3BD000B92500 /* BaseWebView */,
 				FB8325B7214B655C007CB95A /* Language */,
 				FBB078AA21353992003510D1 /* UserDefault */,
 				FBE5F23C21267B3B00B24208 /* Notification */,
@@ -666,6 +690,8 @@
 				72E9733D211FD30C00D96DA4 /* UITextView+Category.m */,
 				FBC099A22133FBD800242E1F /* NSDateFormatter+Category.h */,
 				FBC099A32133FBD800242E1F /* NSDateFormatter+Category.m */,
+				FBC1CC5E2182EE6B008CB13C /* UIFont+MTFont.h */,
+				FBC1CC5F2182EE6B008CB13C /* UIFont+MTFont.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -673,6 +699,7 @@
 		72E97346211FD81F00D96DA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBC1CC5C2182C909008CB13C /* Weather&Time.ttf */,
 				FBD9DC61211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld */,
 				FB2989C321193BC10011025D /* main.m */,
 				72E97348211FD81F00D96DA4 /* MTCommons.h */,
@@ -842,6 +869,26 @@
 				FBB078AC213539AF003510D1 /* MTUserInfoDefault.m */,
 			);
 			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		FBD94988223F3BD000B92500 /* BaseWebView */ = {
+			isa = PBXGroup;
+			children = (
+				FBD9498C223F3BD000B92500 /* FLBaseWebViewController.h */,
+				FBD94990223F3BD000B92500 /* FLBaseWebViewController.m */,
+				FBD94992223F3BD000B92500 /* FLWebView.h */,
+				FBD9498D223F3BD000B92500 /* FLWebView.m */,
+			);
+			path = BaseWebView;
+			sourceTree = "<group>";
+		};
+		FBD94998223F47A900B92500 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBD94999223F47B800B92500 /* MTHomeWebModel.h */,
+				FBD9499A223F47B800B92500 /* MTHomeWebModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FBDD902C212FA944009A75D7 /* Notification */ = {
@@ -1016,7 +1063,7 @@
 					FB2989B021193BC10011025D = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					FB2989C821193BC10011025D = {
 						CreatedOnToolsVersion = 9.2;
@@ -1062,11 +1109,13 @@
 				FB2989C121193BC10011025D /* LaunchScreen.storyboard in Resources */,
 				FB0A37632123FEED007CB0DC /* MTActionToastView.xib in Resources */,
 				722838372128700F003C28FD /* MTNoteSettingHeaderCell.xib in Resources */,
+				FBC1CC702183260F008CB13C /* MTWeatherViewCell.xib in Resources */,
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
 				FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */,
 				FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */,
 				FB9C1F48212FA9CF00CE1224 /* MTNotificationViewController.xib in Resources */,
 				FBC099942133D54B00242E1F /* MTAddNotificationCell.xib in Resources */,
+				FBC1CC5D2182C909008CB13C /* Weather&Time.ttf in Resources */,
 				FBB5E391212EB85C008A3F07 /* MTSettingNameCell.xib in Resources */,
 				FBB0788C2134DD3E003510D1 /* MTStyleViewController.xib in Resources */,
 				FBDDBE2F21378EBD002A88FE /* Language.strings in Resources */,
@@ -1086,6 +1135,7 @@
 				FBDDBE2A2137831F002A88FE /* MTLanguageViewCell.xib in Resources */,
 				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
 				FBB5E379212EAB6E008A3F07 /* MTProfileSetViewController.xib in Resources */,
+				FBC1CC6B21832012008CB13C /* MTWeatherAlertView.xib in Resources */,
 				FBDDBE4B2137B253002A88FE /* EBBannerViewController.xib in Resources */,
 				72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */,
 				FB8325C0214B7824007CB95A /* MTBaseViewController.xib in Resources */,
@@ -1118,7 +1168,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Momenting/Pods-Momenting-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Momenting/Pods-Momenting-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1127,7 +1177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Momenting/Pods-Momenting-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Momenting/Pods-Momenting-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE0C3552A8F2BD9F6FC68138 /* [CP] Check Pods Manifest.lock */ = {
@@ -1192,6 +1242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0A37612123EB83007CB0DC /* UIView+Category.m in Sources */,
+				FBD94995223F3BD000B92500 /* FLWebView.m in Sources */,
 				7228383E212872AD003C28FD /* MTNoteSettingContentCell.m in Sources */,
 				FBB078A12134E043003510D1 /* CGGeometry+RSKImageCropper.m in Sources */,
 				FBDDBE482137B253002A88FE /* EBBannerView.m in Sources */,
@@ -1219,6 +1270,7 @@
 				FBC099932133D54B00242E1F /* MTAddNotificationCell.m in Sources */,
 				72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */,
 				FBB5E390212EB85C008A3F07 /* MTSettingNameCell.m in Sources */,
+				FBC1CC6F2183260F008CB13C /* MTWeatherViewCell.m in Sources */,
 				FBB078A72134E043003510D1 /* RSKTouchView.m in Sources */,
 				72E97340211FD30C00D96DA4 /* UITextView+Category.m in Sources */,
 				72E9733E211FD30C00D96DA4 /* UIColor+Hex.m in Sources */,
@@ -1228,6 +1280,7 @@
 				72E972EC211FCE8700D96DA4 /* MTNoteTextPo+CoreDataProperties.m in Sources */,
 				FBC099982133E2F500242E1F /* MTAddNotificationTimeCell.m in Sources */,
 				FBDDBE4D2137B253002A88FE /* EBBannerWindow.m in Sources */,
+				FBC1CC6921832004008CB13C /* MTWeatherAlertView.m in Sources */,
 				FBB078A92134E043003510D1 /* UIImage+RSKImageCropper.m in Sources */,
 				72E97300211FCEA500D96DA4 /* MTActionAlertView.m in Sources */,
 				72E972F3211FCE8700D96DA4 /* MTNoteViewController.m in Sources */,
@@ -1241,6 +1294,7 @@
 				72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */,
 				FBB5E37C212EAD5E008A3F07 /* MTHelp.m in Sources */,
 				FB2989C421193BC10011025D /* main.m in Sources */,
+				FBC1CC602182EE6B008CB13C /* UIFont+MTFont.m in Sources */,
 				FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
 				FBB078B021353A58003510D1 /* MTMeModel.m in Sources */,
@@ -1257,6 +1311,7 @@
 				72E972F1211FCE8700D96DA4 /* MTNoteToolsView.m in Sources */,
 				FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */,
 				FB8325BA214B656E007CB95A /* MTLanguageManager.m in Sources */,
+				FBD9499B223F47B800B92500 /* MTHomeWebModel.m in Sources */,
 				72E97302211FCEA500D96DA4 /* MTActionSheetView.m in Sources */,
 				FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */,
 				72E97329211FD23700D96DA4 /* MTLocalDataManager.m in Sources */,
@@ -1266,6 +1321,7 @@
 				FBB5E38B212EB613008A3F07 /* MTSettingProfileCell.m in Sources */,
 				FBDDBE4C2137B253002A88FE /* EBBannerViewMaker.m in Sources */,
 				FBB078AD213539AF003510D1 /* MTUserInfoDefault.m in Sources */,
+				FBD94996223F3BD000B92500 /* FLBaseWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1361,7 +1417,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: guo guo (ADX2DVV7XT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1417,7 +1473,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: guo guo (XRPT9476BM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1443,17 +1499,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZHVJZ82B29;
+				CODE_SIGN_IDENTITY = "iPhone Developer: guo guo (ADX2DVV7XT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: guo guo (ADX2DVV7XT)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = XRPT9476BM;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secret;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secretforme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = profileForDev;
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1467,17 +1524,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZHVJZ82B29;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: guo guo (XRPT9476BM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: guo guo (XRPT9476BM)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = XRPT9476BM;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Momenting/Supporting Files/MTHeaderPrefix.pch";
 				INFOPLIST_FILE = Momenting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secret;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secretforme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = profileForAppstore;
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

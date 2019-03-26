@@ -1,8 +1,8 @@
 //
 //  MTNoteTextPo+CoreDataProperties.m
-//  
 //
-//  Created by xiaobai zhang on 2018/8/9.
+//
+//  Created by xiaobai zhang on 2019/3/19.
 //
 //
 
@@ -11,13 +11,14 @@
 @implementation MTNoteTextPo (CoreDataProperties)
 
 + (NSFetchRequest<MTNoteTextPo *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"MTNoteTextPo"];
+    return [NSFetchRequest fetchRequestWithEntityName:@"MTNoteTextPo"];
 }
 
-@dynamic fontSize;
 @dynamic fontName;
-@dynamic text;
-@dynamic sortIndex;
+@dynamic fontSize;
 @dynamic noteId;
+@dynamic sortIndex;
+@dynamic text;
+@dynamic fontType;
 
 @end

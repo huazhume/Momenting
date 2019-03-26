@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *deleteLabel;
 @property (assign, nonatomic) CGFloat contentViewHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *alphaView;
 
 
 @end
@@ -47,9 +48,10 @@
     self.contentViewHeightConstraint.constant = self.contentViewHeight;
     UIWindow *rootWindow = [UIApplication sharedApplication].keyWindow;
     [rootWindow addSubview:self];
-
+    self.alphaView.alpha = 0.0;
     [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.contentViewBottomConstraint.constant = 0.f;
+        self.alphaView.alpha = 0.3;
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
         
@@ -62,6 +64,7 @@
     
     [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.contentViewBottomConstraint.constant = - self.contentViewHeight;
+        self.alphaView.alpha = 0.0;
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(sheetToolsActionWithType:)]) {

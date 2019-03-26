@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *normalFontButton;
 @property (weak, nonatomic) IBOutlet UIButton *italicFontButton;
 @property (weak, nonatomic) IBOutlet UIButton *keyboardButton;
+@property (weak, nonatomic) IBOutlet UIButton *weatherButton;
 
 @end
 
@@ -50,6 +51,8 @@
     self.italicFonts = @[[UIFont fontWithName:@"AvenirNext-UltraLightItalic" size:14],[UIFont fontWithName:@"AvenirNext-MediumItalic" size:14],[UIFont fontWithName:@"AvenirNext-Italic" size:14]];
     self.italicImages = @[@"editor-toolbar-quote-0" ,@"editor-toolbar-quote-1",@"editor-toolbar-quote-2"];
     self.rankImages = @[@"editor-toolbar-list-0" ,@"editor-toolbar-list-1",@"editor-toolbar-list-2"];
+    
+    self.weatherButton.titleLabel.font = [UIFont mtWeatherFontWithFontSize:22];
 }
 
 #pragma mark - setter
@@ -57,6 +60,12 @@
 {
     _keyBoardIsVisiable = keyBoardIsVisiable;
     self.keyboardButton.hidden = !keyBoardIsVisiable;
+}
+
+- (void)setWeatherTitle:(NSString *)weatherTitle
+{
+    _weatherTitle = weatherTitle;
+    [self.weatherButton setTitle:weatherTitle forState:UIControlStateNormal];
 }
 
 #pragma mark - events

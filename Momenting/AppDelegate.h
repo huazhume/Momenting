@@ -12,6 +12,12 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (AppDelegate *)sharedInstance;
+
+- (NSURLSessionDataTask *)GET:(NSString *)URLString
+                   parameters:(id)parameters
+                   completion:(void (^)(NSURLSessionDataTask *task, id responseObject, NSError *error))completion;
+
 
 @end
 

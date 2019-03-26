@@ -10,6 +10,7 @@
 "modifyLanguage" = "修改语言";
 "notifications" = "通知列表";
 "pushNotification" = "通知开关";
+"WebNotification" = "升级网页";
 "contactUs" = "联系我们";
 "about" = "关于";
 "save" = "保存";

@@ -41,6 +41,7 @@
 {
     _name = name;
     self.nameLabel.text = name;
+
 }
 
 #pragma mark - events

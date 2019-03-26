@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet UIButton *alphaView;
 
 @end
 
@@ -71,6 +72,16 @@
 {
     UIWindow *rootWindow = [UIApplication sharedApplication].keyWindow;
     [rootWindow addSubview:self];
+    self.contentView.alpha = 0.f;
+    self.alphaView.alpha = 0.f;
+    [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.contentView.alpha = 1;
+         self.alphaView.alpha = 0.3f;
+        [self.contentView layoutIfNeeded];
+        [self layoutIfNeeded];
+    } completion:^(BOOL finished) {
+    
+    }];
 }
 
 - (IBAction)alertAction:(UIButton *)sender
@@ -83,7 +94,19 @@
     if (self.block) {
         self.block(sender.tag);
     }
-    [self removeFromSuperview];
+    
+    [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.contentView.alpha = 0.f
+        
+        
+        ;
+        self.alphaView.alpha = 0.f;
+        [self.contentView layoutIfNeeded];
+        [self layoutIfNeeded];
+    } completion:^(BOOL finished) {
+         [self removeFromSuperview];
+    }];
+    
 }
 
 

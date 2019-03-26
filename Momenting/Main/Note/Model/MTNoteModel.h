@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    MTNoteFontTypeNormal,
+    MTNoteFontTypeItalic,
+    MTNoteFontTypeBold,
+} MTNoteFontType;
+
+
 @interface MTNoteModel : NSObject
 
 @property (strong, nonatomic) NSArray *contents;
@@ -19,6 +26,9 @@
 @property (assign, nonatomic) CGFloat height;
 @property (assign, nonatomic) NSInteger indexRow;
 @property (strong, nonatomic) UIColor *sectionColor;
+@property (assign, nonatomic) CGFloat fontSize;
+@property (strong, nonatomic) NSString *fontName;
+@property (strong, nonatomic) NSString *weather;
 
 @end
 
@@ -43,6 +53,7 @@
 @property (assign, nonatomic) CGFloat fontSize;
 @property (strong, nonatomic) NSString *fontName;
 @property (copy, nonatomic) NSString *text;
+@property (assign, nonatomic) MTNoteFontType fontType;
 
 @end
 

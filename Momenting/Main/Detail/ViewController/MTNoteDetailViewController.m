@@ -32,6 +32,7 @@ MTNavigationViewDelegate>
 @property (assign, nonatomic) CGPoint scrollViewOldOffset;
 
 @property (assign, nonatomic) BOOL isDownloading;
+@property (weak, nonatomic) IBOutlet UIButton *weatherButton;
 
 @end
 
@@ -42,6 +43,11 @@ MTNavigationViewDelegate>
     [super viewDidLoad];
     [self initBaseViews];
     [self loadData];
+    self.weather = self.weather.length ? self.weather : @"A";
+    [self.weatherButton setTitle:[NSString stringWithFormat:@" %@",self.weather] forState:UIControlStateNormal];
+    self.weatherButton.titleLabel.font = [UIFont mtWeatherFontWithFontSize:22];
+    NSArray *colors = @[[UIColor colorWithHex:0x96B46C],[UIColor colorWithHex:0xE48370],[UIColor colorWithHex:0xC496C5],[UIColor colorWithHex:0x79B47C],[UIColor colorWithHex:0xA299CE],[UIColor colorWithHex:0xA2AEBB] ];
+    [self.weatherButton setTitleColor:colors[(int)arc4random_uniform(colors.count)] forState:UIControlStateNormal];
 }
 
 - (void)loadData
@@ -53,7 +59,7 @@ MTNavigationViewDelegate>
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
+   [UIApplication sharedApplication].statusBarHidden = YES;
 //    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
 }
 
@@ -69,6 +75,7 @@ MTNavigationViewDelegate>
 //    [self.navigationBgView addSubview:self.navigationView];
     [self.tableView registerNib:[UINib nibWithNibName:@"MTNoteToolsTextCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MTNoteToolsTextCell getIdentifier]];
     [self.tableView registerNib:[UINib nibWithNibName:@"MTNoteToolsImageCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MTNoteToolsImageCell getIdentifier]];
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.layer.borderColor = self.color.CGColor;
@@ -132,9 +139,11 @@ MTNavigationViewDelegate>
     UITableViewCell *cell = nil;
     if ([model isKindOfClass:[MTNoteTextVo class]]) {
         
+        MTNoteTextVo *vo = model;
         MTNoteToolsTextCell *textCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteToolsTextCell getIdentifier]];
         [textCell setType:MTNoteToolsTextCellDetail];
         textCell.model = model;
+        textCell.font = [UIFont fontWithName:vo.fontName size:vo.fontSize];
         cell = textCell;
         
     } else {
