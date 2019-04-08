@@ -143,7 +143,12 @@ MTNavigationViewDelegate>
         MTNoteToolsTextCell *textCell = [tableView dequeueReusableCellWithIdentifier:[MTNoteToolsTextCell getIdentifier]];
         [textCell setType:MTNoteToolsTextCellDetail];
         textCell.model = model;
-        textCell.font = [UIFont fontWithName:vo.fontName size:vo.fontSize];
+        if (vo.fontSize == 0) {
+            textCell.font = [UIFont fontWithName:@"PingFangSC-Light" size:14];
+        } else {
+            textCell.font = [UIFont fontWithName:vo.fontName size:vo.fontSize];
+        }
+
         cell = textCell;
         
     } else {

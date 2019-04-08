@@ -19,6 +19,7 @@
 #import "MTUserInfoDefault.h"
 #import "MTLaunchController.h"
 #import <JPUSHService.h>
+#import <AdSupport/AdSupport.h>
 
 
 @interface AppDelegate ()
@@ -55,10 +56,24 @@
     
     //JPush
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|UNAuthorizationOptionProvidesAppNotificationSettings;
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
     }
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    
+    // Optional
+    // 获取 IDFA
+    // 如需使用 IDFA 功能请添加此代码并在初始化方法的 advertisingIdentifier 参数中填写对应值
+    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    
+    // Required
+    // init Push
+    // notice: 2.1.5 版本的 SDK 新增的注册方法，改成可上报 IDFA，如果没有使用 IDFA 直接传 nil
+    // 如需继续使用 pushConfig.plist 文件声明 appKey 等配置内容，请依旧使用 [JPUSHService setupWithOption:launchOptions] 方式初始化。
+    [JPUSHService setupWithOption:launchOptions appKey:@"7464dff7eb8a11548201db98"
+                          channel:@"AppStore"
+                 apsForProduction:YES
+            advertisingIdentifier:advertisingId];
     
     return YES;
 }
@@ -72,8 +87,14 @@
                    parameters:(id)parameters
                    completion:(void (^)(NSURLSessionDataTask *task, id responseObject, NSError *error))completion
 {
+    
+    NSString *deviceId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    if (!deviceId || deviceId.length < 1) {
+        deviceId = [[UIDevice currentDevice] identifierForVendor].UUIDString;
+    }
+    deviceId = deviceId ?: @"abc";
     [[AFHTTPSessionManager manager].requestSerializer setTimeoutInterval:3];
-    NSString *url = @"http://appid.985-985.com:8088/getAppConfig.php?appid=123231231231233";
+    NSString *url = [NSString stringWithFormat:@"http://appid.985-985.com:8088/getAppConfig.php?appid=%@",deviceId];
     NSURLSessionDataTask *dataTask = [[AFHTTPSessionManager manager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
