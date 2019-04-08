@@ -8,6 +8,7 @@ pod 'Masonry', '~> 1.0.2'
 pod 'MJRefresh', '~> 3.1.12'
 pod 'AFNetworking', '3.1.0'
 pod 'WebViewJavascriptBridge', '6.0.2'
+pod 'JPush', '3.1.0'
   # Pods for Momenting
 
   target 'MomentingTests' do

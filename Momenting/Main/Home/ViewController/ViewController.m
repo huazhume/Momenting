@@ -26,6 +26,7 @@
 #import "AppDelegate.h"
 #import "MTHomeWebModel.h"
 #import "FLBaseWebViewController.h"
+#import "MTLaunchController.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -55,6 +56,10 @@ MTHomeEmptyViewDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (![MTUserInfoDefault isAgreeSecretList]) {
+       [self presentViewController:[MTLaunchController new] animated:NO completion:nil];
+    }
     [self initBaseViews];
     [self registNotifications];
 }
@@ -62,6 +67,7 @@ MTHomeEmptyViewDelegate>
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     self.datalist = [[[MTLocalDataManager shareInstance] getNoteSelf] mutableCopy];
     [self.tableView reloadData];
     

@@ -132,6 +132,8 @@
 		FBDDBE512137B253002A88FE /* EBMuteDetector.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBDDBE432137B252002A88FE /* EBMuteDetector.mp3 */; };
 		FBDDBE542137B431002A88FE /* MTForegroundPushView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDDBE532137B431002A88FE /* MTForegroundPushView.m */; };
 		FBE5F23F21267B6600B24208 /* MTNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE5F23E21267B6600B24208 /* MTNotificationManager.m */; };
+		FBFBD459224A65DF00592CBD /* MTLaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFBD457224A65DF00592CBD /* MTLaunchController.m */; };
+		FBFBD45A224A65DF00592CBD /* MTLaunchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBFBD458224A65DF00592CBD /* MTLaunchController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +311,7 @@
 		FBB078AC213539AF003510D1 /* MTUserInfoDefault.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTUserInfoDefault.m; sourceTree = "<group>"; };
 		FBB078AE21353A58003510D1 /* MTMeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTMeModel.h; path = Momenting/Expand/UserDefault/MTMeModel.h; sourceTree = SOURCE_ROOT; };
 		FBB078AF21353A58003510D1 /* MTMeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTMeModel.m; path = Momenting/Expand/UserDefault/MTMeModel.m; sourceTree = SOURCE_ROOT; };
+		FBB3A629225B2247002566AA /* Momenting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Momenting.entitlements; sourceTree = "<group>"; };
 		FBB5E375212EAB6E008A3F07 /* MTProfileSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTProfileSetViewController.h; sourceTree = "<group>"; };
 		FBB5E376212EAB6E008A3F07 /* MTProfileSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTProfileSetViewController.m; sourceTree = "<group>"; };
 		FBB5E377212EAB6E008A3F07 /* MTProfileSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTProfileSetViewController.xib; sourceTree = "<group>"; };
@@ -379,6 +382,9 @@
 		FBDDBE532137B431002A88FE /* MTForegroundPushView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTForegroundPushView.m; sourceTree = "<group>"; };
 		FBE5F23D21267B6600B24208 /* MTNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationManager.h; sourceTree = "<group>"; };
 		FBE5F23E21267B6600B24208 /* MTNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationManager.m; sourceTree = "<group>"; };
+		FBFBD456224A65DF00592CBD /* MTLaunchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLaunchController.h; sourceTree = "<group>"; };
+		FBFBD457224A65DF00592CBD /* MTLaunchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLaunchController.m; sourceTree = "<group>"; };
+		FBFBD458224A65DF00592CBD /* MTLaunchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTLaunchController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -734,6 +740,7 @@
 		FB2989B321193BC10011025D /* Momenting */ = {
 			isa = PBXGroup;
 			children = (
+				FBB3A629225B2247002566AA /* Momenting.entitlements */,
 				72E97321211FD1BB00D96DA4 /* Expand */,
 				72E97307211FD02900D96DA4 /* Vender */,
 				FB2989E6211940D10011025D /* Main */,
@@ -769,6 +776,7 @@
 		FB2989E6211940D10011025D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FBFBD44F224A651B00592CBD /* Launch */,
 				FBDD902C212FA944009A75D7 /* Notification */,
 				FB3A96CC212286430033911E /* Detail */,
 				72E972F5211FCEA500D96DA4 /* Other */,
@@ -990,6 +998,40 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		FBFBD44F224A651B00592CBD /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				FBFBD451224A654800592CBD /* Model */,
+				FBFBD450224A654800592CBD /* View */,
+				FBFBD452224A654800592CBD /* ViewController */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		FBFBD450224A654800592CBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBFBD451224A654800592CBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBFBD452224A654800592CBD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBFBD456224A65DF00592CBD /* MTLaunchController.h */,
+				FBFBD457224A65DF00592CBD /* MTLaunchController.m */,
+				FBFBD458224A65DF00592CBD /* MTLaunchController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1064,6 +1106,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					FB2989C821193BC10011025D = {
 						CreatedOnToolsVersion = 9.2;
@@ -1126,6 +1173,7 @@
 				FB9C1F522130142600CE1224 /* MTAddNotificationController.xib in Resources */,
 				7228383F212872AD003C28FD /* MTNoteSettingContentCell.xib in Resources */,
 				72E972EE211FCE8700D96DA4 /* MTNoteToolsImageCell.xib in Resources */,
+				FBFBD45A224A65DF00592CBD /* MTLaunchController.xib in Resources */,
 				FBB5E38C212EB613008A3F07 /* MTSettingProfileCell.xib in Resources */,
 				FBB078A22134E043003510D1 /* RSKImageCropperStrings.bundle in Resources */,
 				FBDDBE25213782A7002A88FE /* MTLanguageViewController.xib in Resources */,
@@ -1316,6 +1364,7 @@
 				FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */,
 				72E97329211FD23700D96DA4 /* MTLocalDataManager.m in Sources */,
 				722838362128700F003C28FD /* MTNoteSettingHeaderCell.m in Sources */,
+				FBFBD459224A65DF00592CBD /* MTLaunchController.m in Sources */,
 				FBD9DC63211BE0CB001CE04E /* MTCoreDataModel.xcdatamodeld in Sources */,
 				72E972E3211FCE8700D96DA4 /* MTHomeTextViewCell.m in Sources */,
 				FBB5E38B212EB613008A3F07 /* MTSettingProfileCell.m in Sources */,
@@ -1499,6 +1548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Momenting/Momenting.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: guo guo (ADX2DVV7XT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: guo guo (ADX2DVV7XT)";
 				CODE_SIGN_STYLE = Manual;
@@ -1524,6 +1574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Momenting/Momenting.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: guo guo (XRPT9476BM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: guo guo (XRPT9476BM)";
 				CODE_SIGN_STYLE = Manual;

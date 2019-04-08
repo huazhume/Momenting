@@ -23,4 +23,8 @@
 
 + (NSDictionary *)getHomeWebURL;
 
++ (void)saveAgreeSecretList;
+
++ (BOOL)isAgreeSecretList;
+
 @end

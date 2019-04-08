@@ -14,12 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - JCore (1.2.5)
+  - JPush (3.1.0):
+    - JCore (~> 1.2.0)
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
   - WebViewJavascriptBridge (6.0.2)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
+  - JPush (= 3.1.0)
   - Masonry (~> 1.0.2)
   - MJRefresh (~> 3.1.12)
   - WebViewJavascriptBridge (= 6.0.2)
@@ -27,16 +31,20 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - JCore
+    - JPush
     - Masonry
     - MJRefresh
     - WebViewJavascriptBridge
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  JCore: 14706de2640b25fb77dbd02332696491407f37c9
+  JPush: 5921e25ad13e0386351079217b009f2039084eac
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
 
-PODFILE CHECKSUM: ad82a9ecd08137c03b822651675b5aa3bbcbd71e
+PODFILE CHECKSUM: 4a6787b38a3019b553131331afe7509d87121e51
 
 COCOAPODS: 1.6.1

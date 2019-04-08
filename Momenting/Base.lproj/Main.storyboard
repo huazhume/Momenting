@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Db5-Ol-OV8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Db5-Ol-OV8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,10 +106,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CiH-dz-Yzl" secondAttribute="bottom" id="OfP-Ve-FAu"/>
                             <constraint firstItem="XVY-E6-jDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-850" id="R0D-sa-ALC"/>
                             <constraint firstItem="llt-pb-VjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S59-rB-ftA"/>
+                            <constraint firstAttribute="bottom" secondItem="XVY-E6-jDL" secondAttribute="bottom" id="SGt-0P-eGA"/>
                             <constraint firstItem="vQ2-aj-2Px" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dgJ-of-xDf"/>
                             <constraint firstItem="CiH-dz-Yzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dz6-e8-bOD"/>
                             <constraint firstItem="XVY-E6-jDL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="eYP-SS-I5T"/>
-                            <constraint firstItem="XVY-E6-jDL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="nLO-TT-2bu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="llt-pb-VjC" secondAttribute="trailing" id="sbZ-IU-p8L"/>
                             <constraint firstAttribute="trailing" secondItem="vQ2-aj-2Px" secondAttribute="trailing" id="tR3-LQ-7xs"/>
                             <constraint firstItem="CiH-dz-Yzl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zfo-vA-Ljc"/>

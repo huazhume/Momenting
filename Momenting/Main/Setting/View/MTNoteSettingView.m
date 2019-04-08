@@ -12,6 +12,7 @@
 #import "MTProfileSetViewController.h"
 #import "MTNotificationViewController.h"
 #import "MTLanguageViewController.h"
+#import <Masonry.h>
 
 @interface MTNoteSettingView ()
 <UITableViewDelegate,UITableViewDataSource>
@@ -37,11 +38,15 @@
     [self addSubview:self.tableView];
     [self loadData];
     self.backgroundColor = [UIColor clearColor];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.bottom.equalTo(self);
+        make.trailing.equalTo(self).offset(-90);
+    }];
 }
 
 - (void)loadData
 {
-    self.datalist = [@[@[@"header"],@[Localized(@"modifyProfile"),Localized(@"modifyLanguage")],@[Localized(@"notifications"),Localized(@"pushNotification")],@[Localized(@"WebNotification"),Localized(@"contactUs"), Localized(@"about")]] mutableCopy];
+    self.datalist = [@[@[@"header"],@[Localized(@"modifyProfile"),Localized(@"modifyLanguage")],@[Localized(@"notifications"),Localized(@"pushNotification")],@[Localized(@"contactUs"), Localized(@"about")]] mutableCopy];
 }
 
 - (void)refreshData
@@ -78,7 +83,7 @@
     } else if (section ==  1 || section == 2) {
         return 2;
     }
-    return 3;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -164,8 +169,6 @@
         case 3:
         {
             if (indexPath.row == 0) {
-               //web
-            } else if (indexPath.row == 1) {
                 //联系我们
                 [self sendEmail];
             } else {

@@ -22,7 +22,11 @@ typedef void(^DissmissBlock)(void);
 @property(nonatomic , copy) NSString * url;
 @property(nonatomic , copy) NSString * customTitle;
 
+@property(nonatomic , assign) BOOL isDisMiss;
+
 @property(nonatomic , copy) NSString * navigationTitle;
+
+@property(nonatomic , assign) BOOL isShowNavigation;
 
 -(instancetype)initWithUrl:(NSString *)url;
 

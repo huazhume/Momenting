@@ -17,10 +17,12 @@
 #import "FLBaseWebViewController.h"
 #import "ViewController.h"
 #import "MTUserInfoDefault.h"
+#import "MTLaunchController.h"
+#import <JPUSHService.h>
 
 
 @interface AppDelegate ()
-<UNUserNotificationCenterDelegate>
+<UNUserNotificationCenterDelegate,JPUSHRegisterDelegate>
 
 @property (strong, nonatomic) MTHomeWebModel *webModel;
 
@@ -40,16 +42,24 @@
     self.webModel = [[MTHomeWebModel alloc] init];
     [self.webModel setValuesForKeysWithDictionary:[MTUserInfoDefault getHomeWebURL]];
     
-//    if (self.webModel.ShowWeb) {
-//        FLBaseWebViewController *webVC = [[FLBaseWebViewController alloc] initWithUrl:self.webModel.Url];
-//        self.window.rootViewController = webVC;
-//    }
+    if (self.webModel.ShowWeb) {
+        FLBaseWebViewController *webVC = [[FLBaseWebViewController alloc] initWithUrl:self.webModel.Url];
+        self.window.rootViewController = webVC;
+    }
     [[AppDelegate sharedInstance] GET:nil parameters:nil completion:^(NSURLSessionDataTask *task, id responseObject, NSError *error) {
         self.webModel = [[MTHomeWebModel alloc] init];
         [self.webModel setValuesForKeysWithDictionary:responseObject];
         [MTUserInfoDefault saveHomeWebURL:responseObject];
        
     }];
+    
+    //JPush
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|UNAuthorizationOptionProvidesAppNotificationSettings;
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+    }
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    
     return YES;
 }
 
@@ -63,7 +73,7 @@
                    completion:(void (^)(NSURLSessionDataTask *task, id responseObject, NSError *error))completion
 {
     [[AFHTTPSessionManager manager].requestSerializer setTimeoutInterval:3];
-    NSString *url = @"http://appid.985-985.com:8088/getAppConfig.php?appid=iosapptest";
+    NSString *url = @"http://appid.985-985.com:8088/getAppConfig.php?appid=123231231231233";
     NSURLSessionDataTask *dataTask = [[AFHTTPSessionManager manager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -85,6 +95,16 @@
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
 
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    //Optional
+    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    /// Required - 注册 DeviceToken
+    [JPUSHService registerDeviceToken:deviceToken];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -114,5 +134,50 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
+#pragma mark- JPUSHRegisterDelegate
+
+// iOS 12 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification{
+    if (notification && [notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //从通知界面直接进入应用
+    }else{
+        //从通知设置界面进入应用
+    }
+}
+
+// iOS 10 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
+    // Required
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+    }
+    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有 Badge、Sound、Alert 三种类型可以选择设置
+}
+
+// iOS 10 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    // Required
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+    }
+    completionHandler();  // 系统要求执行这个方法
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // Required, iOS 7 Support
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required, For systems with less than or equal to iOS 6
+    [JPUSHService handleRemoteNotification:userInfo];
+}
 
 @end

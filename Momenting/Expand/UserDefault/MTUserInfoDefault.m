@@ -73,5 +73,18 @@ static NSString *kLanagureKey = @"appLanguage";
     return string;
 }
 
++ (void)saveAgreeSecretList
+{
+    NSString *key = @"AgreeSecretList";
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (BOOL)isAgreeSecretList
+{
+    NSString *key = @"AgreeSecretList";
+    return [[NSUserDefaults standardUserDefaults] boolForKey:key];
+}
+
 
 @end

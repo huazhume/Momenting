@@ -32,17 +32,25 @@
     return self;
 }
 
+- (void)setNavigationTitle:(NSString *)navigationTitle
+{
+    _navigationTitle = navigationTitle;
+    self.navigationView.navigationTitle = navigationTitle;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    [self.view addSubview:self.navigationView];
+    [self.view addSubview:self.navigationView];
     self.view.backgroundColor = [UIColor whiteColor];
     CGFloat y = 0;
-    self.webView = [[FLWebView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH , SCREEN_HEIGHT + 20) url:self.url];
+    self.webView = [[FLWebView alloc] initWithFrame:CGRectMake(0, self.isShowNavigation ? 55 + iPhoneTopMargin : -20, SCREEN_WIDTH , SCREEN_HEIGHT - (self.isShowNavigation ? 55 + iPhoneTopMargin : -20) ) url:self.url];
     [self.webView loadWithUrl:_url];
     _webView.delegate = self;
     [self.view addSubview:_webView];
     [self registNotification];
+    
+    self.navigationView.hidden = !self.isShowNavigation;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -60,14 +68,23 @@
         if (self.dismissBlock) {
             self.dismissBlock();
         }
-        [self.navigationController popViewControllerAnimated:YES];
+        
+        if (self.isDisMiss) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }
 }
 
 #pragma mark - MTNavigationViewDelegate
 - (void)leftAction
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (self.isDisMiss) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - notification
@@ -170,7 +187,7 @@
         _navigationView.delegate = self;
 //        _navigationView.backgroundColor = [UIColor whiteColor];
         _navigationView.rightTitle = @"";
-        _navigationView.navigationTitle = @"福利社";
+        _navigationView.navigationTitle = @"";
 //        _navigationView.type = MTNavigationViewNoteDetail;
     }
     return _navigationView;
