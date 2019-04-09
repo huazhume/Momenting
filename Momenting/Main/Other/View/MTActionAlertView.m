@@ -96,10 +96,7 @@
     }
     
     [UIView animateWithDuration:0.29 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        self.contentView.alpha = 0.f
-        
-        
-        ;
+        self.contentView.alpha = 0.f;
         self.alphaView.alpha = 0.f;
         [self.contentView layoutIfNeeded];
         [self layoutIfNeeded];

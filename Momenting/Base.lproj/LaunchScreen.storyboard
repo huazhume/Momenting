@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="zsy-YF-gWI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="-34" width="375" height="701"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,7 +30,7 @@
                             <constraint firstItem="zsy-YF-gWI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="4So-YO-D2X"/>
                             <constraint firstAttribute="trailing" secondItem="zsy-YF-gWI" secondAttribute="trailing" id="FwB-EK-71E"/>
                             <constraint firstItem="7b0-ba-Pxs" firstAttribute="top" secondItem="zsy-YF-gWI" secondAttribute="bottom" id="KVv-cR-mw1"/>
-                            <constraint firstItem="zsy-YF-gWI" firstAttribute="top" secondItem="JvV-Vc-k5y" secondAttribute="bottom" constant="-20" id="su5-kk-G9M"/>
+                            <constraint firstItem="zsy-YF-gWI" firstAttribute="top" secondItem="JvV-Vc-k5y" secondAttribute="bottom" constant="-54" id="su5-kk-G9M"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vez-v8-R53">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="-34" width="375" height="735"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <action selector="dismiss:" destination="iN0-l3-epB" eventType="touchUpInside" id="aCM-AJ-NPY"/>
@@ -34,10 +34,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="vez-v8-R53" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-20" id="9aQ-GX-9sM"/>
+                <constraint firstItem="vez-v8-R53" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-54" id="9aQ-GX-9sM"/>
                 <constraint firstItem="vez-v8-R53" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EkS-Ee-6SB"/>
                 <constraint firstItem="JI0-vE-Id2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="92" id="aMj-Wv-cZH"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vez-v8-R53" secondAttribute="bottom" id="jUS-iF-kn7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vez-v8-R53" secondAttribute="bottom" constant="-34" id="jUS-iF-kn7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JI0-vE-Id2" secondAttribute="bottom" constant="40" id="nAC-vM-BJk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vez-v8-R53" secondAttribute="trailing" id="zXK-hg-7hM"/>
             </constraints>

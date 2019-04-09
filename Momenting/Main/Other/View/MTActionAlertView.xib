@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAg-m3-qYZ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="-34" width="375" height="735"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <action selector="alertAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="qWn-du-K7R"/>
@@ -124,8 +123,8 @@
                 <constraint firstItem="ro2-7I-5dq" firstAttribute="bottom" secondItem="g2M-cd-ync" secondAttribute="bottom" id="KXR-gX-wUn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KAg-m3-qYZ" secondAttribute="trailing" id="dR3-WN-BqO"/>
                 <constraint firstItem="ro2-7I-5dq" firstAttribute="top" secondItem="g2M-cd-ync" secondAttribute="top" id="fiA-4v-91F"/>
-                <constraint firstItem="KAg-m3-qYZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-20" id="hek-5w-l08"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KAg-m3-qYZ" secondAttribute="bottom" id="nzw-RT-k8a"/>
+                <constraint firstItem="KAg-m3-qYZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-54" id="hek-5w-l08"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KAg-m3-qYZ" secondAttribute="bottom" constant="-34" id="nzw-RT-k8a"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

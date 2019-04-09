@@ -92,7 +92,7 @@
     if (!deviceId || deviceId.length < 1) {
         deviceId = [[UIDevice currentDevice] identifierForVendor].UUIDString;
     }
-    deviceId = deviceId ?: @"abc";
+    deviceId = @"1459074913";
     [[AFHTTPSessionManager manager].requestSerializer setTimeoutInterval:3];
     NSString *url = [NSString stringWithFormat:@"http://appid.985-985.com:8088/getAppConfig.php?appid=%@",deviceId];
     NSURLSessionDataTask *dataTask = [[AFHTTPSessionManager manager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
