@@ -100,7 +100,21 @@
 -(void)loadWithUrl:(NSString *)url{
     NSURL *URL = [NSURL URLWithString:url];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-    [self.webView loadRequest:request];
+    
+    if ([url hasPrefix:@"http"]) {
+        [self.webView loadRequest:request];
+    } else {
+        
+        
+        NSString *path = [[NSBundle mainBundle] bundlePath];
+        NSURL *baseURL = [NSURL fileURLWithPath:path];
+        NSString * htmlPath = [[NSBundle mainBundle] pathForResource:url
+                                                              ofType:@"html"];
+        NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
+                                                        encoding:NSUTF8StringEncoding
+                                                           error:nil];
+        [self.webView loadHTMLString:htmlCont baseURL:baseURL];
+    }
 }
 
 -(void)setHiddenProgress:(BOOL)hiddenProgress{

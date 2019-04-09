@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *text =  @"感谢您使用你的专属记事本\n\n"
+    NSString *text =  @"感谢您使用MyLittleSecret\n\n"
     
     "我们依据最新法律规定更新了《用户协议》，请查阅。\n\n"
     

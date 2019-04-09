@@ -13,6 +13,7 @@
 #import "MTNotificationViewController.h"
 #import "MTLanguageViewController.h"
 #import <Masonry.h>
+#import "FLBaseWebViewController.h"
 
 @interface MTNoteSettingView ()
 <UITableViewDelegate,UITableViewDataSource>
@@ -173,6 +174,12 @@
                 [self sendEmail];
             } else {
                 //关于我们
+                
+                NSString * htmlPath = @"aboutours";
+                FLBaseWebViewController *web = [[FLBaseWebViewController alloc] initWithUrl:htmlPath];
+                web.isShowNavigation = YES;
+                web.navigationTitle = @"about us";
+                [[MTHelp currentNavigation] pushViewController:web animated:YES];
             }
         }
             break;
