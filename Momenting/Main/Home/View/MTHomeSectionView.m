@@ -12,6 +12,11 @@
 @interface MTHomeSectionView ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *myNoteButton;
+@property (weak, nonatomic) IBOutlet UIButton *activityButton;
+@property (weak, nonatomic) IBOutlet UIView *indicatorView;
+@property (weak, nonatomic) IBOutlet UIButton *noteButton;
+@property (weak, nonatomic) IBOutlet UIButton *readButton;
 
 @end
 
@@ -35,6 +40,8 @@
 {
     [super awakeFromNib];
     
+    [self.noteButton setTitle:Localized(@"home_note") forState:UIControlStateNormal];
+    [self.readButton setTitle:Localized(@"home_recommend") forState:UIControlStateNormal];
 }
 
 - (void)setName:(NSString *)name
@@ -42,6 +49,12 @@
     _name = name;
     self.nameLabel.text = name;
 
+}
+
+- (void)reloadData
+{
+    [self.noteButton setTitle:Localized(@"home_note") forState:UIControlStateNormal];
+    [self.readButton setTitle:Localized(@"home_recommend") forState:UIControlStateNormal];
 }
 
 #pragma mark - events
@@ -58,5 +71,23 @@
         [self.delegate homeSettingAction];
     }
 }
+
+- (IBAction)homeButtonClicked:(UIButton *)sender {
+    
+    [UIView animateWithDuration:0.29 animations:^{
+       self.indicatorView.center = CGPointMake(sender.center.x, self.indicatorView.center.y);
+    }];
+    
+    NSInteger index = 0;
+    if (![sender isEqual:self.myNoteButton]) {
+        index = 1;
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(homeButtonClickedWithIndex:)]) {
+         [self.delegate homeButtonClickedWithIndex:index];
+    }
+   
+}
+
 
 @end

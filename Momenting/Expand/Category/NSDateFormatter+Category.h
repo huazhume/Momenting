@@ -12,4 +12,6 @@
 
 + (NSDateFormatter *)my_getHHmmFormatter;
 
++ (NSDateFormatter *)my_getDefaultFormatter;
+
 @end

@@ -27,6 +27,7 @@
 #import "MTHomeWebModel.h"
 #import "FLBaseWebViewController.h"
 #import "MTLaunchController.h"
+#import "MTActivityView.h"
 
 @interface ViewController ()
 <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
@@ -49,6 +50,7 @@ MTHomeEmptyViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *setViewLeadingConstraint;
 
 @property (strong, nonatomic) MTHomeWebModel *webModel;
+@property (weak, nonatomic) IBOutlet MTActivityView *activityView;
 
 @end
 
@@ -128,6 +130,14 @@ MTHomeEmptyViewDelegate>
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientChange:)name:UIDeviceOrientationDidChangeNotification object:nil];
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageChangeAction) name:kLanguageNotification object:nil];
+    
+}
+
+- (void)languageChangeAction
+{
+    [self.sectionView reloadData];
 }
 
 - (void)orientChange:(NSNotification *)noti
@@ -168,12 +178,12 @@ MTHomeEmptyViewDelegate>
 #pragma mark - ScrollView
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.y - self.scrollViewOldOffset.y > 1) {
-        //向下滑动
-       [self scrollAnimationIsShow:NO];
-    } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 0){
-        [self scrollAnimationIsShow:YES];
-    }
+//    if (scrollView.contentOffset.y - self.scrollViewOldOffset.y > 1) {
+//        //向下滑动
+//       [self scrollAnimationIsShow:NO];
+//    } else if (self.scrollViewOldOffset.y - scrollView.contentOffset.y > 0){
+//        [self scrollAnimationIsShow:YES];
+//    }
 //    self.scrollViewOldOffset = scrollView.contentOffset;
 }
 
@@ -188,9 +198,9 @@ MTHomeEmptyViewDelegate>
     NSDate *nowDate = [NSDate date];
     
     NSTimeInterval times = [nowDate timeIntervalSinceDate:self.lastScrollDate];
-    if (self.isAnimationing || self.tableView.contentOffset.y <= 0 || times < 0.5 || self.tableView.contentOffset.y >= self.tableView.contentSize.height) {
-        return;
-    }
+//    if (self.isAnimationing || self.tableView.contentOffset.y <= 0 || times < 0.5 || self.tableView.contentOffset.y >= self.tableView.contentSize.height) {
+//        return;
+//    }
     if (isShow && self.headerViewTopConstraint.constant == 0.f) {
         return;
     }
@@ -331,6 +341,12 @@ MTHomeEmptyViewDelegate>
     }];
 }
 
+- (void)homeButtonClickedWithIndex:(NSInteger)index
+{
+    self.activityView.hidden = !index;
+    self.tableView.hidden = index;
+}
+
 #pragma mark - MTHomeEmptyViewDelegate
 - (void)emptyNoteAction
 {
@@ -343,7 +359,7 @@ MTHomeEmptyViewDelegate>
 {
     if (!_sectionView) {
         _sectionView = [MTHomeSectionView loadFromNib];
-        _sectionView.frame = CGRectMake(0, 20, self.view.bounds.size.width, 40);
+        _sectionView.frame = CGRectMake(0, 20, self.tableView.frame.size.width, 40);
         _sectionView.backgroundColor = [UIColor clearColor];
         _sectionView.delegate = self;
     }

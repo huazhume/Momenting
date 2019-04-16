@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>11</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -32,7 +32,7 @@
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>App需要访问相册保存图片，是否允许访问相册？</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App需要访问相册更换头像，是否允许访问相册？</string>
+	<string>App需要访问相册保存图片，是否允许访问相册？</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Weather&amp;Time.ttf</string>

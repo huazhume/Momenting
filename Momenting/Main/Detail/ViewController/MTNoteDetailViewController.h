@@ -16,6 +16,9 @@
 
 @property (assign, nonatomic) BOOL isStatusBarHidden;
 
+@property (assign, nonatomic) BOOL isJubaoHidden;
+
 @property (copy, nonatomic) NSString *weather;
+@property (weak, nonatomic) IBOutlet UIButton *jubaoButton;
 
 @end

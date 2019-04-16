@@ -14,6 +14,8 @@
 
 - (void)homeSettingAction;
 
+- (void)homeButtonClickedWithIndex:(NSInteger)index;
+
 @end
 
 @interface MTHomeSectionView : UIView
@@ -25,5 +27,7 @@
 + (instancetype)loadFromNib;
 
 + (CGFloat)viewHeight;
+
+- (void)reloadData;
 
 @end

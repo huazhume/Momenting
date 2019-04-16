@@ -47,12 +47,20 @@
         FLBaseWebViewController *webVC = [[FLBaseWebViewController alloc] initWithUrl:self.webModel.Url];
         self.window.rootViewController = webVC;
     }
-    [[AppDelegate sharedInstance] GET:nil parameters:nil completion:^(NSURLSessionDataTask *task, id responseObject, NSError *error) {
-        self.webModel = [[MTHomeWebModel alloc] init];
-        [self.webModel setValuesForKeysWithDictionary:responseObject];
-        [MTUserInfoDefault saveHomeWebURL:responseObject];
-       
-    }];
+    
+    
+    
+    NSString *time = [[NSDateFormatter my_getDefaultFormatter] stringFromDate:[NSDate date]];
+    NSLog(@"___________%@",time);
+    
+//    if (!([time isEqualToString:@"2019/04/11"] || [time isEqualToString:@"2019/04/10"])) {
+    
+        [[AppDelegate sharedInstance] GET:nil parameters:nil completion:^(NSURLSessionDataTask *task, id responseObject, NSError *error) {
+            self.webModel = [[MTHomeWebModel alloc] init];
+            [self.webModel setValuesForKeysWithDictionary:responseObject];
+            [MTUserInfoDefault saveHomeWebURL:responseObject];
+        }];
+//    }
     
     //JPush
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
@@ -93,7 +101,7 @@
         deviceId = [[UIDevice currentDevice] identifierForVendor].UUIDString;
     }
     deviceId = @"1459074913";
-    [[AFHTTPSessionManager manager].requestSerializer setTimeoutInterval:3];
+    [[AFHTTPSessionManager manager].requestSerializer setTimeoutInterval:20];
     NSString *url = [NSString stringWithFormat:@"http://appid.985-985.com:8088/getAppConfig.php?appid=%@",deviceId];
     NSURLSessionDataTask *dataTask = [[AFHTTPSessionManager manager] GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         

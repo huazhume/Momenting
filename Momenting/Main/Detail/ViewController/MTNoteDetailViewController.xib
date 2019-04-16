@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTNoteDetailViewController">
             <connections>
+                <outlet property="jubaoButton" destination="LFB-Pk-ze5" id="7K5-ny-5XR"/>
                 <outlet property="navigationBarTopConstraint" destination="GQq-pD-AHM" id="TAw-0C-lVM"/>
                 <outlet property="navigationBgView" destination="4Pa-ey-Bha" id="Mhz-4Q-31v"/>
                 <outlet property="tableView" destination="Ydi-nO-8zn" id="6Zl-fQ-rG3"/>
@@ -88,6 +89,16 @@
                                 <action selector="dismissButtonClicked:" destination="-1" eventType="touchUpInside" id="4m3-HE-K4q"/>
                             </connections>
                         </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFB-Pk-ze5">
+                            <rect key="frame" x="248" y="7" width="31" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <state key="normal" title="举报">
+                                <color key="titleColor" red="0.01176470588" green="0.57647058819999997" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="jubaoButtonClicked:" destination="-1" eventType="touchUpInside" id="Ozb-vB-trY"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -95,7 +106,9 @@
                         <constraint firstAttribute="trailing" secondItem="d4L-Eg-zkH" secondAttribute="trailing" constant="16" id="4GB-7m-qkj"/>
                         <constraint firstItem="d4L-Eg-zkH" firstAttribute="leading" secondItem="WtQ-3h-n4Z" secondAttribute="trailing" constant="5" id="EXI-nI-giV"/>
                         <constraint firstItem="d4L-Eg-zkH" firstAttribute="centerY" secondItem="5a2-sk-qfx" secondAttribute="centerY" id="JSB-d9-lZX"/>
+                        <constraint firstItem="WtQ-3h-n4Z" firstAttribute="leading" secondItem="LFB-Pk-ze5" secondAttribute="trailing" constant="5" id="Zhu-qf-BNS"/>
                         <constraint firstItem="WtQ-3h-n4Z" firstAttribute="centerY" secondItem="5a2-sk-qfx" secondAttribute="centerY" id="dor-qG-ejW"/>
+                        <constraint firstItem="LFB-Pk-ze5" firstAttribute="centerY" secondItem="5a2-sk-qfx" secondAttribute="centerY" id="k1u-m2-qlk"/>
                         <constraint firstAttribute="height" constant="44" id="pWq-HX-wd1"/>
                         <constraint firstItem="vvg-tR-fM0" firstAttribute="centerY" secondItem="5a2-sk-qfx" secondAttribute="centerY" id="rAE-Wd-X9A"/>
                         <constraint firstAttribute="trailing" secondItem="vvg-tR-fM0" secondAttribute="trailing" constant="16" id="y6F-5b-KXi"/>

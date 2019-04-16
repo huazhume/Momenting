@@ -67,16 +67,24 @@
 		FB2989D921193BC10011025D /* MomentingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2989D821193BC10011025D /* MomentingUITests.m */; };
 		FB3A96D22122867C0033911E /* MTNoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A96D02122867C0033911E /* MTNoteDetailViewController.m */; };
 		FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */; };
+		FB514EE02261A7CE0046EB66 /* MTActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB514EDF2261A7CE0046EB66 /* MTActivityView.m */; };
 		FB8325BA214B656E007CB95A /* MTLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8325B9214B656E007CB95A /* MTLanguageManager.m */; };
 		FB8325BF214B7824007CB95A /* MTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8325BD214B7824007CB95A /* MTBaseViewController.m */; };
 		FB8325C0214B7824007CB95A /* MTBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8325BE214B7824007CB95A /* MTBaseViewController.xib */; };
 		FB874ACA212160FF0050DD58 /* MTDeleteStyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */; };
+		FB9B4AA62261ABCC001654FE /* MTMarketHotView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B4AA12261ABCB001654FE /* MTMarketHotView.m */; };
+		FB9B4AA72261ABCC001654FE /* MTMarketHotBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B4AA32261ABCB001654FE /* MTMarketHotBannerCell.m */; };
+		FB9B4AA82261ABCC001654FE /* MTMarketHotItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B4AA42261ABCB001654FE /* MTMarketHotItemView.m */; };
+		FB9B4AAB2261AC38001654FE /* MTMarketPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B4AA92261AC38001654FE /* MTMarketPageControl.m */; };
+		FB9B4AAF2261BAC6001654FE /* MTActivityViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B4AAD2261BAC6001654FE /* MTActivityViewCell.m */; };
+		FB9B4AB02261BAC6001654FE /* MTActivityViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9B4AAE2261BAC6001654FE /* MTActivityViewCell.xib */; };
 		FB9C1F47212FA9CF00CE1224 /* MTNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1F45212FA9CF00CE1224 /* MTNotificationViewController.m */; };
 		FB9C1F48212FA9CF00CE1224 /* MTNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F46212FA9CF00CE1224 /* MTNotificationViewController.xib */; };
 		FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1F4A212FAAA000CE1224 /* MTNotificationViewCell.m */; };
 		FB9C1F4D212FAAA000CE1224 /* MTNotificationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F4B212FAAA000CE1224 /* MTNotificationViewCell.xib */; };
 		FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9C1F4F2130142600CE1224 /* MTAddNotificationController.m */; };
 		FB9C1F522130142600CE1224 /* MTAddNotificationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */; };
+		FBAEF671225C994C008B5E1C /* aboutours.html in Resources */ = {isa = PBXBuildFile; fileRef = FBAEF670225C994B008B5E1C /* aboutours.html */; };
 		FBB0788B2134DD3E003510D1 /* MTStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB078892134DD3E003510D1 /* MTStyleViewController.m */; };
 		FBB0788C2134DD3E003510D1 /* MTStyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB0788A2134DD3E003510D1 /* MTStyleViewController.xib */; };
 		FBB078A12134E043003510D1 /* CGGeometry+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB0788F2134E043003510D1 /* CGGeometry+RSKImageCropper.m */; };
@@ -269,6 +277,8 @@
 		FB3A96CF2122867C0033911E /* MTNoteDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNoteDetailViewController.h; sourceTree = "<group>"; };
 		FB3A96D02122867C0033911E /* MTNoteDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNoteDetailViewController.m; sourceTree = "<group>"; };
 		FB3A96D12122867C0033911E /* MTNoteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNoteDetailViewController.xib; sourceTree = "<group>"; };
+		FB514EDE2261A7CE0046EB66 /* MTActivityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTActivityView.h; sourceTree = "<group>"; };
+		FB514EDF2261A7CE0046EB66 /* MTActivityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTActivityView.m; sourceTree = "<group>"; };
 		FB8325B8214B656E007CB95A /* MTLanguageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLanguageManager.h; sourceTree = "<group>"; };
 		FB8325B9214B656E007CB95A /* MTLanguageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLanguageManager.m; sourceTree = "<group>"; };
 		FB8325BC214B7824007CB95A /* MTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseViewController.h; sourceTree = "<group>"; };
@@ -276,6 +286,17 @@
 		FB8325BE214B7824007CB95A /* MTBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTBaseViewController.xib; sourceTree = "<group>"; };
 		FB874AC8212160FF0050DD58 /* MTDeleteStyleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDeleteStyleTableView.h; sourceTree = "<group>"; };
 		FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDeleteStyleTableView.m; sourceTree = "<group>"; };
+		FB9B4AA02261ABCB001654FE /* MTMarketHotItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMarketHotItemView.h; sourceTree = "<group>"; };
+		FB9B4AA12261ABCB001654FE /* MTMarketHotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMarketHotView.m; sourceTree = "<group>"; };
+		FB9B4AA22261ABCB001654FE /* MTMarketHotBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMarketHotBannerCell.h; sourceTree = "<group>"; };
+		FB9B4AA32261ABCB001654FE /* MTMarketHotBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMarketHotBannerCell.m; sourceTree = "<group>"; };
+		FB9B4AA42261ABCB001654FE /* MTMarketHotItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMarketHotItemView.m; sourceTree = "<group>"; };
+		FB9B4AA52261ABCC001654FE /* MTMarketHotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMarketHotView.h; sourceTree = "<group>"; };
+		FB9B4AA92261AC38001654FE /* MTMarketPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMarketPageControl.m; sourceTree = "<group>"; };
+		FB9B4AAA2261AC38001654FE /* MTMarketPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMarketPageControl.h; sourceTree = "<group>"; };
+		FB9B4AAC2261BAC6001654FE /* MTActivityViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTActivityViewCell.h; sourceTree = "<group>"; };
+		FB9B4AAD2261BAC6001654FE /* MTActivityViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTActivityViewCell.m; sourceTree = "<group>"; };
+		FB9B4AAE2261BAC6001654FE /* MTActivityViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTActivityViewCell.xib; sourceTree = "<group>"; };
 		FB9C1F44212FA9CF00CE1224 /* MTNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNotificationViewController.h; sourceTree = "<group>"; };
 		FB9C1F45212FA9CF00CE1224 /* MTNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNotificationViewController.m; sourceTree = "<group>"; };
 		FB9C1F46212FA9CF00CE1224 /* MTNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTNotificationViewController.xib; sourceTree = "<group>"; };
@@ -285,6 +306,7 @@
 		FB9C1F4E2130142600CE1224 /* MTAddNotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAddNotificationController.h; sourceTree = "<group>"; };
 		FB9C1F4F2130142600CE1224 /* MTAddNotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAddNotificationController.m; sourceTree = "<group>"; };
 		FB9C1F502130142600CE1224 /* MTAddNotificationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTAddNotificationController.xib; sourceTree = "<group>"; };
+		FBAEF670225C994B008B5E1C /* aboutours.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = aboutours.html; sourceTree = "<group>"; };
 		FBB078882134DD3E003510D1 /* MTStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTStyleViewController.h; sourceTree = "<group>"; };
 		FBB078892134DD3E003510D1 /* MTStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTStyleViewController.m; sourceTree = "<group>"; };
 		FBB0788A2134DD3E003510D1 /* MTStyleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTStyleViewController.xib; sourceTree = "<group>"; };
@@ -510,6 +532,15 @@
 		72E972B2211FCE8700D96DA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB9B4AAA2261AC38001654FE /* MTMarketPageControl.h */,
+				FB9B4AA92261AC38001654FE /* MTMarketPageControl.m */,
+				FB9B4AA22261ABCB001654FE /* MTMarketHotBannerCell.h */,
+				FB9B4AA32261ABCB001654FE /* MTMarketHotBannerCell.m */,
+				FB9B4AA02261ABCB001654FE /* MTMarketHotItemView.h */,
+				FB9B4AA42261ABCB001654FE /* MTMarketHotItemView.m */,
+				FB9B4AA52261ABCC001654FE /* MTMarketHotView.h */,
+				FB9B4AA12261ABCB001654FE /* MTMarketHotView.m */,
+				FB9B4A9F2261ABC4001654FE /* Banner */,
 				72E972B3211FCE8700D96DA4 /* MTHomeEmptyView.h */,
 				72E972B4211FCE8700D96DA4 /* MTHomeEmptyView.m */,
 				72E972B5211FCE8700D96DA4 /* MTHomeEmptyView.xib */,
@@ -519,6 +550,11 @@
 				72E972B9211FCE8700D96DA4 /* MTHomeTextViewCell.h */,
 				72E972BA211FCE8700D96DA4 /* MTHomeTextViewCell.m */,
 				72E972BB211FCE8700D96DA4 /* MTHomeTextViewCell.xib */,
+				FB514EDE2261A7CE0046EB66 /* MTActivityView.h */,
+				FB514EDF2261A7CE0046EB66 /* MTActivityView.m */,
+				FB9B4AAC2261BAC6001654FE /* MTActivityViewCell.h */,
+				FB9B4AAD2261BAC6001654FE /* MTActivityViewCell.m */,
+				FB9B4AAE2261BAC6001654FE /* MTActivityViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -749,6 +785,7 @@
 				FB2989BA21193BC10011025D /* Main.storyboard */,
 				FB2989BF21193BC10011025D /* LaunchScreen.storyboard */,
 				FB2989C221193BC10011025D /* Info.plist */,
+				FBAEF670225C994B008B5E1C /* aboutours.html */,
 				FB2989BD21193BC10011025D /* Assets.xcassets */,
 				72E97346211FD81F00D96DA4 /* Supporting Files */,
 			);
@@ -842,6 +879,13 @@
 				FB874AC9212160FF0050DD58 /* MTDeleteStyleTableView.m */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		FB9B4A9F2261ABC4001654FE /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		FBB0788D2134E043003510D1 /* RSKImageCropper */ = {
@@ -1107,6 +1151,9 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -1158,6 +1205,7 @@
 				722838372128700F003C28FD /* MTNoteSettingHeaderCell.xib in Resources */,
 				FBC1CC702183260F008CB13C /* MTWeatherViewCell.xib in Resources */,
 				FB2989BE21193BC10011025D /* Assets.xcassets in Resources */,
+				FB9B4AB02261BAC6001654FE /* MTActivityViewCell.xib in Resources */,
 				FB3A96D32122867C0033911E /* MTNoteDetailViewController.xib in Resources */,
 				FB0A376B21241A9A007CB0DC /* MTNoteDetailSectionView.xib in Resources */,
 				FB9C1F48212FA9CF00CE1224 /* MTNotificationViewController.xib in Resources */,
@@ -1184,6 +1232,7 @@
 				72E972E0211FCE8700D96DA4 /* MTHomeEmptyView.xib in Resources */,
 				FBB5E379212EAB6E008A3F07 /* MTProfileSetViewController.xib in Resources */,
 				FBC1CC6B21832012008CB13C /* MTWeatherAlertView.xib in Resources */,
+				FBAEF671225C994C008B5E1C /* aboutours.html in Resources */,
 				FBDDBE4B2137B253002A88FE /* EBBannerViewController.xib in Resources */,
 				72E972F4211FCE8700D96DA4 /* MTNoteViewController.xib in Resources */,
 				FB8325C0214B7824007CB95A /* MTBaseViewController.xib in Resources */,
@@ -1298,14 +1347,17 @@
 				FB0A376921241A8D007CB0DC /* MTNoteDetailSectionView.m in Sources */,
 				FBB5E378212EAB6E008A3F07 /* MTProfileSetViewController.m in Sources */,
 				72E9733F211FD30C00D96DA4 /* UITableViewCell+Categoty.m in Sources */,
+				FB9B4AAB2261AC38001654FE /* MTMarketPageControl.m in Sources */,
 				72E972EA211FCE8700D96DA4 /* MTNotePo+CoreDataProperties.m in Sources */,
 				72E972E9211FCE8700D96DA4 /* MTNotePo+CoreDataClass.m in Sources */,
 				72E9732A211FD23700D96DA4 /* MTCoreDataManager.m in Sources */,
 				FBB0788B2134DD3E003510D1 /* MTStyleViewController.m in Sources */,
 				FBDDBE4F2137B253002A88FE /* EBEmptyWindow.m in Sources */,
 				FBC0999D2133F48700242E1F /* MTAddNotificationStateCell.m in Sources */,
+				FB9B4AAF2261BAC6001654FE /* MTActivityViewCell.m in Sources */,
 				FB9C1F4C212FAAA000CE1224 /* MTNotificationViewCell.m in Sources */,
 				72E972DE211FCE8700D96DA4 /* MTNoteSettingView.m in Sources */,
+				FB9B4AA82261ABCC001654FE /* MTMarketHotItemView.m in Sources */,
 				72E97330211FD2B900D96DA4 /* MTSanboxFile.m in Sources */,
 				FBDDBE292137831F002A88FE /* MTLanguageViewCell.m in Sources */,
 				FBDDBE24213782A7002A88FE /* MTLanguageViewController.m in Sources */,
@@ -1315,6 +1367,7 @@
 				72E97333211FD2C700D96DA4 /* MTMediaFileManager.m in Sources */,
 				FBDDBE472137B253002A88FE /* EBBannerView+Categories.m in Sources */,
 				72E972E8211FCE8700D96DA4 /* MTNoteModel.m in Sources */,
+				FB9B4AA62261ABCC001654FE /* MTMarketHotView.m in Sources */,
 				FBC099932133D54B00242E1F /* MTAddNotificationCell.m in Sources */,
 				72E972DF211FCE8700D96DA4 /* MTHomeEmptyView.m in Sources */,
 				FBB5E390212EB85C008A3F07 /* MTSettingNameCell.m in Sources */,
@@ -1342,6 +1395,8 @@
 				72E972EF211FCE8700D96DA4 /* MTNoteToolsTextCell.m in Sources */,
 				FBB5E37C212EAD5E008A3F07 /* MTHelp.m in Sources */,
 				FB2989C421193BC10011025D /* main.m in Sources */,
+				FB514EE02261A7CE0046EB66 /* MTActivityView.m in Sources */,
+				FB9B4AA72261ABCC001654FE /* MTMarketHotBannerCell.m in Sources */,
 				FBC1CC602182EE6B008CB13C /* UIFont+MTFont.m in Sources */,
 				FB9C1F512130142600CE1224 /* MTAddNotificationController.m in Sources */,
 				FB2989B621193BC10011025D /* AppDelegate.m in Sources */,
@@ -1564,7 +1619,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1586,10 +1641,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huazhume.secretforme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = profileForAppstore;
+				PROVISIONING_PROFILE_SPECIFIER = ios_release;
 				SWIFT_OBJC_BRIDGING_HEADER = "Momenting/Main/View/Momenting-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -79,10 +79,10 @@
     NSString *title = nil;
     if ([[URL scheme] isEqualToString:@"protocol1"]) {
         title = @"用户协议";
-        urlString = @"http://note.youdao.com/noteshare?id=0dd1abb301bec7f8f77b2dbb4f9af0c6";
+        urlString = @"http://118.89.169.62:8080/web/UserAgreement.html";
     } else if ([[URL scheme] isEqualToString:@"protocol2"]) {
         title = @"隐私条款";
-        urlString = @"http://note.youdao.com/noteshare?id=c806fba036b23c0750f9c59f8db1273b";
+        urlString = @"http://118.89.169.62:8080/web/PrivacyClause.html";
     }
     
     urlString = [urlString stringByReplacingOccurrencesOfString:@" " withString:@""];

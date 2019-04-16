@@ -48,6 +48,8 @@ MTNavigationViewDelegate>
     self.weatherButton.titleLabel.font = [UIFont mtWeatherFontWithFontSize:22];
     NSArray *colors = @[[UIColor colorWithHex:0x96B46C],[UIColor colorWithHex:0xE48370],[UIColor colorWithHex:0xC496C5],[UIColor colorWithHex:0x79B47C],[UIColor colorWithHex:0xA299CE],[UIColor colorWithHex:0xA2AEBB] ];
     [self.weatherButton setTitleColor:colors[(int)arc4random_uniform(colors.count)] forState:UIControlStateNormal];
+    
+    self.jubaoButton.hidden = !self.isJubaoHidden;
 }
 
 - (void)loadData
@@ -230,6 +232,13 @@ MTNavigationViewDelegate>
         [_datalist addObject:textModel];
     }
     return _datalist;
+}
+
+
+
+- (IBAction)jubaoButtonClicked:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"确定要举报此内容吗？" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:@"取消", nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {

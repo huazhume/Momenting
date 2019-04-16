@@ -21,14 +21,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="knK-Bx-A8b">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_icon" translatesAutoresizingMaskIntoConstraints="NO" id="knK-Bx-A8b">
                     <rect key="frame" x="162.5" y="60" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="0n9-UV-rmB"/>
                         <constraint firstAttribute="height" constant="50" id="pEB-ez-vmH"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小秘密用户协议及隐私说明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0d-In-BFu">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户协议及隐私说明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0d-In-BFu">
                     <rect key="frame" x="0.0" y="130" width="375" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14.5" id="hAS-P3-H5s"/>
@@ -163,6 +163,6 @@
         </view>
     </objects>
     <resources>
-        <image name="launch_image" width="292" height="293"/>
+        <image name="launch_icon" width="512" height="512"/>
     </resources>
 </document>
