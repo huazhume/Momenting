@@ -127,13 +127,13 @@
     [notificationMuArray addObject:dayDicFirth];
     [notificationMuArray addObject:dayDicSix];
     
-    [notificationMuArray enumerateObjectsUsingBlock:^(NSDictionary  *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        MTNotificationVo *vo = [MTNotificationVo new];
-        vo.content = obj[@"content"];
-        vo.notificationId = obj[@"id"];
-        vo.time = obj[@"time"];
-        [self addNotificationWithVo:vo];
-    }];
+//    [notificationMuArray enumerateObjectsUsingBlock:^(NSDictionary  *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        MTNotificationVo *vo = [MTNotificationVo new];
+//        vo.content = obj[@"content"];
+//        vo.notificationId = obj[@"id"];
+//        vo.time = obj[@"time"];
+//        [self addNotificationWithVo:vo];
+//    }];
     
 }
 
